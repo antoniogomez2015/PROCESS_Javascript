@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!--
+
+	Tutorial: 
+
+		Curso de Diseño y Programación Web: 14. JavaScript: Algoritmos, diagramas de flujo y eventos | https://www.youtube.com/watch?v=PkV-_58-CeE
+
+
+
+	isNaN:
+	______
+
+	_el método isNaN(), ó "it not a number", nos permitirá comprotar si un dato que por ejemplo no envíe el usuario es un dato de tipo numérico
+
+	_de ésta manera, el método isNaN(), devolverá "true", su la variable que recibe es alfanumérica, osea un número con decinales, ej: "2,452..", más si la variable que recibe no es alfanumérica si no numérica, ej: "1", osea números enteros entonces ésta dará como resultado "false"
+
+
+
+
+	-->
+
+	<button id="alter">indicar cantidad</button>
+
+	<script type="text/javascript">
+		
+		var el = document.getElementById('alter');
+
+		function proof(){
+			
+			var cons = prompt('indique su edad');
+
+			if(isNaN(cons)){
+				
+				document.write('Debe de indicar números enteros');
+
+			}else{
+
+				document.write('Su edad es: ' + cons);				
+
+			}
+		}
+		
+		el.addEventListener('click', proof);
+
+
+
+	</script>
+
+</body>
+</html>

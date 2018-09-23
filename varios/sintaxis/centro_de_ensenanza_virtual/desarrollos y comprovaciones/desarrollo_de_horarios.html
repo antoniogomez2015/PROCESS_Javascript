@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Desarrollo</title>
+
+
+<body>
+
+<!--objeto "date()"-->
+
+	<!--escribir la hora local y mundial de manera general-->
+	<p>Te presentamos la hora</p>
+    <script language="javascript" type="text/javascript">
+		/*ésta línea como un todo es una declaración que tiene sentido en si misma*/
+		/*"ahora", se convierte en el nombre de la variable, y en ésta almacenamos la fecha y la hora actual*/
+		
+		/*declaración de variable, esta declaración le permite a javacript almacenar fechas y horas*/
+		ahora = new Date();
+		
+		/*esta declaración permite convertir los datos de la fecha y ahora local en strings para se imprimibles luego*/
+		horaLocal=ahora.toString();
+		
+		/*esta declaración permite convertir los datos de la fecha y ahora blobal en strings para se imprimibles luego*/
+		horaUtc=ahora.toGMTString();
+		
+		
+		/*ahora llamamos a la declaración que desiemos para que ésta se imprimible en el navegador*/		
+		document.writeln("<b>Hora local: </b>" + horaLocal + "<br />");
+		
+		/*ahora llamamos a la declaración que desiemos para que ésta se imprimible en el navegador*/
+		document.writeln("<b>Hora mundial</b>" + horaUtc);
+	</script>
+    
+    
+    
+    
+    
+    
+    <!--hacer un reloj con horas minutos y segundos de manera específica-->
+    
+    <p>Te presentamos la hora</p>
+    
+    <script language="javascript" type="text/javascript">
+		
+		/*declaración de variable, esta declaración le permite a javacript almacenar fechas y horas*/
+		ahora = new Date();	
+		
+		/*decalración que permite optener y hacer imprimible la hora del navegador*/	
+		horas=ahora.getHours();
+		
+		/*decalración que permite optener y hacer imprimible los minutos de la hora del navegador*/	
+		minutos=ahora.getMinutes();
+		
+		/*decalración que permite optener y hacer imprimible los segundos de la hora del navegador*/	
+		segundos=ahora.getSeconds();
+		
+		
+		/*en este caso abrimos la etiqueta html <font>, a través de un string en el primer argumento para heredar las propiedades html en las demás y la cerramos a la última*/		
+		document.writeln("<font size='5'>");
+		
+		/*ahora expresamos las setencias que deseamos expresar como la ahora en su conjunto, más unas puntos separadores*/
+		document.writeln(horas + ":" +minutos+ ":" +segundos);
+		
+		/*y al final cerramos la etiqueta de estilo html*/
+		document.writeln("<font />");
+	</script>
+    
+</body>
+</html>

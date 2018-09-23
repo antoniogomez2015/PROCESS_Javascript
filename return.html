@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		function newF(nombre){
+		
+			document.write("Tu nombre es: " + nombre);
+
+		};
+
+		newF("tonyGomez");
+
+		newF("Rafael");
+
+		newF("Ana Maria");
+
+
+
+
+		function mayusculas(text){
+
+			return text.toUpperCase();
+	
+		}
+
+		var nombre = mayusculas("Juan");
+
+		document.write(nombre);
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #15 - La importancia de return | https://www.youtube.com/watch?v=h6MmwpNu7eI&index=15&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+		http://www.w3schools.com/js/js_datatypes.asp
+
+
+	
+	Return:
+	_______
+
+	_la instrucción return, está directamente ligada a las funciones las cuáles, son muy importantes dentro de javascript
+
+	_la palabra reservada "return", permite que una función pueda respondernos ó contestarnos brindándonos un resultado de sus operaciones realizadas respectivamente lo cuál, extiendo la posibilidad de aplicación de las funciones
+
+	_de ésta manera, podremos entender que la palabra reserva "return", dentro de una función nos permitirá almacerar el valor ó resultado de las operaciones dentro de la función respectiva el cuál, podremos utilizar posteriormente al llamar a la respectiva función y, dicho valor ó resultado lo podremos guardar posteriormente en una variable para su posterior utilización en diferentes procesos
+
+	_a continuación presentaremos un ejemplo en el cuál, se utiliza la instrucción return, la cuál, devolverá un string, acompañado de un parámetro de la función
+
+	_mientras que a su vez, la función es enviada como parámetro
+
+		function usuario(nombre){
+	
+			return "Nombre de usuario: " + nombre;
+
+		}
+
+		document.write(usuario("Juan"));
+
+	_a continuación se muestra un ejemplo práctico de la potencia y capacidad aplicada de las funciones con valores retornables
+
+	_en la cuál, deseamos saber el valor exponencial al cuadrado de ecuaciones:
+
+		function computo(a,b){
+	
+			var cuadradoA = a*a;
+
+			var cuadradoB = b*b;
+
+			var sumaCuadrados = cuadradoA + cuadradoB;
+
+			return sumaCuadrados;
+
+		}
+
+		document.write(computo(25,12));
+
+	_de ésta manera, podremos ver que podemos hacer ó crear todo un algorítmo que responda ha un programa bajo unos requerimientos concretos y de forma optimizada el cuál, podremos reutilizar en diferentes entornos como algorítmo
+
+	_otra forma más optimizada de expresar lo mismo que en el caso anterior:
+
+
+		function computo(a,b){
+	
+			return a*a + b*b;
+		}
+
+		document.write(computo(25,12));
+
+	_de ésta manera, podremos ver que obtendremos el mismo resultado más hemos optimizado la función la cuál, será más fácil de mantener
+
+
+
+
+
+	-->
+	
+</body>
+</html>

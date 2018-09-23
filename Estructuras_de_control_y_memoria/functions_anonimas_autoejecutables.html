@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Ciclo For					
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		var longitud = dias.length, i = 0;
+
+		for(i; i < longitud; i++){
+
+			document.write(dias[i]);
+	
+		};
+
+
+		//Ciclo ForEach con variabla anónima
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		dias.forEach(function(elemento){
+
+			document.write(elemento);
+	
+		});
+
+
+		//Ciclo ForEach con variable declarada
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		function mostrarElemento(elemento){
+
+			document.write(elemento);
+	
+		}
+
+		dias.forEach(mostrarElemento);
+
+
+		//estructura For Of
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		for(var elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+		+function(){}();
+
+		!function(){}();
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial específico: Tutoriales JavaScript: 19. Funciones Anónimas Autoejecutables | https://www.youtube.com/watch?v=k_UTfaGCDnU
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #22 - Expresiones funcionales | https://www.youtube.com/watch?v=KJ_Bftiqq3E&index=22&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+		
+
+
+	
+	Functions Anónimas Autoejecutables:
+	___________________________________
+
+
+	_las funciones anónimas autoejecutables nos permitirán poder ejcutar bloques de código directamente en el flujo del algoritmo respectivo sin nacesidad de requerir la ejecución de un evento por parte del usuario ó navegador
+
+	_de ésta manera, las funciones autoejecutables tienen la siguiente estructura:
+
+
+		_(....)();
+
+
+	_así, dentro del primer paréntesis debemos de declarar la función anónima a través, de la palabra reservada "function", a acompañada de los paréntesis "()", así, como de las llaves dentro de las cuáles, se indicarán las sentencias ha ejecutar
+
+	_y en segundo paréntesis estaremos llamando a la respectiva función en el mismo momento en que declaramos ésta
+
+	_así, el segundo paréntesis ejecuta ó hace un llamado a la función como un método paara que así, ésta ejecute lo que se encuentra encerrado en el primer paréntesis, ej:
+
+
+		_(function(){...})(a,b);
+
+
+
+	_de ésta manera, podremos ejecutar bloques de código de forma contínua dentro del mismo flujo del respectivo algoritmo, ej:
+
+
+		_(function(){
+
+			alert('Hola Mundo');
+	
+		})();
+
+
+
+	Parámetros:
+	___________
+
+	_más también, en el segudo paréntesis de las funciones autoejecutables podremos pasar ó indicar parámetros
+
+	_de ésta manera, podremos aumentar el funcionalismo y posibilidades de las funciones autoejecutables
+
+
+
+	Formas Alternativas de Funciones Anónimas:
+	__________________________________________
+
+	_también, dispondremos el siguiente método el cuál, encierra ó encapsula más aún el código dentro de otro paréntesis, ej:
+
+
+		_"La Crockford (Jaascript The God Parts)"
+
+			_((function(){...})(a,b));
+
+
+
+	_como también, dispondremos de la siguiente versión en la cuál, ya no se requiere ni un ni dos paréntesis para encapsular el código si no que en vez de eso requiremos de la implementación de un signo de "+", precediendo a la función lo cuál, simplifica la función, ej:
+
+
+		_"Versión Unaria"
+
+			_+function(){...}(a,b);
+
+
+
+	_como también, dispondremos de la siguiente versión en la cuál, ya no se requiere ni un ni dos paréntesis para encapsular el código si no que en vez de eso requiremos de la implementación de un signo de "!", de admiración precediendo a la función lo cuál, simplifica la función, ej:
+
+
+		_"Versión Facebook"
+
+			_!function(){...}(a,b);
+
+
+
+
+
+
+
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

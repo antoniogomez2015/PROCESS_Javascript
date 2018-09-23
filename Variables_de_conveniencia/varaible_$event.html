@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Ejemplo</title>
+</head>
+
+<body>
+
+
+   
+<!--
+    //////////////////////////////////////////////////////////////////////////////////////////
+    Vue Js
+
+        https://vuejs.org/
+            https://vuejs.org/v2/guide/           
+            En Español: https://es-vuejs.github.io/vuejs.org/v2/guide/events.html
+
+
+        Curso Juan Andres nuñez: 28 (videos)
+            https://www.youtube.com/watch?v=IlFk3cyRB0Y&list=PLM-Y_YQmMEqD2EWfWpSbiV3WgShRRW3FE
+
+            Aprende Vue.js esencial #1 - Introducción
+                https://www.youtube.com/watch?v=IlFk3cyRB0Y&list=PLM-Y_YQmMEqD2EWfWpSbiV3WgShRRW3FE
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    --> 
+
+
+    <div id="modulo">
+
+        <button v-on:click="saludo('juan', $event)">Pulsa Aquí</button>
+
+          
+            
+
+    </div>  
+
+
+    
+    <!--vuejs-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+   
+
+    <!--model-->
+    <script type="text/javascript">  
+
+        /*
+        _en éste caso a través, de la directiva "v-on="", de vuejs, podremos de forma inline, pasar parámetros a traves, de los cuáles, podremos personalizar los tados a procesar por la funcion ha ejecutar
+        */
+                
+        new Vue({
+
+            el: '#modulo',          
+
+            methods:{
+
+                /*
+                _se diseña recibir dos parámetros, donde el parámetro "nombre", será definido en la directiva "v-on="" 
+
+                _y el parámetro "_evt", para que no esté "undefined", al no definirse en la directiva "v-on=""
+
+                _ya que si colocásemos en la directiva "v-on="'Juan',_evt", ésto nos daría un error
+
+                _en éste caso debemos utilizar una variable de conveniencia que se llama "$event", que es algo parecido a la variable "$data", de vuejs, que nos permite acceder a los elementos de todo el modelo
+
+                _pero en éste caso "$event", lo que hace es que nos pasa la información del evento en el DOM, del evento que ha ocurrido
+
+                _para que así, "console.log", pueda acceder a la función y su información bi-direccional en general y del evento respectivo
+                */
+                saludo: function(nombre,_evt){
+
+                    /*se concatena un string, con el parámetro a recivir por la directiva v-on="", de vuejs*/
+                    alert('Hola ' + nombre);
+
+                    /*acceso a la información de la función vía consola a través, del parámetro vacio de "_evt"*/
+                    console.log(_evt);
+                }                
+
+            }
+            
+        });
+        
+
+    </script>
+
+
+
+
+</body>
+
+</html>

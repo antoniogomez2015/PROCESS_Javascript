@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+
+	<script type="text/javascript">
+		
+	/*
+
+		https://developer.mozilla.org/es/docs/Web/JavaScript
+
+
+		JavaScript-Module-Pattern
+
+			http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
+
+
+		Curso de JavaScript para principiantes (48 videos)
+
+			https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+			"Curso realizado el 12/1/2015, primero de diciembre del 2015"
+
+
+		canales de interes de desarrollo javascript
+
+
+
+		Jesús Conde
+		https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+			28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+		Curso de AJAX (20 videos) | https://www.youtube.com/playlist?list=PLF49E524856DAD8F7
+
+
+		FirefoxOS HTML5
+		https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+		CasaMadrugada
+		https://www.youtube.com/user/CasaMadrugada
+			tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+		LaZonaInformatica
+		https://www.youtube.com/user/LaZonaInformatica
+			Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+		Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+		thenewboston
+			Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+		xymind
+		https://www.youtube.com/user/xymind/playlists
+			Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+			Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+		Manuel J. Dávila
+		https://www.youtube.com/user/manudg1000
+
+			Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+		Curso de JavaScript desde 0 (78 videos) | https://www.youtube.com/playlist?list=PLU8oAlHdN5BmpobVmj1IlneKlVLJ84TID
+
+			Curso HTML 5 (73 videos) | https://www.youtube.com/playlist?list=PLU8oAlHdN5BnX63lyAeV0LzLnpGudgRrK
+
+			Curso de PHP/MySQL (97 videos) | https://www.youtube.com/playlist?list=PLU8oAlHdN5BkinrODGXToK9oPAlnJxmW_
+
+			Curso SQL (25 videos) | https://www.youtube.com/playlist?list=PLU8oAlHdN5Bmx-LChV4K3MbHrpZKefNwn
+
+			Curso de Java desde 0 (240 videos) | https://www.youtube.com/playlist?list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk
+
+		Javascript basico (32 videos) | https://www.youtube.com/playlist?list=PLA505F7842858BD06
+
+		Programar juegos con HTML5 y JavaScript (31 videos) | https://www.youtube.com/playlist?list=PLWO_rDmzqxWIX7tPL3xBO2odxZDn4xl4D
+
+
+		H. JavaScript: Entornos de desarrollo integrados (IDE) y editores (66 videos) | https://www.youtube.com/playlist?list=PLYHc9BY38qm_U-0G0ktzgshy2rjHIIR5t
+
+		A. JavaScript en español: Tutorial (93 videos) | https://www.youtube.com/playlist?list=PLYHc9BY38qm9YzQAlLIR9xoMCiD2X32AY
+
+		F. JavaScript: Gráficos Estadísticos (17 videos) | https://www.youtube.com/playlist?list=PLYHc9BY38qm-pGmFAAVDUQ5LpieNd6fCH
+
+		D. JavaScript: Computación Gráfica (18 videos) | https://www.youtube.com/playlist?list=PLYHc9BY38qm_PvWOvqnNU__ZFabK3uRSJ
+
+		B. JavaScript. Interfaz Gráfica (15 videos) | https://www.youtube.com/playlist?list=PLYHc9BY38qm_HQp05ceaE4Ucthl5rg8XH
+
+
+
+
+		libro de javascript
+			Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+		http://www.w3schools.com/js/default.asp
+
+
+		http://www.w3schools.com/js/
+
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		JSON
+		____
+
+		Tutorial: Tutorial Introducción a JSON, sintaxis y ejemplos | https://www.youtube.com/watch?v=ScU8g4ePR9Y&t=600s
+
+
+
+		Definición:
+		___________
+
+		_JSON, es una notación de objetos javascript, (javascript object notation), el cuál, es un estandar que se utiliza para para el intercambio de información entre diferentes lenguales y aplicaciones como mongoDB, php, java, ruby, y fremeworks, otros
+
+		_
+
+
+	
+	*/
+
+
+	/*
+
+	Definir un Objeto JSON:
+	_______________________
+
+	_un objeto de tipo json es un objeto convencional personalizado en javascript, el cuál, se define igualmente que una variable global a través, de la palabra reservada "var"
+
+	_seguida del nombre el cuál, deseamos asignarle al nuevo objeto ha crear
+
+	_y luego debemos utilizar el signo de asignación "="
+
+	_y posteriormente al nombre indicado debemos de abrir y cerrar llaves dentro de las cuáles, debemso de definir el respectivo objeto
+
+	_y ya luego dentro del objeto debemos de definir propiedades y atributos entre comillas y separándo éstas por dos puntos ":"
+
+
+	*/
+
+		//var objetoJSON;
+
+		var objetoJSON = {"nombre":"tony"};
+
+		//para posteriormente accer al objeto y sus propiedades respectivamente
+		document.getElementById("contenedor").innerHTML = objetoJSON.nombre;
+
+		var demo = "tonyGomez";		
+
+		document.write("Hello World!");
+
+		document.write(demo);
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<div id="contenedor">
+
+		<h1>Hola Universo</h1>
+
+	</div>
+	
+</body>
+</html>

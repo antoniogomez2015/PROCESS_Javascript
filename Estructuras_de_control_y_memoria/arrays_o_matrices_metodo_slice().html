@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+
+		var persons = peaple.slice(2, 4);
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #18 - Metodos de matrices | https://www.youtube.com/watch?v=UmRRIhRS2YA&index=18&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+		
+
+
+	
+	Array ó Matrices Método slice():
+	________________________________
+
+	_el método slice(), nos permite la posibilidad de hacer filtrados dentro de los elementos de arary
+
+	_así, podremos seleccionar elementos de array, a partir de un punto determinado en adelante, indicando un índice de partir como en el siguiente ejemplo:
+
+
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+
+		var persons = peaple.slice(2);
+
+		document.write(persons);
+
+
+	_de éste manera, a partir del ejemplo anterior podremos ver que javascript, nos arrojará los siguientes elementos:
+
+		_Rebel Julia Marine
+
+	_ya que los arrays, y por énde los índices comienzan en "0", y no en "1"
+
+	_así, como también, tenemos la posibilidad de hacer seleccionar más complejas a través, de la indicación de más de un índice los cuáles, pueden estar separadados por comas ",", ó por guiones "-"
+
+	_más para que ésta opción sea válida, los índices deben estar separados por más de un índice, lo que quiere decir que no podremos indicar índices contiguos ej, "2-3", sino al menos "2-4", ej:
+
+
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+
+		var persons = peaple.slice(2, 4);
+
+		document.write(persons);
+
+	_para que así, de ésta manera, javascript, nos arroje el siguiente resultado
+
+		_Rebel Marine
+
+
+	
+	
+
+
+
+	
+
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

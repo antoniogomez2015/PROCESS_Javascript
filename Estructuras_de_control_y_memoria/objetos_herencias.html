@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Objetos
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+
+		document.write(libro.titulo);
+
+
+
+		//objeto con métodos más "this"
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+
+				var that = this;
+
+				document.write("Mi Nombre es:" + this.nombre);
+
+				function miFuncion(){
+	
+					document.write(that.nombre);
+				}
+
+				function();
+
+			},
+			eslogan: function(){
+	
+			}					
+	
+		}
+
+		document.write(persona.identidad());
+
+
+
+		
+
+
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #29 - Herencia | https://www.youtube.com/watch?v=gd3VWud9IK0&index=29&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+			
+	
+	Objetos - Herencias:
+	____________________
+
+	_la herrencia javascript, permite la reutilización de métodos ó funciones de objetos dentro de un contexto, ámbito ó scope, superior
+
+	_de ésta manera, no hace falta que definamos éstos métodos por nosotros mismos por que éstos métodos ya están allí, por que pertenecen a sus respectivos objeto
+
+	_de ésta manera, a través, de la herencia podremos compartir métodos y propiedades entre objetos
+
+
+
+	Dopodcast Object:
+
+	_todas las propiedades y métodos heredados por defecto dentro de javascript, bienen del padre de todos los objetos, éste es object dopodcast, éste es el protoipo de mayor nivel 
+
+	_más sin envargo hay otros prototipo, como:
+
+		_"object prototype":
+
+			_éste es el padre de todos los objetos
+
+			_"array prototype":
+
+				_éste es el padre de todos los arrays, como array.push()
+
+			_"string protitype":
+
+				_éste es el padre de todos los strings, como toUppercase()
+
+			_"number prototype":
+
+				_éste es el padre de todas las expresiones numéricas, como toSize()
+
+			_"function prototype":
+
+				_éste es el padre de todas las funciones, como toSource()
+
+
+		_y todos éstos a su vez, heredan del objeto "object prototype"
+
+
+	_a continuación mostraremos algunos ejemplos con los cuáles se intercambiarán métodos y propiedades entre si ej:
+
+
+		var persona = {
+	
+			nombre: "juan"
+
+		};
+
+		document.write(persona.hasOwnProperty(nombre));
+
+
+	_de ésta manera, en éste ejemplo, le estamos preguntado que si ésta propiedad existeste y que si es propia, es decir, que si existe dentro del propio objeto ó es heredada de otro objeto
+
+	_de ésta manera, javascript, nos indicará que es "true", lo que quiere decir en éste caso; que si, que la propiedad existen y está en éste objeto
+
+	_más intentamos lo mismo pero con otroa método heredado obtendremos el siguiente resultado ej:
+
+
+		var persona = {
+	
+			nombre: "juan"
+
+		};
+
+		document.write(persona.hasOwnProperty("toString"));
+
+	_entonces en éste caso, javascript, nos indicará que es "false", ya que éste es un método heredado y no pertenece al objeto en éste caso "persona"
+
+
+
+	_a continuación vamos ha hacer un ejemplo poco recomendado para ejemplarizar mejor como se pueden añadir mejor éstas funciones dentro de los prototipos
+
+	_de ésta manera, vamos ha definir un nuevo método dentro del prototipo del objeto mismo lo cuál, no es una buena práctica aunque lo haremos ha modo de ejemplo demostrativo
+
+
+		var juan = {
+			nombre: "Juán",
+			profesion: "Developer",
+			cuidad: "Valencia",
+			saludar: funcion(){
+				document.write("Hola soy " + this.nombre);
+			}
+		};
+
+
+		var andres = {
+			nombre: "Andrés",
+			profesion: "Arte",
+			ciudad: "Madríd "
+		}
+
+
+	_de ésta manera, una forma de poder tomar un método de un objeto para utilizarlo en otro sería a través, de la creación de un variable la cuál, podría contener un método de un objeto en específico, lo cuál, no es recomendable y poco viable ej:
+
+
+		var juan = {
+			nombre: "Juán",
+			profesion: "Developer",
+			cuidad: "Valencia",
+			saludar: funcion(){
+				document.write("Hola soy " + this.nombre);
+			}
+		};
+
+
+		var andres = {
+			nombre: "Andrés",
+			profesion: "Arte",
+			ciudad: "Madríd "
+		}
+
+		var nuevoSaludo = juan.saludar;
+
+		document.write(nuevoSaludo);
+
+
+	_de ésta manera, podremos acceder ó "robar", el método "saludar", del objeto "juan", ya que éste se encuentra guardado en la variable "nuevoSaludos", de ésta manera, al llamar a la variable "nuevoSaludo", podremos acceder al método respectivo
+
+
+
+	_ahora vamos ha hacer un ejemplo con una mejor práctica y recomendación en el cuál, vamos ha crear éste mismo método saluar en un prototipo de un ancestro para que todos los objetos lo compartan ej:
+
+
+		Object.prototype.saludar = function(){
+
+			document.write("Hola soy " + this.nombre);
+		};
+
+
+		var juan = {
+			nombre: "Juán",
+			profesion: "Developer",
+			cuidad: "Valencia"		
+		};
+
+
+		var andres = {
+			nombre: "Andrés",
+			profesion: "Arte",
+			ciudad: "Madríd "
+		}
+
+		var nuevoSaludo = juan.saludar;
+
+		document.write(andres.saludar());
+
+
+
+	_de ésta manera, como podremos ver, el método "saludar", no existen en ninguno de los objetos "juan", y "andres", sino que lo hemos agregado dentro del objeto 
+	"object prototype"
+
+	_para que así, de ésta manera, podamos acceder ha éste de forma heredada en cualquier objeto creado posteriormente
+
+
+
+
+
+
+
+
+	-->
+	
+</body>
+</html>

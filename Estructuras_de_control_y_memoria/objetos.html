@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Objetos
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+
+		document.write(libro.titulo);
+
+
+		
+
+
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #26 - Objetos | https://www.youtube.com/watch?v=MmQuBTdgu7g&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=26
+
+			Aprende JavaScript esencial #27 - Objetos II | https://www.youtube.com/watch?v=xVaj87Cm9nc&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=27
+
+		
+
+
+
+	
+	Objetos:
+	________
+
+	_las matrices ó arrays, con objetos en javascript, incluso las funciones son objetos en javascript
+
+	_los objetos en javascript, nos permitirán almacenar una serie de información compuesta de propiedades y métodos relacionados de alguna forma ó ámbito ó entidad
+
+	_así, de éste manera, dentro de objeto pueden guardarse, variables, matrices, otros objetos, funciones, strings, números, valores booleanos, otros
+
+	
+
+	Creación de Objeto en Javascript:
+
+	_a través, del método de creación "Object Literal Expresion", podremos simplificar la creación de objetos en javascipt, y aumentar sus posibilidades
+
+	_a diferencia de los arrays ó matrices, los objetos en vez de crearse con conchetes se crean a partir de llaves
+
+	_siguiendo la misma estructura de almacenamiento de un espacio en la memoria de las variables a través, de la palabra reservada "var", ej:
+
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+
+
+	llamar a un Objeto:
+
+	_llmar ha un objeto en javascript, y acceder a sus propiedades para lo cuál, debemos de haer uso del "dot operator", lo cuál, no es más que el uso del punto ".", como elemento concatenador en el respectivo objeto una respectiva propiedad del mismos ej:
+
+
+		document.write(libro.titulo);
+
+		document.write(libro.tags[1]);
+
+
+	_así, como también, tendremos la posibilidad de llamar un objeto a través, de la notación "Brackers Notation", ó "corchetes", y a diferencia con la notación "Dot Notation", es que ésta nos permitirá declarar propiedades con más de una palabra dentro de un objeto ej:
+
+		var libro = {
+
+			titulo del libro: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+	_como podemos ver la primera propiedad del objeto del ejemplo de arriba tiene más de una palabra en su conformación "titulo del libro"
+
+	_de ésta manera, a través, de la notación brackers notation, procederíamos ha llamar al objeto de la siguiente manera:
+
+
+		document.write(libro["titulo del libro"]);
+
+
+
+	Métodos de los Objetos:
+
+	_en javascript, un objeto el cuál, una de sus propiedades tiene un valor el cuál, es un función, entonces dicha propiedad ya no es denominada una propiedad del objeto si no, un método del objeto
+
+	
+
+
+	Borrar Propiedades de un Objeto:
+
+	_también, tenemos la posibilidad de borrar propiedades existentes en un objeto para lo cuál, haremos uso de la función precostruida "delete()"
+
+	_a través, de la cuál, nos referiremos al objeto respectivo y al atributo ha eliminar pasándolos como parámetros de ésta función "delete()", ej:
+
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+		delete(libro.genero);
+
+
+
+	Ciclo For In:
+
+	_disponemos del ciclo especial, éste es una variante del ciclo for, éste es el ciclo 
+	"for in", para recorrer las propiedades de un objeto
+
+	_para lo cuál, debemos de hacer uso de la siguientes estructura ej:
+
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}		
+
+
+		for (var propiedad in libro){
+			
+			document.write(propiedad + ' : ' + libro[propiedad]);
+		}
+
+	_de ésta manera, javascript, nos arrojará todas las propiedades con sus respectivos valores de forma contigua gracias al ciclo for, en éste variante para recorrer objetos
+
+
+
+
+
+
+	-->
+	
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Ejemplo</title>
+</head>
+
+<body>
+
+
+    <!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+    <!--El objecto window:
+
+	el el objeto de más alto nivel ó global dentro de javascript, y por ende los métodos no hacen referencia a su objeto padre, ej: 
+
+		window.alert() 
+
+	-->
+
+
+    <!--Método -->
+
+    <!--Window.history()-->
+
+    <!--//////////////////////////////////////////////////////////////////-->
+
+    <!--éste método permite acceder a una lista de los últimos urls, a los cuales hemos accedido a través, del navegador
+
+		éste permite acceder a la lista de urls, más no permite modificar ésta lista de urls, osea  que no podemos cambiar las urls, de las lista a la cuál, tendremos acceso
+
+		éste método cuenta con una única propiedad ésta propiedad es:
+
+			"length"
+
+		la cuál, indica el tamaño y número de páginas que hemos visitado en el navegador web
+
+		a demás, el objeto history, a su vez, tiene tres métodos a través, de éste, éstos son:
+
+			"forward()"
+
+				_equivale ha hacer botón siguiente en el navegador
+
+			"back()"
+
+				_equivale ha hacer botón atras en el navegador
+
+			"go()"
+
+				_éste toma un único parámetro, toma un número entero el cuál, puede ser positivo ó negativo, el cuál, nos llevará ha esa respectiva página en relación a la lista de urls, ej: dos páginas hacia arriba ó dos páginas hacia abajo ó lo que le indiquemos				
+
+				_éste método cuenta con una variante, que toma como parámetro también, un "string", el cuál, debe de coincidir con una de las urls, existente en la lista de urls, visitadas para que así, ésta url, indicada coincida y sea llamada por el navegador
+
+		-->
+
+   
+
+
+    <script type="text/javascript">
+        //NOTE: las declaraciones dentro de la funciones pueden funcionar sin la declaración del objeto "window", quedando ej: "history.forward()"
+
+        //función para poder avanzar entre las siguientes páginas navegadas
+        function nextHistory() {
+
+            window.history.forward()
+        };
+
+        //función para poder avanzar entre las anteriores páginas navegadas
+        function backHistory() {
+
+            window.history.back()
+        };
+
+        //función para poder ir a una página específica del historial
+        function personalHistory() {
+
+            //ejemplo de llamado de uno de los valores de la lista del historial
+            window.history.go(-3)
+
+            //ejemplo de llamado de un string, específico de la lista del historial
+            window.history.go("https://www.youtube.com/")
+        };
+
+
+        //impresión de las páginas navegadas previamente en el navegador
+
+        /*de ésta manera, en éste ejemplo si abrimos éste archivo en el navegador y luego en ésta misma ventana si navegamos por ejemplo ha youtube, facebook, twitter, y otras páginas y luego retrocemos ha ésta página de ejemplo, podremos ver que el navegador nos nostrará la cantidad de páginas que hemos visitado a través, de un número entero, ej; "5"*/
+        document.write("Conozca mi Historial Web " + history.length)
+    </script>
+
+    <!--botones para llamar a las respectivas funciones de navegación del historial del navegador-->
+
+    <!--para que así, luego de que hayamos navegado ahora podremos a través, de los botones que obedecen a las funciones podremos ahora navegar entre las páginas visitadas y registradas por el método "hostiry.length", ó así, como ir ha una página específica determinada por nosotros-->
+
+    <input type="button" value="Next" onclick="nextHistory()">
+
+    <br/>
+
+    <input type="button" value="Back" onclick="backHistory()">
+
+    <br/>
+
+    <input type="button" value="Ir ha Twitter" onclick="personalHistory()">
+
+
+
+
+</body>
+
+</html>

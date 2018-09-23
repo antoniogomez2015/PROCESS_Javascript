@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Ciclo For					
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		var longitud = dias.length, i = 0;
+
+		for(i; i < longitud; i++){
+
+			document.write(dias[i]);
+	
+		};
+
+
+		//Ciclo ForEach con variabla anónima
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		dias.forEach(function(elemento){
+
+			document.write(elemento);
+	
+		});
+
+
+		//Ciclo ForEach con variable declarada
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		function mostrarElemento(elemento){
+
+			document.write(elemento);
+	
+		}
+
+		dias.forEach(mostrarElemento);
+
+
+		//estructura For Of
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		for(var elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #21 - Recorrer matrices | https://www.youtube.com/watch?v=cf0VLQRPCZ0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=21&t=2s
+
+		
+
+
+	
+	Array Iteraciones ó Recorridos:
+	_______________________________
+
+	_en los arrays, tenemos la posibilidad de hacer recorridos de éstos ó iteraciones ej:
+
+
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+
+
+	Ciclo For:
+
+	_para lo cuál, lo más universal es crea un ciclo "for", a través, del cuál, poder recorrer el contenido del array, respectivo ej:
+
+		var longitud = dias.length, i = 0;
+
+		for(i; i < longitud; i++){
+
+			document.write(dias[i]);
+	
+		};
+
+	_de ésta manera, javascript, nos arrojará el siguiente resultado:
+
+		LunesMartesMiércolesJuevesViernesSábado
+
+	_para a continuación entender la lógica del ciclo for, en relación al recorrido que se ha hecho del array:
+
+		_primero hemos creado una varaible "longitud", y dentro de ésta hemos capturado la longitud del arrays "dias.length", y por otra parte dentro de esa misma variable "longitud", hemos guardado otro dato, que "i", es igual ha "0"
+
+			_entendiéndo así, que la longitud del array, la utilizaremos para determinar cuándo debe deternerse el ciclo for, hasta que éste lleve al máximo de la longitud del array, en éste caso hata "5"
+
+			_y que a su vez, determinamos que "i", tiene un valor inicial de cero; y que dicho valor irá cambiando de forma incremental en cada iteración del ciclo for, ya que utilizaremos éste valor "i", en sustitución de cada elemento a la hora de llamar al array, ej: "dias[i]"
+
+		_y ahora para comprender el ciclo for, primeramente ha éste debemos indicarle el elemento de trabajo, en éste caso será "i", pero como ya sabemos y tenemos determinado que "i", es igual que cero "0", entonces no tendremos que indicárselo en cada iteración "i = 0", si no que en vez de eso directamente le indicamos sólo "i", que vale "0", inicialmente
+
+		_para seguidamente indicarle cuál, será el condicional ó elemento comparativo del ciclo for, ha analizar en éste caso será que si "i", es menor "<", que el valor de la variable "longitud", "i < longitud", para que así, de ésta manera, el valor de "i", vaya cambiando de forma incremental en cada iteración de ciclo for, hasta que llegue hasta "5", en éste caso y así, se detenga en éste punto
+
+		_para por último indicarle la sentencias ha ejecutar en cada iteración si la condición anterior se ha cumplido correctamente; en éste caso será, que al valor de "i", le sea sumado "1", "i++", de ésta manera, en cada iteración "i", tendrá, un valor incremental superior a su valor anterior hasta que llegue hasta "5", en éste caso donde se romperá el ciclo
+
+		_para finalmente ejecutar las sentencias dentro de las llaves "{}", del ciclo for, en cada iteración de forma automática y consecutiva; lo cuál, en éste caso es imprimir dicho valor en pantalla a través, de un:
+
+			document.write(dias[i]);
+
+		_donde al llamar al "array[0]", no indicamos el valor de un elemento de éste en concreto por ejemplo; si no que en vez de eso  pasamos el valor actual de "i", el cuál, ya tenemos configurado a través, del algoritmo del ciclo for, para que en cada iteración del ciclo for, éste valor sea incremental
+
+
+
+
+
+	Ciclo ForEach:
+
+	_la estructura del foreach, ejecuta una función dentro de la posición de cada uno de los elementos dentro de un array
+
+
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+	_ejemplo de un forEach, con una función anónima "función no declarada previamente así, como sin nombre":
+
+		dias.forEach(function(elemento){
+
+			document.write(elemento);
+	
+		});
+
+	_de ésta manera, a través, de la estructura "forEach", epecial para el control y recorridos de arrays, podemos hacer uso de las funciones para tener un mayor control de los arrays
+
+	_entendiéndo así, primeramente que estaremos utilizando la estructura forEach, de forma concatenada ".", al array, para así, indicar que el forEach, estará superditado por el array, y su contenido, lo que quiere decir, es que todo lo que haga referencia el forEach, se estará buscando ó justificando en el contenido del array, respectivo
+
+	_y en éste caso haremos uso de una función anónica, lo que quiere decir que ésta respectiva función no tendrá nombre
+
+	_más si tendrá parámetros y, como parámetro le pasaremos un nombre genérico en éste caso "elemento", a través, del cuál, haremos referencia ha cada elemento dentro del array, respectivo
+
+	_para lugo ejecutar entre llaves "{}", las sentencias dentro de la función genérica, en éste caso una impresión en pantalla "document.write();"
+
+	_y en dicha impresión en pantalla estaremos llamando es al parámetro que hemos indicado ó referenciado en la función anónima que hemos creado "function(elemento){}"
+
+
+
+	_ejemplo con una función declarada previamente y con nombre:
+
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		function mostrarElemento(elemento){
+
+			document.write(elemento);
+	
+		}
+
+		dias.forEach(mostrarElemento);
+
+
+
+	_éste caso es práctivamente idéntico al caso anterior, más en éste caso la única diferencia es que la función es referenciada lo que quuiere decir, es que ésta existe previamente
+
+	_así, como también, es que ésta función respectiva tiene un nombre y por énde no es anónima
+
+	_así, como también, ésta función tiene desarrolladas sus tentencias de igualmanera entre llaves "{}"
+
+	_para que así, sólo tengamos que hacer referencia ha ésta a través, de su nombre "sin paréntesis", en el momento de hacer uso de la estructura del "forEach()"
+
+		dias.forEach(mostrarElemento);
+
+
+
+
+	Estructura ESNEXT For Of:
+
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		for(var elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+		ó
+
+		for(let elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+	_a través, de la nueva estructura for of, debemos entender que dentro de la estructura del ciclo for, se ha de crear un variable en éste caso "elemento", dentro de la cuál, como valor ésta obtendrá cada uno de los valores respectivos dentro del array, en cada ciclo realizado por el ciclo for
+
+	_y dicho valor lo podremos obtener posteriormente a través, de las sentencias ha ejecutar dentro de las llaves del propio ciclo for, en éste caso a través, de una impresión en pantalla "document.write()", en la cuál, hacemos referencia a la respectiva variable en éste caso "elemento", la cuál, almacenará el valor actual del elemento del array en cada iteración ó recorrido del array respectivo
+
+	
+
+
+
+
+
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

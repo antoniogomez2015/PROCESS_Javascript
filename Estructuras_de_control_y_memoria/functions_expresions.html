@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Ciclo For					
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		var longitud = dias.length, i = 0;
+
+		for(i; i < longitud; i++){
+
+			document.write(dias[i]);
+	
+		};
+
+
+		//Ciclo ForEach con variabla anónima
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		dias.forEach(function(elemento){
+
+			document.write(elemento);
+	
+		});
+
+
+		//Ciclo ForEach con variable declarada
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		function mostrarElemento(elemento){
+
+			document.write(elemento);
+	
+		}
+
+		dias.forEach(mostrarElemento);
+
+
+		//estructura For Of
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		for(var elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #22 - Expresiones funcionales | https://www.youtube.com/watch?v=KJ_Bftiqq3E&index=22&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+		
+
+
+	
+	Functions Expresions:
+	_____________________
+
+	_las expresiones funcionales nos son "elevadas", ó "hoisting", como las funciones normales por lo cuál, no podremos llamar éstas antes de declararlas
+
+	_ésto as así, de forma parcial ya que javascript, realza la declaración de las expresiones funcionales pero no su asignación, osea la función y acción de éstas ej
+
+
+		var miExpresion = function(){
+		
+			document.write("Hola Mundo");
+
+		};
+
+
+		miExpresion();
+
+
+	_las expresiones funcionales en su asignación pueden llevar funciones declaradas lo cuál, es lo más recomendable para el proceso de depuración ej:
+
+
+		var miExpresion = function proof(){
+		
+			document.write("Hola Mundo");
+
+		};
+
+
+	_y para llamar a la expresión funcíonal debemos de hacer una combinación entre el nombre que le dimos a la expresión funcional y los paréntesis de la función que se encuentra en su asignación
+
+
+		miExpresion();
+
+
+
+
+
+
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

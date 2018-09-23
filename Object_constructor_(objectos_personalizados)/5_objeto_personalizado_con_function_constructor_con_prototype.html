@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+25.- Curso de JavaScript para principiantes. Crear Objetos con funciones constructor.
+	https://www.youtube.com/watch?v=bLA3IOzSFRg&list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx&index=26
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--Programación orientada a objectos:-->
+
+	<!--Referencia: http://www.w3schools.com/js/js_objects.asp-->
+
+<!--
+la programación orientada ha objetos toma el paradigma científico, dividiendo un programa en diferentes objetos relacionados entre si, lo que facilita, simplifica y acelera el desarrollo de aplicaciones
+
+así, ésto prodría entenderse como si tenemos un programa complejo, porque no dividirlo en programas más simples y que cada uno de ellos se encargue de una parte del programa final ó complejo
+
+ésto quiere decir que ha aplicación la podemos dividir en diferentes tareas las cuáles podrán interpretarse como objetos en función de una misma aplicación final
+
+los objetos nos permiten encapsular las tareas y también, reciclar éstas para reutilizarlas de ser necesario
+
+así, a ciencia cierta podremos decir que un objeto nos sirve para encapsular propiedades y métodos respectivamente
+
+también, podríamos decir que los objetos nos permite ordenar el código dividiéndolo en varias partes pequeñas para ser más sencillo el desarrollo de aplicaciones complejas
+
+javascript, nos ofrece varios modos para crear un objeto, éstos son:
+
+-->
+
+
+<script type="text/javascript">
+
+	
+	//lo primero será la declaración de dicha función constructor con parámetros
+	/*así, cuando ésta función sea instanciada se le tendrán que incorporar la misma cantidad de argumentos que parámetos que ésta posea*/
+	function fConstructor(nombrePersona){
+
+		/*creamos una variable llamada nombre a la que asignamos el parámetro "nombrePersona"*/
+
+		/*así, cuando se instancie el objeto "fConstructor", habrá que pasarle un argumento de tipo string, el cuál, pasará como parámetro de la variable "nombre",
+
+		también, podría entenderse que a través de "this", la variable "nombre", tomará el argumento dentro de su elemento padre en éste caso, la función "fConstructor",
+
+		NOTA: cuando se habla de objetos las variables serán interpretadas como propiedades */
+		this.nombre = nombrePersona;
+
+		/*de ésta manera, se podrá almacenar en otra propiedad el resultado de un string, más el argumento obtenido de la función padre "fConstructor"*/
+		this.info = "Esta persona se llama " + this.nombre;
+
+		/*ahora creamos una función anónima la cuál, podrá mostrar el contenido*/
+		this.mostrarInfo = function(){
+			alert(this.info);
+		};
+	}
+
+
+	//ahora vamos ha instancia el objeto constructor que creamos:
+
+	var sujeto1 = new fConstructor('Tony');
+	var sujeto2 = new fConstructor('Maria');
+
+
+</script>
+
+<!--así, tendremos que llamar ha un objeto -->
+<input type="button" value="ver función" onclick="sujeto1.mostrarInfo('Tony');">
+
+<input type="button" value="ver función" onclick="sujeto2.mostrarInfo('Maria');">
+
+
+<script type="text/javascript">
+	
+	/*a continuación vamos ha hacer un ejmeplo más extendido con un carro*/
+	function car(color,año,marca,modelo,precio){
+
+		/*enunciamos todas las propiedades del vehículo en éste caso*/
+
+		this.color = color;
+
+		this.año = año;
+
+		this.marca = marca;
+
+		this.modelo = modelo;
+
+		this.precio = precio;
+
+		/*agrupamos todas las propiedades dentro de la propiedad especial "info", para su fácil posterior llamado*/
+		this.info = "Características del Vehículo: " + this.color + this.año + this.marca + this.modelo + this.precio;
+
+		/*y por último creamos ha la función que llamará en éste caso al atributo especial "info", cuando ésta sea llamada*/
+		this.mostrarInfo = function(){
+
+			alert(this.info);
+		}
+	}
+
+
+	/*para que ahora sólo nos quede instanciar el objeto que hemos creado las veces que lo necesitemos*/
+
+	var car1 = new car('Negro','1972','Ford','Mustang','32.000');	
+
+	var car2 = new car('Azul','1970','Ford','Mustang','45.000');	
+
+
+</script>
+
+
+	<!--para por último llamar ha éstas instancias del objeto en éste caso utilizaremos botones-->
+
+	<!--así, sólo tendremos que concatenar el nombre de la variable en la cuál, instanciamos el objeto, en éste caso es "car1", con el nombre de la propiedad "mostrarInfo", más "()", paréntesis de la función anónima, quedando así; "car1.mostrarInfo()" -->
+	<input type="button" value="El Carro de Tony es: " onclick="car1.mostrarInfo()">
+
+	<input type="button" value="El Carro de Maria es: " onclick="car2.mostrarInfo()">
+
+
+</body>
+
+</html>
+
+

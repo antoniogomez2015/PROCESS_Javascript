@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--Programación orientada a objectos:-->
+
+	<!--Referencia: http://www.w3schools.com/js/js_objects.asp-->
+
+<!--
+
+	la programación orientada ha objetos toma el paradigma científico, dividiendo un programa en diferentes objetos relacionados entre si, lo que facilita, simplifica y acelera el desarrollo de aplicaciones
+
+	así, ésto prodría entenderse como si tenemos un programa complejo, porque no dividirlo en programas más simples y que cada uno de ellos se encargue de una parte del programa final ó complejo
+
+	ésto quiere decir que la aplicación la podemos dividir en diferentes tareas las cuáles podrán interpretarse como objetos en función de una misma aplicación final
+
+	los objetos nos permiten encapsular las tareas y también, reciclar éstas para reutilizarlas de ser necesario
+
+	así, a ciencia cierta podremos decir que un objeto nos sirve para encapsular propiedades y métodos respectivamente
+
+	también, podríamos decir que los objetos nos permite ordenar el código dividiéndolo en varias partes pequeñas para ser más sencillo el desarrollo de aplicaciones complejas
+
+	javascript, nos ofrece varios modos para crear un objeto, éstos son:
+
+-->
+
+	<script type="text/javascript">
+	
+	//instancia directa de un objeto:
+	/*
+	javascript, dispone de un objeto "build-in", éste es "object()", éste es un objeto pre construido, el cuál, está vació y funciona como marco en blanco el cuál, podremos utilizar para crear nuestros propios objetos
+
+	así, para crear un nuevo objeto personalizable "object()", debemos hacerlo a través, de la palabra clave "new", la cuál, nos permitirá crear el nuevo objeto para almacenarlo en una variable, ej:
+	*/
+
+	/*creación de un objeto el cuál, hemos almacenado en una variable para su posteior uso*/
+	/*en éste momento el objeto que hemos creado está vacío*/
+
+
+
+		var miNuevoObjeto = new Object();
+
+
+
+	/*agregando una propiedad: al objeto creado
+	___________________________________________
+
+	/*así, la estructura del objeto "Object();" será el contenedor general del objeto*/
+
+	/*y la variable en la cuál, hemos guardado el objeto "var niNuevoObjeto",pasará ha ser el objeto mismo, a la cuál, nos referimos y llamaremos posteriormente*/
+
+	/*y al objeto que hemos creado debemos de agregarle propiedades para que así, éste objeto tome forma 
+
+	_así, debemos de concatenar la variable que contiene al objeto, en éste caso "miNuevoObjeto", con las nuevas propiedades que le agregemos al objeto 
+
+	_en éste caso a la nueva propiedad le hemos dado el nombre genérico de "info", quedando entonces de la siguiente manera, "miNuevoObjeto.info", 
+
+	_para por último agregarle un valor ha dicha propiedad que hemos agregado, en éste caso es un "string", "Soy un nuevo objeto básico"*/
+
+
+
+		miNuevoObjeto.info = "Soy un nuevo objeto básico"
+
+
+
+
+	/*agregando un método: al objeto creado
+	________________________________________
+
+	_para ésto primero creamos una función
+
+	_así, dentro del nuevo objeto genérico "object()", para crear un nuevo método personalizado lo primero que tendremos que hacer es crear un function, en éste caso la función tendrá el nombre de "tema1", para leugo utilizar ésta nueva función como contenido del nuevo método ha crear
+
+	_en éste caso creamos una ventana modal "confirm()", en la cuál, llamamos a la propiedad "info" que hemos creado para el objeto generico "object()", refiriéndonos ha ella a través, de la palabra reservada "this"*/
+
+
+
+		function tema1(){
+
+			confirm(this.info);
+		};
+
+
+
+	//ahora si, ya con la función "tema1", creada previamente ahora si podremos crear el método
+
+
+	/*
+	así, a la variable "miNuevoObjeto", que contiene el objeto genérico "object()", le concatenamos ".", el nombre del "método" que deseamos crear de forma personalizada por nosotros en éste momento 
+
+	_en éste caso será el método que llamaremos "miMetodo", al cuál, le asignamos "=", "la declaración de la función que creamos previamente", en éste caso es "tema1", (sin paréntesis) 
+
+	_más no le asignamos la llamada de ésta función que en dicho caso sería "tema1(), de ésta manera´, sólo almacenaremos ésta función
+
+	_así, podríamos entender que la diferencia entre una propiedad y un método para un objeto es que la propiedad lleva como valor un string, ó valor numérico a través, de un signo de asignación "=", mientras que el método lleva el nombre de un función sin "()", paréntesis y permite almacenar programas enteros dentro
+	*/
+
+
+		miNuevoObjeto.miMetodo = tema1;
+
+
+
+	/*
+	_de ésta manera, estamos declarando el nuevo método "miMetodo", y a su vez, ha éste le estamos asignado la función "tema1"
+	*/
+
+
+	/*
+
+	lógica:
+	_______
+
+	_en éste caso cuando utilizados la palabra reservada "this", dentro de una función ésta hace referencia al elemento padre de la función respectiva, en éste caso el elemento padre es el objeto global window
+
+	así, lo que estamos indicando en éste caso es que la función debe de acceder al objeto padre y ubicar una propiedad que se llama en éste caso "info"
+
+	pero en éste caso, el objeto window, en éste ejemplo no cuenta con ninguna propiedad llamada "info", por que hay que recordar que la propiedad llamada info, existente que se cuentran es dentro de una función no está dentro del objeto global window
+
+	es por ésta razón que creamos un método especial que hace de función al cuál, le asignamos el valor de la función de éste ejemplo "tema1", para que así, la variable "miNuevoObjeto", la cuál tiene concatenada la propiedad "info", tome ahora el valor de la función "tema1", y así, si pueda acceder a la información de "info"
+
+	conviertiendose así, ahora en el objeto padre de "info", pudiendo así, acceder a la información ahora
+
+	en síntesis, estamos sustituyendo al objeto padre window, de la función por el método que hemos creado para que éste ahora sea el padre de la propiedad "info"
+
+
+	////////////////////////////////////////////////////////////////////////////////
+	quedando entonces la expresión de la siguiente manera:
+
+
+	var miNuevoObjeto = new Object(); //nuevo objeto
+
+		miNuevoObjeto.info = "Soy un nuevo objeto básico" //nuevo atributo
+
+		//función para el contenido del nuevo método
+		function tema1(){
+
+			confirm(this.info);
+		};
+
+		miNuevoObjeto.miMetodo = tema1; //redirección del padre de la propiedad "info"
+
+	*/
+
+	/*
+	otra forma conseguir el mismo resultado más de una forma más simple a es a través, de un las funciones anónimas:
+	*/
+
+	</script>
+
+	<!--ahora vamos ha llamar a la función principal "tema1()", a través, de un botón para así, comprobemos un error 
+
+	así, podremos ver que en una ventana modal nos indicará que ésta es un función "Undefined", ó una función indefinida, por el proble que indicamos de su elemento padre window, en el cuál, no se encuentra el atributo solicitado "info", en éste caso
+	-->
+	<input type="button" value="NewObject1" onclick="tema1()">
+
+
+	<!--pero más si llamamos en vez de la función "tema1()", llamamos al método "miMetodo", que hemos creado con el cuál, guardamos la función "tema1"
+
+	pero dicho método ahora tenemos que llamarlo como una función, es decir, llamarlo con "()", paréntesis, quedando así; "miMetodo()" 
+
+	así, tendremos que concatenar el objeto que contiene al método, ej; 
+	"miNuevoObjeto.miMetodo()", de ésta manera, podremos ver que ahora si se muestra en la ventana modal el valor de la propiedad "info"
+	-->
+
+
+
+		<input type="button" value="NewObject1" onclick="miNuevoObjeto.miMetodo()">
+
+
+
+		<script type="text/javascript">
+
+		var miNuevoObjeto2 = new Object();
+
+		//agregando una propiedad al objeto creado
+		miNuevoObjeto2.info = "Soy un nuevo objeto básico2"
+
+		//
+		miNuevoObjeto2.nuevoMetodo = function(){
+
+			confirm(this.info);
+		};
+
+
+
+
+
+	//funciones constructor del objeto:
+
+	/*
+	ésto es hacer una especie de plantilla en la cuál, podremos luego instanciar los objetos
+
+	el proceso dista bastante del proceso que llevamos hasta ahora
+	*/
+
+
+
+
+		//lo primero será la declaración dicha función constructor
+		function fConstructor(){
+
+			this.info = "Soy un objeto de tipo constructor";
+			this.mostrarInfo = function(){
+
+				alert(this.info);
+			}
+
+			this.configurarInfo = function (nuevaInfo) {
+
+				this.info = nuevaInfo
+			}
+			
+
+		}
+
+
+
+
+	//ahora vamos ha instancia el objeto constructor que creamos:
+	/*para ésto creamos una variable y en ésta guardamos la instancia del objeto que estamos creando
+
+	y a través, de la palabra reservada "new", podremos hacer una llamada al objeto creado constructor para hacer así, una instancia de ésta plantilla reutilizable
+
+	así, cuando llamemos las propiedades y métodos del objeto constructuor éstas se almacenarán en éste caso en la variables que lo contendrá "miobjetoConstructor1"
+
+	así, podremos la cantidad de instancias del elemento constructor que necesitemos
+
+	*/
+
+
+		var miobjetoConstructor1 = new fConstructor();
+		var miobjetoConstructor2 = new fConstructor();
+		var miobjetoConstructor3 = new fConstructor();
+
+
+
+
+
+</script>
+
+
+
+	<!--así, tendremos que llamar ha un objeto dentro del otro objecto-->
+	<input type="button" value="ver función" onclick="miNuevoObjeto.miMetodo();">
+
+	<!--así, tendremos que llamar ha un objeto dentro del otro objecto-->
+	<input type="button" value="ver función2" onclick="miNuevoObjeto2.nuevoMetodo();">
+
+
+
+	<!--botones para los objetos constructor-->
+
+	<!--llamada el objeto constructor "miobjetoConstructor1"-->
+	<input type="button" value="Objeto Constructor1" onclick="miobjetoConstructor1.mostrarInfo();">
+
+	<!--llamada el objeto constructor "miobjetoConstructor1"-->
+	<input type="button" value="Objeto Constructor2" onclick="miobjetoConstructor2.mostrarInfo('información alternativa');">
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+

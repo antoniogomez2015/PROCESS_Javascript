@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>	
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--El objecto Window.Document.location:
+
+	el el objeto location, hijo del objeto window, y relacionado con el objeto document, éste tiene información sobre la página que tenemos cargada en ese momento dentro del navegador
+
+
+		window.location
+
+
+	así, podremos consevir ha una url, como una serie de partes, éstas son:
+
+		_protocolo: http:
+
+		_hostname: //www.google.com
+
+		_puerto: :8080
+
+		_pathname: videos/display.php/...
+
+	quedando de la siguiente manera:
+
+		"http://www.google.com:8080/videos/display.php.."
+
+	-->
+
+
+<!--//////////////////////////////////////////////////////////////////-->
+
+	<!--Properties -->
+
+		<!--location.host-->	
+
+		<!--
+
+		_el objeto location	tiene información de la página que tenemos cargada en ese momento dentro del navegador
+
+		_de ésta manera, podremos pensar en la url, como una serie de partes:
+
+			_http:
+
+			_//www.sitioweb.com:8080
+
+			_/videos/display.php?section=535#list
+
+		_lo cuál, podría interpretarse de la siguiente menera de forma estructurada:
+
+			_[protocolo] //[hostname] :[puerto] /[pathname] [serach] [hash]
+
+
+		_a continuación presentamos una lista de las propiedades consernientos a los datos de la url:
+
+			_location.href | 'http://www.example.com:8080/tools/display.php?section=435#list'
+
+			_location.proticol | 'http:'
+
+			_location.host | 'www.example.com:8080'
+
+			_location.hostname | 'www.example.com'
+
+			_location.port | '8080'
+
+			_location.pahname | 'tools/display.php'
+
+			_location.search | '?section=435'
+
+			_location.hash | '#list'
+
+
+
+		Propertie host:
+
+		_la propiedad host, nos permitirá mostrar la parte inicial de la url, sub-dominio ó hosting
+
+
+
+		Ejemplo 1:
+
+		_en el siguiente ejemplo nos permitirá mostrar ó enunciar el sub-dominio ó hosting, de la url, actual del navegador ante el usuario:
+
+
+			<button onclick="myFunction();" id="demo">Saber mi Hash</button>
+
+			<script>
+
+				function myFunction() {
+				    var x = location.host;
+    				document.getElementById("demo").innerHTML = x;
+				}
+
+			</script>
+
+			
+
+	-->
+
+
+
+		<button onclick="myFunction();" id="demo">Saber mi Hash</button>
+
+		<script>
+
+			function myFunction() {
+			    var x = location.host;
+    			document.getElementById("demo").innerHTML = x;
+			}
+
+		</script>
+
+
+
+</body>
+
+</html>
+
+

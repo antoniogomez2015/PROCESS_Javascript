@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		var edad = 28;
+
+		if(edad >= 18){
+
+			alert("bienvenido al club")
+	
+		}else{
+	
+			alert("la edad mínima es 18 años")
+		};
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #7 - If / Elsee | https://www.youtube.com/watch?v=AqQ6Irah4N0&index=7&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+	
+	Condicional If Else:
+	____________________
+
+	_a través, de la estructura condicional if(){}, podremos hacer filtros y esquemas de control para un sin número de casos y requerimientro de control para diferetnes programas y aplicaciones
+
+	_de ésta manera, debemos expresar una estructura de control if(){}, de la siguiente manera y con los siguientes criterios:
+
+		_var edad = 28;
+
+		_if(edad >= 18){
+
+			alert("bienvenido al club")
+	
+		}else{
+	
+			alert("la edad mínima es 18 años")
+		};
+
+	_de ésta manera, podremos ver que la estructura de control if, require de un elemento externo ha analizar, en éste caso sería la variable "edad", la cuál, debe de tener un valor inicial el cuál será tomado por el condicional if, para su análisis y funcionamiento
+
+	_para posteriormente utilizar la palabra clave "if", seguida de dos paréntesis "()", dentro de los cuáles, expresaremos la estructura condicional en la cuál, en éste caso compararemos si el valor de la variable en éste caso "edad", con un valor de "28", es mayor ó igual ">=", ha "18"
+
+	_y si ésto es así, entonces ejecuta las sentencias que se encuentras a continuación dentro de llaves "{}"
+
+	_más si no es así "else", al comparar el valor de la variable "edad", y ver que ésta si es mayor ó igual en éste caso ha "18", ejecutar las sentencias que se encuentras dentro de las siguientes llaves "{}"
+
+	NOTA: else{}, dentro de la estructura del condicional es opcional entendiendo así, que el ocndicional if, podría funcionar correctamente si sólo utilizamos la parte inicial "if(){}"
+
+	_más también, dispondremos de un segundo condicional simultaneo para el "else", ya que al complirse el condicional "if", inicialmente no se ejecutará ó analizará la parte del condicional "else"
+
+	_para lo cuál, dispondremos de "else if(){}", a través, del cuál, podremos hacer ambas consultas de forma simultáneas, tanto para el "if(){}", como ahora para el "else if(){}", ej:
+
+		var edad = 15 ;
+		
+	    if(edad < 18){
+
+	      alert("eres demaciado joven aún!");
+		
+			}else if(edad >= 66){
+		
+				alert("la edad mánima es 65 años");
+		}else{
+
+			alert("bienvenido al club");
+		};
+
+
+	_y en éste caso, el último "else{}", indicará el rango en éste caso de edad permitido deltro del condicional "if(){}else if(){}else{}"
+
+	_en éste ejemplo el rango de edad ha analizar y contemplar dentro del condicional va desde los "18", hasta los "65", años de edad
+
+	_ya que si el rango de edad cae en el rango de menos de "18", entonces el condicional if, ejecutará el alert(), con el mensaje "de que eres demaciado jove aún"
+
+	_y más si por el contrario, si el rango de edad cae sobre los "65", años, entonces el condicional "else if()", entonces éste ejecutará el alert(), en el mensaje de que la edad máxima es de 65 años
+
+
+	NOTA: pueden existir incluso muchos if y else if, anidados unos dentro de otros ó seguido ya que el sistema sólo ejecutará sólo el primero en cumplirse así, haya mas de una verdadero ó "true", éstos hay que tenerlo en cuenta
+
+	_de ésta manera, las demás condiciones no serán evaluadas, lo que quiere decir, es que al cumplirse una de las posibles condiciones y al ejecutarse sus sentencias el condicional if, en general saldrá de la estructura condicional "if", para que así, javascript, continúe con las siguientes sentencias dentro del código general de javascript,
+
+	-->
+	
+</body>
+</html>

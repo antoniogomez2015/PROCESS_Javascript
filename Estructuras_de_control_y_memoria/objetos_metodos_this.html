@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Objetos
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+
+		document.write(libro.titulo);
+
+
+
+		//objeto con métodos más "this"
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+
+				var that = this;
+
+				document.write("Mi Nombre es:" + this.nombre);
+
+				function miFuncion(){
+	
+					document.write(that.nombre);
+				}
+
+				function();
+
+			},
+			eslogan: function(){
+	
+			}					
+	
+		}
+
+		document.write(persona.identidad());
+
+
+
+		
+
+
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #28 - Métodos y this | https://www.youtube.com/watch?v=g3fBLnh0rcU&index=28&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+			
+	
+	Objetos Método This:
+	____________________
+
+	_el método "This", hace referencia al objeto del cuál, precede ó existe, de ésta manera, podremos ver que el método this, es una método ó función comodín la cuál, puede funcionar ó articular en cualquier objeto
+
+	_así, el método this en una función única éste hará referencia al objeto glocal más en un función que esté funcionando como método de un objeto, entonces this, hará referencia ha ese dicho objeto
+
+	_de ésta manera, podremos ver que tanto el valor como la aplicación this, son dinámicos y cambia en relación al ámbito, objetos y estructuras reslecionadas
+
+	_para lo cuál, tendremos que crear un objeto prvio para la utilización ó aplicación del método this, ej:
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			caminar: function(){
+				document.write("me gusta caminar hasta el trabajo")
+			},
+			eslogan: function(){
+				document.write("soluciones gráficas es diseño")
+			}			
+	
+		}
+
+
+	_de ésta manera, debemos entender que una propiedad de un objecto la cuál, tenga como valor asignado una función anónica ó personalizada a partir de éste punto, ésta propiedad deja de ser contemplada como una propiedad para pasar ha ser contemplada como un método ó función del objeto respecto, en éste caso del objeto persona
+
+	_más ahora para acceder a los respectivos métodos que hemos creado dentro del objeto debemos de proceder de la siguiente manera:
+
+
+		document.write(persona.caminar());
+
+
+
+	Scope de los Métodos de los Objetos:
+
+	_principalmente en los objetos tenemos que tneer especial cuidado con el escope, ámbito ó alcance de las funciones, para que hacer referencia a los elementos correctos para que éstos funcionen correctamente
+
+	_de ésta a través, del siguiente ejemplo podremos ver las limitaciones de los alcances de las variables utilizadas como métodos dentro de objetos ej:
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+				document.write("Mi Nombre es:" + nombre);
+			},
+			eslogan: function(){
+				document.write("soluciones gráficas es diseño");
+			}			
+	
+		}
+
+		document.write(persona.identidad());
+
+
+
+	_de ésta manera, podríamos inferior que el ejemplo de arriba ya funciona correctamente, al llamar al método "identidad", del objeto "persona"
+
+	_para que así, éste ejecute las siguientes sentencias; string, "Mi Nombre es", sumado ó concatenado con el atributo "nombre", del objeto "persona", tendría que funcionar correctamente ya que el atributo "nombre", se encuentra sólo ha una escala superior que la función ó metodo "identidad", 
+
+	_ésto lo podemos ver que es así, ya que al llamar a ésta propiedad lo hacemos de la siguiente manera: "document.write("Mi Nombre es:" + nombre);", en vez de ésta 
+	"document.write("Mi Nombre es:" + person.nombre);"
+
+	_lo cuál, hasta éste punto nos dará error ó nos se renderizará nada en el navegador ya que la función del método "identidad", no encuentra al atributo "nombre", que hace referencia la sentencia del "document.write()", dentro de dicha función que a su vez es método del objeto persona
+
+	_y ésto es así, por que la función respectiva está buscando en éste caso a la propiedad ó variable "nombre", en el objeto global ó superior, lo que sucede es que la función del método identidad es parte del objeto persona, es por ésta razon por la cuál, que no puede buscar dentro de si misma sino, que más bien hace lo más lógico que es buscar en un scope, ó ámbito superior que en éste caso es objeto padre y por ésta razón da error
+
+
+
+
+	Método This:
+
+	_el método genérico ó comodín this, nos permitirá variar ó ajustar el scope, ó alcance de los objetos y sus respectivos métodos ó funciones como atributos
+
+	_de ésta manera, no hay que perder el contexto de "this", ya que no importa donde se declare this, si no el contexto como éte se ejecuta
+
+	_ya que this, guarda es el contexto en el que éste se ejecutar ó como es invocado en relación a los objetos
+
+
+
+	_más si hacemos uso del método this, podremos solucionar ó hacer funcionar el objeto correctamente ej:
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+				document.write("Mi Nombre es:" + this.nombre);
+			},
+			eslogan: function(){
+				document.write("soluciones gráficas es diseño");
+			}			
+	
+		}
+
+		document.write(persona.identidad());
+
+
+	_como podemos ver en éste caso del ejemplo de arriba, lo único que hemos cambiado es que hemos antepuesto de forma concatenara ".", la palabra reservaada "this", como método de éste objeto precediendo a la palabra correspondiente a la propiedad ó variable "nombre"
+
+	_de ésta manera, le estaremos indicando ha javascript, que no haga scope, y que no busque éste elemento ó atributo en éste caso en un ámbito ó scope, superior sino, que lo busque en éste mismo elemento; ya que en éste elemento si se encuentra éste dicho elemento
+
+
+	_de ésta manera, podremos entender que el método this, siempre hará referencia al objeto en el cuál, éste método "this", exista ó se esté ejecutando
+
+
+
+
+	Ejemplo explicativo de This:
+
+	_a través, del siguiente ejemplo podremos ver las características y alcance del método genérico this, ej:
+
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+				document.write("Mi Nombre es:" + this.nombre);
+
+				function miFuncion(){
+	
+					document.write(this.nombre);
+				}
+
+				function();
+
+			},
+			eslogan: function(){
+	
+			}					
+	
+		}
+
+
+	_de ésta manera, en el ejemplo de arriba es idéntico a los anteriores excepto por que dentro del método "identidad", del objeto "persona", estamos incluyendo otra función y a su vez, estamos llamando ha una función genérica "function();"
+
+	_de ésta manera, en éste caso, al llamar ha una función de manera, única sin ser parte de un objeto como método this, hará referencia al elemento global al hacer el scope ó ámbito
+
+	_más si lanzácemos el método this, en una función que trabaje como una método de un objeto entonces el método this, viviría en dicho objeto y hará fererencia ha éste a la hoara de hacer scope
+
+
+
+	Otra forma de llamar Métodos de Objetos:
+
+	_también, podemos hacer uso de variables para poder así, almacenar objetos y métodos respectivamente para su llamada posterior, ej:
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+				document.write("Mi Nombre es:" + this.nombre);				
+
+			},
+			eslogan: function(){
+	
+			}
+
+		}
+
+
+		var miObjeto = persona.identidad;
+
+		miObjeto();
+
+
+	_de ésta manera, podremos ver que todo es casi igual con la diferencia que al final, hemos guardado el método del respectivo objeto de una nueva variable para su llamado posterior y que el método "identidad", ya no tiene una función adicional dentro de si
+	
+	_pero al momento de llamar ha dicho método "identidad", del objeto "persona", lo estamos haciendo al llamar a la respectiva variable "miObjeto", añadiéndole al final dos "()", paréntesis lo cuáles, harán referencia de que nos estamos refiriendo es a la función dentro del objeto persona	
+
+
+
+	Extender las Propiedades de This:
+
+	_más tenemos la posibilidad de extender las posibilidades de this, por ejemplo para que this, se limite y haga referencia al ojeto ó elemento en el cuál, está declarado y existe
+
+	_para lo cuál, disponemos de dons tipos de opciones ó fórmulas para lograrlo, éstas son:
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+
+				var that = this;
+
+				document.write("Mi Nombre es:" + this.nombre);
+
+				function miFuncion(){
+	
+					document.write(that.nombre);
+				}
+
+				function();
+
+			},
+			eslogan: function(){
+	
+			}					
+	
+		}
+
+		document.write(persona.identidad());
+
+
+
+
+	_de ésta manera, podremos ver que todo sigue relativamente igual en nuestro ejemplo de arriba más con las diferencias de que hemos agregado una nueva variable dentro del método "identidad"
+
+	_de ésta manera, ahora en vez de usar "this", ahora usaremos el valor de la variable "that"
+
+	_ya que ahora la variable con el nombre "that", hará que por el ámbito ó escope, de las variables en javascript, that, podrá ser usado en cualquier función dentro de éste método
+
+	_aunque de una manera, más sintetizada podemos ver que la función que hace como método "identidad", del objeto "persona", si puede esar "this"
+
+	_mientras que la función que se encuentra anidada dentro de la función que hace de método del objeto "persona", tiene que usar la variable "that", y su valor que es "this", ya que de ésta manera, al encontrarse la variable en el ámbito del método "identidad", podrá hacer uso de éste y no se irá al objeto glocal si tampoco tratará de buscardo dentro de si misma
+
+
+
+	_includo disponemos de otra modalidad para lograr éste mismo resultado aunque mucho más elegante
+
+	_para lo cuál, debemos hacer uso del método "bind()", el cuál, es un constructor del lenguaje, de ésta manera, debemos proceder de la siguiente manera
+
+	_bind(), ejecutará un función pasándole un valor específico de this, es decir, ejecuta la función pero el valor de "this", es éste que te voy ha decir
+
+	_
+
+
+
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){				
+
+				document.write("Mi Nombre es:" + this.nombre);
+
+				var miFuncion = function(){
+	
+					document.write(this.nombre);
+				}.bind(this);
+
+			},
+			eslogan: function(){
+	
+			}					
+	
+		}
+
+		document.write(persona.identidad());
+
+
+	_de ésta manera, podremos ver que en éste caso la función que hemos anidado dentro de el método "identidad", dentro ó parte del objeto "persona", ahora dicha función está siendo pasada como una valor de una variable "miFuncion"
+
+	_y que a su vez, ha ésta se le está concatenando el método "bind()", el cuál, le estará asignando el valor retornado de la función en éste caso una función anónima, al método "this", para que así, this, no tenga que hacer escope, hasta el objeto global sino que en vez de tome el valor que le está asignando el método "bind()"
+
+
+
+
+	-->
+	
+</body>
+</html>

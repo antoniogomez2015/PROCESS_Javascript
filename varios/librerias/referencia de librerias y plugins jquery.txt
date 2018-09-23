@@ -1,0 +1,58 @@
+
+referencia de plugins jquery:
+
+
+				PLUGINS PARA HACER GRÁFICOS
+______________________________________________________________________________________________
+
+
+1_sigmajs //especialmente útil para desarrollar gráficos con javascript
+	//web: http://sigmajs.org/
+
+
+2_easy pie chart //especialmente útil para hacer gráficos circulares
+	//web: http://rendro.github.io/easy-pie-chart/
+
+
+3_TufteGraph  //especialmente útil para hacer gráficos de líneas verticales
+	//web: http://xaviershay.github.io/tufte-graph
+
+
+
+4_highcharttable ///especialmente útil para hacer gráficos de líenas verticales
+	//web: http://highcharttable.org/
+
+
+5_Humble Finance //especialmente útil para hacer gráficos de tipo financieros
+	//web: http://www.humblesoftware.com/finance/index (no requiere descargar libreria)
+
+
+
+6_Cubism.js //especialmente útil para hacer gráficos en movimiento
+	//web: http://square.github.io/cubism/  (no requiere descargar libreria)
+
+
+
+7_dygraphs //espeialmente útil para hacer gráficos horizontales
+	//web: http://dygraphs.com/
+
+
+
+8_D3.js //espeialmente útil para hacer gráficos interactivis y multiformato
+	//web: http://d3js.org/ 
+
+
+
+9_jscharts //especialmente útil para mostrar gráficos animados en ventanas modales
+	//web: http://www.jscharts.com/
+
+
+
+10_amcharts //especialmente útil para hacer gráficos con interacciones diversas
+	//web: http://www.amcharts.com/
+
+
+
+
+				PLUGINS PARA HACER GRÁFICOS
+______________________________________________________________________________________________

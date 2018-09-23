@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+
+		var persons = peaple.indexOf(2, 4);
+
+
+
+
+		/*ejemplo de una función y algoritmo para borrado de elemento de un array*/
+
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+		function proof(elemento, array){
+
+			var indice = peaple.indexOf(elemento);
+
+			if(indice > -1){
+
+				peaple.splice(indice, 1);
+	
+			}else{
+
+				document.write("No se ha encontrado el Elemento");
+	
+			};
+	
+		};
+
+        proof("Lone", peaple);
+
+		document.write(peaple);
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #19 - Array indexOf - Metodos de matrices | https://www.youtube.com/watch?v=-fP71BGtd6M&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=19
+
+		
+
+
+	
+	Array ó Matrices Método indexOf():
+	________________________________
+
+	_el método indexOf(), nos devolvera el primer índice ó la primera instancia de un índice indicado de una matriz ó array, si lo encuentra
+
+	_de ésta manera, si le indicamos que busque un índice con un string, que dice "verde", entonces seleccionará el primer índice que coincida con el string, en éste caso "verde", así, hayan más elementos elementos con el string, verde posteriormente al primer elemento encontrado
+
+	_más si no lo encuentra entronces devolverá "-1", ej:
+
+	
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+
+		var persons = peaple.indexOf("Julia");
+
+		document.write(persons);
+
+
+	_de éste manera, a partir del ejemplo anterior podremos ver que javascript, nos arrojará los siguientes elementos:
+
+		_Rebel Julia Marine
+
+	_de ésta manera, javascript, nos arrojará como resultado que el índice correspondiente ha éste elemento indicado "Julia", es "3"
+
+
+
+	Ejemplo de una Función más Compleja:
+	____________________________________
+
+	_a continuación mostraremos un ejemplo en el cuál, podremos ver al unísono todos los elementos y método vistos para los arrays, y elemento adyacentes en temas previos:
+
+
+		var peaple = [
+			"Cecilie",
+			"Lone",
+			"Rebel",
+			"Julia",
+			"Marine"
+		];
+
+		function proof(elemento, array){
+
+			var indice = peaple.indexOf(elemento);
+
+			if(indice > -1){
+
+				peaple.splice(indice, 1);
+	
+			}else{
+
+				document.write("No se ha encontrado el Elemento");
+	
+			};
+	
+		};
+
+        proof("Lone", peaple);
+
+		document.write(peaple);
+
+
+	_donde la explicación de la lógica de éste algoritmo y función serían los siguientes:
+
+	_primero a la función "proof", se le deben de pasar 2 parámetros al momento de llamar ésta, los cuáles, tendrán que ser como primer parámetro el "nombre de un elemento de un array",  y como segundo parámetro el "nombre del array mismo"
+
+	_para que así, la función "proof", como primera sentencie tome el "índice", de éste elemento que se pasa como primer parámetro de la función a través, del método "indeOf()"
+
+	_para luego comprobar si éste índice es mayor que "-1", ó lo que es lo mismo mayor al elemento "0", de un array, ésto a través, de un condicíonal "if(){}"
+
+	_de ésta manera, si el condicional if, se cumple, entonces, proceder ha eliminar un elemento de la lista a través, del método "splice()", y por medio del valor dinámico de la varaible "indice",
+
+	_y como segundo parámetro del método "splice()", será de uno, pues es sólo un elemento ha eliminar en éste caso del array "proof"
+
+	_y en dado caso de que el condicional if, no se cumpla "else{}", entonces se debe de mostrar el siguiente mensaje: "No se ha encontrado el Elemento"
+
+	_y para que el sistema funcione, debemos de llamar a la función "proof", e indicarle sus respectivos parámetro de trabajo para que así, ésta ejecute las acciones
+
+		 _proof("Lone", peaple);
+
+
+	_para por último si llamar al array, "peaple", con diferencia de que ahora éste estará superditado por las acciones hechas por la función proof, que se ha ejecutado antes que el array "peaple"
+
+	_lo que nos arrojará como resultado los elementos filtrados de:
+
+		_Cecilie,Rebel,Julia,Marine
+
+	
+	
+
+
+
+	
+
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

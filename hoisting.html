@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Ciclo For					
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		var longitud = dias.length, i = 0;
+
+		for(i; i < longitud; i++){
+
+			document.write(dias[i]);
+	
+		};
+
+
+		//Ciclo ForEach con variabla anónima
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		dias.forEach(function(elemento){
+
+			document.write(elemento);
+	
+		});
+
+
+		//Ciclo ForEach con variable declarada
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		function mostrarElemento(elemento){
+
+			document.write(elemento);
+	
+		}
+
+		dias.forEach(mostrarElemento);
+
+
+		//estructura For Of
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		for(var elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #23 - Alzado (hoisting) | https://www.youtube.com/watch?v=iibPWeXID8c&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=23
+
+		http://www.w3schools.com/js/js_hoisting.asp
+
+		
+
+
+	
+	hoisting:
+	_________
+
+	_el proceso de hoisting, es algo que uno no realiza, si no que es algo de lo que uno debe de ser consciente
+
+	_de ésta manera, estaremos consciente de que elementos se renderizarán primero en nuestros programas ó algoritmos javascript
+
+	_es importante conocer el procedo de carga de nuestro programa javascript, para que cada línea de código esté disponible cuando se necesite
+
+	_javascript, prioríza el orden en el que carga las funciones, asignaciones y código en ejecución
+
+	_de ésta manera, podremos entender que la siguiente priorización consiste en que javascript, colocará los elementos más importantes en la parte de arriba hacia la línea número "1", en relación a la siguiente jerarquía e instancias entre elementos del mismo tipo ej:
+
+
+		_variables inicializadas 
+
+		_funciones declaradas
+
+	_y demás código fuera de éste esquema aparecerá en su propio orden el cuál, presentan en el propio documento javascript
+
+
+	_y a través, del siguiente ejemplo podremos ver un ejemplo de las características del hoisting, ó alzado ó priorización de javascript
+
+
+		function obtenerNumero(){
+
+			return retornarNumero();
+
+			var retornarNumero = function(){
+				return 80;
+			}
+
+			var retornarNumero = function(){
+				return 50;
+			}
+	
+		}
+
+	_en el siguiente ejemplo, la función "obtenerNumero()", no arrojará ningún resultado y quedará como "undefined"
+
+	_ya que por medio del hoisting, las variables "var retornarNumero", serán levantadas hasta las primeras línea de código pero no sus asignaciones "=", en éste caso las funciones anónimas "function(){}"
+
+	_de ésta manera, como prodremos ver, en éste caso, la asignación de éstas variables "var retornarNumero", es analcanzables
+
+	_ya que la primera sentencia "{}", ha ejecutar de la función "obtenerNumero()", es "return retornarNumero()", lo cuál, hace una llamada directa a las variables que aún no tienen asignación por regla ó cuestión de "hoisting"
+
+	_ya que en éste caso javascript, interpretará el código de la siguiente manera, en relación a las reglas de hoisting:
+
+	
+
+		var retornaNumero = undefined;
+		var retornaNumero = undefined;
+
+		return retornaNumero();
+
+		renornaNumero = function(){
+			return 80;
+		}
+
+		renornaNumero = function(){
+			return 50;
+		}
+
+		obtenerNumero();
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

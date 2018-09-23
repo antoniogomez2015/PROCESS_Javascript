@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eventos</title>	
+</head>
+<body>
+
+	<!--
+
+		Tutorial:
+
+			Curso de Diseño y Programación Web: 14. JavaScript: Algoritmos, diagramas de flujo y eventos | https://www.youtube.com/watch?v=PkV-_58-CeE
+
+
+
+
+		Formas de crear eventos en javasript:
+		_____________________________________
+
+		_existen tres formas de crear ó configurar eventos en javascript, las cuáles, son las siguientes:
+
+
+			_manejador de eventos como atributos html
+
+				_en ésta opción se pada el evento como un parámetro directamente en el html, respectivo, ó también, ésto es denominado eventos en línea
+
+
+			_manejador de eventos semánticos
+
+				_ésta opción consiste en pasar el evento como parte de semántica javascript, y html, de ésta manera, el evento se concatena a la variable la cuál, a su vez, ha capturado el elemento html, a través, del transversing, de javascript
+
+
+			_manejador de eventos múltiples
+
+				_
+
+
+
+
+		Eventos como Atributos:
+		_______________________
+
+			_de ésta manera, para crear eventos javascript, como eventos de atributos html, ó eventos en línea, debemos de agregar el respectivo evento como atributo directamente en el tag, ó etiqueta html, ej:
+
+
+			
+				<script type="text/javascript">
+		
+					function myFunction(){
+			
+						alert('hola mundo');
+					}
+
+				</script>
+
+				
+
+
+				_<h1 onclick="miFunction();">hola mundo</h1>
+
+
+			NOTA: todos los eventos en línea ó a través, de atributos html, van precedidos de palabra "on", ej: (onclick="")
+
+
+		
+		Eventos semánticos:
+		___________________
+
+			_la estructura a través, del objeto "window", concatenado a su vez, con el objeto hijo "onload", al cuál, le será asignado un una función ha ejecutar se denomina manejador de eventos semántico
+
+			_una característica de éste tipo de manerjador de eventos es que éstos se ejecutarán en el momento que es cargado el documento html, respectivo
+
+			_con los manejadores de eventos semánticos podremos tener un mayor control de la programación javascript, ya que a través, de los manejadores de eventos semánticos tendremos la posibilidad de pasar parámetros dentro de la función ha ejecutar al finalizar la carga del documento html, lo cuál, no podríamos hacer en los eventos en línea ó a través, de atributos html
+
+				_de ésta manera, podríamo pasar el mismo tipo de evento ha ejecutar para que así, podamos accesar a características del mismo evento ha ejecutar ó ejecutado, ej:
+
+					function myFunction(e){
+
+						alert("has cliqueado en el botón'",  + e.type + "' con el objeto de nombre id '" + e.target.id +"'");
+					};
+
+				_de ésta manera, podremos ver que podremos acceder a las características internas del evento ejecutado dentro de la misma función ejecutada tras la carga del documento html
+
+
+			NOTA: el javascript, de éste tipo de manejadores de eventos deben estar debajo del html, ó al final del respectivo documento html
+
+
+
+
+		Manejador de Eventos Múltiples:
+		_______________________________
+
+		_ésta modalidad es mucho más estructurada que las versiones anteriores que nos permitirá tener un control total del sistema y a su vez, nos amplía las posibilidades de programación
+
+			Varible:
+			________
+
+			_de ésta manera, lo primero y más recomendado es capturar al elemento html, haciendo transversing, con javascript, para poder así, guardar el elemento html, en una variable
+
+			Método:
+			_______
+
+			_para posteriormente hacer uso del método de "addEventListener()", el cuál, debemos concatenarselo a la variable que hemos creado previamente del elemento html, respectivo
+
+			_de ésta manera, el método "addEventListener()", requiere dos parámetros los cuáles son los siguientes:
+
+				_el primer parámetro es el nombre del evento, ej: click, change, focus, otros 
+
+				_y como segundo parámetro, debemos de indicar el nombre de la función a ejecutar cuando el evento sea disparado ó ejecutado
+
+				NOTA: éste gestos de eventos no requiere que tipo de evento vaya recedido de la parabra "On", a cada evento
+
+
+			_ejemplo:
+
+				var ev = document.getElementById('eMp');
+
+				ev.addEventListener('click', accion);
+
+				function accion(){
+
+					alert('eventos múltiples');
+				}
+
+
+			Remover eventos:
+			________________
+
+			_también, tendremos la posbilidad de remover eventos lo cuál, es especialmente útil para crear lógica en diferentes tipos de modelos de negocios aplicados
+
+			_para lo cuál, dispondremos del método "ev.removeEventListener()", al cuál, también, tendremos que pasarle dos parámetros
+
+				_el primer parámetro corresponderá al nombre del evento relacionado anteriormente a la variable que contiene al elmento html, respectivo
+
+				_y como segundo parámetro debemos de indicarle el nombre de función aplicada previamente ha eliminar del respectivo elemento html
+
+			_lo cuál, nos pemritirá quitarle acción a un elemento ha modo de interruptor en un momento determinado en relación a la lógica del sistema, ej
+
+
+				function miEvento(){
+					
+					document.write(nombre);
+
+					ev.removeEventListener('click', accion);
+
+				}
+
+
+
+
+
+
+		-->
+
+	<!--//////////////////////////////////////////////////////////////////////////-->
+	<!--manejadores de eventos como atributos html-->
+
+	<script type="text/javascript">
+		
+		function myBtn(){
+			
+			alert('hola mundo');
+		}
+
+	</script>
+
+
+	<h1 onclick="myBtn();">hola mundo</h1>
+	
+
+	<!--//////////////////////////////////////////////////////////////////////////-->
+	<!--manejadores de eventos semánticos-->
+
+	<button id="btn">click aquí</button>
+
+	<script type="text/javascript">
+		
+		var proof = document.getElementById('btn');
+
+		function myFunction(e){
+
+			alert("has cliqueado en el botón'",  + e.type + "' con el objeto de nombre id '" + e.target.id +"'");
+		};
+
+		window.onload = function(){
+
+			proof.onclick = myFunction;
+
+		};
+
+	</script>
+	
+	
+
+
+	<!--//////////////////////////////////////////////////////////////////////////-->
+	<!--manejadores de eventos múltiples-->
+
+	<button id="eMp">Eventos múltiples</button>
+
+	<script type="text/javascript">
+		
+		var ev = document.getElementById('eMp');
+
+		ev.addEventListener('click', accion);
+
+		function accion(){
+
+			alert('eventos múltiples');
+		}
+
+		//también podremos agregarle el manejador de eventos múltiples al objeto window, de ésta manera, funcionaríamos en cierta manera, el manejador de eventos semántico con el múltiple, ej:
+
+		window.addEventListener('load', function(){
+
+		});
+
+		window.addEventListener('load', myFunction);
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Objetos
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+
+		document.write(libro.titulo);
+
+
+
+		//objeto con métodos más "this"
+		var persona = {
+
+			nombre: "tony",
+			edad: 35,
+			profesion: "diseñador",
+			nacionalidad: "venezolano",
+			signo: "sagitario",
+			residencia: "barquisimeto",
+			identidad: function(){
+
+				var that = this;
+
+				document.write("Mi Nombre es:" + this.nombre);
+
+				function miFuncion(){
+	
+					document.write(that.nombre);
+				}
+
+				function();
+
+			},
+			eslogan: function(){
+	
+			}					
+	
+		}
+
+		document.write(persona.identidad());
+
+
+
+		
+
+
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #30 - Creación de objetos | https://www.youtube.com/watch?v=PUfn_EIk83o&index=30&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+			
+	
+	Formas de Crear Objetos:
+	________________________
+
+
+
+	Object Create:
+	______________
+
+	_a continuación expresaremos un ejemplo con el uso de prototipos personalizados a través, de los cuáles, podremos hacer referencia ha métodos personalizados y creados por nosotros mismos, de ésta manera, podremos hacer que uno ó más objetos hagan referencia ha éstos determiandos métodos contenidos dentro de objetos creados por nosotros así, como personalizados
+
+	_el siguiente objeto hará del objeto prototipo para los demás objetos creados posteriormente a partir de éste y de sus métodos
+
+	
+		//objeto prototipo
+
+		var BF = {
+			titulo: "battlefield,",
+			genero: "rfp",
+			jugar: function(){
+
+				document.write("Estoy Jugando: " + this.titulo);
+
+			}
+		}
+
+	_para a continuación a través, de la estructura de creación de objetos 
+	"Object.create()", crear un objeto a partir de otro objeto que hará de prototipo ej:
+
+		var BF1 = Object.create(BF);
+			BF1["version"] = "battlefield 1";
+
+		document.write(BF1);
+
+
+	_de ésta manera, podremos ver que ahora el nuevo objeto creado "BF1", es creado a partir del objeto "BF", siguiendo el ejemplo de arriba
+
+
+
+	Object Literal Notation:
+	________________________
+
+	_una forma más simple y reducida de crear objetos en javascript, es a través, de la estructura de object literal notation, la cuál, se expresa a continuación:
+
+
+		var alter = Object.create(Object.prototype);
+
+	_ésta es la manera más larga y clásica de declar un objeto en javascript, en cuál, explícitamente hacemos referencia que el nuevo objeto "alter", será creado a partir del objeto "Object Prototype"
+
+
+	Object Define Property:
+
+	_y a través, de la estructura "object define property", podremos agregar atributos y métodos dentro de un objeto creado a partir de la estructura "Object create", ej:
+	"alter.proppiedad = 'valor'"
+
+		var alter = Object.create(Object.prototype);
+
+			alter.nombre = "Tony";
+
+	_y cuando se definen propiedades a través, de la estructura "object define property", tendremos que a su vez, especificar una serie de opciones como enumerable, otros, que generalmente tienen un valor común
+
+	_para lo cuá, es utilizado el "dot operator", para la simplificación de la expresión
+
+
+
+
+	Sintax Sugar:
+
+	_más existe la notación "Sintax Sugar", la cuál, nos permitirá reducir la cantidad de código y significando lo mismo ej:
+
+		var miObjeto = {
+			nombre: "Tony",
+			apellido: "Gomez",
+			profesion: "Dev"	
+		}
+
+
+
+	Constructores ó Clases:
+	_______________________
+
+	_javascript, no dispone de constructores ó clases de directamente pero las emula de alguna manera
+
+	_ésto es posible a através, del operador "new", más una función 
+
+	_en el siguiente ejemplo crearemos objetos con new, ej:
+
+
+		function Cod(){
+			
+			this.titulo = "Call of Dutty";
+			this.genero = "FPS";
+			this.jugar = function(){
+				document.write('Estoy Jugando' + this.titulo);
+			}
+
+		}
+
+
+	_es una convención que los nombres de las funciones constructoras empiezan con maýuscula ej, "Cod"
+
+	_y para llamar al objeto debemos hacer lo siguiente:
+
+		var UW = new Cod();
+			IM['version'] = 'Infinite Warfare';
+
+		document.write(UW.titulo);
+
+
+	_de ésta manera, estamos creando un nuevo objeto ó instancia del objeto que ya habíamos creado, ésto es posible gracias a la palabra reservada "new", la cuál, nos permitirá crear instancias de un objeto
+
+	_así, de ésta manera, cuando utilizamos el operador "new", precediendo ha una función; lo que hacemos es crear un nuevo objeto y a su vez, asignarle los atributos y métodos del objeto prototype, en éste caso el objeto "cod", que hemos hecho justo más arriba
+
+	_de ésta forma, debemos entender que no existen constructores propiamente dicho, sino que existen "llamadas de construcción por así decirlo", 
+
+	_para lo cuál, exsite el operador "new", el cuál, cuando precede ha una función, estamos haciendo una llamada ha una función en modo construcción
+
+
+	NOTA: a diferencia con la estructura de "Object create", la estructura de constructores ó clases, no crean el prototype, por si mismas sobre su objeto que debería ser el objeto protoeype, al ser creados a partir de éstos, lo cuál, presenta una gran diferencia importante en comparación con la estructura y opción "Object create"
+
+	
+	_una forma de solucionar ésta situación de la falta de herencia de la estructura de constructores a por médio de la siguiente manera agregando lo siguiente:
+
+		Cod.prototype.jugar = function(){
+
+			document.write('Estoy Jugando' + this.titulo);
+			
+		}
+
+	_de ésta manera, le estamos indicando ha javascript, que el objeto "Cod", el el objeto prototipo del objeto instancia a través, de la palabra reservada "new"
+
+	_para que así, tome el método especificado "jugar", y podamos acceder ha éste referenciado ahora si a su respectivo "object prototype"
+
+
+
+
+
+
+	-->
+	
+</body>
+</html>

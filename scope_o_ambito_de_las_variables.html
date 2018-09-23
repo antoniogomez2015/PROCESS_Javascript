@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		function newF(nombre){
+		
+			document.write("Tu nombre es: " + nombre);
+
+		};
+
+		newF("tonyGomez");
+
+		newF("Rafael");
+
+		newF("Ana Maria");
+
+
+
+
+		function mayusculas(text){
+
+			return text.toUpperCase();
+	
+		}
+
+		var nombre = mayusculas("Juan");
+
+		document.write(nombre);
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #16 - Ámbito de las variables | https://www.youtube.com/watch?v=Ck_xKRZR0pc&index=16&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+		
+
+
+	
+	Ambito de las Variables:
+	________________________
+
+	_en javascript, la única estructura que crea ó permite el scope, ó ámbito ó alcance de la varaibles son las funciones
+
+		var miNombre = "Juan";
+
+		function usuario(){
+	
+			document.write(miNombre);
+
+		}
+
+		usuario();
+
+
+	_de ésta manera, debemos entender el funcionalismo de la función en relación a las variables 
+
+	_así, en éste caso, la función "usuario()", al ser llamada ejecuta las sentencias entre llaves
+
+	_en la cuál, ésta debe imprimir en pantalla el contenido de una varaibles
+
+	_entonces la función pregunta ó busca dentro de su propio ámbito ó estructura esa variable en éste caso "miNombre", y como ve que esa variable no se encuentra en su ámbito
+
+	_entonces buscará la variable fuera de su ámbito en el ámbito global ó en el ámbito próximo
+
+
+	_más si repetimos el proceso anterior pero si ésta vez hay más de una variable en diferentes ámbitos
+
+
+		var miNombre = "Juan";
+
+		function usuario(){
+
+			var miNombre = "Tony";
+	
+			document.write(miNombre);
+
+		}
+
+		usuario();
+
+
+	_en éste caso podremos ver que al existir la misma variable en diferentes ámbito, scope, ó alcance, la función en éste caso tomará la varia que esté en el ámbito más cercano
+
+
+	_más también, podremos expresar el caso contrario en el cuál, desemoa acceder desde un ámbito global ha una variable la cuál, se encuentra en un ámbito local 
+
+
+		function usuario(){
+
+			var miNombre = "Tony";
+	
+			document.write(miNombre);
+
+		}
+
+		usuario();
+
+		document.write(miNombre);
+
+	_en éste caso podremos ver que estamos tratando de acceder a la variable "miNombre", la se encuentra y existe sólo dentro de la función "usuario()" 
+
+	_de ésta maenera tendremos un error de "referencia", al querer acceder a un variable desde una ámbito global ha un ámbito local
+
+	_más que de la forma inversa si es correctamente posible
+
+
+
+	Scope:
+	______
+
+	_y para solucionar el scope, ó alcance de las variables con el caso anterior el cuál, deseabamos acceder ha una variable dende un ámbito global ha un ámbito local
+
+	_para lo cuál, sólo tendremos que definir la variable como global al momento de definir ésta
+
+	_entendiéndo así, que si que si definimos una variable con la palabra reservada "var", ésta obedecerá a su contexto
+
+	_más si definimos una variable sin la palabra "var", javascript, la definirá automáticamente en el contexto ó ámbito global así, la hayamos definido en un ámbito local
+
+	_de ésta manera, si podremos acceder ha un variable creada en un ámbito local desde un ámbito ó contexto global ej:
+
+
+		function usuario(){
+
+			miNombre = "Tony";
+	
+			document.write(miNombre);
+
+		}
+
+		usuario();
+
+		document.write(miNombre);
+
+
+
+
+
+	-->
+	
+</body>
+</html>

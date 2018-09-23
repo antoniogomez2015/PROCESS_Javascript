@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascrip</title>
+
+	<!--ejemplo con objeto window-->
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var ele = document.getElementById('proof');
+
+			console.log(ele);
+
+			document.write(ele);
+
+		};
+
+	</script>
+
+
+	<!--ejemplo con evento html-->
+	<script type="text/javascript">
+			
+		function cargador(){
+
+			var ele = document.getElementById('proof');
+
+				console.log(ele);
+
+				document.write(ele);
+
+		};
+
+	</script>
+
+
+
+	<!--
+
+		Fromas y métodos de incorporar javascript, en un documento html, y fuera de él:
+		_______________________________________________________________________________
+
+
+		Consideraciones:
+		________________
+
+		_primeramente debemos entender que debe primeramente de renderizarse el DOM, html, ó lo que es lo mismo haber cargado la página web, en el navegador
+
+		_de lo contrario javascript, se ejecutará con problemas si colocamos éstes antes que el html, entendiendo que el navegaodr interpreta código de arriba hacia abajo
+
+
+
+		Implementación General:
+		_______________________
+
+		_de ésta manera, lo más recomendable es colocar javascript, al final del documento html, para que así, el código javasript, se ejecute cuando todo el código se haya ejecutado previamente para que así, javascript, no presente ningún problema, ej:
+
+
+			<header>
+				
+				<nav></nav>
+
+			</header>
+
+			<main>
+				
+				<section>						
+						
+				</section>						
+
+			</main>
+
+			<footer>
+					
+			</footer>
+
+
+			<script type="text/javascript">
+					
+				document.getElementById('demo');
+
+				alert("Hola Mundo");
+
+			</script>
+
+
+
+
+
+	Implementación en Cabecera y Externa:
+	_____________________________________
+
+	_más tenemos la posibilidad de implementar el javascript, en las cabeceras, de los documentos ó antes del html
+
+	_para lo cuál, dispondremos de dos métodos los cuáles son:
+
+
+
+		Primer método Objeto Window:
+		____________________________
+
+		_el primer método consiste en la implementación del objeto preconstruido window, el cuál, hace referencia a la ventan del navegador
+
+		_de ésta manera, cuando ésta se haya cargado correctamente entonces se ejecutará la función que hemos asignado ó igualado ha éste objeto, ej:
+
+
+			<script type="text/javascript">
+			
+				window.onload = function(){
+
+					var ele = document.getElementById('proof');
+
+					console.log(ele);
+
+					document.write(ele);
+
+				};
+
+			</script>
+
+
+
+
+		Segundo Método por Evento Html:
+		_______________________________
+
+		_más también, dispondremos de otro método el cuál, consiste en utilizar uno de los eventos prec onstruidos en html, éste es onload(), dentro del cuál, haremos el llamado a una función para que así, cuando el cuerpo ó <body>, de la página se haya cargado entonces se ejecute el javascript, general el cuál, se encontrará dentro de ésta función
+
+		_de ésta manera, nos aseguraremos que el javascript, se ejecutará, cuando el documento ya esté cargado correctamente, ej:
+
+
+			<script type="text/javascript">
+			
+				function cargador(){
+
+					var ele = document.getElementById('proof');
+
+					console.log(ele);
+
+					document.write(ele);
+
+				};
+
+			</script>
+
+
+			<body onload="cargador()">
+
+				<header>
+
+				</header
+
+				<main>
+
+				</main>
+
+			</body>
+
+
+
+	-->
+</head>
+<body>
+
+	
+
+	
+</body>
+</html>

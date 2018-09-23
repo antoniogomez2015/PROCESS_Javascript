@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!--
+
+	Tutorial: 
+
+		Curso de Diseño y Programación Web: 14. JavaScript: Algoritmos, diagramas de flujo y eventos | https://www.youtube.com/watch?v=PkV-_58-CeE
+
+
+
+	Valor par ó inpar:
+	__________________
+
+	_para deducir si el valor por ejemplo el indicado por un usuario es par ó impar, podremos hacer uso del siguiente algitmo
+
+
+	Algoritmo:
+	__________
+
+	_primeramente a través, del método "prompt()", capturamos el número indicado por el usuario el cuál, a su vez, guadamos en un variable en éste caso "cons"
+
+	_para posteriormente sacar el residuo del número indicado por el usuario para lo cuál, debemos de sacar el cociente "%", entre "2", de ésta manera, si el número indicado es par, el residuo dará "0", y si el número indicado es inpar, dará como resultado "1", lo cuál, también, a su vez, lo guardaremos en una función en éste caso "modulo"
+
+	_para posteriormente hacer uso de un operador terniario para que así, a través, de éste saber si el resultado del "residuo", es "0", en este caso indicarle al usuario un mensaje como "Par", ó si el resultado del residuo es inpar, entonces indicarle al usuario un mensaje que diga "inpar"
+
+	_para por último contenar las variables y renderizarlas en el cliente ó navegador ante el usuario de forma complementada
+
+
+
+
+	-->
+
+	<button id="alter">indicar cantidad</button>
+
+	<script type="text/javascript">
+		
+		var el = document.getElementById('alter');
+
+		function proof(){
+			
+			var cons = prompt('indique su edad');
+
+			var modulo = cons % 2;
+
+			var tipo = (modulo == 0)?"Par":"Inpar";
+
+			document.write('El número indicado es: ' + cons + ' el cuál, es ' + tipo);
+		}
+		
+		el.addEventListener('click', proof);
+
+
+
+	</script>
+
+</body>
+</html>

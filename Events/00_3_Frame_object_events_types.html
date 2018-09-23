@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	/*
+
+	Documentación de eventos de Javascript:
+	_______________________________________
+
+
+		HTML DOM Events
+
+			https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+	NOTA: la característica de "on", antecediendo al evento sólo aplica a los eventos javascript, que son pasados como atributos html, en línea directamente en el html, convencional
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+	Frame Object Events:
+	____________________
+
+
+
+	onabort
+
+		_El evento ocurre cuando la carga de un recurso ha sido abortada
+
+	onbeforeunload	
+
+		_El evento ocurre antes de que el documento esté a punto de ser descargado
+
+	onerror
+
+		_El evento ocurre cuando se produce un error al cargar un archivo externo
+
+	onhashchange
+
+		_El evento ocurre cuando ha habido cambios en la parte de anclaje de una URL
+
+	onload
+
+		_El evento ocurre cuando un objeto se ha cargado
+
+	onpageshow
+
+		_El evento ocurre cuando el usuario navega a una página web
+
+	onpagehide
+
+		_El evento ocurre cuando el usuario navega fuera de una página web
+
+	onresize
+
+		_El evento ocurre cuando se cambia el tamaño de la vista del documento
+
+	onscroll
+
+		_El evento ocurre cuando se está desplazando la barra de desplazamiento de un elemento
+
+	onunload
+
+		_El evento ocurre una vez que una página se ha descargado (for <body>)
+
+		_éste atributo será aplicado al tag boby, y disparará el evento cuanto éste sea totalmente cargado ó renderizado por el navegador
+
+
+	*/
+
+
+
+
+</script>
+
+	<!--//////////////////////////////////////////////////////////////////////////////////////-->
+	<!--onresize-->
+	<!---JavaScript Tutorial: 'onresize()' Event | https://www.youtube.com/watch?v=NO-U0vP5ikA-->
+
+	<script type="text/javascript">
+
+		//de ésta manera, cuando el tamaño de la ventana del navegador sea modificada se dispará el evento javasciprt
+
+		function change(){
+
+			var el = document.getElementByTagName('body');
+			el[0].style.background = "red";
+
+			var tH = document.getElementByTagName('h1');
+			tH[0].style.color = "purple";
+		}
+		
+
+	</script>
+
+	<body onresize="change();">
+		
+		<h1>hola mundo</h1>
+
+		<h2>BIenvenidos</h2>
+
+	</body>
+	
+
+	<!--//////////////////////////////////////////////////////////////////////////////////////-->
+
+	<!--onunload-->
+	<!--Tutorial: javascript-events listener onunload | https://www.youtube.com/watch?v=BwFP22l1PBE-->
+	<script type="text/javascript">
+
+		//de ésta manera, cuando el elemento "<body>", sea cargado se disparará el el evento
+		
+		function myFunction(){
+			alert("hola mundo");
+		}
+
+	</script>
+
+	<body onunload="miFunction();">
+
+		<h1>Bienvenidos</h1>
+
+	</body>
+
+	<!--////////////////////////////////////////////////////////////////////////////////////////-->
+	
+</body>
+</html>

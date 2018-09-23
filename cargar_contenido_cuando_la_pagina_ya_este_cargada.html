@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript</title>
+
+	<script type="text/javascript">
+
+	/*
+
+	JavaScript - Ejecutar una función cuando la pagina se haya cargado - solución
+
+	Tutorial:
+
+		http://www.lawebdelprogramador.com/foros/JavaScript/1461283-Ejecutar-una-funcion-cuando-la-pagina-se-haya-cargado-solucion.html
+
+
+
+	Hola, aquí les dejo las tres maneras que conozco de cargar una función de JavaScript una vez se haya cargado la pagina.
+
+	*/
+
+
+		
+	/*
+
+		_función la cuál, se ejecutará cuando la página ya esté cargada de ésta manera, debemos de incorporar dentro de ésta función la llamada al "load()", a través, del cuál, cargaremos el html, respectivo y deseado
+
+	*/
+
+		function miFuncion() {
+
+			alert('OK');
+
+			$('#contenedor').load('includes/massive_animacion.html');
+
+		}
+
+	</script>
+
+</head>
+
+<!--
+
+	1.- Poniendo el tag onload en el <body> de nuestra página para que ejecute nuestra función la cuál, llamará a la función que previamente hemos creado
+
+-->
+
+<body onload="miFuncion();">
+
+
+	<!--Contenedor del html, cargado-->
+
+
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--
+
+_Métodos tal cuál, están en el tutorial:
+
+
+1.- Poniendo el tag onload en el <body> de nuestra página para que ejecute nuestra función:
+
+
+			<!DOCTYPE html>
+			<html lang="es">
+			<head>
+				<meta charset="utf-8">
+				<head>
+					<title>Test</title>
+
+					<script>
+					function miFuncion() {
+						alert('OK');
+					}
+					</script>
+
+				</head>
+
+				<body onload="miFuncion();">
+					mi pagina...
+				</body>
+
+			</html>
+
+
+
+2.- Llamando a la función directamente desde javascript con window.onload:
+
+
+			<!DOCTYPE html>
+			<html lang="es">
+			<head>
+				<meta charset="utf-8">
+				<head>
+					<title>Test</title>
+
+					<script>
+					function miFuncion() {
+						alert('OK');
+					}
+
+					window.onload=miFuncion;
+					</script>
+
+				</head>
+
+				<body>
+					mi pagina...
+				</body>
+
+			</html>
+
+
+
+3.- Ejecutar nuestro código dentro del window.onload sin llamar a ninguna función:
+
+
+			<!DOCTYPE html>
+			<html lang="es">
+			<head>
+				<meta charset="utf-8">
+				<head>
+					<title>Test</title>
+
+					<script>
+
+					window.onload=function() {
+						alert('OK');
+					}
+
+					</script>
+
+				</head>
+
+				<body>
+					mi pagina...
+				</body>
+
+			</html>
+
+			
+
+-->
+
+	
+</body>
+</html>

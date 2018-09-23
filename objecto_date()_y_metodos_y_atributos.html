@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--El objecto pre construido Date():
+
+	Referencia: http://www.w3schools.com/js/js_date_methods.asp
+
+	21.- Curso de JavaScript para principiantes. El uso del Objeto Date.
+	https://www.youtube.com/watch?v=XZQScp0Troo&list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx&index=22
+
+
+	el objeto pre construido Date(), nos permitirá configurar la fecha y la hora
+
+	éste no forma parte del DOM, por ende tendremos que construirlo y podremos construir los objecto Date(), que necesitemos
+
+	también, necesitaremos el uso de argumentos para poner un fecha concreta como también, el uso de métodos para editar fechas y horas
+
+	
+	-->
+	
+<!--//////////////////////////////////////////////////////////////////-->
+
+	<!--llamada de objeto -->
+
+		<!--new = Date();-->		
+
+		<!--la forma más fácil de llamar a un objeto Date(), que contenga información sobre la fecha y hora es a través, de la palabra clave ó build-in, "new =", y a su vez, almacenanto éste nuevo objeto en una variable
+
+		de ésta manera la variable que contiene al objeto Date(), "var tiempo", ahora ésta misma variable se ha convertido en el objeto Date(), que tiene información sobre la fecha y hora, de ésta manera habremos creado al objeto Date()
+
+		ésto es posible a través, de la palabra reservada "new", que permite crear nuevos objetos y elementos
+
+		a continuación un ejemplo simple y directo:
+
+		/////////////////////////////////////////////////////////////////////
+
+		<div id="container">
+
+			<p>hora aquí</p>				
+
+		</div>	
+		
+
+		var tiempo = new Date();
+		document.getElementById("container").innerHTML = tiempo.getSeconds()
+
+		/////////////////////////////////////////////////////////////////////
+
+		-->
+
+
+	<!--Métodos del objeto Date()-->
+
+		<!--
+		javascript, cuenta con una serie de métodos para recuperar, configurar y editar esos datos dentro de objetos Date()
+
+		-->
+
+
+		<!--/////////////////////////////////////////////////////////////////-->
+		<!--a continuación los contenedores que serán relacionados posteriormente con los objetos date(), y sus diferentes métodos-->
+
+		<!--mostratos datos directamente-->
+		<p>Mostrando datos directamente:</p>
+			<p id="mostrando_datos"></p>
+				<br />
+
+		<!--creando el objeto Date()-->
+		<p>Creando el objeto Date():</p>
+			<p id="creando_elobjeto_Date()"></p>
+				<br />
+
+		<!--usando "new Date();", para obtener el tiempo actual-->
+		<p>Usando "new Date();", para obtener el tiempo actual:</p>
+			<p id="usando_new_Date()"></p>
+				<br />
+
+		<!--usando new Date(date string), "bajo la notación alglosajona"-->
+		<p>Usando "new Date(String);", "bajo la notación alglosajona":</p>
+			<p id="usando_new_Date(String)"></p>
+				<br />
+
+		<!--usando new Date(milliseconds), "desde: 01 January 1970 00:00:00 UTC.-->
+		<p>Usando new Date(milliseconds), "desde: 01 January 1970 00:00:00 UTC.:</p>
+			<p id="new_Date(milliseconds)"></p>
+				<br />
+
+		<!--usando new Date(year, month, day, hours, minutes, seconds, milliseconds)"-->
+		<p>Usando new Date(year, month, day, hours, minutes, seconds, milliseconds):</p>
+			<p id="new_Date(year, month,..)"></p>
+				<br />
+
+		<!--para convertir fecha ha un string estático-->
+		<p>Para convertir fecha ha un string estático:</p>
+			<p id="Date()ha_String"></p>
+				<br />
+
+		<!--para convertir datos ha "UCT String"-->
+		<p>Para convertir datos ha "UCT String":</p>
+			<p id="UTC_String"></p>
+				<br />	
+
+		<!--método convierte una fecha a un formato más legible-->
+		<p>Método convierte una fecha a un formato más legible:</p>
+			<p id="Date_String"></p>
+				<br />	
+
+		<!--representación de la fecha en: syntax (YYYY-MM-DD) "Año-Mes-Día"-->
+		<p>Representación de la fecha en: syntax (YYYY-MM-DD) "Año-Mes-Día":</p>
+			<p id="(YYYY-MM-DD)"></p>
+				<br />	
+
+		<!--representación de la fecha completa con hours, minutes, and seconds"-->
+		<p>Representación de la fecha completa con hours, minutes, and seconds":</p>
+			<p id="Date_Plus"></p>
+				<br />		
+
+		<!--representación de la fecha largas con una sintaxis "MMM DD YYYY"-->
+		<p>Representación de la fecha largas con una sintaxis "MMM DD YYYY":</p>
+			<p id="Date_long"></p>
+				<br />		
+
+		<!--representación de la fechas cortas con una sintaxis "MM/DD/YYYY"-->
+		<p>Representación de la fechas cortas con una sintaxis "MM/DD/YYYY":</p>
+			<p id="Date_short"></p>
+				<br />	
+
+		<!--representación de la fechas con todos los datos manualmente-->
+		<p>Representación de la fechas con todos los datos manualmente:</p>
+			<p id="Date_fullDate"></p>
+				<br />
+
+		<!--JavaScript ignorará los errores tanto en el nombre del día y en los paréntesis de tiempo:-->
+		<p>JavaScript ignorará los errores tanto en el nombre del día y en los paréntesis de tiempo:</p>
+			<p id="Date_errors"></p>
+				<br />
+
+		<!--The getTime() Method, devuelve el número de milisegundos desde 1 de enero de 1970:, así, podremos repetir éste mismos proceso para los demás métodos expresados en la lista anterior-->
+		<p>The getTime() Method, devuelve el número de milisegundos desde 1 de enero de 1970:, así, podremos repetir éste mismos proceso para los demás métodos expresados en la lista anterior:</p>
+			<p id="metodos"></p>
+				<br />
+
+		<!--array para personalizar los días de la semana en vez de números a strings-->
+		<p>Array para personalizar los días de la semana en vez de números a strings:</p>
+			<p id="semanaArray"></p>
+				<br />
+
+		<!--fecha personalizada para el año-->
+		<p>Fecha personalizada para el año:</p>
+			<p id="fechaPersonalizada"></p>
+				<br />
+
+
+
+
+
+
+		<div id="container">
+		</div>	
+
+
+		<!--//////////////////////////////////////////////////////////////-->
+
+		<script type="text/javascript">
+
+
+			/*formas de instancias un objeto Date(); con argumentos
+			
+			
+			new Date() //objeto date(); son parámetros
+
+			new Date(milliseconds) //objeto date(); con parámetro en milisegundos
+
+			new Date(dateString) //objeto date(); con parámetro de un string, de datos
+
+			new Date(year, month, day, hours, minutes, seconds, milliseconds) //objeto date(); con parámetros concretos
+		
+			*/
+
+			/*///////////////////////////////////////////////////////////////*/
+			/*métodos del objeto date(), relacionados con los contenedores y elementos expresados un poco más arriba*/
+
+			/*de ésta manera, con haber creado el objeto date(), una vez almacenandolo en una variable, ej; "var fecha = new Date()", podremos llamarlo a través, de sus diferentes métodos expresados a continuación*/
+
+			//mostrando datos directamente
+			document.getElementById("mostrando_datos").innerHTML = Date();
+
+			//creando el objeo Date()
+			var fecha = new Date();
+			document.getElementById("creando_elobjeto_Date()").innerHTML = Date();
+
+			//usando "new Date();", para obtener el tiempo actual
+			var fecha2 = new Date();
+			document.getElementById("usando_new_Date()").innerHTML = fecha2;
+
+			//usando new Date(date string), "bajo la notación anglosajona"
+			var fecha3 = new Date("October 13, 2014 11:13:00");
+			document.getElementById("usando_new_Date(String)").innerHTML = fecha3;
+
+			//usando new Date(milliseconds), "desde: 01 January 1970 00:00:00 UTC.
+			var fecha4 = new Date(86400000);
+			document.getElementById("new_Date(milliseconds)").innerHTML = fecha4;
+
+			//usando new Date(year, month, day, hours, minutes, seconds, milliseconds)
+			var fecha5 = new Date(99,5,24,11,33,30,0);
+			document.getElementById("new_Date(year, month,..)").innerHTML = fecha5;
+
+			//para convertir fecha ha un string estático
+			var fecha6 = new Date();
+			document.getElementById("Date()ha_String").innerHTML = fecha6.toString();
+
+			//para convertir datos ha "UTC string"
+			var fecha7 = new Date();
+			document.getElementById("UTC_String").innerHTML = fecha7.toUTCString();
+
+			//método convierte una fecha a un formato más legible
+			var fecha8 = new Date();
+			document.getElementById("Date_String").innerHTML = fecha8.toDateString();
+
+			/*
+			javascript, tiene cuatro tipos de formato de fechas:		
+				ISO Dates
+				Long Dates
+				Short Dates
+				Full Format
+			*/
+
+
+			//JavaScript ISO Dates
+
+			/*ISO 8601 es la norma internacional para la representación de fechas y horas.
+
+			La sintaxis de 8601 ISO (AAAA-MM-DD) es también el formato de fecha JavaScript preferido:*/
+
+			//representación de la fecha en: syntax (YYYY-MM-DD) "Año-Mes-Día"
+			var fecha9 = new Date("2015-12-03");
+			document.getElementById("(YYYY-MM-DD)").innerHTML = fecha9;
+
+			//representación de la fecha completa con hours, minutes, and seconds"
+			var fecha10 = new Date("2015-03-25T12:00:00");
+			document.getElementById("Date_Plus").innerHTML = fecha10;
+
+
+
+			//JavaScript Long Dates.
+
+			/*Fechas largas son más a comunes y éstas se escriben con una sintaxis  "MMM DD YYYY", como esta:*/
+
+			//representación de la fecha largas con una sintaxis "MMM DD YYYY"
+			var fecha11 = new Date("Mar 25 2015");
+			document.getElementById("Date_long").innerHTML = fecha11;
+
+			//pero el año, el mes y el día, pueden ir en cualquier orden
+
+				//var d = new Date("25 Mar 2015");
+				//var d = new Date("2015 Mar 25");
+
+			//y el mes puede escribirse completo ó parcialmente
+
+				//var d = new Date("January 25 2015");
+				//var d = new Date("Jan 25 2015");
+
+			//así, como también, las comas son innoradas
+
+				//var d = new Date("2015, JANUARY, 25");
+
+
+
+			//JavaScript Short Dates.
+
+			/*Fechas cortas son más a frecuentes y se escriben con una sintaxis como esta: "MM/DD/YYYY"*/
+
+			//representación de la fechas cortas con una sintaxis "MM/DD/YYYY"
+			var fecha12 = new Date("03/25/2015");
+			document.getElementById("Date_short").innerHTML = fecha12;
+
+			//pero también acepta los siguientes separadores "/ ó -", entre los datos
+
+				//var d = new Date("03/25/2015");
+				//var d = new Date("03-25-2015");
+
+			//así, como también, acepta cualquier orden de los datos
+
+				//var d = new Date("2015/03/25");
+
+
+
+			//Full Date Format
+
+			/*JavaScript aceptará cadenas de fecha en "formato de JavaScript completa":*/
+
+			//representación de la fechas con todos los datos manualmente
+			var fecha13 = new Date("Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)");
+			document.getElementById("Date_fullDate").innerHTML = fecha13;
+
+			//JavaScript ignorará los errores tanto en el nombre del día y en los paréntesis de tiempo:
+			var fecha14 = new Date("Fri Mar 25 2015 09:56:24 GMT+0100 (Tokyo Time)");
+			document.getElementById("Date_errors").innerHTML = fecha14;
+
+
+
+			//JavaScript Date Methods
+
+			/*Los métodos Date(); permiten obtener y valores de fecha establecidos (años, meses, días, horas, minutos, segundos, milisegundos)*/
+
+			/*
+			getDate() //optener días como un número de (1-31)
+			getDay() //optener el día de la semana como un número de (0-6)
+			getFullYear() //optener el año en cuatro dígitos (yyyy)
+			getHours() //optener la hora en (0-23)
+			getMilliseconds() //optener los milisegundos en (0-999)
+			getMinutes() //optener minutos en (0-59)
+			getMonth() //optener meses en (0-11)
+			getSeconds() //optener segundos en (0-59)
+			getTime() //Obtener el tiempo (milisegundos desde 1 de enero de 1970)
+			*/
+
+
+			//ejemplos simples y directos de aplicaciones métodos "Date Methods"
+
+			//The getTime() Method, devuelve el número de milisegundos desde 1 de enero de 1970:, así, podremos repetir éste mismos proceso para los demás métodos expresados en la lista anterior
+
+			var metodo1 = new Date();
+			document.getElementById("metodos").innerHTML = metodo1.getSeconds();
+
+
+			//la mayoría de los métodos de la lisda expresada anteriormente arrojan como resultado por lo general un array, que va des desde (0, a ...), por ende en concaciones comúnes habrá que realizar arrays personalizados para apañar una mejor y más legible visualización ante el usuario:
+
+			var array = new Date();
+			var semana = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			document.getElementById("semanaArray").innerHTML = semana[array.getDay()];
+
+
+
+			//Date Set Methods
+
+			/*éstos nos permiten configurar fechas personalizadas más allá de la fecha actual ó disponible en un momento determinado*/
+
+			/*
+			setDate() //éste permite ajuste el día como un número (1-31)
+			setFullYear() //éste permite ajustar el día (orden opcional month and day)
+			setHours() //éste permite ajustar la hora como un número (0-23)
+			setMilliseconds() //éste permite ajustar los milisegundos en (0-999)
+			setMinutes() //éste permite ajustar los minutos en (0-59)
+			setMonth() //éste permite ajustar los meses en (0-11)
+			setSeconds() //éste permite ajustar los segundos en (0-59)
+			setTime() //éste permite ajustar el tiempo desde (milliseconds since January 1, 1970)
+			*/
+
+
+			//The setFullYear() Method
+
+			/*así, mismo prodríamos mificar el número de array de cada uno de los tipos de datos de las lista expresada en el paso anterior, personalizando así, la fecha y l hora respectivamente, sea ésta en horas, minutos, segundos, otros*/
+
+			var newFecha = new Date();
+			newFecha.setFullYear(2020, 0, 14);
+			document.getElementById("fechaPersonalizada").innerHTML = newFecha;
+
+
+			/*y el método "toTimeString()", nos permitirá convertir los valores de la hora ó tiempo en valores strings
+
+				toTimeString()
+		
+			así, podremos apliar éste método de forma conjunta con los demás métodos y formas del objeto date();
+
+			*/
+
+
+
+
+		</script>
+
+
+
+
+
+		<script type="text/javascript">
+			
+			function tiempoActual(){
+
+				var salida = "";
+				var tiempo = new Date();
+
+				salida += "<br/>Fecha: " + tiempo.getDate();
+				salida += "<br/>Mes: " + tiempo.getMonth();
+				salida += "<br/>Año: " + tiempo.getFullYear();
+				salida += "<br/>Horas: " + atiempo.getHours();
+				salida += "<br/>Minutos: " + tiempo.getMinutes();
+				salida += "<br/>Segundos: " + tiempo.getSeconds();
+				document.getElementById("container").innerHTML = salida;
+
+			};					
+
+		</script>
+
+		<script type="text/javascript">
+
+			document.write('tiempo actual ha modo de lista');
+
+			tiempoActual();
+
+		</script>				
+
+		<input type="button" onclick="location.reload(true);" value="Actualizar Fecha">	
+
+		<br /><br />
+
+
+		<script type="text/javascript">
+
+			document.write('información del año actual:')
+
+			var añoActual = new Date();
+
+			document.getElementById('saberAño').innerHTML = añoActual.getDate();
+
+		</script>
+
+
+		<p id="saberAño">información aquí</p>
+
+		<br /><br />
+
+
+		<script type="text/javascript">
+
+			/*función con un array, para la correcta representación del año, ya que arrays, comienzan en "0-11", hasta once, de ésta manera nos aparecerán los meses de forma incorrecta para lo cuál, podremos utilizar el siguiente método para hacer de forma correcta*/
+
+			function fechaYHora(){
+				/*la variable "salida_T", obtendrá valores del tiempo requerido*/
+				var salida_T = "";
+				/*aquí creamos al objeto date(), para el parámetro de día*/
+				var dia = new Date();
+				/*a través, de éste array, estaremos convirtiendo los valores nuéricos ha valores de strings, corrigiendo el error de los números*/
+				var mes = new Array();
+					mes[0] = "Enero";
+					mes[1] = "Febrero";
+					mes[2] = "Marzo";
+					mes[3] = "Abril";
+					mes[4] = "Mayo";
+					mes[5] = "Junio";
+					mes[6] = "Julio";
+					mes[7] = "Agosto";
+					mes[8] = "Septiembre";
+					mes[9] = "Octubre";
+					mes[10] = "Noviembre";
+					mes[11] = "Diciembre";
+					/*aquí obtenemos el mes del array, mientras que a su vez, le anteponemos la variable con la hora del día y mes*/
+					var m = mes[dia.getMonth()];
+				/*aquí creamos el objeto date(), para el tiempo total*/
+				var ahoraMismo = new Date();
+				salida_T += "<br />Fecha: " + ahoraMismo.getDate();
+				/*observese que aquí en vez de "getMonth()", se ha pasado la variable "m", la cuál, ya contiene ésta información y la del array en forma conjunta y corregida*/
+				salida_T += "<br />Mes: " + ahoraMismo.m;
+				salida_T += "<br />Mes: " + ahoraMismo.getDate();
+				salida_T += "<br />Año: " + ahoraMismo.getFullYear();
+				salida_T += "<br />Horas: " + ahoraMismo.getHours();
+				salida_T += "<br />Minutos: " + ahoraMismo.getMinutes();
+				salida_T += "<br />Segundos: " + ahoraMismo.getSeconds();
+
+			}
+
+			document.getElementById('newTime').innerHTML = "salida_T";
+
+		</script>
+
+
+		<p id="newTime"></p>
+
+
+
+
+</body>
+
+</html>
+
+

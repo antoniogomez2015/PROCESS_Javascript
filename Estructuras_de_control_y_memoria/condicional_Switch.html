@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		premiado = true;
+
+
+		switch(premiado){
+
+			case true:
+
+				document.write("has clasificado correctamente");
+
+				break;
+
+			case false:
+
+				document.write("has sido eliminado!")
+
+				break;
+	
+		};
+
+
+
+		dia = 4; 
+
+		switch(dia){
+
+			case 1:
+
+				document.write("Lunes");
+
+				break;
+
+			case 2:
+
+				document.write("Martes");
+
+				break;
+
+			case 3:
+
+				document.write("Miércoles");
+
+				break;
+
+			case 4:
+
+				document.write("Jueves");
+
+				break;
+
+			case 5:
+
+				document.write("Viernes");
+
+				break;
+
+			case 6:
+
+				document.write("Sábado");
+
+				break;
+
+			case 7:
+
+				document.write("Domingo");
+
+				break;
+
+			default:
+
+				document.write("día de la semana incorrecto!")
+	
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #8 - Switch | https://www.youtube.com/watch?v=kedU_XCfx7Y&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=8
+
+
+	
+	Condicional Switch:
+	___________________
+
+	_a través, de la estructura condicional "switch", podremos hacer condicionales a través, de suiches, los cuáles harán de condicional cada uno de éstos casos
+
+	_así, de ésta manera, al cumplirse uno de éstos ya no pasará el siguiente suiche ej:
+
+
+		_premiado = true;
+
+
+		_switch(premiado){
+
+			case true:
+
+				document.write("has clasificado correctamente");
+
+				break;
+
+			case false:
+
+				document.write("has sido eliminado!");
+
+				break;
+	
+		};
+
+
+
+	Estructura:
+	___________
+
+	_de ésta manera, podremos ver para crear el condicional switch, requerimos de un elemento externo, en éste caso será una variable "premiado", la cuál, tiene un valor de "true", ó verdadero, un valor booleano la cuál, será incluida y utilizada para el condicional switch
+
+	_para a continuación expresar la palabra reservada "switch", seguida de dos paréntesis "()", dentro de los cuáles, indicaremos el valor ha analizar, en éste caso será el valor de la variable "premiado", la cuál, tiene un valor de "true"
+
+	_seguido de dos llaves "{}", dentro de las cuáles, indicaremos todas las sentencias ó suiches ha ejecutarse
+
+	_así, en el caso "case", de ser un valor en éste caso de "true:", entonces ejecuta las setencias encontradas a continuación
+
+		_"document.write("has clasificado correctamente");" 
+
+	_hasta que encuentres el siguiente "break", el cuál, romperá la estructura del lectura ó ejecución
+
+
+	_y en el caso "case", de ser un valor en éste caso de "false", entonces ejecuta las sentencias encontradas a continuación
+
+		_"document.write("has sido eliminado!");"
+
+	_hasta que encuentres el siguiente "break", el cuál, romperá la estructura del lectura ó ejecución
+
+
+	NOTA: en caso de no incorporar la palabra reservada "break", dentro de la estructura del switch, entonces se ejecutarán ambas sentencias ó casos, tanto la "true", como la "false", ésta opción es útil para ciertos casos específicos
+
+
+
+
+	Switch Completo:
+	________________
+
+	_a continuación un ejemplo más elaborado del condicional switch:
+
+		_dia = 4; 
+
+		_switch(dia){
+
+			case 1:
+
+				document.write("Lunes");
+
+				break;
+
+			case 2:
+
+				document.write("Martes");
+
+				break;
+
+			case 3:
+
+				document.write("Miércoles");
+
+				break;
+
+			case 4:
+
+				document.write("Jueves");
+
+				break;
+
+			case 5:
+
+				document.write("Viernes");
+
+				break;
+
+			case 6:
+
+				document.write("Sábado");
+
+				break;
+
+			case 7:
+
+				document.write("Domingo");
+
+				break;
+
+			default:
+
+				document.write("día de la semana incorrecto!")
+	
+		}
+
+	_así, como también, contaremos con el comodín de "default:", a través, del cuál, podremos ejecutar sentencias a partir de éste cuando no se cumpla ninguna de las condiciones dentro los suiches del "switch", propieamente dicho
+
+
+
+	Switch Extended:
+	________________
+
+	_más también para casos especiales podremos extender las posibilidades de switch, haciendo que éste se comporte haciando comparaciones como si fuese un "if(){}"	
+
+	_para que así, de ésta manera, sólo con colocar la palabra reservada "switch", seguida de dos paréntesis "()", dentro de los cuáles debemos de colocar la palabra reservada "true", ó valor booleano, verdadero el cuál, nos permitirá crear comparaciones al siemrpe tener un valor afirmativo para todos los suiches respectivos
+
+	_de ésta manera, en cada caso "case", ahora entre paréntesis "():", poder hacer comparaciones ej "case (edad < 18):"
+
+	_así, seguido de los paréntesis y dos puntos anteriores seguir con las sentencias ha ejecutar si la condición respectiva se cumple
+
+	_para posteriormente romper la lectura y ejecución con un "break", y volver ha comenzar el ciclo de análisis si la condición no se cumple, y si se cumple entonces renderizar la sentencias y respectivas para posteriormente salir del "switch"
+
+
+
+		_var edad = 18
+
+		_switch(true){
+
+			case (edad < 18):
+
+				document.write("eres menor de edad aún")
+
+			break;
+
+			case (edad > 65):
+
+				document.write("el límite de edad es de 65 años!")
+
+			break;
+
+			default:
+
+				document.write("sigue intentando")
+	
+		}
+
+
+	
+
+
+
+	-->
+
+	<script type="text/javascript">
+		
+		var edad = 18
+
+		switch(true){
+
+			case (edad < 18):
+
+				document.write("eres menor de edad aún")
+
+			break;
+
+			case (edad > 65):
+
+				document.write("el límite de edad es de 65 años!")
+
+			break;
+
+			default:
+
+				document.write("sigue intentando")	
+		}
+
+	</script>
+	
+</body>
+</html>

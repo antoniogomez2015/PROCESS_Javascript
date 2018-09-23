@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>	
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--
+
+	Object Window.Date:
+	___________________
+
+
+	_el el objeto Date, nos permitirá manipular la fecha y la hora ante el usuario y en aplicaciones
+
+	_el objeto date, no forma parte del DOM, por lo que tendremos que crear nuestros propios objetos date, a la hora de utilizarlos
+
+	_y cada uno de los objetos que creemos pueden representar una fecha y hora determinada diferente
+
+
+	Crear un Objeto Date:
+	_____________________
+
+	_para lo cuál, debemos hacer uso de la palabra clave "New", la cuál, nos permitirá instanciar un objeto ya existentes
+
+	_así, como también, es recomendable almacenar una objeto Date, instancia en una variable para que así, podamos hacer un uso más fácil de éste, ej:
+
+		
+		var miFecha = new Date();
+
+	_para luego, hacer de los diferentes métodos podremos condigurar y representar la fecha y la hora de diferentes maneras y a través, de diferentes criterios, ej:
+
+		document.getElementById('demo').innerHTML = miFecha.getDate();
+
+	_de ésta manera, podremos ver que estamos en éste caso inyectando sobre un elemento html, tanto la variable "miFecha", que contiene al objeto Date(), instanciado así, como también, hemos concatenado ".", uno de los métodos posibles que permite el objeto Date, en éste caso utilizamos el método "getDate()"
+
+	_de ésta manera, podremos determinar el flujo de trabajo con el método Date, de la siguiente manera, primero debemos expresar éste por lo general guardado en una variable y posteriormente contenarle el método ha utilizar para configurar la hora
+
+
+	Referencia del objeto Date:
+
+		http://www.w3schools.com/jsref/jsref_obj_date.asp
+
+
+
+	Metodo toLocaleTimeString():
+	____________________________
+	
+
+	_el método toLocaleTimeString(), éste método nos permite indicar el tiempo actual, específicamente la hora actual lo cuál, es altamente recomendable, ej; "toLocaleTimeString()"
+	
+	_lo cuál, será traducido hasta la respectiva hora en relación a la hora actual ej:
+
+		11:35:33
+		
+
+
+-->
+
+
+<button onclick="myFunction()">Ver Fecha y Hora</button>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	
+		function myFunction() {
+
+		    var d = new Date();
+		    var n = d.toLocaleTimeString();
+		    document.getElementById("demo").innerHTML = "La hora actual es: " + n;
+
+		}
+
+
+</script>
+
+
+
+
+	
+
+
+
+</body>
+
+</html>
+
+

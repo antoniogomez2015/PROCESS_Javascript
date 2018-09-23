@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		premiado = true;
+
+
+		switch(premiado){
+
+			case true:
+
+				document.write("has clasificado correctamente");
+
+				break;
+
+			case false:
+
+				document.write("has sido eliminado!")
+
+				break;
+	
+		};
+
+
+
+		dia = 4; 
+
+		switch(dia){
+
+			case 1:
+
+				document.write("Lunes");
+
+				break;
+
+			case 2:
+
+				document.write("Martes");
+
+				break;
+
+			case 3:
+
+				document.write("Miércoles");
+
+				break;
+
+			case 4:
+
+				document.write("Jueves");
+
+				break;
+
+			case 5:
+
+				document.write("Viernes");
+
+				break;
+
+			case 6:
+
+				document.write("Sábado");
+
+				break;
+
+			case 7:
+
+				document.write("Domingo");
+
+				break;
+
+			default:
+
+				document.write("día de la semana incorrecto!")
+	
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #9 - Condiciones complejas | https://www.youtube.com/watch?v=IbPSrCGXxIs&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=9
+
+
+	
+	Condicional Anidados:
+	_____________________
+
+	_tenemos la posibilidad decrear estructuras condicionales anidadas para que así, de ésta manera, podamos hacer condicionamientos más complejos y específicos
+
+	_para lograr resultados más exactos y adaptados ha requerimientos concreto
+
+
+
+	Condicionales If(){} Anidados:
+	______________________________
+
+	_a continuación crearemos un condicional if(){}, anidado ó compuesto para aumentar las posibilidades de creación y desarrollo con éste tipo de condicional:
+
+
+		_var edad = 66;
+
+
+		_if(edad > 18){
+
+			document.write("Bienvenido al Club!");
+	
+		}else if(edad < 65){
+
+			document.write("la edad máxima permitida es de 65 años!");
+	
+		}else{
+
+			document.write("invida a un amigo que entre por ti!");
+	
+		};
+
+
+		_en el ejemplo anterior podremos ver que la edad ó valor de la variable "edad", es de "66", más aún así, el condicional no llega ha ejecutar el "else if(edad > 65)", ya que ésta condición secumple cuándo el valor de la variable "edad", es mayor que "65", años, en éste ejemplo
+
+		_ésto sucede por que así, el valor de la variable "edad", llegue hasta 100, ó más siempre éste valor será superior ha "18", como es requerido por el condicional "if(){}", el cuál, está primero que el condicional "else if()", por ésta razón nunca en éstas circustancias podrá ejecutarse el condicional "else if(){}", sin contar que cuando hay una coincidencia en el condicional, los demás condicionales no se ejecutan ya que javascript, saldrá de la estructura del condicional y seguirá ejetando las siguientes sentencias fuera del condicional
+
+
+		_por lo que para éstos casos es son necesarios y aplican los condicionales anidados ó compuestos
+
+		_de ésta manera, podremos expresar la estructura de control if, de la siguientes manera para solucionar éste tipo de casos más complejos:
+
+
+			var edad = 66;
+
+
+			_if(edad > 18){
+
+				if(edad < 65){
+
+					document.write("Bienvenido al Club!");
+	
+				}else{
+
+					document.write("la edad máxima permitida es de 65 años!");
+	
+				}				
+		
+			}else{
+
+				document.write("invita ha un amigo que entre por ti!");
+		
+			};
+
+
+		_de ésta manera, estamos incrementando el control y las posibilidades de diseño a través, de una estructura de control más avanzada
+
+		_ya que en éste caso, estamos consultando que si "if", la edad "65", es mayor ">", que "18", años
+
+		_y si así, es entonces que consulta a su vez, si "if(if())", la edad es menor "<", que "65", y si es así, si la edad es menor ha "65", años entonces ejecute la siguiente sentencia "Bienvenido al Club!"
+
+		_más si edad es superior en éste caso, entonces ejecute "else{}", la siguiente sentencia "la edad máxima permitida es de 65 años!"
+
+		_y si la edad es menor ha "18", entonces ejecute la siguiente sentencia 
+		"else{}, final", "invita ha un amigo que entre por ti!"
+
+
+
+	Condicionales con Operadores Logicos Binarios:
+	______________________________________________
+
+	_más para simplicar las cosas disponemos en javascript, de los operadores lógicos en éste caso los binearios, ó que aceptan dos operadores, uno a la derecha y otro a la izquierda, éstos son:
+
+		_&& = And
+
+			_en éste operador ambas condiciones deben de cumplirse "true"; tanto la que está a la derecha como la que está a la izquierda del operador lógico
+
+		_|| = Or
+
+			_en éste operador sólo una ó ambas condiciones deben de cumplirse "true"; la que está a la derecha y la que está a la izquierda ó una de éstas
+
+
+	_de ésta manera, ahora podremos expresar el mismo ejemplo anterior pero ahora de una manera, mucho más simple y entendible
+
+
+		_edad = 15;
+
+		_if(edad > 18 && edad < 65){
+
+			document.write("Bienvenido al Club!");			
+
+		}else{
+
+			document.write("invita ha un amigo que entre por ti!");
+	
+		}
+
+	_de ésta manera, expresaremos la misma lógica del caso anterior aunque no las mismas sentencias ante el usuario ya que éste caso sólo podremos enviar dos mensajes ante el usuario y tres mensajes como en el ejemplo anterior
+
+
+
+
+	
+
+
+
+	-->
+	
+</body>
+</html>

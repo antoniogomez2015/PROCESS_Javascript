@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		function newF(nombre){
+		
+			document.write("Tu nombre es: " + nombre);
+
+		};
+
+		newF("tonyGomez");
+
+		newF("Rafael");
+
+		newF("Ana Maria");
+
+
+
+
+		function mayusculas(text){
+
+			return text.toUpperCase();
+	
+		}
+
+		var nombre = mayusculas("Juan");
+
+		document.write(nombre);
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #14 - Creación de funciones | https://www.youtube.com/watch?v=1CdiNPAR1N0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=14
+
+		http://www.w3schools.com/js/js_datatypes.asp
+
+
+	
+	Funciones Personalizadas:
+	_________________________
+
+	_debe entenderse que existen funciones creadas ó builting, por el sistema ó funciones internas del sistema las cuáles, tiene una finalidad determinada
+
+	_más las funciones personalizadas son las que podemos crear por nosotros mismos, darle un nombre específico y asignarle una serie de acciones ha realizar en relación ha una necesidad concreta
+
+	_las funciones las podemos utilizar al mismo nivel que las variables
+
+	_de ésta manera podremos utilizar las funciones en cualquier contexto 
+
+	_así, como también, éstas se pueden enviarse 
+
+	_éstas se pueden intercambiar 
+
+	_éstas se pueden retornar 
+
+	_éstas se pueden enviar como parámetros
+
+	_éstas se pueden devolver "callback"
+	
+
+	_a través, de las funciones personalizadas podremos crear nuestras propias funciones personalizadas con nuetras características y especificaciones
+
+	_lo cuál, nos permitirá crear estructuras de control y desarrollo más complejas y útiles a través, de algorítmos los cuáles, nos permitirán escribir menos código por medio de funciones personalizadas que apliquen a más utilidades a la vez
+
+	_entendiendo así, que una función es una estructura de datos que se ejecuta una tarea la cuál, se puede repetir en uno ó diferentes entornos reciclando así, la función para diferentes aplicaciones
+
+	_también, podríamos hacer una alegoría con un "snippet", de código ó sentencias juntas que podemos llamar y utilizar de forma práctiva y rápida
+
+	
+	Consideraciones:
+
+	_una función personalizada debería de tener una sóla función u objetivo claro y definido para que así, éste se ejecute correctamente y sin problemas ni complicaciones
+
+
+
+	Hoisting:
+
+	_una función declarada es aquella que al momento de crearse se le ha asignado un nombre y por énde no es anónima y a su vez, ha ésta se ha agregado sus declaraciones netre llaves "{}"
+
+	_las funciones declaradas pueden llamarse antes de definirse al igual que las variables, ésto es posible a través, del "hoisting", ó "elevación" el cuál, colocará la declaración de una función en la primera línea de un documento javascript, así, ésta haya sido declarada por ejemplo en la línea 350
+
+	_
+
+
+
+	Crear una Función:
+
+	_para crear una función debemos de hacer uso de la palabra reservada "function", seguida de un nombre el cuál, personalizará y hará referencia a respectiva función
+
+	_seguida de dos paréntesis "()", a través, de los cuáles, podremos pasar parámetros ó nó
+
+	_para a continuación asignar dos llaves "{}", dentro de las cuáles, indicaremos todas las sentencias que conformarán nuestro programa ó snippet, ó functión personalizada ej:
+
+		_function newF(){
+
+			document.write("Bienvendos");
+	
+		}
+
+	_y para llamar la función en un punto ó momento determinado para que así, se ejecuten las sentencias dentro de ésta
+
+	_debemos hacer uso del nombre de la función seguida de sus dos paréntesis "()"
+
+		_newF();
+
+	_para que así, javascript, ejecute la sentencias dentro de ésta, en éste caso:
+
+		_Bienvenidos
+
+
+
+	Funciones con Parámetros:
+
+	_así, como también, tendremos la posibilidad de agregar parámetros al momento de llamar a la respectiva función para que así, podamos cambiar ó alterar el valor por defecto de la función respectiva ha procesar
+
+	_para lo cuál, tendremos que al momento de declarar la función asignarle un valor genérico como parámetro "()", en éste caso "nombre", el cuál, podrá ser reemplazado ó sustituido con el valor pasado como parámetro al momento de llamar a la función respectiva
+
+		_function newF(nombre){
+		
+			document.write("Tu nombre es: " + nombre);
+
+		};
+
+		_newF("tonyGomez");
+
+		_newF("Rafael");
+
+		_newF("Ana Maria");
+
+
+	_y si deseamos utilizar el valor capturado por la acción del usuario en éste caso, suministrar su nombre a través, de un string, de texto personalizado
+
+	_para lo cuál, sólo tendremos de asignar el mismo nombre ó valor genérico que asignamos a la función como parámetro a la hora de declar ésta por primera vez, en éste caso "nombre"
+
+	_así, en la sentencia ha ejecutar dentro de la función en éste caso, estamos llamando ha ese parámetro dinámico de la siguiente manera
+
+		_"Tu nombre es: " + nombre
+
+	_a través, del método de imprimir en pantalla estamos pasando como parámetro un string, estático y el nombre del parámetro dinámico el cuál, estará superditado por la cción del usuario y por tanto es dinámico
+
+
+	_de ésta manera, podremos agregar ó asignar todos los parámetros personalizados separados por coms ",", que desiemos para la función 
+
+
+		_function newF(nombre, apellidos){
+		
+			document.write("Tu nombre es: " + nombre + " y tu Apellido es: " + apellidos);
+
+		};
+
+		_newF("Tony", "Gomez");
+
+		_newF("Rafael", "Tejada");
+
+		_newF("Ana Maria", "Gonzalez");
+
+
+
+	Funciones con la Opción Return:
+
+	_también, tendremos la posibilidad de utilizar el valor ó resultado de las operaciones realizadas por las sentencias que conforman la respectiva función
+
+	_de ésta manera, podremos utilizar éstos resultados para hacer procesos de procesos para lograr así, procesos más complejos entre otras muchas posibilidades ej:
+
+
+		_function mayusculas(text){
+
+			return text.toUpperCase();
+	
+		}
+
+		var nombre = mayusculas("Juan");
+
+		document.write(nombre);
+
+
+	_de ésta manera, en el anterior ejemplo podremos ver que la función "mayusculas", requiere un parámetro "text"
+
+	_el cuál, le pasamos "Juan", al momento en el cuál, llamamos a ha ésta respectiva función y que a su vez, ésta la guardamos dentro de una nueva variable "nombre"
+
+	_y cuando llamamos a la función ésta ejecuta las sentencias en su interior "{}", el cuál, es convertir un valor de texto ó string, en carácteres e mayúscuas
+
+	_pero precediendo ha ésta sentencia se encuentra la palabra reservada "return", a través, de la cuál, podremos capturar ese valor hasta ese punto para poder utilizar éste valor fuera de la función en cualquier momento
+
+	_para que así, de ésta manera, fuera de la función "mayusculas", podamos imprimir en pantalla "document.write", el espectivo valor guardado en la variable en éste caso "nombre"
+
+	_de ésta manera, podremos aumentas en gran manera la posibilidad de acción y alcance de las variables lo cuál, las hace ahora funciones de doble sentido lo que quiere decir, de que ahora ésta tendrán funcionalidad en relación a la información suministrada por el usuario como ambién, ahora éstes pueden arrojar un resultado el cuál, podremos utilizar posteriormente
+
+
+	Un buen ejemplo:
+
+		
+		//javascript
+
+		function informeDeBotones(botonId, botonName, botonValor){
+			/*y como sentencias crearemos variables que recojerán la información obtenida de los botones respectivos*/
+			//donde "\n", secuencia de escape es un character, de nueva línea que obliga al interprete ha saltar de línea
+
+			//ésta variable recogerá información sobre ID, del botón
+			var userMessage1 = "id del boton: " + botonId + "\n"
+
+			//ésta variable recogerá información sobre el nobmre del botón
+			var userMessage2 = "Nombre del Botón: " + botonName + "\n"
+
+			//ésta variable recogerá información sobre "value", del botón
+			var userMessage3 = "Valor del Botón: " + botonValor + "\n"
+
+			//por último se generará un alerta con la información respectiva
+			alert(userMessage1 + userMessage2 + userMessage3)
+		};
+
+
+		//html
+
+		<input type="button" id="id1" name="Botón Izquierdo" value="Izquierdo" onclick="informeDeBotones(this.id, this.name, this.value)"/>
+
+		<input type="button" id="id2" name="Botón Cenrtal" value="Central" onclick="informeDeBotones(this.id, this.name, this.value)"/>
+
+		<input type="button" id="id3" name="Botón Derecho" value="Derecho" onclick="informeDeBotones(this.id, this.name, this.value)"/>
+
+
+	Decripción del ejercicio:
+
+	_ésto es posible gracias a la palabra reserva "this", la cuál, hace referencia al elemento mismos al cuál,  se ha pulsado y hace referencia ó vive donde éste es declarado
+
+	_así, en éte caso, está haciendo referencia ha todos los elementos, tanto el 'id="', 'name=""', y 'value=""', 
+
+		_"this.id, this.name, this.value": 
+
+	_los cuáles, serán filtrados por las variables dentro de la función
+
+	
+
+
+	
+
+
+
+	-->
+	
+</body>
+</html>

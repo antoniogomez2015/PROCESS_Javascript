@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>	
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--Variables-->
+
+<!--las variables son contenedores en los cuáles, podremos almacenar varios tipos de datos como:
+
+	_número enteros
+
+	_números decimales
+
+	_strings (texto)
+
+
+javascript, en un lenguaje de programación case sensitive, ésto quiere decir que éste distingue entre minúsculas y mayúsculas a la hora de nombrar e identificar variables
+
+-->
+
+<script type="text/javascript">
+
+	//asignar un valor a la variable
+	
+	monto = 85.76;
+
+</script>
+
+<!--en el ejemplo anterior no tubimos que previamente haber declarado la variable, osea haber creado la variable, ej "monto"-->
+
+
+<!--aunque por convenciones es aconsejable declarar previamente la existencia de una variables, para ésto, es recomendables utilizar la plabra reservada "var" + "nombre de variable", ej:-->
+
+
+<script type="text/javascript">
+
+	//declaración de variable	
+	var miMonto;
+
+	//asignar un valor a una variable existente
+	miMonto = 10;
+	
+	//declarar un variable y asignarle un valor en un sólo paso
+	var miValor = 50;
+
+
+</script>
+
+
+
+<!--/////////////////////////////////////////////////////////////////////////-->
+
+<!--a continuación veremos el "Scope", ó alcance de las variables-->
+
+<!--
+
+cuando una variable se crea dentro de una función, ésta es una variable que se denomina "Local", y su funcionamiento se limita al alcance de la función y no más allá
+
+más si es una variable que se crea fuera de una función ésta se denomina como una variable "Global"
+
+incluso javascript, permite hacer variables tanto globales y locales con el mismo nombre
+-->
+
+
+<script type="text/javascript">
+
+	//a continuación realizaremos un ejemplo "calcular el valor de un impuesto"
+	
+	function factorImpuesto(subTotal, tasaDeImpuesto){
+
+		//variable "local"
+		var total = subTotal * (1+(tasaDeImpuesto/100))
+		return total;
+	}
+
+	//variable "global", para almacenar el contenido de "return", total
+	var totalGlobal = factorImpuesto(5000,30)
+
+
+	//función para mostrar el resultado del cálculo
+	function mostrarResultado(){
+
+		confirm(totalGlobal)
+	}
+
+
+</script>
+
+
+	<a href="#" onclick="factorImpuesto(5000,30), mostrarResultado()">Calcular Impuesto</a>
+
+
+
+
+
+
+</body>
+
+</html>
+
+

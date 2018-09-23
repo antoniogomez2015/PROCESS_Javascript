@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--El objecto construido Math:-->
+
+	<!--Referencia: http://www.w3schools.com/js/js_math.asp-->
+
+<!--
+el método construido "Math", permite llevar todo tipo de operaciones de cálculo de forma práctica, éste método no tiene que ser creado ó instanciado a través, de la palabra reservada "new", por que éste ya viene construido dentro de javascript, así, que para implementarlo sólo tendremos que llamarlo y utilizar los diferentes métodos que éste ofrece
+
+a continuación se expresa un ejemplo de implementación del objeto Math:
+
+-->
+
+<!--contenedor para el objeto Math-->
+<div id="contenedor"></div>
+
+<!--botón disparación del evento "trigger"-->
+<input type="button" onclick="aleatorio();" value="Número aleatorio">
+
+<!--función javascript, que será la que se ejecute-->
+<script type="text/javascript">
+	
+	function aleatorio(){
+
+		//implementación del objeto Math, con un método "random()"
+		document.getElementById("contenedor").innerHTML = Math.random();
+	}
+
+
+	//Métodos disponibles para el objeto Math:
+
+		/*
+		Math.min(0, 150, 30, 20, -8, -200); //éste devuelve el menor valor
+		Math.max(0, 150, 30, 20, -8, -200); //éste devuelve el mayor valor
+		Math.random(); //éste devuelve un número aleatorio
+
+		Math.round(4.7) //éste devuelve el antero más cercano menor "redondeo", ó valores medio ó intermedios entre ambos valores en éste caso
+
+		Math.ceil(2.4); //éste devuelve un redondeo más preciso hacia arriba
+		Math.floor(4.7); //éste devuelve un redondeo más preciso hacia abajo
+		*/
+
+	//Math Constants "javascript, dispone de éstas constantes matemáticas"
+
+		/*
+		Math.E //devuelve el número de Euler
+		Math.PI //devuelve PI
+		Math.SQRT2 //devuelve la raíz cuadrada de 2
+		Math.SQRT1_2 //devuelve la raíz cuadrada de 1/2
+		Math.LN2 //devuelve el logaritmo natural de 2
+		Math.LN10 //devuelve el logaritmo natural de 10
+		Math.LOG2E //devuelve el logaritmo base de 2 de E
+		Math.LOG10E //devuelve el logaritmo base de 10 de E
+		*/
+
+
+	//Math Object Methods
+
+		/*
+		abs(x) //Devuelve el absoluto valor de "X"
+		acos(x) //Devuelve el arco coseno de x, en radianes
+		asin(x) //Devuelve el arco seno de x, en radianes
+		atan(x) //Devuelve el arco tangente de x como un valor numérico entre -PI / 2 y PI / 2 radianes
+		atan2(y,x) //Devuelve el arcotangente del cociente de sus argumentos
+		ceil(x) //Devuelve x, redondeado hacia arriba al entero más cercano
+		cos(x) //Devuelve el coseno de x (x está en radianes)
+		exp(x) //Devuelve el valor del Ex
+		floor(x) //Devuelve x, redondeado hacia abajo al entero más cercano
+		log(x) //Devuelve el logaritmo natural (base e) de x
+		max(x,y,z,...,n) //Devuelve el número con el valor más alto
+		min(x,y,z,...,n) //Devuelve el número con el valor más bajo
+		pow(x,y) //Devuelve el valor de x para la potencia de y
+		random() //Devuelve un número aleatorio entre 0 y 1
+		round(x) //Rodondea x al entero más cercano
+		sin(x) //Devuelve el seno de x (x está en radianes)
+		sqrt(x) //Devuelve la raíz cuadrada de x
+		tan(x) //Devuelve la tangente de un ángulo
+		*/
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
+
+

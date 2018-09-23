@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		var semana = [
+			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes"
+		];
+
+		semana.splice(4, 1, "Domingo");	
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #18 - Metodos de matrices | https://www.youtube.com/watch?v=XNDMeF5Qpp8
+
+		
+
+
+	
+	Array ó Matrices Método Splice():
+	_________________________________
+
+	_el método "Splice()", nos permitirá operar en cualquier punto del array, lo cuál, nos permitirá tanto agregar como eliminar un elemento del array, sin importar el orden en que se encuentre el respectivo elemento
+
+	_de ésta manera, el método "Shice()", se compone de la siguiente estructura:
+
+		_array.splice(start, deleteCount[, item1, [item2, [item3, ...]]]);
+
+		_donde "start", hace alución al índice en el cuál, desemos intervenir dentro del array, respectivo
+
+		_donde "deleteCount", hace referencia a la cantidad de elementos ha aliminar, más si éste valor está en cero éste método interpretará que no desemos eliminar ningún elemento sino agregar elementos
+
+		_y si desemoa agregar ó insertar elementos dentro del array, debemos hacer uso del tercer parámetro el cuál, es "[, item1..]"
+	
+
+	_en el siguiente ejemplo elimaremos el elemento "Martes y miércores", del array, "semana":
+
+
+		var semana = [
+			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes"
+		];
+
+		semana.Splice(1, 2);		
+
+		document.write(semana);
+
+	_lo cuál, nos arrojaría como resultado javascript, es: "Lunes,Jueves,Viernes"
+
+	_de ésta manera, podremos ver que a través, de éste método podemos eliminar elementos de un array
+
+	_entnediendi así, que "1", de "semana.Splice(1, 2);", equivale al índice a partir del cuál, deseamos comenzar ha eliminar elementos
+
+	_y que el "2", de "semana.Splice(1, 2);", equivale a la cantidad de elementos ha eliminar en éste caso dos elementos ha eliminar
+
+
+	_más si lo que deseamos es agregar elementos debemos agregar a la ecuación el tercer parámetros y dejar el seguindo parámetro en "0", ej:
+
+
+		var semana = [
+			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes"
+		];
+
+		semana.Splice(4, 0, "Sábado");		
+
+		document.write(semana);
+
+	_de ésta manera, estaremos agregando el día sábados a partir del índice "4"
+
+	_así, de ésta manera, podremos ir agregando la cantidad de elementos en los respectivos luegares deseados
+
+
+	_más también, tendremos la posibilidad de agregar y eliminar a la vez, para lo cuál, debemos de condigurar los atributos del método "splice()", de la siguiente manera:
+
+
+		var semana = [
+			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes"
+		];
+
+		semana.splice(4, 1, "Domingo");		
+
+		document.write(semana);
+
+	_de ésta manera, en éste ejemplo hemos cambiado el viernes por el domingo
+
+	_ya que a través, del índice "4", le estamos indicando el punto de partida
+
+	_y a través, del "1", le estamos indicando la cantidad de elementos ha elininar
+
+	_y a través, del tercer argumento "Domingo", le estamos indicando a su vez, que agregue un elemento en éste mismos punto, índice "4"
+
+
+
+
+
+
+	-->
+	
+</body>
+</html>

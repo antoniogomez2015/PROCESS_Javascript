@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+
+		//Ciclo For					
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		var longitud = dias.length, i = 0;
+
+		for(i; i < longitud; i++){
+
+			document.write(dias[i]);
+	
+		};
+
+
+		//Ciclo ForEach con variabla anónima
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		dias.forEach(function(elemento){
+
+			document.write(elemento);
+	
+		});
+
+
+		//Ciclo ForEach con variable declarada
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		function mostrarElemento(elemento){
+
+			document.write(elemento);
+	
+		}
+
+		dias.forEach(mostrarElemento);
+
+
+		//estructura For Of
+		var dias = [			
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		];
+
+		for(var elemento of dias){
+
+			document.write(elemento);
+	
+		};
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #22 - Expresiones funcionales | https://www.youtube.com/watch?v=KJ_Bftiqq3E&index=22&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+		
+
+
+	
+	Inmmediately Invoked Functions Expresions:
+	__________________________________________
+
+	_las expresiones funcionales de invocación inmediata hacen uso de la estructura de los paréntesis "()()", a través, de los cuáles hacen uso del operador de agrupación y de la precedencia "()"
+
+	_para así, de ésta manera, auto ejecutarse y justo a continuación hacen uso de otro paréntesis para invocarse como cualquier otra función ej
+
+		resutado de la función + (); ó miNombre();
+
+	_las expresión funcíonal de invocación inmediata, hacen uso también, de funciones las cuáles, pueden ser anónimas ó nó
+
+	de ésta manera, debemos esctructurar una expresión funcíonal de invocación inmediata de la siguiente manera:
+
+
+		(function(){
+
+			document.write("Hola Universo");
+	
+		})();
+
+
+
+	
+
+
+
+
+	-->
+	
+</body>
+</html>

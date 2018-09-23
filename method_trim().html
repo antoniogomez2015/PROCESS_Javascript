@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		
+		
+		var usuario = prompt("Nombre de usuario?");
+
+		if(usuario && usuario.trim()){
+
+			confirm("el usuario: " + usuario + " es correcto?".trim());
+
+			document.write(usuario + " Gracias por entrar al Grupo!".trim());
+	
+		}else{
+	
+			document.write("no has introducido un usuario!".trim());
+
+		}
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #12 - Funciones nativas: prompt | https://www.youtube.com/watch?v=7QGD3MEpIuI&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=12
+
+		http://www.w3schools.com/jsref/jsref_trim_string.asp
+
+
+	
+	method trimg():
+	_______________
+
+	_a través, de la función "trim()", podremos eliminar en las cadenas de strings, los espacios vacíos que se encuentren al principio ó al final de la expresión
+
+	_de ésta manera, evitaremos lecturas erroneas cuando capturemos valores de tipo strinsg, pas posteriores valoraciones para que así, éstos no de como resultado "true", cuando en realidad deberían de dar "false", el recibir sólo un caracter con un espacio en blanco y similar
+
+	_así, como también, cuando el usuario untroduzca un string, la función "strim()", elimine automáticamente los espacios inecesarios al comienzo y al final de la cadena de texto ej:
+
+
+		_var usuario = prompt("Nombre de usuario?");
+
+		_if(usuario){
+
+			alert("el usuario: " + usuario + " es correcto?".trim());
+
+			document.write(usuario + " Gracias por entrar al Grupo!".trim());
+	
+		}else{
+	
+			document.write("no has introducido un usuario!".trim());
+
+		}
+
+	_más disponemos de otra modalidad para la comprobación de usuarios más correcta a través, de un signo de comparación lógico "&&", y el método "trim()"
+
+
+		_var usuario = prompt("Nombre de usuario?");
+
+		_if(usuario && usuario.trim()){
+
+			confirm("el usuario: " + usuario + " es correcto?".trim());
+
+			document.write(usuario + " Gracias por entrar al Grupo!".trim());
+	
+		}else{
+	
+			document.write("no has introducido un usuario!".trim());
+
+		}
+
+
+
+
+	
+
+
+	
+
+
+
+	-->
+	
+</body>
+</html>

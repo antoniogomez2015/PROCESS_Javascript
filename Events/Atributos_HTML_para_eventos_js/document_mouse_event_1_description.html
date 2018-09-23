@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>	
+</head>
+<body>
+
+
+<!--
+
+
+Curso de JavaScript para principiantes (48 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
+
+
+canales de interes de desarrollo javascript
+
+
+
+Jesús Conde
+https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
+
+	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
+
+
+
+
+FirefoxOS HTML5
+https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
+
+
+CasaMadrugada
+https://www.youtube.com/user/CasaMadrugada
+	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
+
+
+LaZonaInformatica
+https://www.youtube.com/user/LaZonaInformatica
+	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
+
+
+
+Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
+
+
+
+thenewboston
+	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+
+
+
+xymind
+https://www.youtube.com/user/xymind/playlists
+	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
+
+	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
+
+
+
+Manuel J. Dávila
+https://www.youtube.com/user/manudg1000
+
+	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
+
+
+
+libro de javascript
+	Introducción a JavaScript: http://librosweb.es/javascript/
+
+
+
+
+http://www.w3schools.com/js/default.asp
+
+
+http://www.w3schools.com/js/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<!--Eventos en Javascript-->
+
+<script type="text/javascript">
+	
+	//detección ó registro de eventos handlers:
+
+		//manejadores de eventos:
+
+	//referencia: http://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+	/*los eventos son normalmente combinados con funciones y, las funciones no deben ser eejcutadas antes de que los eventos ocurran  */
+
+
+
+	//eventos HTML, acciones de botón más utilizadas:
+
+
+		onchange //para cuando un elemento html, ha sido cambiado
+
+		onclick //para cuando el usuario ha hecho click, sobre un elemento html
+
+		onmouseover //para cuando el usuario mueve el mouse, sobre un elemento html
+
+		onmouseout //para cuando el usuario mueve el mouse, fuera de un elemento html
+
+		onkeydown //para cuando el usuario pulsa un tecla del teclado
+
+		onload //para cuando el navegador ha cargado la página completa
+
+
+
+	//Mouse Events:
+
+
+		onclick //éste evento ocurre cuando el usuario hace click, sobre un elemento
+
+		oncontextmenu //éste evento ocrurre cuando el usuario hace mouse right click, sobre un elemento html para abrir un menú contextual
+
+		ondblclick //éste evento ocurre cuando el usuario hacer doble click, sobre un elemento html
+
+		onmousedown //éste evento ocurre cuando el usuario pulsa un botón del mouse sobre un elemento html
+
+		onmouseenter //éste evento ocurre cuando el cursor del mouse, se deplaza sobre un elemento html
+
+		onmouseleave //éste evento ocurre cuando un cursor del mouse, se deplaza fuera de un elemento html
+
+		onmousemove //éste evento ocurre cuando el cursor del mouse, se mueve mientras está sobre un elemento html
+
+		onmouseover //éste evento ocurre cuando el cursor del mouse, se desplaza sobre un elemento html, o en uno de sus hijos
+
+		onmouseout //éste evento ocurre cuando un usuario mueve el cursor del mouse, fuera de un elemento, o de uno de sus hijos
+
+		onmouseup //éste evento ocurre cuando el usuario suelta el botón del mouse, sobre un elemento html
+
+
+
+	//Keyboard Events:
+
+
+		onkeydown //éste evento ocurre cuando el usuario presiona una tecla del teclado
+
+		onkeypress //éste evento ocurre cuando el usuario pulsa una tecla del teclado
+
+		onkeyup //éste evento ocurre cuando el usuario suelta una tecla del teclado
+
+
+
+	//Frame/Object Events:
+
+
+		onabort //éste evento ocurre cuando la carga de un recurso ha sido abortada
+
+		onbeforeunload //éste evento ocurre antes de que el documento está a punto de ser cargado
+
+		onerror //éste evento ocurre cuando se ha producido un error al cargar un archivo externo
+
+		onhashchange //éste evento ocurre cuando ha habido cambios en la parte de un anchor, de una URL
+
+		onload //éste evento ocurre cuando un elemento ha sido cargado
+
+		onpageshow //éste evento ocurre cuando un usuario navega en una página web
+
+		onpagehide //éste evento ocurre cuando el usuario navega fuera ó lejos de una página web
+
+		onresize //éste evento ocurre cuando se cambia el tamaño la vista del documento
+
+		onscroll //éste evento ocurre cuando el usuario está desplazando la barra "scroll", de desplazamiento de un elemento html
+
+		onunload //éste evento ocurre cuando una página no ha sido cargada
+
+
+
+	//Form Events:
+
+
+		onblur //éste evento ocurre cuando un elemento html, pierde el foco
+
+		onchange //éste evento ocurre cuando el contenido de un elemento de formulario, "selection, or the checked", han cambiado (por <input>, <keygen>, <select> y <textarea>)
+
+		onfocus //éste elemento ocurre cuando un elemento optiene focus
+
+		onfocusin //éste evento ocurre cuando un elemento html, está a punto de entrar en el foco
+
+		onfocusout //éste evento ocurre cuando un elemento html, está a punto de perder elfoco
+
+		oninput //éste elemento ocurre cuando un elemento html, de tipo "imput", recibe información del usuario
+
+		oninvalid //éste elemento ocurre cuando un elemento html, no es válido
+
+		onreset //éste evento ocurre cuando un formulario es reseteado
+
+		onsearch //éste evento ocurre cuando el usuario escribe algo en el campo "search", (for <input="search">)
+
+		onselect //éste evento ocurre cuando el usuario selecciona algún texto, (for <input> and <textarea>)
+
+		onsubmit //éste evento ocurre cuando un formulario ha sido enviado
+
+
+
+	//Drag Events:
+
+
+		ondrag //éste evento ocurre cuando un elemento html, es arrastrado
+
+		ondragent //éste evento ocurre cuando un usuario ha terminado de arrastrar un elemento html
+
+		ondragenter //éste evento ocurre cuando el elemento html, arrastrado entra en el destino de colocación
+
+		ondragleave //éste evento ocurre cuando el elemento arrastrado deja el destino de colocación
+
+		ondragover //éste evento ocurre cuando el elemento arrastrado está sobre el destino de colocación
+
+		ondragstart //éste evento ocurre cuando el usuario empieza a arrastrar un elemento
+
+		ondrop //éste evento ocurre cuando el elemento arrastrado se coloca sobre el destino de colocación
+
+
+
+	//Clipboard Events:
+
+
+		oncopy //éste evento ocurre cuando el usuario copia contenido de un elemnto html
+
+		oncut //éste evento ocurre cuando el usuario corta contenido de un elemnto html
+
+		onpaste //éste evento ocurre cuando el usuario pega contenido de un elemnto html
+
+
+
+	//Print Events:
+
+
+		onafterprint //éste evento ocurre cuando una página se ha empezado a imprimir, o si el cuadro de diálogo de impresión se ha cerrado
+
+		onbeforeprint //éste evento ocurre cuando la página está a punto de imprimirse
+
+
+
+	//Media Events:
+
+
+
+		onabort //éste evento ocurre cuando la media cargada ha sido abortada
+
+		oncanplay //éste evento ocurre cuando el navegador no puede reproducir la media especificada (when it has buffered enough to begin)
+
+		oncanplaythrough //éste evento ocurre cuando el navegador puede reproducir una media respectiva pero tiene problemas con el (without stopping for buffering)
+
+		ondurationchange //éste evento ocurre cuando la duración de la media cambia
+
+		onemptied //éste evento ocurre cuando algo malo sucede con el archivo de la media respectiva y derepente éste no está disponible
+
+		onended //éste evento ocurre cuando la reproducción de la media respeciva ha llegado hasta el final de su reproducción, (útil para mensajes como "gracias por escuchar")
+
+		onerror //éste evento ocurre cuando ha sucedido un error en la carga de un archivo de media respectivo
+
+		onloadeddata //éste evento ocurre cuando la "media data", ó datos de medios han sido cargados
+
+		onloadedmetadata //éste evento ocurre cuando la "metadata", ó datos de medios han sido cargados, como (like dimensions and duration) 
+
+		onloadstart //éste evento ocurre cuando el navegador comienza a buscar la media respectiva ó especificada
+
+		onpause //éste evento ocurre cuando la media, está en pausa, ya sea por el usuario o mediante programación
+
+		onplay //éste evento ocurre cuando se ha iniciado la media, o ya no se detuvo
+
+		onplaying //éste evento ocurre cuando la media ha sido reproducida después de haber sido pausada previamente ó detenida por problemas de "buffering"
+
+		onprogress //éste evento ocurre cuando el navegador está en el proceso de obtener la media respectiva (downloading the media)
+
+		onratechange //éste evento ocurre cuando se cambia la velocidad de reproducción de la media respectiva
+
+		onseeked //éste evento ocurre cuando el usuario ha terminado mover / saltar a una nueva posición en los medios en la reproducción
+
+		onseeking //éste evento ocurre cuando el usuario comienza ha mover / saltar a una nueva posición en los medios en la reproducción
+
+		onstalled //éste evento ocurre cuando el navegador está tratando de obtener una "media data", pero ésta no está disponible
+
+		onsuspend //éste evento ocurre cuando el navegador no puede obtener los datos de la media respectiva de forma intencional por que éstos no son soportados
+
+		ontimeupdate //éste evento ocurre cuando el usuario cambia la posición de la reproducción (como cuando el usuario avanza rápidamente a un punto diferente en la media reproducida)
+
+		onvolumechange //éste evento ocurre cuando el volumen de la media respectiva ha sido cambio por el usuario  (incluye establecer el volumen a "mute")
+
+		onwaiting //éste evento ocurre cuando el usuario ha pausado la reproducción de un medio, pero se espera la reanudación de éstos  (como cuando en la media, se hace una pausa para esperar más datos)
+
+
+
+	//Animation Events:
+
+
+		animationend //éste evento ocurre cuando una animación CSS, ha finalizado
+
+		animationiteration //éste evento ocurre cuando una animación CSS, es repetida
+
+		animationstart //éste evento ocurre cuando una animación CSS, ha sido comenzada ó inicializada
+
+
+
+	//Transition Events:
+
+
+		transitionend //éste evento ocurre cuando una transición CSS, ha sido finalizada
+
+
+
+	//Server - Sent Events:
+
+
+		onerror //éste evento ocurre cuando se produce un error con el origen del evento ó recurso "source"
+
+		onmessage //éste evento ocurre cuando se recibe un mensaje a través del origen del evento ó recurso "source"
+
+		onopen //éste evento ocurre cuando se abre una conexión con el origen del evento ó recurso "source"
+
+
+
+	//Misc Events:
+
+
+		onmessage //éste evento ocurre cuando se recibe un mensaje a través de un objeto (WebSocket, Web Worker, Event Source or a child frame or a parent window)
+
+		onmousewheel / onwheel //"onmousewheel- Deprecated.", éste evento ocurre cuando el usuario mueve el mouse, de forma circular sobre un elemento html, 
+
+		ononline //éste evento ocurre cuando el navegador comienza a trabajar online
+
+		onoffline //éste evento ocurre cuando el navegador comienza a trabajar fuera de línea
+
+		onpopstate //éste evento ocurre cuando cambia la historia ventanas
+
+		onshow //éste evento ocurre cuando se muestra una <Menú> elemento como un menú contextual
+
+		onstorage //éste evento ocurre cuando se actualiza una zona de almacenamiento Web
+
+		ontoggle //éste evento ocurre cuando el usuario abre o cierra la <detalles> elemento
+
+		onwhell //éste evento ocurre cuando el usuario mueve el mouse, de forma circular sobre un elemento html
+
+
+
+	//Touch Events:	
+
+
+		ontouchcancel //éste evento ocurre cuando se interrumpe el contacto
+
+		ontouchend //éste evento ocurre cuando un dedo se retira de una pantalla táctil
+
+		ontouchmove //éste evento ocurre cuando un dedo se arrastra por la pantalla
+
+		ontouchstart //éste evento ocurre cuando se coloca un dedo en una pantalla táctil
+
+
+
+	//Event Objects:
+
+		//Constants:
+
+			CAPTURING_PHASE //la fase del evento actual es la fase de captura
+
+			AT_TARGET //El evento actual se encuentra en la fase de destino, es decir, que se está evaluando en el destino del evento (2)
+
+			BUBBLING_PHASE //La fase evento actual es la fase de propagación (3)
+
+
+		//Properties:
+
+			bubbles //Devuelve si o no de un evento específico es un evento de propagación
+
+			cancelable //Devuelve si o no de un evento puede tener su acción predeterminada impedido
+
+			currentTarget //Devuelve el elemento cuyo oyentes evento desencadenado el evento
+
+			defaultPrevented //Devoluciones o no se llama al método preventDefault () para el evento
+
+			eventPhase //Devoluciones que se está evaluando actualmente en fase del flujo del evento
+
+			isTrusted //Devuelve si o no de un evento cuando éste es de confianza
+
+			target //Devuelve el nombre del evento
+
+			timeStamp //Devuelve el tiempo (en milisegundos con relación a la época) en la que se creó el evento
+
+			type //Devuelve el nombre del evento
+
+			view //Devuelve una referencia al objeto Window donde ocurrió el evento
+
+
+		//Methods:
+
+			preventDefault() //Cancela el evento si es cancelable, lo que significa que no se produzca la acción predeterminada que pertenece al evento
+
+			stopImmediatePropagation() //Evita que otros oyentes de un mismo hecho de ser llamado
+
+			stopPropagation() //Evita la propagación adicional de un evento durante el flujo del evento
+
+
+
+
+	//MouseEvent Object:
+
+
+		altkey //Devuelve la acción del evento si se pulsa la tecla "ALT" cuando se activa el evento de ratón
+
+		button //Devuelve la acción del evento cuando el botón del ratón  que dispara el evento se presiona
+
+		buttons //Devuelve la acción del evento cuando los botones del ratón  que dispara el evento se presionan
+
+		clientX //Devuelve la coordenada horizontal del puntero del ratón, con relación a la ventana actual, cuando se activa el evento de ratón
+
+		clientY //Devuelve la coordenada vertical del puntero del ratón, con relación a la ventana actual, cuando se activa el evento de ratón
+
+		ctrlKey //Devuelve la acción del evento si la tecla "CTRL" se presionó cuando se activa el evento de ratón
+
+		detail //Devuelve un número que indica cuántas veces se hizo clic en el ratón
+
+		metaKey //Devuelve si la tecla "META" fue presionado cuando se activa un evento
+
+		relatedTarget //Devuelve el elemento relacionado con el elemento que desencadenó el evento de ratón
+
+		screenX //Devuelve la coordenada horizontal del puntero del ratón, con relación a la pantalla, cuando se activa un evento
+
+		screenY //Devuelve la coordenada vertical del puntero del ratón, con respecto a la pantalla, cuando se activa un evento
+
+		shiftKey //Devuelve si se pulsa la tecla "SHIFT" cuando se activa un evento
+
+		which //Devuelve qué botón del ratón se presiona cuando se activa el evento de ratón
+
+
+
+	//KeyboardEvent Object:
+
+
+		altKey //Devuelve si se pulsa la tecla "ALT" cuando se activa el evento clave
+
+		ctrlKey //Devuelve si se pulsa la tecla "CTRL", cuando se desencadenó el evento clave
+
+		charCode //Devuelve el código de caracteres Unicode de la tecla que activa el evento onkeypress
+
+		key //Devuelve el valor de la tecla representada por el evento
+
+		keyCode //Devuelve el código de caracteres Unicode de la tecla que activa el evento onkeypress, o el código de clave de Unicode de la clave que desencadenó la onkeydown o evento onkeyup
+
+		location //Devuelve la ubicación de una tecla en el teclado o el dispositivo
+
+		metaKey //Devuelve la acción del evento si se ha presionado la tecla "meta", cuando se desencadenó el evento clave
+
+		shiftKey //Devuelve la acción del evento si se pulsa la tecla "SHIFT" cuando se activa el evento clave
+
+		which //Devuelve el código de caracteres Unicode de la tecla que activa el evento onkeypress, o el código de clave de Unicode de la clave que desencadenó la onkeydown o evento onkeyup
+
+
+
+	//HashChangeEvent Object:
+
+		newUrl //Devuelve la URL del documento, después de que ésta ha sido cambiada
+
+		oldUrl //Devuelve la URL del documento, antes de que ésta sea cambiada
+
+
+
+	//Page TransitionEvent Object:
+
+		persisted //Devuelve la acción del evento si la página se almacena en caché por el navegador
+
+
+
+	//FocusEvent Object:
+
+		relatedTarget //Devuelve el elemento relacionado con el elemento que desencadenó el evento
+
+
+
+	//AnimationEvent Object:
+
+		animationName //Devuelve el nombre de la animación
+
+		elapsedTime //Devuelve el número de segundos que una animación ha estado funcionando
+
+
+
+	//TransitionEvent Object:
+
+		propertyName //Devuelve el nombre de la propiedad CSS asociada con la transición
+
+		elapsedTime //Devuelve el número de segundos que una transición ha estado funcionando
+
+
+
+	//WheelEvent Object:
+
+		deltaX //Devuelve la cantidad de desplazamiento horizontal "horizontal scroll", de una rueda del ratón (eje x)
+
+		deltaY //Devuelve la cantidad de desplazamiento vertical "vertical scroll", de una rueda del ratón (eje x)
+
+		deltaZ //Devuelve un número que representa la unidad de las mediciones de valores delta (píxeles, líneas o páginas)
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
+
+

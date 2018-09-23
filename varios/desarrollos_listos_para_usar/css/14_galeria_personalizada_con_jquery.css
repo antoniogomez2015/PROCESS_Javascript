@@ -1,0 +1,54 @@
+
+*{
+	margin:0 auto;
+	padding:0;
+}
+
+body{
+	background:#212121;
+	margin:auto;
+}
+
+	#wrapper{
+		width:1280px;
+		margin:auto;
+		border: solid 1px #999999;
+	}
+	
+	h2{
+		text-align:center;
+		color:#ddd;
+		font-family:arial,helvetica,sans serif;
+	}
+	
+	#reviews{
+		width:1024px;
+		height:500px;
+		display:block;
+		margin:0 auto;
+		background-color:#09F;
+		border: solid 1 #CCC;
+	}
+	
+	#reviews img{
+		width:1024px;
+		height:492px;
+	}
+	
+	#tumbs{
+		width:800px;
+		height:50px;
+		display:block;
+		margin: auto;		
+	}
+	
+		#tumbs img{
+			width:80px;
+			border-radius:80px;
+			border: solid #ddd;
+			margin:10px;
+		}
+		
+	.preloader{
+		margin:auto;
+	}
