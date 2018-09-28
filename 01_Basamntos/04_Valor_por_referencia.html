@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+
+<!--
+	_Valor por Referencia:
+	______________________
+
+    _en las variables, si valor es dinámico y puede cambiar en el tiempo, es decir, que su valor lo podremos alterar en el tiempo posteriormente haciendo referencia a la respectiva veriale y re asignándole un nuevo valor
+
+    _más en los objeto esto nos es así, cuando una variable hace referencia a un objeto, ej;
+
+
+        var proof1 = {
+            nombre: "Juán";
+        }
+
+        var proof2 = proof1;
+
+        console.log(proof1, proof2);
+
+
+    _en éste ejemplo creamos el objeto proof, con una propiedad de "nombre", y asu vez creamos el objeto "proof2", con el valor del objeto "proof1"
+
+    _más que pasará si accedemos a la propiedad "nombre", del objeto "proof", y cambiamos su valor, ej;
+
+        _proof1.nombre = "Pedro";
+
+    _en éste caso cuando llamemos a la variable "proof2", ahora ésta también, tendrá el mismo valor de propiedad de "Pedro", que el del objeto "proof1"
+
+    _de ésta manera, podremos ver que cuando un objecto hace referencia ha otro objeto, éstos compartirán todas sus propiedades internas y características
+
+    
+
+
+
+-->
+
+	<!--ejemplo para la creación del entorno de javascript-->
+	<script type="text/javascript">
+
+        var proof1 = {
+            nombre: "Juán"
+        }
+
+        var proof2 = proof1;
+
+        console.log(proof1, proof2);
+
+        proof1.nombre = "Pedro";
+
+        console.log(proof2);
+
+	</script>
+
+			
+
+<body>
+
+
+			
+</body>
+
+</html>

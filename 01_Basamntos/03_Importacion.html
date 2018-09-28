@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+
+<!--
+	_Importación:
+	_____________
+
+    _en javascript, el orden descendente ó en cascada de importación de los arhivos javascript, ó con extensión .js,  a través, del tag, html <script src="">, tiene una importación vital en un projecto
+
+    _de ésta manera, debemos entender que javascript, sólo hará un barrido ó lectura del código javascript, en expresamente en el código javascript, cuando el navegador encuentra el tag "<script", ó a través, de un tag <script src="">
+
+    _más javascript, no puede realizar éste barrido ó lectura rápida del código javascript, en documento html, es decir, que si en el código html, hay varias referencias a varios archivos importados a través, del tag <script src="">, ó por medio de tag <script>
+
+    _javascript, en éste caso hará más de un barrido, haciendo un barrido por cada bloque de código encontrado ó enlazado, en el orden descendente ó en cascada en el que se los vaya encontrando
+
+    _de ésta manera, el navegador creará el contexto ó entorno javascript, con el primer bloque de código de javascript, que se consiga primero obviando los otros bloques de código qua haya en el documento posteriormente
+
+    _de ésta manera, si en el primer bloque de código encontrado hay referenia de variables, constantes y demás estructuras de control que se encuentras en otros bloques de código que aún el navegador no ha barrido ó leido, ésto será interpretado como un "errorReference"
+
+
+
+-->
+
+	<!--ejemplo para la creación del entorno de javascript-->
+	<script type="text/javascript">
+
+		const n = "tonyGomex";
+        
+        console.log(n);
+
+	</script>
+
+			
+
+<body>
+
+
+			
+</body>
+
+</html>
