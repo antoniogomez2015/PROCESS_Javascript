@@ -39,9 +39,21 @@
 	<!--ejemplo para la creación del entorno de javascript-->
 	<script type="text/javascript">
 
-		var a = "tonyGomez";
+		var loc ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103
+			}
+		}
 
-		document.write("Hola Mundo");
+		console.log(loc["direccion"]["pais"]["estado"]);
 		
 	</script>
 
