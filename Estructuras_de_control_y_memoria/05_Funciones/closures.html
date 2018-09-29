@@ -4,88 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 
-	<script type="text/javascript">
-
-
-		//Ciclo For					
-		var dias = [			
-			"Lunes",
-			"Martes",
-			"Miércoles",
-			"Jueves",
-			"Viernes",
-			"Sábado"
-		];
-
-		var longitud = dias.length, i = 0;
-
-		for(i; i < longitud; i++){
-
-			document.write(dias[i]);
-	
-		};
-
-
-		//Ciclo ForEach con variabla anónima
-		var dias = [			
-			"Lunes",
-			"Martes",
-			"Miércoles",
-			"Jueves",
-			"Viernes",
-			"Sábado"
-		];
-
-		dias.forEach(function(elemento){
-
-			document.write(elemento);
-	
-		});
-
-
-		//Ciclo ForEach con variable declarada
-		var dias = [			
-			"Lunes",
-			"Martes",
-			"Miércoles",
-			"Jueves",
-			"Viernes",
-			"Sábado"
-		];
-
-		function mostrarElemento(elemento){
-
-			document.write(elemento);
-	
-		}
-
-		dias.forEach(mostrarElemento);
-
-
-		//estructura For Of
-		var dias = [			
-			"Lunes",
-			"Martes",
-			"Miércoles",
-			"Jueves",
-			"Viernes",
-			"Sábado"
-		];
-
-		for(var elemento of dias){
-
-			document.write(elemento);
-	
-		};
-
-
-
-
-
-
-
-	</script>
-
 </head>
 <body>
 
@@ -98,11 +16,12 @@
 
 		Tutorial específico: Aprende JavaScript esencial #24 - Closures | https://www.youtube.com/watch?v=dJ3Onk2WRLs&index=24&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
 
+	-->
 		
 
+	<!--
 
 
-	
 	Closures:
 	_________
 
@@ -112,6 +31,9 @@
 
 	_de ésta mamera, podremos hacer estructuras más complejas a través, de funciones anidadas ya que a través, de éste método ahora un función puede devolver la estructura de otra función la podrá ejecutarse en el entorno donde éste función ha sido renderizada lo cuál, aumenta la complejidad y posibilidades de las funciones en javascript, ej:
 
+	-->
+
+	<script>
 
 		function miFuncion(){
 	
@@ -131,9 +53,12 @@
 
 		document.write(miFuncion);
 
+	</script>
 
-	_de ésta manera, javascript, nos arrojará el siguiente resultado:
-
+	
+	<!--_de ésta manera, javascript, nos arrojará el siguiente resultado:-->
+	
+	<script>
 			
 		function funcionInterna(){
 			
@@ -141,10 +66,15 @@
 
 		}
 
+	</script>
+
+	<!--
 	_javascript, nos mostrará como resultado la estructura de la función anidada que tiene por dentro
 
 	_y otra forma de obtener directamente el valor ó la ejecución de la función anidade dentro de la otra podremos hacerlo a través, del siguiente método
+	-->
 
+	<script>
 
 		function miFuncion(){
 		
@@ -165,7 +95,10 @@
 
 		document.write(variableExterna);
 
+	</script>
 
+
+	<!--
 	_de ésta manera, javascript, nos arrojará como resultado 
 
 		"Hola Universo"
@@ -177,6 +110,9 @@
 
 	_de ésta manera, extender y aumentar las capacidades de las funciones y scope, de estructuras de javascript, ej:
 
+	-->
+
+	<script>
 
 		function miFuncion(){
 	
@@ -196,11 +132,11 @@
 
 		document.write(miFuncion);
 
-
+	</script>
 		
 		
 
-	-->
+	
 	
 </body>
 </html>
