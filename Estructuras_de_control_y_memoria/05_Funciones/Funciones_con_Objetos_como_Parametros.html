@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #14 - Creación de funciones | https://www.youtube.com/watch?v=1CdiNPAR1N0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=14
+
+		http://www.w3schools.com/js/js_datatypes.asp
+
+
+	
+	Funciones con Objetos como Parámetros:
+	______________________________________
+
+    _en las funciones, tenemos la posibilidad de pasar como parámetros ha objetos anónimos como declarados previamente
+    
+    _de ésta manera, podremos aumentar las posibilidades de las funciones entre otras posibilidades, ej;
+
+    -->
+    
+    <script>
+    
+        function job(e){
+            console.log(e);
+        }
+
+        /*
+        _de ésta manera, al llamar a la función "job()", en éste caso le estamos pasando como parámetro un objeto anónimo
+
+        _de ésta manera, el objeto anónimo será renderizado en consola al poder el método "console.log()", acceder al objeto anonimo por medio del parámetro genéroco "e"
+        */
+        job({
+            designer: "diseñador",
+            level: "master"
+        });
+
+
+        /*
+        _en éste caso, creamos un objeto declarado el cuál, pasamos como parámetro al llamar a la función inicial "job", para obtener así, el mismo resultado
+        */
+        var job2 ={
+            focus: "app",
+            dev: "art"
+        };
+
+        job(job2);
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////
+        /*
+        _así, como también, tendremos la posibilidad de acceder ha propiedades específicas de un objeto externo a una función desde la propia función
+
+        _para que así, podamos utilizar las propiedades del objeto dentro del bloque e cófigo de la función respectiva
+        
+        _de ésta maenra, al objeto al ser pasado como parámetro al momento de llamar a la función respectiva, las propiedades del objeto estarán disponibles para usas y renderizadas
+        
+        _de ésta manera, al objeto ser pasado como parámetro de la función respectiva, pasa ahora al ámbito ó entorno de la función por medio de parámetro genérico "e", de la función
+
+        _lo que quiere decir, que ahora para acceder a los parámetro del objeto desde la función respectiva, debemos hacerlo ahora a través, del parámetro "e", y a continuación concatenar ".", el nombre del parámetro del objeto al cuál, deseamos acceder desde la función respectiva, ej;
+
+        */
+
+        //definición de la función con parámetro genérico "e"
+        function consulta(e){
+            //accediendo a los parámetros del objeto desde "e"
+            document.write(e.nombre + " ", + e.apellido);
+        }
+
+        //objeto definido y externo
+        var person ={
+            nombre: "tony",
+            apellido: "gomez",
+            sexo: "macho"
+        }
+
+        //llamado de la función
+        consulta(person);
+    
+    </script>
+	
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #14 - Creación de funciones | https://www.youtube.com/watch?v=1CdiNPAR1N0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=14
+
+		http://www.w3schools.com/js/js_datatypes.asp
+
+
+	
+	Función con Retorno de Funciones:
+	_________________________________
+
+    _a continuación se muestra como una función puede devolver un objeto, ej;
+
+
+    -->
+    
+    <script>
+
+        /////////////////////////////////////////////////////////////////
+        //función que devuelve un Objeto
+     
+
+        //función ha ejecutar que retornará un objeto explícito
+        function id(){
+
+           var sr = {
+               nombre: "Jose",
+               apellido: "Perez"
+           }
+           return sr
+        }
+
+        //llamado de la función por consola
+        console.log(id());
+
+
+
+        /////////////////////////////////////////////////////////////////
+        //función ha ejecutar que retornará un objeto anónimo
+
+        //función con parámetros que igualan las propiedades del objeto para ser accesibles posteriormente y personalizables
+        function sdk(cargo, prof){
+
+            return {
+                cargo: "CO",
+                prof: "Master"
+            }
+        }
+
+        //llamado de la función y almacenado con parámetro personalizados para las propiedades del objeto anónimo
+        var read = sdk("Gerente", "Senior");
+
+        //llamado por consola de la función que devuelve un objeto
+        console.log(read);
+
+
+    </script>
+</body>
+</html>
+

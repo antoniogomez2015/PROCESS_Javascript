@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #14 - Creación de funciones | https://www.youtube.com/watch?v=1CdiNPAR1N0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=14
+
+		http://www.w3schools.com/js/js_datatypes.asp
+
+
+	
+	Función con Retorno de valores primitivos:
+	__________________________________________
+
+    _a continuación se muestra como una función puede devolver un valor primitivo al llamar ó ejecutar la funcíon respectiva, ej;
+
+
+    -->
+    
+    <script>
+
+        /////////////////////////////////////////////////////////////////
+        //función que devuelve un valor primitivo como un nnúmero
+
+        //función con retorno numérico
+        function calculo(){
+            //función que retorna al objeto Math, con el método random()   
+            return Math.random();
+        }
+
+        //llamado de la función por consola la cuál, renderizará un números aleatorio de entre 0 y 1, al cuál, se le irá sumando "10"
+        console.log(calculo() + 10);
+
+
+
+        /////////////////////////////////////////////////////////////////
+        //función que devuelve un valor primitivo como un "string"
+
+        //función que con retorno de tipo string
+        function titular(){
+            return "tony"
+        }
+
+        console.log("Titulas de la Cuenta: " + titular());
+        
+
+    </script>
+</body>
+</html>
+

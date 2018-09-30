@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #14 - Creación de funciones | https://www.youtube.com/watch?v=1CdiNPAR1N0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=14
+
+		http://www.w3schools.com/js/js_datatypes.asp
+
+
+	
+	Funciones con Funciones como Parámetros:
+	________________________________________
+
+    _en las funciones, tenemos la posibilidad de pasar como parámetros ha otras funciones anónimas como declarados previamente
+    
+    _de ésta manera, podremos aumentar las posibilidades de las funciones entre otras posibilidades
+
+    _de ésta manera, al pasar una función anónima como parámetro de la función en éste caso "alter()", ahora la función anidada ahora pasa al ámbito ó entorno de la función "alter()"
+
+    _lo que quiere decir, que ahora para acceder al bloque de código de la función anidada debeoms hacerlo ahora a través, del parámetro genétro "fn", que le colocamos a la función "alter()"
+
+    _también, podremos inviar como parámetro una función explícita en vez de una función anónima para obtener el mismos resultado, ej;
+
+    -->
+    
+    <script>
+
+        //definición de la función con parámetro genérico "fn"
+        function alter(fn){
+            //llamado de la función anidada a través, del parámetro "fn"
+            fn();
+
+        }
+        
+        //llamado de la función con función anónima anidada
+        alter(function(){
+            //bloque de código ha ejecutarse de forma aniadada
+            console.log("función anidada");            
+        });
+
+        /////////////////////////////////////////////////////////////////
+        //ejemplo con función explícita en vez de anónima
+
+        function tema(fn){
+            fn();
+        }
+
+        //función explícita
+        var infoc = function(){
+            console.log(misDatos);
+        }
+
+        //llamado de la función con función explícita como parámetro
+        tema(infoc);
+    
+    </script>
+</body>
+</html>
+

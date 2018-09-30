@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #26 - Objetos | https://www.youtube.com/watch?v=MmQuBTdgu7g&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=26
+
+			Aprende JavaScript esencial #27 - Objetos II | https://www.youtube.com/watch?v=xVaj87Cm9nc&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=27
+
+		
+
+
+
+	
+	Acceso directo a propiedade de un objeto:
+	_________________________________________
+
+	_en los casos en los que tenemos objeto anidados unos dentro de otros de forma compla, es recomendable almacenar en variables ó constantes los accessos a las propiedades que utilizareos con mayor regularidad, ej;
+
+    -->
+
+    <script>
+
+		var trabajo = {
+
+			lunes: "analisis",
+            martes: "desarrollo",
+            miercoles:{
+                implementacion: "plateamiento",
+                colocacion: "estructuras",
+                modulacion:{
+                    fase1: "toma de campo",
+                    aplicacion: "inseminacion",
+                    muestreo:{
+                        somatizacion: "sintomas",
+                        reververacion: "efluentes"
+                    }
+                }
+            },
+            jueves: "post-sintomas",
+            viernes: "entrega",           
+			tags: ["consulta", "floracion", "acceso", "biopsia"]	
+		}	
+
+
+		var x = trabajo.miercoles.modulacion.muestreo.reververacion;
+
+        console.log(x);
+
+    </script>
+
+    <!--
+
+	_de ésta manera, ahora sólo a través, de la variable "x", podremos acceder al valor "efluentes" propiedad "reververacion", de una manera rápida y corta
+
+    _ésto es posible ya que todos los objetos son pasados por referencia
+
+    -->
+
+	
+	
+</body>
+</html>
