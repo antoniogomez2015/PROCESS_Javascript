@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+
+<!--
+	_Ámbitos y Contextos con This:
+	______________________________
+
+	_en javascript, cada vez que se crear el contexto de javascript, en el navegador, a través, de los tags, <script></script>
+
+	_en ese punto se creará el objeto "window", el cuál, contempla todos los sub objetos, métodos, propiedades y demás elementos partes del lenguaje javascript
+
+	_más también, en ese mismo momento se crea el objto "this", el cuál, será un reflejo del objeto "window"
+
+	_de ésta manera, el objeto "this", lo que nos permitirá hacer ó crear son ámbitos personalizados a parte del ámbito global del objeto window
+
+	_de ésta manera, podremos hacer referencias por ejemplo a un ámbito inmediatamente superior dentro de un objeto que a su vez, está contenido dentro de una función, otros
+
+	_lo que quiere decir, que si por ejemplo, que si una función con un bloque de código de un console.log(this), dentro de un objeto, dará como resultado al llamar a la función dentro del objeto, las mismas propiedades del objeto excentuando la función que contiene el "this", ej;
+
+		var persona = {
+			nombre: "Maria",
+			apellido: "Durán",
+			imprimir: function(){
+				console.log(this);
+			}
+		}
+
+		persona.imprimir();
+
+		
+	_como vemos en el ejemplo, de arriba, javascript, no tendrá que buscar hasta ámbito global del objeto window, de ésta manera, tendremos un control total del alcance y comportamiento del ámbito de los elementos en relación a nuestras necesidades
+	
+	_incluso tendremos la posibilidad de crear contextos en ámbitos superiores inmediatos, lo que quiere decir que podremos almacenar contextos superiores y hacer referencia ha éstos en contextos ó ámbitos inferiores; "var self = this;", lo que aumentará aún más las posibilidades y alcances de los elementos en javascript, ej;
+
+
+
+-->
+	
+	<script type="text/javascript">
+
+		///////////////////////////////////////////////////////////////////////////////////////
+		//ejemplo de ámbito global sin "this"
+
+		var nombre = "perezAlberto";
+
+		var loc ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103,
+				titular: function(){
+					console.log("El nombre es: " + nombre);
+				}
+			}
+		}
+
+		/*
+		_de ésta manera, al llamar a la función anidada "titular",dentro del objeto en éste caso "loc", ésta buscará la variable nombre directamente en el ámbito global obviando las propiedades del objeto que tiene disponibles inmediatamente
+		*/
+		console.log(loc.direccion.titular());
+
+
+		///////////////////////////////////////////////////////////////////////////////////////
+		//ejemplo de ámbito local con "this"
+
+
+		var nombre2 = "tonyGomez";
+
+		var loc2 ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103,
+				titular: function(){
+					console.log("Tu pais es: " + this.pais);
+				}
+			}
+		}
+
+		/*
+		_de ésta manera, al llamar a la función anidada "titular", dentro del objeto en éste caso "loc2", ésta buscará la variable nombre directamente en el ámbito global obviando las propiedades del objeto que tiene disponibles inmediatamente
+		*/
+		console.log(loc2.direccion.titular());
+
+
+
+		///////////////////////////////////////////////////////////////////////////////////////
+		//ejemplo de ámbito local con "this", en un segundo nivel
+
+
+		var nombre3 = "tonyGomez";
+
+		var loc3 ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			ref: function(){
+				var self = this;
+			},
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103,				
+				titular: function(){
+					console.log("Tu nombre es: " + self.nombre);
+				}
+			}
+		}
+
+		/*
+		_de ésta manera, al llamar a la función anidada "titular", dentro del objeto en éste caso "loc3", ésta buscará la variable nombre3, pero en un ámbito superior al del objeto anidado "direccion"
+		
+		_ya que a través, de la propiedad "ref", que tiene como valor una función anónima la cuál, tiene una variable llamada por convención "self", la cuál, a su vez tiene el valor de "this" 
+		
+		_de ésta manera, éste nuevo this, almacenado en la variable self, hará referencia a ese contexto ó ámbito superior lo cuál, permitirá tener acceso en éste caso a la propiedad "nombre3"
+		*/
+		console.log(loc3.direccion.titular());
+		
+	</script>
+
+			
+
+<body>
+
+	
+</body>
+
+</html>

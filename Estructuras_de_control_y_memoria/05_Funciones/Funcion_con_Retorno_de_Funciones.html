@@ -30,43 +30,46 @@
     
     <script>
 
-        /////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////
         //función que devuelve un Objeto
      
 
-        //función ha ejecutar que retornará un objeto explícito
-        function id(){
+        //función ha ejecutar que retornará otra función
+        function single(){
 
-           var sr = {
-               nombre: "Jose",
-               apellido: "Perez"
+            //retorno con funcción anónima
+           return function(){
+               console.log("tonyGomez");
            }
-           return sr
         }
 
-        //llamado de la función por consola
-        console.log(id());
+        //variable en la que se guarda la función anónima retornada
+        var info = single();
+
+        //llamado de la variable "info", pero como función a través, de los paréntesis "()"
+        info();
 
 
+        ///////////////////////////////////////////////////////////////
+        //función que devuelve un Objeto pero con parámetros
 
-        /////////////////////////////////////////////////////////////////
-        //función ha ejecutar que retornará un objeto anónimo
 
-        //función con parámetros que igualan las propiedades del objeto para ser accesibles posteriormente y personalizables
-        function sdk(cargo, prof){
+        //función ha ejecutar que retornará otra función
+        function single2(){
 
-            return {
-                cargo: "CO",
-                prof: "Master"
-            }
+        //retorno con funcción anónima con parámetro para acceder bloque de contenido del console.log(), en éste caso
+        return function(nombre){
+        console.log("Creador: " + nombre);
+        }
         }
 
-        //llamado de la función y almacenado con parámetro personalizados para las propiedades del objeto anónimo
-        var read = sdk("Gerente", "Senior");
+        //variable en la que se guarda la función anónima retornada
+        var info2 = single2();
 
-        //llamado por consola de la función que devuelve un objeto
-        console.log(read);
+        //llamado de la variable "info", pero como función a través, de los paréntesis "()", con parámetro para personalizar el bloque de contenido de la función anónima
+        info2("tonyGomez");
 
+        
 
     </script>
 </body>
