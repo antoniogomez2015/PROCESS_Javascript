@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+<!--
+
+
+	_New:
+	_____
+
+	_la palabra reservada "New", nos permitirá crear un nuevo objeto vacio en una primera instancia la cuál, hará referencia a otro elemento del cuál tomará las propiedades y características con las cuáles, New, recreará un nuevo objeto, ej;
+
+
+	/*///////////////////////////////////////////////////////////////////////////////////*/
+
+		//ésto renderizará en la consola como un objeto vacío
+
+			_var proof = {};
+
+			console.log(proof);
+
+
+
+	/////////////////////////////////////////////////////////////////////////////////////
+
+		//más siguiente caso renderizará por consola "undefined"
+
+			function persona(){
+
+			}
+
+			var juan = persona();
+
+			console.log(juan);
+
+
+	/////////////////////////////////////////////////////////////////////////////////////
+
+		//más el mismo ejemplo con la palabra reservada "New", ahora si renderizará al elemento que representa como un objeto "persona{}"
+
+			function persona(){
+
+			}
+
+			var juan = new persona();
+
+			console.log(juan);
+
+
+	/////////////////////////////////////////////////////////////////////////////////////
+
+	_de ésta manera, a ésta función "persona()", podríamos ahora agregarle propiedades, métodos ó funciones como también, objetos anidados
+
+	_ya que ahora la función "persona()", en éste caso, y gracias ha la palabra reservada "new", será interpretada como un objeto y ocupará un espacio en memoria que apuntará ha la funció "persona()", cuando ésta es referenciada por "new"
+
+	_para agregar propiedades y elementos dentro de ésta función en éste caso "persona()", y que éstas propiedades y elementos sean contemplados como hijos ó dentro de ésta función
+
+	_debemos de hacer uso de la palabra reservada "this", en cada propiedad de forma concatenada ".", para que así, se cree un nuevo contecto ó ámbito dentro de ésta función "persona()", para cada propiedad respectivamente, ya que la función "persona()", en éste caso tomará un comportamiento similar ha una clase "class"
+
+	_de ésta manera, debemos hacer uso de la palabra reservada this, más el nombre de la propiedad ha agregar de forma concatenada ".", seguido de la asignación del valor "=", ej; "tony", entendiendo así, que cuando "new", invoca a la función "persona()", ese contexto es creado
+	
+	_para que así, éstas propiedades y elementos no pasen ha ser parte del objeto global de window, si no que pasen ha formar parte de la función "persona()", en éste caso
+
+
+-->
+
+
+	<script>
+	
+		
+		function persona(x,y){
+			this.nombre = x,
+			this.apellido = y,
+			this.edad = 38,
+
+			this.nombreCompleto = function(){
+				return this.nombre + " " + this.apellido
+			},
+
+			this.obj ={
+				operador: "diseñador",
+				aplicacion: "layout",
+				project: "app dev"
+			}
+
+			console.log("mensaje ha renderizar");
+		}
+
+		//podríamos crear el objeto con parámetro
+		var juan = new persona("tony", "Gomez");
+
+		//como también, acceder directamente ha propiedades, métodos y objetos anidados
+		console.log(juan.nombreCompleto());
+	
+	</script>
+
+			
+
+<body>
+
+	
+</body>
+
+</html>
