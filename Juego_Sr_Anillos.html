@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    //juego del Sr de los Anillos
+
+    //modelo constructor
+    function Format(nombre){
+        //gamer
+        this. nombre = nombre;
+        this.live = 100;
+        this.power = 100;
+
+
+        //action cure
+        this.cure = function(cure){
+            if(this.live <= 80 && this.live >= 20){                
+                this.live += 20;
+                console.log(this.nombre + ": Vida: " + this.live + " Poder: " + this.power);
+            }else{
+                console.log("Aún estas muy fuerte");               
+            }
+            
+        }
+
+        //action danger
+        this.danger = function(danger){
+            if(this.live >= 20){
+                this.live -= 20;
+                console.log(this.nombre + ": Poder: " + this.power + ": Vida: " + this.live);
+            }else{
+                console.log("Ya estás muerto");
+            }
+            
+        }
+
+        //estatus
+        this.resumen = function(){
+            console.log(nombre + "Live: " + this.live + "Power: " + power);
+        }
+
+        
+    }
+
+    //instancia de objetos
+    var legolas = new Format("Legolas");
+    var gandald = new Format("Gandal");
+
+    //renderizando objetos
+    console.log(legolas.nombre);
+    console.log(gandald.nombre);
+
+    //acciones de juego
+    console.log(legolas.danger());
+    console.log(legolas.danger());
+    console.log(legolas.danger());
+    console.log(legolas.danger());
+    console.log(legolas.cure());
+    
+
+
+</script>
+
+    
+</body>
+</html>
