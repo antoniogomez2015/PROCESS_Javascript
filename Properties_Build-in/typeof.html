@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+<!--
+
+
+	Typeof:
+	_______
+
+    _la instrucción "typeof", nos permitirá saber el tipo de dato recibido en una operación determinada
+    
+    _de ésta manera, podremos tomar determinaciones en relación a la orientación de la lógica del proyecto respectivo
+
+    _de ésta manera, la instrucción typeof, nos permitirá analizar los tipos de datos siguientes:
+
+
+        _"number"
+
+            _la instrucción typeof, nos permitirá analizar datos de tipo numérico
+
+
+        _"string"
+
+            _la instrucción typeof, nos permitirá analizar datos de tipo texto ó string
+
+
+        _"object"
+
+            _la instrucción typeof, nos permitirá analizar datos de tipo objetos
+
+        
+        _"function"
+
+            _la instrucción typeof, nos permitirá analizar datos de tipo funciones
+
+
+    NOTA: sabiendo que valor es renderizado en la consola por cada tipo de valor, podremos entonces utilizar ese mismo valor renderizado para hacer estructuras de control de flujo
+
+
+
+
+-->
+
+
+	<script>
+
+        //función con parámetro tipo numérico
+        function sample(st){
+            console.log(typeof st);
+        }
+
+        console.log(sample(1));
+		
+
+        //función con parámetro tipo string, ó texto
+        function sample2(st){
+            console.log(typeof st);
+        }
+
+        console.log(sample2("tony"));
+
+
+        //función con parámetro tipo objeto
+        function sample3(st){
+            console.log(typeof st);
+        }
+
+        console.log(sample3({}));
+
+
+        //función con parámetro tipo numérico
+        function sample4(st){
+            console.log(typeof st);
+        }
+
+        console.log(sample4(function(){}));
+
+
+        //control de flujo en relación al tipo de valor ó parámetro
+        function sample(st){
+            if(typeof st == "number"){
+                return "El valor es: " + (8 + st)
+            }else{
+                console.log("Tipo de valor inválido!..");
+            }
+        }
+
+        console.log(sample(15));
+		
+
+
+
+	</script>
+
+			
+
+<body>
+
+	
+</body>
+
+</html>

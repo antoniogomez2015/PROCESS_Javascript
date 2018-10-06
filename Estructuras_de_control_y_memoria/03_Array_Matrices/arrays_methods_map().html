@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+			
+
+<script>
+	
+	/*
+
+	Array Methods Map():
+	____________________
+
+	_éste método nos permitirá aplicar una función a cada propiedad del array, lo cuál, es similar a lo que se podría hacer con un ciclo for
+    
+    _de ésta manera, al método "map()", debemos de pasarle como parámetro la función ha ejecutar para cada elemento dentro del array, respectivamente 
+    
+    _y a su vez, la función que incluyamos dentro del método map(), debemos de pasarle un parámetro genérico como "e", de elemento 
+    
+    _a través, del cuál, la función respectiva podrá acceder ha cada elemento del array una vez la función sea invocada a través, del método map(), ej;
+
+	*/
+
+			var marcas = [
+
+			"Ford",
+			"Chevrolet",
+			"Skoda",
+			"Mitsubishi",
+			"Toyota",
+			"Chrisler"
+		];
+
+        console.log(marcas.map(function(e){
+            return "El automovil es marca: " + e;
+        }))
+
+		
+
+	/*
+	_de ésta manera, obtendremos por consola el siguiente resultado
+
+		[
+			0: "El automovil es marca: Ford"
+            1: "El automovil es marca: Chevrolet"
+            2: "El automovil es marca: Skoda"
+            3: "El automovil es marca: Mitsubishi"
+            4: "El automovil es marca: Toyota"
+            5: "El automovil es marca: Chrisler"
+		]
+
+    _así, podremos ver que poder modificar las propiedades de un array a través, de una función por medio del método "map()"
+	*/
+
+				
+
+	
+
+
+</script>
+
+	
+</body>
+</html>

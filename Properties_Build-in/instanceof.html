@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+<!--
+
+
+	Instanceof:
+	___________
+
+    _la instrucción "instanceof", nos permitirá determinar si una propiedad ó parámetro de un objeto es parte otro
+
+    _de ésta manera, podremos hacer una comparativa la cuál, nos arrojará un resultado de tipo boolean, "true/false"
+
+    _para que así, podamos hacer estructuras de flujo, otros, en relación si un elemento ó parámetro es parte de otro objeto ó elemento determinado
+
+    _en el siguiente ejemplo; podremos saber que si lo pasado como parámetro "st", es un objeto en concreto y no otro elemento diferente de un objeto
+
+    _y efectivamente a través, de la instrucción "intanceof", podremos saber que el parámetro pasado a través, de "st", es un objeto llamado en éste caso "user"
+    
+    -->
+
+
+	<script>
+
+        //clase constructor
+        function sample(){
+            this.nombre = "tony",
+            this.apellido = "Gomez",
+            this.edad = 38
+        }
+
+        //instancia del objeto
+        var user = new sample();
+
+        var obj = {
+            nombre: "jose",
+            apellido: "Gomez"
+        }        
+
+
+        //función para analizará el tipo de parámetro
+        function proof(st){
+            //console.log(st instanceof sample);
+            if(st instanceof sample){
+                console.log("El objecto es: " + sample);
+            }else{
+                console.log("El objeto es incorrecto");
+            }
+        }
+
+        //llamado de la función que hará el análisis
+        console.log(proof(user));
+
+
+
+	</script>
+
+			
+
+<body>
+
+	
+</body>
+
+</html>

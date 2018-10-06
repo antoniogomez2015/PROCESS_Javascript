@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>		
+
+<script>
+	
+	/*
+
+	Matrices Anidados:
+	__________________
+
+	_más también, tendremos la posibilidad de gardar matrices ó arrays, enteros dentro del valor de un elemento personalizado ej:
+	*/
+
+		var marcas = [
+
+			"Ford",
+			"Chevrolet",
+			"Skoda",
+			"Mercedes",
+			"Toyota",
+			"Chrisler"
+		];
+
+
+		marcas[3] = ["Mitsubishi", "Okumo", "Ouyama"];
+
+		document.write(marcas[3]);
+
+	/*
+	_así, como también, podríamos expresar ésto mismo dentro del propio array ej:
+	*/
+
+		var marcas = [
+
+			"Ford",
+			"Chevrolet",
+			"Skoda",
+			["Mitsubishi", "Okumo", "Ouyama"],
+			"Toyota",
+			"Chrisler"
+		];
+
+		document.write(marcas[3]);
+
+
+
+</script>
+
+	
+</body>
+</html>

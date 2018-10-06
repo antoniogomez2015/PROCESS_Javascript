@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
+
+		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+
+		Tutorial específico: Aprende JavaScript esencial #17 - Matrices (Arrays) | https://www.youtube.com/watch?v=Qj5BE-1iMX0&index=17&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
+
+	-->
+		
+
+<script>
+	
+	/*
+
+	Array Properties:
+	_________________
+
+	_los arrays también, disponen de propiedades como por ejemplo la propiedad:
+
+		_length
+
+			_a través, de la cuál, podremos saber los índices a través, de los cuáles, está conformado un array, respectivo ej:
+
+	*/
+
+			var marcas = [
+
+			"Ford",
+			"Chevrolet",
+			"Skoda",
+			"Mitsubishi",
+			"Toyota",
+			"Chrisler"
+		];
+
+		document.write(marcas.length);
+
+
+	/*
+
+	_de ésta manera, javascript, nos indicará que éste array, por ejemplo está conformado por "6", elementos
+
+	_en éste caso, javascript, si contempla los elementos a partir de "1", y no de "0", para darnos una respuesta más elocuente
+
+	_ésta propiedad también, nos sirve para saber cuantos elementos existen dentro de elementos compuestos ó matrices dentro de matrices ej:
+
+	*/
+
+		var marcas = [
+
+			"Ford",
+			"Chevrolet",
+			"Skoda",
+			["Mitsubishi", "Okumo", "Ouyama"],
+			"Toyota",
+			"Chrisler"
+		];
+
+		document.write(marcas[3].length);
+
+
+	/*
+
+	_de ésta manera, javascript, nos indicará que el elemento "3", en éste caso esta conformado a su vez, por "3", elementos en éste caso
+
+	_así, como también, podremos pedirle que nos muestr los otros índices del array, para que así, javascript, sume todos los elemnetos y nos diga cuantos hay por todos ej:
+
+	*/
+
+
+		document.write(marcas[5].length);
+
+		
+
+
+	/*
+
+	_así, podremos ver que javascript, dedujo que habían 7, elementos hasta llegar al índice "5"
+
+	*/
+
+
+
+</script>
+
+	
+</body>
+</html>

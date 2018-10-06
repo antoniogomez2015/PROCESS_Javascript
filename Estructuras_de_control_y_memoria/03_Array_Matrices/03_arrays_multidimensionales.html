@@ -4,26 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 
-	<script type="text/javascript">
-		
-		
-		var miArray = [
-			"tony",
-			4 + 5,
-			"orange",
-			function proof(){document.write("Hola")},
-            ["Juan", "Jose", "Maria", "Petra", "Josefina"]
-		];
-
-		miArray[3]();
-
-
-
-
-
-
-	</script>
-
 </head>
 <body>
 
@@ -35,16 +15,19 @@
 
 
 		Tutorial específico: Aprende JavaScript esencial #20 - Matrices multidimensionales | https://www.youtube.com/watch?v=ZIkooHvLzL0
-
+	-->
 		
 
+<script>
 
+	/*
 	
 	Array ó Multidimensionales: (Arrays Anidados)
 	___________________________
 
-	_en los arrays, tenemos la posibilidad de incluir cualquier tipo de datos e datos ó elementos complejos como variables, funciones otros, ej:
+	_en los arrays, tenemos la posibilidad de incluir cualquier tipo de datos ó elementos complejos como variables, funciones otros, ej:
 
+	*/
 
 		var miArray = [
 			"tony",
@@ -55,40 +38,52 @@
 		];
 		
 
-	_como vemos en el ejemplo del array, anterior, en éste se encuentras diferentes elementos de diferentes tipos como strings, numéricos, colores exadecimales y funciones
+	/*
+	_como vemos en el ejemplo del array, anterior, en éste se encuentran diferentes elementos de diferentes tipos como strings, numéricos, colores exadecimales y funciones
 
-	_y de ésta manera, por ejemplo, para llamar a la función que se encuentra dentro de éste arrays, debemos llamar primero al elemento del array, para luego a su vez, llamar implícitamente a la función respectiva de la siguiente manera:
+	_de ésta manera, por ejemplo, para llamar a la función que se encuentra dentro de éste arrays, debemos llamar primero al elemento del array, para luego a su vez, llamar implícitamente a la función respectiva de la siguiente manera:
 
+	*/
 
 		miArray[3]();
 
 
-	_así, como también, podremos ver que también, podremos incluir arrays, detentro de arrays
+	/*
+	_así, como también, podremos ver que también, podremos incluir arrays, dentro de otros arrays
 
-	_de ésta manera, podremos acceder a todos los elementos de todos arrays, anidaddos a través, de la llamada el array, principal ej:
+	_de ésta manera, podremos acceder a todos los elementos de todos los arrays, anidaddos a través, de la llamada el array, principal ej:
+	*/
 
 		miArray;
 
+
+	/*
 	_así, como también, podremos acceder a cualquier elemento dentro del array, como también, al elemento el cuál, está compuesto por otro array, anidado ej:
+	*/
 
 		 document.write(miArray[4]);
 
 
-	_para que así, javascript, en éste caso no arroje el siguiente resultado:
+	
+	/*_para que así, javascript, en éste caso no arroje el siguiente resultado:
+
 
 		_JuanJoseMariaPetraJosefina
 
 	_e incluso si desiamos acceder a unos de los elementos en concreto del array, anidado podemos hacerlo de la siguiente manera:
+	*/
 
 
 		 document.write(miArray[4][2]);
 
+	/*
 	_de ésta manera, el sistema nos arrojará el siguiente resultado:
 
 		_Maria
 
 
 	_incluso prodríamos hacer anidamientos más complejos y guardar arrays, dentro de arrays, dentro de arrays, ej:
+	*/
 
 
 		var miArray = [
@@ -99,18 +94,24 @@
             ["Juan", "Jose", "Maria", "Petra", "Josefina", ["Rojo", "Verde", "Azul"]]
 		];
 
+	/*
 	_de ésta manera, ahora para poder acceder hasta el color azul debemos hacerlo de la siguiente manera:
+	*/
 
 
 		document.write(miArray[4][5][1]);
 
+	/*
 	_lo cuál, nos arrojará javascript, lo siguiente:
 
 		_verde
 
+	*/
 
 
-	
+
+
+</script>
 
 	
 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+
+	Prototipos:
+	___________
+
+    _los prototipos nos permitirán poder agregar ó cargar en memoria estructuras y elementos dentro de los prototipos nativos de javascript
+
+    _de ésta manera, podremos agregar elementos por ejemplo; dentro de los prototipos de tipo string, numéricos, arrays, funciones, objetos y elementos primitivos
+
+    _con el objetivo de no tener que sobre cargar la memoria a la hora de tener que repetir procesos dentro de una clase ó función de primera clase que hace de constructor object
+
+    _de ésta manera, podremos agregar métodos y estructuras al core, de javascript, para aumentar las posibilidades de implementación y acceso, ya que de ésta manera, los elementos que vayamos agregado estarán disponibles desde cualquier punto y ámbito de nuestro código
+
+
+    Ejemplo de Implementación:
+    __________________________
+
+    _así, por ejemplo; si ha una clase le estamos cargando 1000, registros dinámicos de una base de datos de nombre y apellidos
+
+    _y tenemos que devolver un mensaje estático a través, de un función dentro de la clase constructor igualmente
+
+    _entonces en éste caso, lo más recomendable es agregar ésta función del mensaje estático como un nuevo prototipo de funciones para que así, no tengamos información estática repetida consumiendo memoria del sistema de forma inecesaria
+
+    _de ésta manera, la función del mensaje estático sólo estará una sóla vez en memoria, mientras que la información dinámica del constructor estará 1000, veces en memoria respectivamente
+
+    _para que así, cuando sea necesario, llamar ha ésta función sea desde el prototipo de funciones y no desde la clase constructura 
+    
+    _para que así, nos ahorremos ese espacio en memoria por los 1000, registros ha realizar
+
+
+    Agregar Prototipos:
+    ___________________
+
+    _una vez hemos creado una nueva clase ó constructor, podremos ahora agregar nuevos prototipos
+
+    _para lo cuál, debemos hacer uso de la pala reservada "prototype", concatenada ".", al nombre de la clase respectiva
+
+    _para luego concatenarle ".", el nombre de la propiedad ó prototipo ha agregar para seguidamente asignarle "=", el elemento ó estrura que conformará el nuevo prototipo respectivamente
+
+
+    Usar Prototipos Creados:
+    ________________________
+
+    _de ésta manera, al llamar a la clase constructor ya instanciada vía consola, podremos ver que ahora tiene una nueva extesión de "__proto__", la cuál, contendrá el elemento que hemos agregado como un nuevo prototipo 
+
+    _así, podremos incluso llamar directamente a la propiedad ó elemento que  hemos creado como nuevo prototipo 
+    
+    _de ésta manera, en éste caso javascirpt, buscará el elemento ó propiedad dentro de la clase constructora y si no lo encuentra allí entonces javascript, buscará dentro de los prototipos respectivos 
+    
+    _de ésta manera, podremos ver que ahora podremos aumentar el alcance de los elementos y estrcturas y así, como también, la administración de la memoria del sistema en el desarrollo de nuestros proyectos y su optimización
+
+
+    Usar Prototipos Existentes:
+    ___________________________
+
+    _más también, y de forma por defecto tendremos a nuestra disposición todos los prototipos disponibles por tipos de elementos dentro de javascript
+
+    _de ésta manera, por ejemplo; podremos crear una variable e ir a la consola y llamar ha ésta variable por el nombre que he le hemos dado
+
+    _para a continuación concatenar ".", a el nombre de ésta variable para que así, el sistema nos liste todos los prototipos disponibles para éste tipo de elemento y valores
+
+    _es decir, que javasciprt, nos mostrará unos prototipos diferentes si la variable que hemos creado tiene un valor numérico a que si ésta tiene un valor de tipo string, otros
+
+    _de ésta manera, podremos utilizar todos los prototipos disponibles por tipo de elemento
+
+
+    -->
+    
+    <script>
+
+        ///////////////////////////////////////////////////////////////
+        //función que devuelve un Objeto
+     
+
+        //función de primera clase ó constructor
+        function person(){
+
+            this.nombre = "tony",
+            this.apellido = "Gomez",
+            this.edad = 38,
+
+            this.info = function(){
+                console.log("Usuario: " + this.nombre + " " + this.apellido);
+            }
+        }
+
+        //instanciado del objeto
+        var user = new person();
+
+        //agregando nuevo prototipo "message"
+        person.prototype.message = function(){
+            console.log("soy un nuevo mensaje");
+        }
+
+        //accediendo al nuevo prototipo
+        console.log(user.message());
+        
+        
+
+    </script>
+</body>
+</html>
+

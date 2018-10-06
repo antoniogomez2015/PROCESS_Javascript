@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<!--
+			
+	Funciones Anónimas:
+	___________________
+
+    
+
+    Ámbito Local:
+    _____________
+
+    _una características muy importante es que las variables anónimas permiten crear un ámbito ó entorno particular ó local, es decir, que los elementos en memoria que creemos dentro de una función anónima no pasarán ha ser parte del objeto global 
+    
+    _si no que en vez de eso permanecerán en un ámbito ó alcance local de la función anónima respectiva
+
+    _para lo cuál, debemos de hacer uso de los paréntesis "()", los cuáles, nos permitirá crear un ámbito local para la función respectiva
+
+
+    Auto Ejecutables:
+    _________________
+
+    _otra característica que tienen las funciones anónimas es que se pueden auto ejecutar, es decir, que no tendremos que llamarlar ó invocarlas posteriormente una vez las hayamos creado
+       
+    _para lo cuál, debemos por último crear otros paréntesis "()", los cuáles, debemos de colocar fuera de los paréntesis en los cuáles, hemos declarado la función
+    
+    de ésta manera, a través, de éstos paréntesis podremos auto invocar la función que hemos creado previamente
+
+    _
+
+
+    -->
+    
+    <script>
+
+        ///////////////////////////////////////////////////////////////
+        //funciones anónimas
+
+        //variable en el objeto global       
+        //_ésta variable podrá ser utilizada y cambiada desde cualquier parte del código        
+        var user = "tony";
+
+        //función anónima
+        (function(){
+
+            //variable con un ámbito local
+            //ésta variable sólo podrá ser usada y modificada dentro de ésta función
+            var user = "tony";
+
+            console.log(user);
+
+        })();
+     
+
+      
+      
+
+    </script>
+</body>
+</html>
+
