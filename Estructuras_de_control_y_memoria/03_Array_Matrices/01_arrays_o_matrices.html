@@ -23,40 +23,27 @@
 	
 	/*
 
-	Array Properties:
-	_________________
+	Array:
+	______
 
-	_los arrays también, disponen de propiedades como por ejemplo la propiedad:
+	_los arrays representar un conjunto de elementos ó variables en memoria agrupadas a través, de índices secuenciales
 
-		_length
+	_de ésta manera, podremos tener agrupados diferentes tipos de valores y propiedades dentro de un array
 
-			_a través, de la cuál, podremos saber los índices a través, de los cuáles, está conformado un array, respectivo ej:
+	_así, podremos almacenar valor de tipo;
 
-	*/
+		_boolean - true/false
+		_null
+		_number
+		_string
+		_array[]
+		_function
+		_object{}
 
-			var marcas = [
-
-			"Ford",
-			"Chevrolet",
-			"Skoda",
-			"Mitsubishi",
-			"Toyota",
-			"Chrisler"
-		];
-
-		document.write(marcas.length);
-
-				
-
-	/*
-
-	_de ésta manera, javascript, nos indicará que éste array, por ejemplo está conformado por "6", elementos
-
-	_en éste caso, javascript, si contempla los elementos a partir de "1", y no de "0", para darnos una respuesta más elocuente
-
-	_ésta propiedad también, nos sirve para saber cuantos elementos existen dentro de elementos compuestos ó matrices dentro de matrices ej:
+	_de ésta manera, podremos ver que dentro de un array, podremos almacenar múltiples tipos de datos
 
 	*/
+
 
 		var marcas = [
 
@@ -64,33 +51,51 @@
 			"Chevrolet",
 			"Skoda",
 			["Mitsubishi", "Okumo", "Ouyama"],
+			
+			function(){
+				console.log("Saludar");
+			},
+			
 			"Toyota",
-			"Chrisler"
+
+			{
+				titular: "tony",
+				registro: "unico"
+			},
+
+			"Chrisler",
+
+			10
+
 		];
 
-		document.write(marcas[3].length);
+		//accediendo ha un primitivo como un número ó string
+		console.log(marcas[1]);
+
+			//y obtendremos por consola "Chevrolet"
+
+		//////////////////////////////////////////////////////////
+
+		//accediendo ha un array anidado
+		console.log(marcas[3][1]);
+
+			//y obtendremos por consola "Okumo"
 
 
-	/*
+		//////////////////////////////////////////////////////////
 
-	_de ésta manera, javascript, nos indicará que el elemento "3", en éste caso esta conformado a su vez, por "3", elementos en éste caso
+		//accediendo ha una función anónima
+		console.log(marcas[4]());
 
-	_así, como también, podremos pedirle que nos muestr los otros índices del array, para que así, javascript, sume todos los elemnetos y nos diga cuantos hay por todos ej:
-
-	*/
-
-
-		document.write(marcas[5].length);
-
-		7
+			//y obtendremos por consola "Saludar"
 
 
-	/*
+		//////////////////////////////////////////////////////////
 
-	_así, podremos ver que javascript, dedujo que habían 7, elementos hasta llegar al índice "5"
+		//accediendo ha un objeto anónimo
+		console.log(marcas[6].titular);
 
-	*/
-
+			//y obtendremos por consola "tony"
 
 
 </script>

@@ -1,0 +1,29 @@
+body {
+  background: #555; }
+
+main {
+  width: 80%;
+  height: auto;
+  margin: 0 auto; }
+
+main img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5%; }
+
+.masonry-layout {
+  --columns: 1;
+  --gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: var(--gap); }
+  .masonry-layout.columns-1 {
+    --columns: 1; }
+  .masonry-layout.columns-2 {
+    --columns: 2; }
+  .masonry-layout.columns-3 {
+    --columns: 3; }
+  .masonry-layout.columns-4 {
+    --columns: 4; }
+
+/*# sourceMappingURL=main.css.map */

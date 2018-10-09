@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    /*
+        Tutorial:
+            Media Queries (de CSS) con JavaScript
+                https://www.youtube.com/watch?v=sudFVYXWGD8
+
+        Referencia:
+            https://developer.mozilla.org/es/docs/Web/API/MediaQueryList
+
+
+
+    Media Querys con Matchmedia:
+    ____________________________
+
+    _matchmedia(), es un método el objeto global u objeto window, a través, del cuál, podremos controlar las media querys, de css, a través, de javascript
+
+    _media querys Css;
+
+        _@media (min.width: 600px){
+            body: background: red;
+        }
+
+    _el méto matchmedi(), recibe como parámetro cualquier media query, válida en css, es decir, que a través, del método matchmedia(), podremos recibir directamente una media query de css, directamente 
+
+    _de ésta manera, debemos de pasar como parámetro un string, y entre paréntesis la condición ha ejecutar "(min.width: 600px)", de igual manera que haríamos directamente en css
+
+    /*//////////////////////////////////////////////////////////////*/
+    /*
+    _así, primeramente almacenamos al método matcMedia, en una constante llamada en éste caso "resize"
+
+    _a la cuál, posteriormente le concatenaremos ".", el método "addListener()", que es parte del objeto media query
+
+    _de ésta manera, el método addListener, recibe como parámetro un callback, el cuál, será un función
+
+    */
+
+    //
+    const resize = matchMedia('(min.width: 600px)');
+
+    const changeSize = function(e){
+        e.matches
+        ? document.body.style.background = 'red'
+        : document.body.style.background = 'green'   
+    }
+
+    resize.addListener(changeSize);
+    changeSize(resize);
+
+    //console.log(resize);
+        
+
+//NOTA: no funcion hasta ahora
+   
+
+</script>
+    
+</body>
+</html>

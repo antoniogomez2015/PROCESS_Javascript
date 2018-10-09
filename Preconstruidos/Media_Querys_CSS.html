@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    /*
+        Tutorial:
+            Media Queries (de CSS) con JavaScript
+                https://www.youtube.com/watch?v=sudFVYXWGD8
+
+
+
+    Media Querys en Javascript:
+    ___________________________
+
+    _tenemos la posbilidad de controlar las media querys, de css, a través, de javascript
+
+    _media querys Css;
+
+        _@media (min.width: 600px){
+            body: background: red;
+        }
+
+    _de ésta manera, para controlar las meda querys css, desde javascript, debemos hacer uso de los siguientes eventos, métodos e instrucciones javascirpt
+
+    _primeramente debemos de hacer uso del evento "resize", el cuál, detecta cambios en el tamaño de la ventana del navegador
+
+    _así, como también, hacemos uso de la instrucción "innerWidth", dentro de un condicional if, y a través, del cuál, determinamos que la ventana del navegador sea como mínimo de una tamaño de "600p"
+
+    _y de ser así, de tener un tamaño de 900px, entonces se le aplicará un estilo de color de fondo "rojo"
+
+    _más si el tamaño es de 600px, entonces se le aplicará un color de fondo "purpura"
+    
+    */
+
+    //éste evento se ejecuta cuando se rescala la ventana
+    /*addEventListener("resize", function(){
+        if(innerWidth > 900){
+            document.body.style.background = "red";
+        }else if(innerWidth > 600){
+            document.body.style.background = "purple";
+        }
+    });*/
+
+    //NOTA: hasta éste punto el sistema funcionará ó se activará sólo cuando el usuario haga algún cambio del tamaño de la ventana de forma manual, es decir, cuando el usuario arrastre y redimensione el tamaño del tamaño de la ventana manualmente
+
+
+
+    /*//////////////////////////////////////////////////////////////*/
+    /*
+    _más para que javasccript, detecte el tamaño de la ventana del navegador debemos de la instrucción "DOMContendLoaded", como un evento nuevo con las mismas instrucciones con el control css, que ha habíamos hecho en el paso anterior, ej;
+    */
+
+    //éste se ejecuta al cargar la página
+    /*addEventListener("DOMContentLoaded", function(){
+        if(innerWidth > 900){
+            document.body.style.background = "red";
+        }else if(innerWidth > 600){
+            document.body.style.background = "purple";
+        }
+    });*/
+
+    //de ésta manera, debemos de colocar ambos eventos para que así, garantizemos el mismo resultado en ambos casos
+
+
+    /*//////////////////////////////////////////////////////////////*/
+    /*
+    _más también, podríamos simplificar el código para que sea más compacto simple y legible;
+
+    */
+
+    //de ésta manera, sólo tendremos que declarar la función sólo una vez y utilizarla en ambos eventos
+    const resize = function(){
+        if(innerWidth > 900){
+            document.body.style.background = "red";
+        }else if(innerWidth > 600){
+            document.body.style.background = "purple";
+        }
+    };
+
+    //declaración de los eventos
+    addEventListener("resize", resize);
+    addEventListener("DOMContentLoaded", resize);
+
+    //NOTA: éste sistema no es perfecto por que hay elementos que pueden afectar el área establecida para el scroll bar, la cuál, cambir el ancho de la ventana y dispositivos, otros
+
+    //_tampoco nos permitirá detectar si el dispositivo está en vertical y horizontal
+
+</script>
+    
+</body>
+</html>

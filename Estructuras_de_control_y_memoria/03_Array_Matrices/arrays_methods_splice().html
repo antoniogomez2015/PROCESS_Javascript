@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+			
+
+<script>
+	
+	/*
+
+	Array Methods Splice():
+	_______________________
+
+    _el método pop(), nos permitirá tanto eliminar como agregar elementos específicos dentro de un array, de forma personalizada
+
+    _de ésta manera, podremos obtener resultados precisos al poder acceder a las posiciones exactas del erray y modificar su contenido
+    
+
+
+    _el método splice(), recibe mútiples parámetros en relación a la operación deseada
+
+    _de ésta manera, primeramente debemos de acceder ha un índice del array, lo cuál, debemos de indicar un con número
+
+    _para a continuación indicar cuantos elemento se eliminarán a partir del índice indicado, ej;
+
+        _var recorte = nArr.splice(2, 3);
+
+    _de ésta manera, obtendremos por consola: "1,2,6 "
+
+    _más también, tendremos la posibilidad de sustituir ó agregar elementos a partir del índice indicado y en lugar de los elementos eliminados, ej;
+
+        _var recorte = nArr.splice(2, 3, "Hola");
+
+    _de ésta manera, obtendremos ésto pos consola: "1,2,Hola,6"
+
+    _de igual manera, podremos agregar múltiples parámetros
+
+        _var recorte = nArr.splice(2, 3, "Hola", "tony", "Gomez");
+
+    _más en los casos en los que no requiramos eliminar ningún elemento más si deseamos agregar elementos en un índice determinado 
+    
+    _lo podremos hacer de la siguiente manera, agregando un "0", en el parámetro de eliminar
+
+        _var recorte = nArr.splice(2, 0, "Hola");
+
+
+	*/
+
+        //declaración del arreclo
+        var nArr =[1,2,3,4,5,6];
+        
+        //eliminando un elemento al arreglo
+        //mientras que a su vez, lo guardamos en una variable para luego saber que elemento se ha eliminado
+        nArr.splice(2,0, "Hola: ", "tony");
+       
+        console.log(nArr);
+
+		
+
+	/*
+	
+	*/
+
+				
+
+	
+
+
+</script>
+
+	
+</body>
+</html>
