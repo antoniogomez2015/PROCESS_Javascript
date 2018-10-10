@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	    
+<script>
+
+    /*
+
+    Arguments Functions:
+    ____________________
+    
+    _al declarar una función y hacer el llamado de ésta a través, de la consola
+
+    _podremos ver que si ahora hacemos referencia al nombre de la función que hemos creado
+
+    _y a continuación concatenamos ".", en éste punto, tendremos a disposición todos los elementos del prototipo "__proto__", de las función, dentro del ámbito de la función, entre los cuáles, dispondremos el tipo de elemento "arguments"
+
+
+    //////////////////////////////////////////////////////////////////
+
+
+    _de ésta manera, podremos hacer uso del elemento "arguments", ubicado dentro del "__proto__", de las funciones
+
+    _así, al llamar a la función que hemos creado, le podamos pasar como parámetro el elemento "arguments", para que así, obtengamos un array vacío, "[]"
+
+
+
+    NOTA: el elemento "arguments", del "__proto__", no hace referencia a los argumentos que podremos definir a la hora de declarar una función, si no que en vez de eso, hacen referencia a los parámetros que podremos indicar a la hora de llamar a la función respectiva
+
+
+
+    _de ésta manera, cuando pasamos parámetros a la hora de llamar a la función respectiva, éstos parámetros son pasados también, ha modo de propiedades del array, del "__proto__/arguments"
+
+    _lo que quiere decir que de ésta manera, que podremos acceder a los elementos del array, como parte de nuestro flujo de programación posteriormente
+
+
+        
+    */
+
+    function demo(x1,x2,x3){
+        console.log(arguments);
+
+    }
+
+    console.log(demo("tony","Gomez", " Otálora"));
+
+    //de ésta manera, obtendremos lo siguiente por consola: "Arguments(3) ["tony", "Gomez", " Otálora", callee: ƒ, Symbol(Symbol.iterator): ƒ]"
+
+
+    //en el siguiente ejemplo utilizaremos "arguments", para la lógica de nuestro programa
+    function consulta(a,b,c){
+        if(arguments.length !== 3){
+            console.log("Se requieren 3 argumentos");
+            return
+        }
+        console.log("Bienvenido: " + a + b + " " + c);
+    }
+
+    consulta("tony", "Gomez", 38);
+
+    //de ésta mamera, estamos comprobando que la cantidad de argumentos requerida es la deseada a través, del elemento "__proto__/arguments"
+
+
+</script>
+</body>
+</html>
+

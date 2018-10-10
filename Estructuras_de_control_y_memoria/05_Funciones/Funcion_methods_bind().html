@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script type="text/javascript">
+		
+		
+	/*
+    
+    Function Method Bind():
+    _______________________
+
+        Reference:
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/bind
+
+    
+        Tutorial:
+            JavaScript es fácil: ¿Cómo funciona el método bind()? #3
+                https://www.youtube.com/watch?v=AjQsp-RpQ6o
+
+
+
+    _el método bind(), nos permitirá hacer referencia a un contexto ó ámbito determinado ó personalizados
+
+    _de ésta manera, podremos referencia a variables y elementos que estén en un contexto ó ámbito tanto global como local, cuando estemos haciendo de éstos en funciones
+
+    _lo cuál ampliará las posibilidaddes de los recursos pudiendo así, acceder ha cualquier elemento desde cualquier ámbito ó contexto
+
+
+
+    
+    */
+
+    var x = 9;
+
+    var module = {
+        x = 85;
+        getX = function(){
+            return this.x;
+        }
+
+    };
+
+    module.getX();
+
+    var retrieveX = module.getX;
+
+    retrieveX();
+
+    var context = {
+        x: 55
+    };
+
+    var bindGetX = retrieveX.bind(context);
+
+    bindGetX();
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

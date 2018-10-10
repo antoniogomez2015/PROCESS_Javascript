@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+			
+
+<script>
+	
+	/*
+
+	Array Methods Fill():
+	_____________________
+
+    Tutorial:
+
+        Fill Method in JavaScript Arrays
+            https://www.youtube.com/watch?v=S0cLXlZeWtw
+
+
+
+	_el método fill(), nos permitirá sustituir ó sobre escribir elementos dentro de un array, con un valor común
+
+    _de ésta  manera, podremos acceder ha rangos de elementos contiguos de un array, y sustituir éstos por un valor común para todos éstos al unísono
+
+    _de ésta manera, el método fill(), recibe los siugientes parámetros:
+
+        _como primer parámetro debemos de indicar el valor común el cuál, sustituirá los índices ó rango de elementos indicados del array
+
+        _como segundo parámetro, debemos de indicar a partir de que elemento ó índice se comenzará ha seleccionar el rango de elementos del array
+
+        _y como tercer parámetro, debemos de indicar cuál, será el último elemento ó indice ha seleccionar que conformará el rango de elementos ha modificar
+
+	*/
+
+			var marcas = [
+
+			"Ford",
+			"Chevrolet",
+			"Skoda",
+			"Mitsubishi",
+			"Toyota",
+			"Chrisler"
+		];
+
+        //"Vendido", es el valor común a sustituir en rango de elementos
+        //"1", indicará el inicio del rango de elemento
+        //"4", indicará el final del rango de elementos
+        console.log(marcas.fill("Vendido",1,4));
+
+    //de ésta manera, obtendremos por consola lo siguiente: 
+    //_["Ford", "Vendido", "Vendido", "Vendido", "Toyota", "Chrisler"]
+		
+
+	
+				
+
+	
+
+
+</script>
+
+	
+</body>
+</html>

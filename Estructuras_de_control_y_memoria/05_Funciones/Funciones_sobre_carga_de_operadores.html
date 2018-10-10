@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Sobre Carga de Operadores:
+    __________________________
+
+    _la sobre carga de operadores consiste es poder declarar por ejemplo una misma función con diferentes argumentos, ej;
+
+        function demoProducto(nombre){
+        
+        }
+
+        function demoProducto(nombre, usuario){
+        
+        }
+
+        function demoProducto(producto, x1, 2x){
+        
+        }
+
+    _de ésta manera, podamos utilizar cada una de éstas "instancias", de la misma función para diferentes operaciones con diferentes parámetros al ser llamadas ó utilizadas éstas funciones de forma independiente unas de otras
+
+    _más en javascript, ésto no es posible de momento, ya que el intérprete de javascript, una vez ha barrido ó recorrido el documento, sustituirá todas las instancias de la función con el mismo nombre con última versión de la función encontrada
+
+    _más para los casos en los que necesitemos de éste tipo de "sobre carga de operadores", dispondremos del siguiente metodo ó modalidad que soporta hasta cierto límite ésta posibilidad
+
+
+    
+    */
+
+    
+
+    //opción para sobre carga de operadores
+    function demoProducto(nombre, precio){
+
+        nombre = nombre || "sin nombre";
+        precio = precio || 0;
+
+        console.log("Producto: ", nombre, " ", "Precio: ", precio);
+        
+        //definición de valores de parámetros alternativos
+        function productoDescripcion(nombre){
+            demoProducto(nombre);
+        }bind(this);
+
+        //definición de valores de parámetros alternativos
+        function productoValor(precio){
+            demoProducto(precio);
+        }bind(this);
+    }
+
+
+
+    
+    //parámetro indirecto para "nombre"
+    productoDescripcion("Micro Nikkor 200 F4")
+    
+    //parámetro indirecto para "precio"
+    productoValor(120);
+        
+    //llamado a la función principal
+    demoProducto("Nikon Lens", "undefined");
+
+</script>
+
+</body>
+</html>
+
