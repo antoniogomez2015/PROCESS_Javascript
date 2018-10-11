@@ -16,6 +16,7 @@
 
     _la sobre carga de operadores consiste es poder declarar por ejemplo una misma función con diferentes argumentos, ej;
 
+
         function demoProducto(nombre){
         
         }
@@ -28,7 +29,7 @@
         
         }
 
-    _de ésta manera, podamos utilizar cada una de éstas "instancias", de la misma función para diferentes operaciones con diferentes parámetros al ser llamadas ó utilizadas éstas funciones de forma independiente unas de otras
+    _de ésta manera, podamos utilizar cada una de éstas "instancias", de la misma función para diferentes operaciones con diferentes parámetros al ser llamadas ó utilizadas, al ser éstas funciones de forma independiente unas de otras
 
     _más en javascript, ésto no es posible de momento, ya que el intérprete de javascript, una vez ha barrido ó recorrido el documento, sustituirá todas las instancias de la función con el mismo nombre con última versión de la función encontrada
 
@@ -40,7 +41,8 @@
 
     
 
-    //opción para sobre carga de operadores
+    //función que hará de constructor de los valores de las variables "nombre" y "precio"
+    //de ésta manera, podremos definir el valor de las variables "nombre", y "precio", de forma dinámica a través, de otras funciones en éste caso, más también, podremos asignarle "=", un valor por defecto por medio del operador "or", ó "||"
     function demoProducto(nombre, precio){
 
         nombre = nombre || "sin nombre";
@@ -48,27 +50,27 @@
 
         console.log("Producto: ", nombre, " ", "Precio: ", precio);
         
-        //definición de valores de parámetros alternativos
-        function productoDescripcion(nombre){
-            demoProducto(nombre);
-        }bind(this);
-
-        //definición de valores de parámetros alternativos
-        function productoValor(precio){
-            demoProducto(precio);
-        }bind(this);
     }
 
+    //configurando de valores de parámetros alternativos haciendo referencia a la función constructor "demoProducto"
+    function productoDescripcion(nombre){
+        demoProducto(nombre);
+    };
+
+    //configurando de valores de parámetros alternativos haciendo referencia a la función constructor "demoProducto"
+    function productoValor(precio){
+         demoProducto(precio);
+    };
 
 
     
-    //parámetro indirecto para "nombre"
-    productoDescripcion("Micro Nikkor 200 F4")
+    //definición de parámetro indirecto para "nombre", con el segundo parámetro como "null", ya que la función que hace como constructor "demoProducto", requiere dos parámetros
+    productoDescripcion("Micro Nikkor 200 F4", null);
     
-    //parámetro indirecto para "precio"
-    productoValor(120);
+    //definición de parámetro indirecto para "precio", con el segundo parámetro como "null", ya que la función que hace como constructor "demoProducto", requiere dos parámetros
+    productoValor(null, 120);
         
-    //llamado a la función principal
+    //llamado a la función principal demoProducto
     demoProducto("Nikon Lens", "undefined");
 
 </script>

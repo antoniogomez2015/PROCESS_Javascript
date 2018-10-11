@@ -33,29 +33,48 @@
     
     */
 
+    /////////////////////////////////////////////////////////////////////
+
     var x = 9;
 
     var module = {
-        x = 85;
-        getX = function(){
-            return this.x;
+        x: 85,
+        getX: function(){
+            return this.x
         }
 
     };
 
-    module.getX();
+    /////////////////////////////////////////////////////////////////////
 
+    //accediendo ha variable de un ámbito local
+    console.log(module.getX());
+
+
+    //almacenamos la referencia al método del objeto "module"
     var retrieveX = module.getX;
 
-    retrieveX();
+    //en éste caso, está accediendo ha un método de un objeto el cuál, a su vez, devuelve una variable local "x", de ese mismo objeto
+    //más cuando el interprete de javasciprt, trata de asignar esa variable desde el entorno global donde se está llamando ha ese método, encuentra que en el ámbito global también existe una variable "x", por lo cuál, asigna el valor de la variable "x", global
+    //en éste caso obtendremos por consola que el valor de "x", es "9"
+    console.log(retrieveX());
+        
 
+/////////////////////////////////////////////////////////////////////
+
+    //objeto alternativo que brindará un ámbito local para la instancia de la variable "x"
     var context = {
         x: 55
     };
 
+    //re utilización de una referencia de un método dentro de un objeto mientras que a su vez, cambiamos el ámbito de ejecución del interprete de javascript
     var bindGetX = retrieveX.bind(context);
 
-    bindGetX();
+
+    //en éste caso, estamos accediendo al mismo método "getX", del objeto "module", más a su vez, estamos cambiando el ámbito en el cuál, el interprete de javascript, buscará la variable "x", en éste caso, a través, del método bind(), indicndo así, que el interprete de javascript, busque la variable "x", en el ámbito del objeto "contenxt"
+    console.log(bindGetX());
+
+    //de ésta manera, podremos cmabiar el ámbito en el cuál, va ha trabajar el interprete de javascript, en un momento determinado según la lógica de nuestra aplicación
 
 
 

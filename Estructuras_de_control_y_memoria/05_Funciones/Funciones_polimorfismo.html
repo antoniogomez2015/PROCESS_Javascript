@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Polimorfismo:
+    _____________
+
+    _el polomorfismo nos permitirá manerajar diferentes tipos de parámetros dentro de una función
+
+    _de ésta manera, manejar y constatar diferentes tipos de datos en relación de la lógica y control de nuestra aplicación
+
+    
+    */
+
+    function dateType(x1){
+
+        if(x1 === undefined){
+            console.log("Valor indefinido...");
+        }
+
+        if(x1 instanceof "string"){
+            console.log("El valor es de tipo STRING");
+        }
+
+        if(x1 instanceof "number"){
+            console.log("El valor es de tipo NUMBER");
+        }
+
+        if(x1 instanceof "object"){
+            console.log("El valor es de tipo OBJECT");
+        }
+
+    }
+
+    console.log(dateType("tonyGomez"));
+
+
+    
+
+</script>
+
+</body>
+</html>
+
