@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Ambito de las Funciones:
+    ________________________
+
+    _tenemos la posibilidad de controlar el ámbito de los elementos que interactuan con las funciones
+
+    _de ésta manera, podremos crear estructuras más complejas y con una mayor funcionalidad
+
+    
+    */
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Planteamiento:
+
+    //función que creará más funciones
+    function crearFunciones(){
+
+        //array vacío el cuál, instanciará las funciones con el contenido
+        var arr = [];
+
+        //contenido utilizable
+        var numero = 1;
+
+        //introducir prototipo de la función ha instanciar a través, del array
+        arr.push(function(){
+            //impresión de la variable
+            console.log(numero);
+        })
+
+        //contenido utilizable
+        var numero = 2;
+
+        //introducir prototipo de la función ha instanciar a través, del array
+        arr.push(function(){
+            //impresión de la variable
+            console.log(numero);
+        })
+
+        //contenido utilizable
+        var numero = 3;
+
+        //introducir prototipo de la función ha instanciar a través, del array
+        arr.push(function(){
+            //impresión de la variable
+            console.log(numero);
+        })
+
+        //retorno del array constante [rquerido]
+        return arr;
+
+
+    }
+
+    //almacenado y llamado y ejecutando la función creadora de funciones
+    var funciones = crearFunciones();
+
+    //accediendo a la primera instancia de función creada
+    funciones[0]();
+    funciones[1]();
+    funciones[2]();
+
+
+
+    /*
+    _al tratar de acceder a cada una de las tres posiciones del array, que devuelve una función con la variable respectiva como bloque de código de contenido
+
+    _podremos ver que no obtenemos la versión ó instancia de la variable en el orden de ejecutación quese ha establecido
+
+    _si no que por el contrario, vemos que el interprete de javascript, barre ó recorre el documento y toma el último valor de la instancia de la variable
+    
+    _y asigna ese valor para cada requerimiento de las funciones ha instanciar, en éste caso el valor de "3"
+    */
+
+
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    //Solución:
+
+
+    //función que creará más funciones
+    function crearFunciones2(){
+
+        //array vacío el cuál, instanciará las funciones con el contenido
+        var arr = [];
+
+        //contenido utilizable
+        var numero = 1;
+
+        //introducir prototipo de la función ha instanciar a través, del array
+        //más en éste caso, como parámetro del método push(), se ejecutará una función anónima y auto ejecutable la cuál, a su vez, recibirá como parámetro la variable "numero", con su valor secuencial, y gracias a la función auto ejecutable el interprete de javascript, creará un contecto ó ámbito para ésta función solamente
+        //de ésta manera, al auto ejecutar la función anónima ésta recibe como argumento la variable, ej; "()(numero)", y a su vez, ésta misma variable es pasada como parámetro "function()"", de la función auto ejecutable
+        //para posteriormente poder utilizar ésta misma función dentro del console.log(), ha ejecutar y estar disponible
+        arr.push((function(numero){
+            return function(){
+                console.log(numero);
+            }
+        })(numero));
+
+        numero = 2;
+
+        arr.push((function(numero){
+            return function(){
+                console.log(numero);
+            }
+        })(numero));
+
+        numero = 3;
+
+        arr.push((function(numero){
+            return function(){
+                console.log(numero);
+            }
+        })(numero));
+
+        //retorno del array constante [rquerido]
+        return arr;
+
+        
+    }
+
+    //almacenado y llamado y ejecutando la función creadora de funciones
+    var instancias = crearFunciones2();
+
+    //accediendo a la primera instancia de función creada
+    instancias[0]();
+    instancias[1]();
+    instancias[2]();
+    
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Solución simplificada a través, de un ciclofor:
+
+    //función que creará más funciones
+    function crearFunciones3(){
+
+        //array vacío el cuál, instanciará las funciones con el contenido
+        var arr =[];
+
+        //contenido utilizable
+        var numero = 1;
+
+        //ciclo for, que creará las funciones que desiemos
+        //en éste caso, el ciclo for, primeramente le asigna un valor de "0", a la variable numero
+        //posteriormente crea el condicional en el que si la variable numero, tiene un valor de igual ó menor de "5", y si es así, entonces se ejecute el bloque de código del ciclo for
+        //y a su vez, que le vaya agregando ó sumando un "1", al valor de la variable "numero", actual
+        for(var numero = 0; numero <= 5; numero ++){
+            //igualmente aquí, se pasa como parámetro del método push(), una función anónima como en el ejemplo anterior
+            arr.push((function(numero){
+                return function(){
+                    console.log(numero);
+                }
+            })(numero));    
+            
+        }
+        //retorno del array constante [rquerido]
+        return arr;
+    }
+
+    //almacenado y llamado y ejecutando la función creadora de funciones
+    var i = crearFunciones3();
+
+    //accediendo a la primera instancia de función creada
+    i[0]();
+    i[1]();
+    i[2]();
+    i[3]();
+    i[4]();   
+
+    //de ésta manera, podremos lograr el mismo resultado de forma más corta ó sintetizada, controlada, extensible y mantenible en el tiempo
+
+</script>
+
+</body>
+</html>
+
