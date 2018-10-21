@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos del Objeto Number:
+    __________________________
+
+        Reference:
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Métodos:
+
+    toPrecision():
+    ______________
+
+    _éste método nos pemritirá determinar tanto la cantidad de número enteros como la cantidad de números decimales en una expresión de tipo numérica
+
+    _de ésta manera, el método "toPrecision()", recibe como parámetro un número que representará la totalidad tanto de números enteros como de decimales en la expresión númerca ha representar
+
+    _así, como también, el método "toPrecision()", realizará redondeo en la expresión numérica representada
+
+
+
+    NOTA: más si indicamos un valor como parámetro menor a la cantidad de números enteros de la expresión numérica, entonces el método "toPrecision()", representará la expresión numérica a través, de la notación exponencial, ej:
+
+        _var a = 100.456789;
+
+        _console.log(a.toPrecision(2));
+
+    _de ésta manera, obtendremos en consola: "1.0e+2"
+
+        
+    */
+
+    //variable que guarda una instania del objeto Number
+    var pit = 3.14154789514;
+
+    //llamada de objeto number más el método toPresicion(), el cuál, en éste caso, al haber un sólo numero entero representará al "3", más tres decimales, en éste caso "142", haciendo un pequeño redondeo, para hacer un total de "4", valores como hemos indicado como parámetro en el método "toPrecision()"
+    console.log(pit.toPrecision(4));
+
+        //de ésta manera, obtendremos por consola "3.142"
+    
+
+
+</script>
+
+</body>
+</html>
+

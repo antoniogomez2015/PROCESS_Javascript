@@ -16,19 +16,19 @@
 
     _el objeto String, es un objeto intríncico ó build-in, ó lo que es lo mismo, el objeto String, es un objeto nativo ó pre construido dentro de javascript
 
-    _de ésta maenra, el objeto String, siempre estará disponible en el lenguaje de javascript, sin que el desarrollador los tenga que declarar
+    _de ésta manera, el objeto String, siempre estará disponible en el lenguaje de javascript, sin que el desarrollador lo tenga que declarar
 
-    _el objeto String, es muy útil en todo tipo aplicaciones en las cuáles, se requiera controlar la representación del texto en general y carácteres en específico así, como de su comportamineto de forma específica en relación al efecto deseado ha realizar
+    _el objeto String, es muy útil en todo tipo aplicaciones en las cuáles, se requiera controlar la representación de texto en general y carácteres en específico así, como de su comportamiento de forma específica en relación al efecto deseado ha realizar
 
     _de ésta manera, podremos instanciar el objeto Number, de la siguiente manera,
 
         _var info = new String ("Bienvenidos..");
 
-    _más en javascript, casi todo es un objeto, de ésta manera, cuando se define un número como un literal en una variable por ejemplo, ésto es considerado en javascript, como un objeto y específicamente como una instancia del objeto Number, ej;
+    _más en javascript, casi todo es un objeto, de ésta manera, cuando se define un string, como un texto literal en una variable por ejemplo, ésto es considerado en javascript, como un objeto y específicamente como una instancia del objeto string, ej;
 
-        _var n1 = 123.45;
+        _var name = "tony";
 
-    _
+    _para acceder a partes de un string, ó texto del objeto string(), podremos hacer uso de la notación corchetes a través, de la cuál, podremos acceder a elementos de un objeto
 
     
     */
@@ -37,18 +37,25 @@
     //Planteamiento:
 
     //instanciación del objeto String
-    var info = new String ("Bienvenidos..");
+    var info = new String("Bienvenidos..");
 
-    //llamado del objeto Number, almacenado en la variable n1, en éste caso
-    console.log(info);
+    //llamando ó accediendo al valor primitivo del objeto string, por medio del método valueOf()
+    console.log(info.valueOf());
+    
+    //llamado ó accediendo hau n caracter específico del estring, a través, de la notación de corchetes, en éste caso, a la posición cero, [0]
+    console.log(info[0]);
 
+        //de ésta manera, obtendremos por consola "B"
+    
 
     ////////////////////////////////////////////////////////////////////////////////
     //opción resumida:
 
     var info2 = "Bienvenidos nuevamente...";
 
-    console.log(info2);
+    console.log(info2[4]);
+
+        //de ésta manera, obtendremos por consola "v"
 
     
 

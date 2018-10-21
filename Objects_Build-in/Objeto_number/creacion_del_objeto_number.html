@@ -17,11 +17,13 @@
         Reference:
             https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number
 
+            https://www.w3schools.com/js/js_number_methods.asp
+
 
 
     _el objeto Number, es un objeto intríncico ó build-in, ó lo que es lo mismo, el objeto Number, es un objeto nativo ó pre construido dentro de javascript
 
-    _de ésta maenra, el objeto Number, siempre estará disponible en el lenguaje de javascript, sin que el desarrollador los tenga que declarar
+    _de ésta maenra, el objeto Number, siempre estará disponible en el lenguaje de javascript, sin que el desarrollador lo tenga que declarar
 
     _el objeto Number, es muy útil en aplicaciones en las cuáles, se requieran realizar cálculos numéricos
 
@@ -44,17 +46,30 @@
     //Planteamiento:
 
     //instanciación del objeto Number
+    //a través, de la palabra reservada "nuew", y del método "Number()", el cuál, se instancia de una clase
     var n1 = new Number (45);
 
     //llamado del objeto Number, almacenado en la variable n1, en éste caso
+    //ésto nos devolverá el objeto: Number{45}, y no directamente el valor
     console.log(n1);
+
+    //para poder acceder al valor del objeto number, directamente debemos hacerlo a través, del método "valueOf()", para que así, a través, de éste método podamos acceder al valor del objeto y no al objeto propiamente dicho
+    console.log(n1.valueOf());
+
+    //más al instanciar un objeto number, a través de "new", podremos utilizar su valor normalmente en cualquier operación que haga referencia al valor y no al objeto number, directamente
+    var proof = n1 + 5;
+
+    //llamando a la variable proof, que hace referencia a la operación aritmética
+    console.log(proof);
 
 
     ////////////////////////////////////////////////////////////////////////////////
     //opción resumida:
 
+    //representación del objeto number a través, de una expresión nominal
     var n2 = 123.45;
 
+    //acceder al valor del objeto number, guardado en la variable "n2"
     console.log(n2);
 
 
