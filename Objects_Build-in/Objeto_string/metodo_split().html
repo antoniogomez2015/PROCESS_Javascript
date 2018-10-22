@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos del Objeto String:
+    __________________________
+
+        Reference:
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Métodos:
+
+    split():
+    ________
+
+    _éste método nos pemritirá segmentar las palabrar conformadas dentro de una cadena de texto ó string, dentro de un array
+
+    _para que así, podamos hacer uso de esas palabras segmentadas y ordenadas dentro de un array posteriormente
+
+    _de ésta manera, por ejemplo; podremos contar las palabras existentes
+
+    _de ésta manera, al método "split()", nos permitirá pasarle como parámetros los siguientes elementos;
+
+        _si no le enviamos parámetros, es decir, dejamos el paréntesis vacío, el interprete de javascript, nos devolverá un array con toda la oración del string, ó cadenada de texto como un sólo valor del array
+
+        _más si indicamos como parámetro comillas vacias y sin espacio "", entonces el interprete de javascript, nos devolverá un array con cada caracter como una valor de array
+
+        _más si indicamos como parámetro comillas vacías y con un espacio " ", entonces el interprete de javascript, nos devolverá un array con cada palabra de la cadena de texto como una propiedad ó valor del array
+
+
+    */
+
+    
+
+    //variable que almacena el objeto string
+    var name = "tony Gomez";
+
+    //llamada y cceso al objeto string, más el método split()
+    console.log(name.split(""));
+        //de ésta manera, obtendremos por consola: ["t","o","n","y","","G","o","m","e","z"]
+
+
+    //llamada y cceso al objeto string, más el método split()
+    console.log(name.split(" "));
+        //de ésta manera, obtendremos por consola: ["tony", "Gomez"]
+
+
+    ///llamada y cceso al objeto string, más el método split(), más la propiedad "length"
+    console.log(name.split(" ").length);
+        //de ésta manera, obtendremos por consola: 2 (dos palabras en la cadena)
+
+    
+
+
+
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos del Objeto String:
+    __________________________
+
+        Reference:
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Métodos:
+
+    substr():
+    _________
+
+    _éste método nos pemritirá extraer segmentos de una cadena de texto ó string
+
+    _de ésta manera, podremos podremos obtener extractos personalizados de una serie de carácteres ó palabras completas dentro de una cadena de texto
+
+    _de ésta manera, el método "substr()", nos permitirá pasarle dos parámetros los cuáles son los siguientes:
+
+        _como primer parámetro podremos indicarle a partir de que índice de caracter comenzará ha realizar la extracción de caracteres de hay en adelante
+
+        _y como segundo parámetro opcionnal, podremos indicar cuantos carácteres adicionales se mostrarán a partir del del caracter inicial seleccionado en el parámetro uno
+    
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+    _más también, tendremos la posibilidad de utilizar el método "indexOf()", como segundo parámetro del método "substr()", para indicar un caracter especial como un espacio vacío por ejemplo, para determinar la finalización de la extracción de caracteres dentro de la cadena de texto ó string
+
+    _lo cuál, es especialmente útil en los casos en que no sabremos la cantidad de caracteres introducida por el usuario como un string, de forma dinámica, otros
+
+    */
+
+    
+
+    //variable que almacena el objeto string
+    var name = "tony Gomez";
+
+    //llamada y acceso al objeto string, a partir del caracter con la posición de (5), de hay en adelante
+    console.dir(name.substr(5));
+        //de ésta manera, obtendremos por consola: "Gomez"
+
+
+    //llamada y acceso al objeto string, a partir del caracter con la posición de (5), y hasta dos (2), carácteres más a partir de allí, ó la posición (5)
+    console.dir(name.substr(5,2));
+        //de ésta manera, obtendremos por consola: "Go"
+
+    
+    //llamada y acceso al objeto string, a partir del caracter con la posición de (0), y hasta que encuentre unespacio vació a través, de los métodos "substr()", y "indexOf()"
+    console.log(name.substr(0, name.indexOf(" ")));
+        //de ésta manera, obtendremos por consola: "tony"
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

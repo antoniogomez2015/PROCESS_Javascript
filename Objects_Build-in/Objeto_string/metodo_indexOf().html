@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos del Objeto String:
+    __________________________
+
+        Reference:
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Métodos:
+
+    indexOf():
+    __________
+
+    _éste método nos pemritirá obtener el índice ó ubicación de un caracter en específico de un string, ó cadena de texto
+
+    _de ésta manera, podremos saber cuál, es la ubicación de un caracter determinado de una cadena de texto
+
+    _de ésta manera, el interprete de javascript, interpretará los carácteres de una cadena de string, como elementos de un array 
+    
+    _y a su vez, el interprete de javascript, tomará en cuenta los espacios en blanco
+
+    _así, como también, el interprete de javascript, tomará en cuenta si los carácteres están en caja baja ó caja alta ó "lowercase", y "uppercase"
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+    _más también, tendremos la posbilidad de distinguir entre conincidencia de una misma letra ó caracter dentro de un mismo string, ó cadena de texto
+
+    _para lo cuál, dispondremos del método "lastIndexOf()", por medio del cuál, podremos identificar y obtener la última coincidencia de un caracter determinado dentro de una cadena de texto ó un string
+
+    
+    */
+
+    //variables que alamacenan un objeto de tipo String, con carácteres en caja baja y con espacios
+    var name = "tony gomez otalora";
+
+    //variables que alamacenan un objeto de tipo String, con carácteres tanto en caja baja como en caja alta y sin espacios
+    var user = "TonyGomezOtalora";
+
+    //llamada al objeto string, más el método "indexOf()", para obtener el índice del caracter deseado, en éste caso "t"
+    console.log(name.indexOf("t"));
+        //ésto nos arrojará por consola el valor de índice de "0"
+
+    //llamada al objeto string, más el método "lastIndexOf()", para obtener la última coincidencia del caracter en éste caso "t", en caja baja
+    console.log(name.lastIndexOf("t"));
+        //ésto nos arrojará por consola el valor de índice de "12"
+
+
+    //llamada al objeto string, más el método "indexOf()", para obtener el índice del caracter deseado, en éste caso "t"
+    console.log(user.indexOf("t"));
+        //ésto nos arrojará por consola el valor de índice de "10", ya que la primera "T", es en mayúscula y el interprete de javascript, distingue entre carácteres en caja baja y caja alta
+  
+
+    //llamada al objeto string, más el método "lastIndexOf()", para obtener la última coincidencia del caracter en éste caso "t", en caja baja
+    console.log(user.lastIndexOf("t"));
+        //ésto nos arrojará por consola el valor de índice de "10", ya que la primera "T", es en mayúscula y el interprete de javascript, distingue entre carácteres en caja baja y caja alta
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
