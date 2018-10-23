@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuricomponent.asp
+
+           
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    decodeURIComponent():
+    _____________________
+
+    _el método "decodeURIComponent()", permite codificar componentes de una cadena de texto compleja
+
+    _un codificador URI, es un (Uniform Resource Identifier, URI), ó "Identificador de Recurso Uniforme" 
+    
+    _el cuál, restaurará los valores de la cadena string ó de texto original
+
+
+    */
+
+    
+
+    //definición de un objeto String
+    var info = "https://w3schools.com/my test.asp?name=ståle&car=saab";
+
+    //almancenado de la codificación de la cadena de texto a través, del método "encodeURIComponent()"
+    var resp = encodeURIComponent(info);
+
+    //almacenado y decodificación de la cadena de texto a través, del método decodeURIComponent()
+    var decode = decodeURIComponent(resp)
+
+    //llamado por consola del método "encodeURIComponent()"
+    console.log(resp);
+        //de ésta manera, obtendremos por consola: https%3A%2F%2Fw3schools.com%2Fmy%20test.asp%3Fname%3Dst%C3%A5le%26car%3Dsaab
+
+
+    //llamado por consola del método "decodeURIComponent()"
+    console.log(decode);
+        //de ésta manera, obtendremos por consola: https://w3schools.com/my test.asp?name=ståle&car=saab
+
+    
+
+
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    decodeURI():
+    ____________
+
+    _el método "decodeURI()", permite decodificar una cadena de texto codificada previamente
+
+    _un codificador URI, es un (Uniform Resource Identifier, URI), ó "Identificador de Recurso Uniforme" 
+    
+    _el cuál, reemplazará cada instancia de ciertos carácteres por uno, dos o tres secuencias de escape representando el carácter codificado en UTF-8.
+
+
+
+
+    */
+
+    //definición de un objeto String
+    var info = "my test.asp?name=ståle&car=saab";
+
+    //almancenado de la codificación de la cadena de texto a través, del método "encode URI()"
+    var resp = encodeURI(info);
+
+    //almacenado y decodificación de la cadena de texto a través, del método decodeURI()
+    var decode = decodeURI(resp)
+
+    //llamado por consola del método "encodeURI()"
+    console.log(resp);
+        //de ésta manera, obtendremos por consola: my%20test.asp?name=st%C3%A5le&car=saab
+
+    //llamado por consola del método "decode URI()"
+    console.log(decode);
+        //de ésta manera, obtendremos por consola: my test.asp?name=ståle&car=saab
+
+
+
+
+</script>
+
+</body>
+</html>
+

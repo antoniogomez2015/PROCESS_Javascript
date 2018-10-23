@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>	
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+/*
+    reference:
+    __________
+
+        https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+
+        https://www.w3schools.com/jsref/met_win_btoa.asp
+
+        https://www.w3schools.com/jsref/met_win_atob.asp
+
+        https://developer.mozilla.org/es/docs/Web/API/WindowBase64/atob
+
+
+        Tutorial:
+            https://www.youtube.com/watch?v=sDBMexerEyk
+
+	
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+    Métodos:
+    ________
+
+
+    btoa():
+    _______
+
+    _Como las DOMStrings son cadenas codificadas en 16 bits, en la mayoría de navegadores llaman a window.btoa sobre una cadena Unicode,
+    
+    _de ésta manera, resultará en una excepción Character Out Of Range, si un carácter excede el rango de los caracteres ASCII de 8 bits. Hay dos posibles métodos para resolver este problema:
+
+        _btoa()
+        _atob()
+
+
+    _La función WindowBase64.atob(), descodifica una cadena de datos que ha sido codificada utilizando la codificación en base-64. 
+    
+    _Puedes utilizar el método window.btoa(), para codificar y transmitir datos que, de otro modo podrían generar problemas de comunicación. 
+    
+    _Luego de ser transmitidos se pueden usar el método window.atob() para decodificar los datos de nuevo. 
+    
+    _Por ejemplo, puedes codificar, transmitir y decodificar los caracteres de control como valores ASCII 0 a 31.
+
+
+
+*/
+
+    //almacenaje de un objeto String
+    var inf = "Enlace de referencia!";
+
+    //codificación de carácteres de un objeto String, de la variable "inf", en éste caso, bajo la codificación ASCII unicode a 16 bits
+    var b64 = btoa(inf);
+
+    //decodificación de carácteres de un objeto String, de la variable "inf", en éste caso, bajo la codificación WindowBase64
+    var unicode = atob(b64);
+
+    //llamado de la variable b64, por consola
+    console.log(b64);
+        //de ésta manera, obtendremos por consola: RW5sYWNlIGRlIHJlZmVyZW5jaWEh
+
+    //llamado de la variable unicode, por consola
+    console.log(unicode);
+        //de ésta manera, obtendremos por consola: Enlace de referencia!
+
+
+</script>
+
+
+	
+</body>
+</html>

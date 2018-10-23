@@ -22,22 +22,24 @@
     ////////////////////////////////////////////////////////////////////////////////
     //Métodos:
 
-    italics():
-    __________
+    fontcolor():
+    ____________
 
     _éste método nos pemritirá aplicar tags, html, ha un string, ó cadena de texto
 
-    _de ésta manera, en éste caso, podremos renderizar una cadena de texto dentro de los tags, <i></i>
+    _de ésta manera, en éste caso, podremos renderizar una cadena de texto dentro de los tags, <fontcolor></fontcolor>
+
+    _para hacer un texto acentuado ó en negrita
 
     */
 
     var name = "tonyGomez";
 
-    console.log(name.italics());
+    console.log(name.fontcolor("purple"));
         //de ésta manera, obtendremos por consola: <i>tonyGomez</i>
 
     //aplicar el método "italics()", en el objeto string name, en éste caso
-    var set = name.italics();
+    var set = name.fontcolor("purple");
 
     //renderizar la variable "set", que contiene el método objeto string
     document.write(set);
