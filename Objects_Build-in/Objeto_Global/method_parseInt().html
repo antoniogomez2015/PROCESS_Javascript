@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    parseInt():
+    _____________
+
+    _el método "parseInt()", analiza una cadena de texto ó string, y devuelve un entero
+
+
+    _el método "parseInt()", recive un parámetro, el cuál, es "radix", se usa para especificar qué sistema numérico se usará, 
+    
+    _por ejemplo, un radix de 16 (hexadecimal), indica que el número en la cadena se debe analizar desde un número hexadecimal a un número decimal
+
+    _Si se omite el parámetro radix, JavaScript asume lo siguiente:
+
+    _Si la cadena comienza con "0x", la raíz es 16 (hexadecimal)
+
+    _Si la cadena comienza con "0", la raíz es 8 (octal), ésta característica está en desuso
+
+    _Si la cadena comienza con cualquier otro valor, la raíz es 10 (decimal),
+
+    Nota: ¡Solo se devuelve el primer número en la cadena!
+
+    Nota: Se permiten espacios iniciales y finales.
+
+    Nota: Si el primer carácter no se puede convertir en un número, parseInt () devuelve NaN.
+
+    Nota: los navegadores más antiguos darán como resultado ParseInt ("010") como 8, porque las versiones más antiguas de ECMAScript (más antiguas que ECMAScript 5, usan el octal radix (8) como predeterminado cuando la cadena comienza con "0", a partir de ECMAScript 5, el valor predeterminado es el decimal radix (10)
+
+
+    NOTA: si una cadena de texto ó string, es enviada como parámetro del método parseInt(), y la cuál, comienza con carácteres diferentes de representaciones de número, en éste caso el interprete de javascript, a través, del método "parseInt()", evaluará éste parámetro como un elemento "NaN"
+
+    */
+
+
+
+    //almacenamiento del método "parseFloat()", en variables
+    var a = parseInt("10") + "<br>";
+    var b = parseInt("10.00") + "<br>";
+    var c = parseInt("10.33") + "<br>";
+    var d = parseInt("34 45 66") + "<br>";
+    var e = parseInt(" 60 ") + "<br>";
+    var f = parseInt("40 years") + "<br>";
+    var g = parseInt("He was 40") + "<br>";
+
+    var h = parseInt("10", 10)+ "<br>";
+    var i = parseInt("010")+ "<br>";
+    var j = parseInt("10", 8)+ "<br>";
+    var k = parseInt("0x10")+ "<br>";
+    var l = parseInt("10", 16)+ "<br>";
+
+    //conjunción de todas las variables en la variable "n"
+    var n = a + b + c + d + e + f + g + "<br>" + h + i + j + k +l;
+
+
+
+
+
+    //renderización de las variables con el método "parseFloat()"
+    document.write(n);
+        //de ésta manera, obtendremos renderizado en el navegador:
+
+            /*
+                10
+                10
+                10
+                34
+                60
+                40
+                NaN
+                
+                10
+                10
+                8
+                16
+                16
+            */
+
+
+    //como podremos ver el interprete de javascript, ha descartado todos los elementos seguidos al elemento inicial del parámetro enviado que no representen ó que no sean un número propiamente dicho
+        
+
+
+</script>
+
+</body>
+</html>
+

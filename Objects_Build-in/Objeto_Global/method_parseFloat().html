@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    parseFloat():
+    _____________
+
+    _el método "parseFloat()", permite convertir un valor a un número legal, descartando los demás elementos de tipo string, seguidamente
+
+    _de ésta manera, el método "parseFloat()", nos permitirá convertir el argumento del objeto en un número que representa el valor del objeto
+
+    _de ésta manera, el método "parseFloat()", mos permitirá enviarle como parámetros los siguientes elementos y valores;
+
+        _Number
+        _String
+
+    _la diferencia de enviar valores numéricos a través, de objetos de tipo string, es que enviar valores a través, de objetos de tipo string, es que se pueden combinar valores numéricos como de tipo string, a la vez
+
+    _con la particularidad de que el primer elemento del string, deberá ser de tipo numérico y nunca de tipo string como primera palabra, ya que de ser así, el resultado será "NaN", ej:
+
+        _"He was 40"
+
+    _más si el primer valor de un string, representa un número podremos posteriormente declarar valores de tipo texto seguidamente, ej:
+
+        _"40 years"
+
+
+    _de éste manera, el interprete de javascript, gracias al método "parseFloat()", descartará todos los elementos enviados como parámetros más allá del primer valor que no sean un número ó que representen un número
+
+    */
+
+
+    //almacenamiento del método "parseFloat()", en variables
+    var a = parseFloat(50) + "<br>";
+    var b = parseFloat("10.00") + "<br>";
+    var c = parseFloat("10.33") + "<br>";
+    var d = parseFloat("34 45 66") + "<br>";
+    var e = parseFloat(" 60 ") + "<br>";
+    var f = parseFloat("40 years") + "<br>";
+    var g = parseFloat("He was 40") + "<br>";
+
+    //ordenamiento de variables en otra variable
+    var n = a + b + c + d + e + f + g;
+
+
+    //renderización de las variables con el método "parseFloat()"
+    document.write(n);
+        //de ésta manera, obtendremos renderizado en el navegador:
+
+            /*
+                50
+                10
+                10.33
+                34
+                60
+                40
+                NaN            
+            */
+
+
+    //como podremos ver el interprete de javascript, ha descartado todos los elementos seguidos al elemento inicial del parámetro enviado que no representen ó que no sean un número propiamente dicho
+        
+
+
+</script>
+
+</body>
+</html>
+

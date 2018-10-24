@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    escape():
+    ________
+
+    NOTE: el método "escape()", ha sido depreciado desde la versión 1.5, e javascript, de ésta manera, dispondremos de los nuevos métodos llamados;  
+    
+        _Use encodeURI() or encodeURIComponent() instead
+
+
+    _el método "escape()", permite codificar una cadena de texto ó string
+
+    _un codificador URI, es un (Uniform Resource Identifier, URI), ó "Identificador de Recurso Uniforme" 
+    
+    _el cuál, reemplazará cada instancia de ciertos carácteres por uno, dos o tres secuencias de escape representando el carácter codificado en UTF-8.
+
+
+
+
+    */
+
+    //definición de un objeto String
+    var info = escape("my test.asp?name=ståle&car=saab");
+
+
+    //llamado por consola del método "escape()"
+    console.log(info);
+        //de ésta manera, obtendremos por consola: my%20test.asp%3Fname%3Dst%E5le%26car%3Dsaab
+
+
+
+</script>
+
+</body>
+</html>
+

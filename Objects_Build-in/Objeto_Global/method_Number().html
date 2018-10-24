@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    Number():
+    ________
+
+    _el método "Number()", permite convertir un valor a un objeto de tipo "Number", legal, se devuelve NaN
+
+    _de ésta manera, el método "Number()", nos permitirá convertir el argumento del objeto en un número que representa el valor del objeto.
+
+    _Nota: Si el parámetro es un objeto Fecha, la función Número(), devuelve el número de milisegundos desde la medianoche del 1 de enero de 1970, UTC.
+
+    _el método "Number()", puede convertir los siguientes tipos de valores:
+
+        _true
+        _false
+        _Date() Object
+        _String Numbers
+        
+
+    _de ésta manera, el valor en éste caso "999 888", no puede ser interpretado ya que es de tipo string, y expresa un número pero no conforma un sólo núemro, si no que en vez de eso, conforma dos números, "999", y "888"
+
+    _de ésta manera, los carácters y números y elementos ha interpretar deben estar conformados por un sólo elemento ó caracter
+
+    */
+
+
+
+    //almacenado del método "isNaN(), "de las variables..
+    var x1 = true;
+    var x2 = false;
+    var x3 = new Date();
+    var x4 = "999";
+    var x5 = "999 888";
+
+    var n = 
+    Number(x1) + "<br>" + 
+    Number(x2) + "<br>" + 
+    Number(x3) + "<br>" + 
+    Number(x4) + "<br>" + 
+    Number(x5);
+    
+
+    document.write(n);
+        //de ésta manera, renderizaremos en el navegador:
+            /*
+                1
+                0
+                1540326692169
+                999
+                NaN                
+            */
+        
+
+
+</script>
+
+</body>
+</html>
+

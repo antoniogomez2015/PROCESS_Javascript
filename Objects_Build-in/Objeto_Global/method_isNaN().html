@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    isNaN():
+    ________
+
+    _el método "isNaN()", permite evaluar y determinar si un valor determinado es un número ó no
+
+    _ea método isNaN () determina si un valor es un número no válido (Not-a-Number)
+
+    _Este método devuelve verdadero si el valor equivale a NaN. De lo contrario, devuelve falso.
+
+    _éste método es diferente del método "isNaN()", del objeto "Number",  "Number.isNaN()", específico del Número.
+
+    _el método del objeto "Global" "isNaN ()"", convierte el valor probado en un Número, luego lo prueba
+
+    _el método del objeto "Number.isNaN()", no convierte los valores a un Número, y no devolverá verdadero para ningún valor que no sea del tipo Número
+
+    _de ésta maenra, al método "isNaN()", debemos de pasale como parámetros por lo general los siguientes valores:
+
+        _números, strins, true, false, undefined, NaN, "NaN", 11/22
+
+
+    */
+
+
+
+    //almacenado del método "isNaN(), "de las variables..
+    var a = isNaN(123) //false
+    var b = isNaN(-1.23) //false
+    var c = isNaN(5-2) //false
+    var d = isNaN(0) //false
+    var e = isNaN('123') //false
+    var f = isNaN('Hello') //true
+    var g = isNaN('2005/12/12') //true
+    var h = isNaN('') //false
+    var i = isNaN(true) //false
+    var j = isNaN(undefined) //true
+    var k = isNaN('NaN') //true
+    var l = isNaN(NaN) //true
+    var m = isNaN(0 / 0) //true
+
+    
+
+    //llamar al método "isNaN()"
+    console.log("La variable (a), es igual ha: " + a);
+        //de ésta manera, obtendremos por consola: La variable (a), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (b), es igual ha: " + b);
+        //de ésta manera, obtendremos por consola: La variable (b), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (c), es igual ha: " + c);
+        //de ésta manera, obtendremos por consola: La variable (c), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (d), es igual ha: " + d);
+        //de ésta manera, obtendremos por consola: La variable (d), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (e), es igual ha: " + e);
+        //de ésta manera, obtendremos por consola: La variable (e), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (f), es igual ha: " + f);
+        //de ésta manera, obtendremos por consola: La variable (f), es igual ha: "true"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (g), es igual ha: " + g);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (h), es igual ha: " + h);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (i), es igual ha: " + i);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "false"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (j), es igual ha: " + j);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (k), es igual ha: " + k);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (l), es igual ha: " + l);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+    //llamar al método "isNaN()"
+    console.log("La variable (m), es igual ha: " + m);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+
+</script>
+
+</body>
+</html>
+

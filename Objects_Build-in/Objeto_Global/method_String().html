@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    String():
+    _________
+
+    _el método "String()", nos permitirá convertir valor de un determinado objeto a un objeto de tipo "String"
+
+    _de ésta manera, podremos convertir un valor de un objeto en un objeto de tipo string, para diferentes aplicaciones lógicas y de estrucutras de control, otros
+
+    NOTA: el método String(), devuelve un valor similar al método toString(), del objeto "String", de un objeto individual ó externo como un objeto de tipo "Number, "Array", "Object", otros
+
+
+    */
+
+
+
+    //almacenamiento del método "parseFloat()", en variables
+    var x1 = Boolean(0);
+    var x2 = Boolean(1);
+    var x3 = new Date();
+    var x4 = "12345";
+    var x5 = 12345;
+
+    //alacenamiento del método "String()", en la variable "res"
+    var res =
+    String(x1) + "<br>" +
+    String(x2) + "<br>" +
+    String(x3) + "<br>" +
+    String(x4) + "<br>" +
+    String(x5);
+
+
+
+    //renderización de las variables con el método "parseFloat()"
+    document.write(res);
+        //de ésta manera, obtendremos renderizado en el navegador:
+
+            /*
+                false
+                true
+                Tue Oct 23 2018 23:03:05 GMT-0400 (hora de Venezuela)
+                12345
+                12345
+            */
+
+
+    //de ésta manera, el interprete de javascript, convierte ha un objeto de tipo string, los valores pasados como parámetros en el método "String()", de valores ó elementos de diferentes objetos como los que hemos obtenido renderizado en el navegador, ej; (Number,Boolean, Date,..)
+        
+
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_encodeuri.asp
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+            https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //métodos:
+
+
+
+    isFinite():
+    ___________
+
+    _el método "isFinite()", permite evaluar y determinar si un valor primeramente es de tipo numérico así, como también, si éste valor es finito ó infinito
+    
+    _de ésta manera, podremos hacer comprobaciones lógicas en estructuras de control en un sistema determinado, otros
+
+    _ya que el método "inFinite()", devuelve "true/false", más también, éste método devolverá "false", si el valor pasado es: +infinity, -infinity, or NaN (Not-a-Number), de lo contrario devolverá "true"
+
+    _de ésta manera, el método "inFinite()", recibe todo tipo de parámetros más es capaz de analizar valores de objetos de tipo "Number", y "String"
+
+    _lo cuál, quiere decir que el método "inFinite()", puede detectar valores numéricos finitos, ó con límite en valores numericos como en un string, ó cadena de texto, ej;
+
+        _isFinite(123);
+        _isFinite("123");
+
+
+    _más cuando se envian valores numéricos combinados entre carácteres de texto y número de forma conjunta y dentro de un string, en éste caso el método isFinite(), no podrá determinar que ese valor es un enteramente numérico y finito, ej;
+
+        _isFinite("2005/12/12");
+
+
+    */
+
+    //almacenado del método "isFinite(), "de las variables..
+    var a = isFinite(123);
+    var b = isFinite(-1.23);
+    var c = isFinite(5-2);
+    var d = isFinite(0);
+    var e = isFinite("123");
+    var f = isFinite("Hello");
+    var g = isFinite("2005/12/12");
+    var h = isFinite(2005/12/12);
+
+
+    //llamar al método "isFinite()"
+    console.log("La variable (a), es igual ha: " + a);
+        //de ésta manera, obtendremos por consola: La variable (a), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (b), es igual ha: " + b);
+        //de ésta manera, obtendremos por consola: La variable (b), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (c), es igual ha: " + c);
+        //de ésta manera, obtendremos por consola: La variable (c), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (d), es igual ha: " + d);
+        //de ésta manera, obtendremos por consola: La variable (d), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (e), es igual ha: " + e);
+        //de ésta manera, obtendremos por consola: La variable (e), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (f), es igual ha: " + f);
+        //de ésta manera, obtendremos por consola: La variable (f), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (g), es igual ha: " + g);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+    //llamar al método "isFinite()"
+    console.log("La variable (h), es igual ha: " + h);
+        //de ésta manera, obtendremos por consola: La variable (g), es igual ha: "true"
+
+
+</script>
+
+</body>
+</html>
+
