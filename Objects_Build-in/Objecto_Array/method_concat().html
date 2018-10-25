@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    concat():
+    _________
+
+    _el método "concat()", nos permitirá unir dos ó más cadenas u objetos de tipo array
+    
+    _de ésta manera, podremos crear programas complejos al tener la posibilidad de unir más de una cadena de elementos a través, de estructuras de control, lógica y demás operaciones
+
+    _de ésta manera, el método "concat()", recibirá como parámetros la cantidad de arrays ha concatenar, representando cada uno de los arrays ha concatenar a través, del nombre de la definición de cada array respectivo, separado por una coma ","
+
+
+
+    */
+
+    //definición de tres arrays diferentes unos de otros
+    var hege = ["Cecilie", "Lone"];
+    var stale = ["Emil", "Tobias", "Linus"];
+    var kai = ["Robin"];
+
+    //concatenar los arrays "stale", y "kai", al objeto "children"
+    var children = hege.concat(stale, kai);
+
+    //llamado por consola del array "children"
+    console.log(children);
+        //de ésta manera, obtendremos por consola: Array 0: "Cecilie" 1: "Lone" 2: "Emil" 3: "Tobias" 4: "Linus" 5: "Robin"
+
+
+
+
+</script>
+
+</body>
+</html>
+

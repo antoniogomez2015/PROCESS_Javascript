@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    every():
+    ________
+
+    _el método "every()", nos permitirá devolver un booleano, con un valor de "true", si todos los elementos en el arreglo pasan la condición implementada por la función dada 
+    
+    _y el método "every()", dará un valor de "false", si la condición implementada no la cumple
+
+    _de ésta manera, el método "every()", nos permitirá hacer comporbaciones en aplicaciones de lógica y en estructuras de control en un programa determinado
+  
+
+
+    */
+
+    //creación de un nuevo array
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    //función comprobadora ha aplicar al array
+    function comp(){
+        //el método "includes()", comprobará si el elemento "Orange", está incluido en el array fruits
+       return fruits.includes("Orange");
+            //la función comp(), a través, del método "includes()", delvolverá en éste caso un valor de "true" 
+    }
+    
+    
+    //llamado por consola el array "fruits"
+    console.log(fruits.every(comp));
+        //de ésta manera, obtendremos por consola: "true"
+
+    
+    //de ésta manera, ya que ha la función comp(), comprobadora recorre los elementos del array y optiene el resultado deseado ó analizado y da el valor de "true"
+    
+    //entonces el método "every()", aplicado posteriormente al array también, dará como resultado "true"
+
+
+
+
+</script>
+
+</body>
+</html>
+

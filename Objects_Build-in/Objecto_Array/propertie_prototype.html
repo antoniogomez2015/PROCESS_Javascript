@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //properties:
+
+
+
+    prototype:
+    __________
+
+    _la propiedad que hace de constructor "prototype", nos permitirá la posibilidad de poder agregar nuevas propiedades y métodos objeto array
+
+    _de ésta manera, podremos agregar nuevas propiedades y métodos al objeto global de los arrays 
+    
+    _así, como también, podremos agregar nuevas propiedades y métodos a arrays personalizados ó creados por nosotros
+
+
+
+    */
+
+
+    //definición de un objeto array
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    //agrgando propiedad al constructor principal de los arrays
+    Array.prototype.suma = Array.length + 15;
+
+    //ejecución por consola del array, con la nueva propiedad creada "suma"
+    console.log(fruits.suma);
+        //de ésta manera, obtendremos por consola: 16
+
+    //////////////////////////////////////////////////////////////////////////////////
+
+    //creando un nuevo método para el array "fruits"
+    Array.prototype.myUcase = function() {
+        //ciclo for para acceder a los elementos internos del array
+        for (i = 0; i < this.length; i++) {
+            //asignación del método toUpperCase(), a los elementos del array
+            //donde this[i], equivale a cada elemento interno del array
+            this[i] = this[i].toUpperCase();
+        }
+    };
+
+    //aplicación del nuevo método "myUcase()", creado para el objeto array
+    fruits.myUcase();
+
+    //ejecución por consola del array, freuits
+    console.log(fruits);
+        //de ésta manera, obtendremos por consola: 
+        //["BANANA", "ORANGE", "APPLE", "MANGO"]
+
+
+</script>
+
+</body>
+</html>
+

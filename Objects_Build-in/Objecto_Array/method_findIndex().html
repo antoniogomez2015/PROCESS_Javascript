@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    findIndex():
+    ____________
+
+    _el método "findIndex()", devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1
+
+    _de ésta manera, podremos excluir ó discriminar los elementos que no tengan las características que necesitemos, para lo cuál, debemos de hacer uso de una nueva función que hará de función comprobadora del array
+    
+    _de ésta maenra, en relación a la lógica ó estructuras de control en un programa determinado podremos extrarer un elemento determinado que pase la prueba ó test, que necesitemos
+
+
+    */
+
+
+
+    //declaración de un array
+    var val = [5, 12, 8, 130, 44];    
+
+
+    //nueva variable "found", con el array con el método "find()", y a su vez, el método "find()", la cuál, tiene como parámetro una función anónima la cuál, hará de text, que analizará el array
+    var found = val.findIndex(function(e) {
+        return e > 10;
+    });
+   
+    
+    //llamado por consola el array "fond"
+    console.log(found);
+        //de ésta manera, obtendremos por consola: 12
+
+
+
+
+</script>
+
+</body>
+</html>
+

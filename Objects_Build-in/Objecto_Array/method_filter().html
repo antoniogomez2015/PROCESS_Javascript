@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    filter():
+    _________
+
+    _el método "filter()", nos permitirá obtener un nuevo array, el cuál, estará conformado sólo por los valores que hayan pasado el test, ó análisis a través, de una nueva función
+
+    _de ésta manera, podremos excluir ó discriminar algunos parámetros de un array según la lógica de la aplicación, otros
+
+
+
+    */
+
+    //declaración de un array
+    var ages = [32, 33, 16, 40];
+
+
+    //función comprobadora del elementos del array
+    function checkAdult(age) {
+        //ésta función recibe como parámetro el array
+        //para que así, se pueda analizar si alguno de los elementos del array es menor ó igual ">=", ha [18], en éste caso
+        return age >= 18;
+    }
+   
+    
+    //llamado por consola el array "ages", con el método "filter()", y la función comprobadora
+    console.log(ages.filter(checkAdult));
+        //de ésta manera, obtendremos por consola: [32, 33, 40]
+
+
+
+
+</script>
+
+</body>
+</html>
+

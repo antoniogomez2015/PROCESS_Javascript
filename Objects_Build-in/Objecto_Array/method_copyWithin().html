@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    copyWithin():
+    _____________
+
+    _el método "copyWithin()", nos permitirá copiar los dos primeros elementos del array, a los dos últimos elementos del array
+
+    _de ésta manera, el método copyWithin() transfiere una copia  plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve
+    
+    _de ésta manera, el método "copyWithin()", recibirá hasta tres parámetros;
+
+        _donde el primer parámetro corresponderá con el índice ó target, a partir del cuál, el interprete de javascript, comenzará ha aplicar el cambio de elementos
+
+        _y el segundo parámetro, corresponderá al inicio ó "start", a partir del cuál, se comenzará ha crear un rango de acción sobre el cuál, los elementos serán desplazados ó cambiados en el orden nativo de los elementos que conforman el array
+
+        _y como tercer parámetro, corresponderá el final ó "end", a partir del cuál, se definirá un rango de acción a través, del cuál, se realizará el desplazamiento ó cambios en el orden nativo de los elementos que conforman el array
+
+
+    _de ésta manera, a través, de las posiciones "start", "end", del método "copyWithin()", podremos limitar el rango de copiado ó replicación del elementos dentro de un array
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+
+    NOTA: si sólo se coloca el "target", como único parámetro del método "copyWithin()", entonces éste copiará los elementos en pares si el valor de índices es por ejemplo de (2)
+
+    pero si el índice indicado es de (2), entonces éste copiará páres dobles de elementos repetirdos en la ubicación del índice "1 y 2"
+
+        _["Banana", "Orange", "Banana", "Orange"]
+
+    _pero si el índice indicado es de (1), entonces éste copiará páres de elementos repetirdos en la ubicación del índice "1", y así, sucesivamente
+        
+        _["Banana", "Banana", "Orange", "Apple"]
+
+
+    NOTA: más si no indicamos un parámetro en la posición de "start", en el método "copyWithin()", entonces el interprete de javascript, tomará los elementos a partir del elemento "0", ó primer elemento del array
+
+    NOTA: más si no indicamos un parámetro en la posición de "end", en el método "copyWithin()", entonces el interprete de javascript, tomará los elementos a partir del último elemento del array
+
+
+
+    */
+
+    //creación de un array en la variable fruits
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+
+    //
+    fruits.copyWithin(0,1,3);
+
+
+    //llamado por consola el array "fruits"
+    console.log(fruits);
+        //de ésta manera, obtendremos por consola: 
+        //["Orange", "Apple", "Apple", "Mango"]
+
+
+
+
+</script>
+
+</body>
+</html>
+
