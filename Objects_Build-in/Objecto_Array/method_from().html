@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    from():
+    _______
+
+    _el método "from()", crea una nueva instancia de Array a partir de un objeto iterable
+    
+    _de ésta maenra, podremos convertir diferentes elementos y estructuras de memoria a un array
+
+    _para que así, dispongamos de las propiedades y métodos de los array, para diferentes comprobaciones, estructuras de control y lógica
+
+    _de ésta manera, dispondremos de los elementos nativos de una estructura de memoria diferente, ahora como elementos dentro de un array, con todos las propiedades y métodos propios de un array
+
+    _para lo cuál, primeramente debemos de hacer uso de objeto "Array", al cuál, debemos de concatenarle ".", el método "from()"
+
+    _de ésta manera, podremos crear un nuevo array a partir de diferentes elementos primitivos como números y strings, y como también, a través de diferentes estructuras de memoria como objetos de tipo map, set, y objetos personalizados, otros    
+
+
+    */
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //array a partir de un primitivo de tipo String
+
+    //varaible que contendrá al nuevo objeto de tipo array
+    var myArr = Array.from("ABCDEFG");
+
+    //llamando al nuevo array por consola
+    console.log(myArr);
+        //de ésta manera, obtendremos por consola: ["A", "B", "C", "D", "E", "F", "G"]
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //array a partir de un objeto de tipo Set
+
+    //varaible que contendrá al nuevo objeto de tipo Set
+    var conv = new Set(["foo", window]);
+
+    //varaible que contendrá al nuevo objeto de tipo Array
+    var elem = Array.from(conv);
+
+
+    //llamando al nuevo array por consola
+    console.log(elem);
+        //de ésta manera, obtendremos por consola: ["foo", Window]
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //array a partir de un objeto de tipo Set
+
+    //varaible que contendrá al nuevo objeto de tipo Map
+    var m = new Map([[1, 2], [2, 4], [4, 8]]);
+
+    //varaible que contendrá al nuevo objeto de tipo Array
+    var elem2 = Array.from(m);
+
+
+    //llamando al nuevo array por consola
+    console.log(elem2);
+        //de ésta manera, obtendremos por consola: [Array(2), Array(2), Array(2)]0: (2) [1, 2]1: (2) [2, 4]2: (2) [4, 8]
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //array a partir de una función queq hará de objeto
+
+
+    //función que creará un nuevo array a partir del objeto "Array", y del método "from()"
+    function ref(){
+        //el método "from()", tendrá como parámetros la sentencia "arguments", para que así, sea el nuevo array creado sea capaz de recibir los parámetros que sean pasados al invocar la función en éste caso "ref()"
+        return Array.from(arguments);
+    }
+
+
+    //llamado de función "ref()", por consola la cuál, creará el nuevo array, con valores creados a partir de los parámetros pasados al llamar la funcion "ref()"
+    console.log(ref(1578963));
+        //de ésta manera, obtendremos por consola: [1578963]
+
+
+
+</script>
+
+</body>
+</html>
+

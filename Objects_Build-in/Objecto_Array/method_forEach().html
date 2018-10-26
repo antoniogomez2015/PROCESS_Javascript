@@ -25,14 +25,12 @@
 
 
 
-    findIndex():
-    ____________
+    forEach():
+    __________
 
-    _el método "findIndex()", devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1
-
-    _de ésta manera, podremos excluir ó discriminar los elementos que no tengan las características que necesitemos, para lo cuál, debemos de hacer uso de una nueva función que hará de función comprobadora del array
+    _el método "forEach()", ejecuta la función indicada una vez por cada elemento del array
     
-    _de ésta maenra, en relación a la lógica ó estructuras de control en un programa determinado podremos extrarer un elemento determinado que pase la prueba ó test, que necesitemos
+    _de ésta maenra, podremos hacer escaneos y comprobaciones de todos los elementos contenidos en un array en relación a la lógica ó estructuras de control en un programa determinado
 
 
     */
@@ -42,16 +40,26 @@
     //declaración de un array
     var val = [5, 12, 8, 130, 44];    
 
+    //variable "conv", que contiene una función anónima la cuál, evaluará si uno de los elementos del array tiene un valor de (12), y si es así, entonces le será sumado un valor de 5
+    var conv = function(item){
+        if(item == 12){
+            item = item + 5;
+        }
+        console.log("El elemento tiene un valor de: " + item);        
+    }
 
-    //nueva variable "found", con el array con el método "find()", y a su vez, el método "find()", la cuál, tiene como parámetro una función anónima la cuál, hará de text, que analizará el array
-    var found = val.findIndex(function(e) {
-        return e > 10;
-    });
+    //variable "plus", con el array "val", como valor, y a su vez con el método "forEach()", el cuál, a su vez, tiene como parámetro la función que hará el test, sobre el erray a través, de la variable "conv"
+    var plus = val.forEach(conv);
    
     
     //llamado por consola el array "fond"
-    console.log(found);
-        //de ésta manera, obtendremos por consola: 12
+    console.log(plus);
+        //de ésta manera, obtendremos por consola: 
+        //El elemento tiene un valor de: 5
+        //method_forEach().html:53 El elemento tiene un valor de: 17
+        //method_forEach().html:53 El elemento tiene un valor de: 8
+        //method_forEach().html:53 El elemento tiene un valor de: 130
+        //method_forEach().html:53 El elemento tiene un valor de: 44
 
 
 
