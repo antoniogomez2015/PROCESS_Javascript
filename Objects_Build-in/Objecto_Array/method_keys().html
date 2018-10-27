@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    keys():
+    _______
+
+    _el método "keys()", devuelve un nuevo objeto  Array Iterator que contiene las claves de índice con las que acceder a cada elemento en el array
+
+    _para lo cuál, requeriremos recorrer el array para que así, podamos obtener los índices de sus elementos respectivos
+
+
+    _de ésta menera, el método "keys()", recibirá como parámetro:
+
+        _de forma opciona le podremos pasar un elemento que haga de separador entre comillas con un espacio ó un pipe, "|", guión, otros
+    
+    _de ésta manera, podremos obtener todos los índices de todos los elementos del array, a través, de diferentes estructuras de control y de lógica
+    
+
+
+    */
+
+
+    //almacenaje del nuevo array en la variable myArr
+    var myArr = ["Juán", "Tony", "Pedro", "José"];
+
+
+    //llamando al método "keys()"
+    console.log(myArr.keys());
+        //de ésta manera, obtendremos por consola: Array Iterator {}__proto__: Array Iterator
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+
+    //almacenaje del nuevo array en la variable myArr
+    var myArr = ["Juán", "Tony", "Pedro", "José"];
+
+    //variable que alamacena al array con el método "keys()"
+    var inter = myArr.keys();
+
+    //optención de los índices del array a través, de un ciclo "for(of)"
+    for(var key of inter){
+        console.log(key);
+    }
+
+        //de ésta manera, obtendremos por consola: 0 1 2
+
+
+
+
+</script>
+
+</body>
+</html>
+

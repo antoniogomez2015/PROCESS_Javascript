@@ -50,13 +50,13 @@
 
     
 
-    concat():
+    concat(): (unión de arrays)
     _________
 
     _el método "concat()", nos permitirá unir dos ó más cadenas u objetos de tipo array
 
 
-    copyWithin():
+    copyWithin(): (desplazamiento)
     _____________
 
     _el método "copyWithin()", nos permitirá copiar los dos primeros elementos del array, a los dos últimos elementos del array
@@ -64,15 +64,33 @@
     _de ésta manera, el método copyWithin() transfiere una copia  plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve
 
 
-    entries():
+    entries(): (index + elemento)
     __________
 
     _el método "entries()", nos permitirá retornar un nuevo objeto Array Iterator que contiene los pares clave/valor para cada índice de la matriz
 
     _de ésta manera, podremos transformar un array para que así, obtengamos un nuevo array el cuál, nos muestre el índice de cada elemento acompañado con su valor ó elemento respectivo
 
+    
+    keys(): (index)
+    _______
 
-    every():
+    _el método "keys()", devuelve un nuevo objeto  Array Iterator que contiene las claves de índice con las que acceder a cada elemento en el array
+
+
+    indexOf(): (index)
+    __________
+
+    _el método "indeOf()", devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó -1 si el elemento no se encontrara
+
+
+    lastIndexOf(): (index)
+    ______________
+
+    _el método "lastIndexOf()", devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó -1 si el elemento no se encontrara
+
+
+    every(): (function)
     ________
 
     _el método "every()", nos permitirá devolver un booleano, con un valor de "true", si todos los elementos en el arreglo pasan la condición implementada por la función dada 
@@ -80,19 +98,31 @@
     _y el método "every()", dará un valor de "false", si la condición implementada no la cumple
 
 
-    forEach():
+    forEach(): (function)
     __________
 
     _el método "forEach()", ejecuta la función indicada una vez por cada elemento del array
 
 
-    fill():
+    map(): (function)
+    ______
+
+    _el método "map()", crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos
+
+
+    fill(): (sustituir)
     _______
 
     _el método "fill()", nos permitirá sustituir ó reemplazar uno ó más valores ó elementos de un array por una valor estático
 
 
-    filter():
+    push(): (agregar)
+    _______
+
+    _el método "push()", agrega uno o más elementos al final de un array y devuelve la nueva longitud del array
+
+
+    filter(): (test)
     _________
 
     _el método "filter()", nos permitirá obtener un nuevo array, el cuál, estará conformado sólo por los valores que hayan pasado el test, ó análisis a través, de una nueva función
@@ -100,19 +130,19 @@
     _de ésta manera, podremos excluir ó discriminar algunos parámetros de un array según la lógica de la aplicación, otros
 
 
-    find():
+    find(): (test)
     _______
 
     _el método "find()", nos permitirá obtener un nuevo array, con el primer elemento que haya pasado el test, ó análisis
 
 
-    findIndex():
+    findIndex(): (test)
     ____________
 
     _el método "findIndex()", devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1
 
 
-    from():
+    from(): (crear array)
     _______
 
     _el método "from()", crea una nueva instancia de Array a partir de un objeto iterable
@@ -120,6 +150,34 @@
     _de ésta maenra, podremos convertir diferentes elementos y estructuras de memoria a un array
 
 
+    isArray(): (verificar array)
+    __________
+
+    _el método "isArray()", determina si un objeto es una array
+
+    _más el método "isArray()", debe de utilizarse en conjunto con el objeto "Array", directamente, ya que el método isArray(), será el que reciba el array ha analizar
+
+
+    includes(): (obtener)
+    ___________
+
+    _el método "includes()", determina si un array incluye un determinado elemento, devuelve true o false según corresponda
+
+    
+    join(): (mezclar)
+    _______
+
+    _el método "join()", une todos los elementos de un array (o un objeto similar a una array), en una cadena y devuelve esta cadena de texto
+
+
+    pop(): (eliminar)
+    ______
+
+    _el método "pop()", elimina el último elemento de un array y lo devuelve 
+    
+    _este método cambia la longitud del array, simplificando el array respectivo
+
+    
 
 
 

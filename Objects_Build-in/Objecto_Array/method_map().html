@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp            
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    map():
+    ______
+
+    _el método "map()", crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos
+    
+
+    _de ésta menera, el método "map()", recibirá como parámetro:
+
+        _el nombre ó valor de la coincidencia ha buscar dentro de los elementos dentro del array
+    
+
+    _de ésta manera, podremos acceder e intervenir a todos los elementos de un array a través, de estructuras de control y de lógica, otros
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+    _también, es posible crear operaciones específicas en vez de pasar una función como parámetro del método map(), ej;
+
+        var numeros= [1, 4, 9];
+        var raices = numeros.map(Math.sqrt);
+        // raices tiene [1, 2, 3]
+        // numeros aún mantiene [1, 4, 9]
+
+    _en éste caso, como parámetro del método map(), hemos pasado el objeto "Math", el con la proiedad "sqrt", la cuál, obtiene la raíz cuadrada de los elementos del array
+
+    _de ésta manera, ahora el método map(), podrá crear un nuevo array con los nuevos valores ó elementos modificados
+
+    */
+
+
+    //almacenaje del nuevo array en la variable myArr
+    var myArr = [1, 5, 10, 15];
+
+    //nueva variable "doubles", con el array "myArr", y con el método "map()"
+    //y a su vez, el método "map()", recibe como parámetro una función anónima la cuál, intervendrá a cada elemento dentro del array en éste caso "myArr"
+    var doubles = myArr.map(function(x) {
+        return x * 2;
+    });
+
+
+    //llamando al método "map()"
+    console.log(doubles);
+        //de ésta manera, obtendremos por consola: [2, 10, 20, 30]
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+    //nueva variable "numeros", que contiene al nuevo array
+    var numeros= [1, 4, 9];
+
+    //array "numeros", con el método "map()", el cuál, tiene como parámetros al objeto "Math", y a la propiedad "srqt"
+    var raices = numeros.map(Math.sqrt);
+
+    //llamado por consola del array
+    console.log(raices);
+        //de ésta manera, obtendremos por consola: [1, 2, 3]
+        //de ésta manera, obtendremos por consola:  [1, 4, 9]
+
+
+</script>
+
+</body>
+</html>
+

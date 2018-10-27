@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            Tutorial específico
+                17.- Curso javaScript - reduce ES5
+                    https://www.youtube.com/watch?v=91XSlmki8xA  
+
+                16.7: Array Functions: reduce() - Topics of JavaScript/ES6
+                    https://www.youtube.com/watch?v=-LFjnY1PEDA       
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    reduce():
+    _________
+
+    _el método "reduce()", nos permitirá sintetizar los elementos contenidos en un array 
+    
+    _de ésta manera, si los elementos contenidos dentro de un array, son de tipo "string", entonces el interprete de javascript, unificará los elementos contenidos en el array, en un sólo ó valores ó elemento resultante ó realizará la operación indicada para los strins, respectivos
+
+    _más si los elementos contenidos en el array, son de tipo "Number", entonces el interprete de javascript, irá realizando la operación indicada, ej; sumándo los elementos respectivos para que así, al final, obtengamos la sumatoria de los mismos
+    
+    _también, podríamos definir la acción del método "reduce()", como que éste aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor
+
+
+    
+
+    _de ésta menera, el método "reduce()", recibe como parámetros
+
+        _el método "reduce()", recibe como parámetro una función que puede ser anónima ó declarada la cuál, a su vez, recibirá como mínimo dos parámetros y un máximo de hasta cuatro parámetros
+
+            _de ésta manera, el primer parámetro ej, "v_ant", corresponderá al (valor anterior retornado), ó punto inicial del test
+
+            _el segundo parámetro "v_act", corresponderá al (valor actual del elemento)
+
+            _el tercer parámetro "index", corresponderá con el índice del elemento el cuál, podremos pasar luego de la función anónima ó declaracda, de ésta manera, ahora el valor del parámetro "v_ant", en su valor inicial será de "5", en éste caso, en la primera iteración del array
+
+            _el cuarto parámetro "array", corresponderá con el array respectivo que se está recorriendo
+
+
+        NOTA: en terminos práctivos podremos simplificar los parámetros a sólo dos, (v_ant, v_act), los cuáles, en la mayoría de los casos son los que vamos ha utilizar
+    
+    
+
+    Workflow:
+    _________
+
+        _de ésta manera, lo que hace el método reduce(), es iterar sobre cada uno de los elementos contenidos en el array
+
+        _de ésta manera, el primer valor del parámetro "v_ant", ó (valor anterior retornado), en éste caso será de "nunguno"
+
+        _más el valor del parámetro "v_actual", ó (valor actual del elemento), será en éste caso de "1", ó primer elemento del array
+
+        _de ésta manera, siguiente el ejemplo del ejercicio en éste caso entonces 
+            
+            _"1 + nada", es igual ha  = "1"
+
+        _más ahora en la segunda iteración el valor de "v_actual", ahora es "5", más ahora el valor de "v_ant", es lo que retornó la iteración anterior, y en éste caso fue "1", ej;
+
+            _"1 + 5", es igual ha  = "6"
+
+        _más en la tercera iteración se seguirá repitiendo el ciclo y los valores serán los siguientes:
+
+            _"6 + 10", es igual ha = "16"
+
+        _y en la cuarta y última iteración del ciclo los valores serán los siguientes;
+
+            _"16 + 15", es igual ha = "31"
+
+        _de ésta manera, se irán acumulando ó concatenando los elementos del array en los casos en los que los elementos no sean numéricos, y se les haya aplicado alguna operación aritmética, otros
+
+        _de ésta manera, podremos obtener un rastro ó registro de cada iteración ó función aplicada ha cada elementos contenido en el array
+        
+
+
+    _de ésta manera, podremos utilizar el método reduce(), para modificar un array, pudiendo así, aumentar la cantidad de elementos dentro de un array través, del tiempo según lógica y requerimientos de nuestra aplicación ó sistema
+
+ 
+
+    */
+
+
+    //almacenaje del nuevo array en la variable "myArr"
+    var myArr = [1, 5, 10, 15];
+
+    //
+    var result = myArr.reduce(function(v_ant, v_act){
+        return v_ant + v_act;        
+    },5);
+
+    //llamando al método "reduce()"
+    console.log(result);
+        //de ésta manera, obtendremos por consola: 31
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //podremos lograr algo similar utilizando un ciclo for, y una variable, ej;
+
+
+    //nueva variable "sum", la cuál,  obtendrá el registro a través, del tiempo de la intervención del array "myArr"
+    var sum = 0;
+
+    //ciclo for, a través, del cuál, también, podremos recorrer el array, y a través, de la variable suma poremos también, dejar un registro del proceso a través, del tiempo
+    for(var i = 0; i < myArr.length; i++){
+        sum = sum + myArr[i];
+    }
+
+    //llamado por consola al la variable sum, con el valor acumulado del ciclo for
+    console.log(sum);
+        //de ésta manera, obtendremos por consola: 31
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //podremos lograr algo similar utilizando un ciclo for of, y una variable, ej;
+
+
+    //nuevo array
+    var nr =[4,8,12,16];
+
+    //
+    var tm = 0;
+
+    //
+    for(var y of nr){
+        tm += nr[i];
+    }
+
+    //
+    console.log(tm);
+
+
+</script>
+
+</body>
+</html>
+
