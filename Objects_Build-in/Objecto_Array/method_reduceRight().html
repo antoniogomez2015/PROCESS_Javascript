@@ -32,23 +32,23 @@
 
 
 
-    reduce():
-    _________
+    reduceRight():
+    ______________
 
-    _el método "reduce()", nos permitirá sintetizar los elementos contenidos en un array 
+    _el método "reduceRight()", nos permitirá sintetizar los elementos contenidos en un array 
     
     _de ésta manera, si los elementos contenidos dentro de un array, son de tipo "string", entonces el interprete de javascript, unificará los elementos contenidos en el array, en un sólo ó valores ó elemento resultante ó realizará la operación indicada para los strins, respectivos
 
     _más si los elementos contenidos en el array, son de tipo "Number", entonces el interprete de javascript, irá realizando la operación indicada, ej; sumándo los elementos respectivos para que así, al final, obtengamos la sumatoria de los mismos
     
-    _también, podríamos definir la acción del método "reduce()", como que éste aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor
+    _también, podríamos definir la acción del método "reduceRight()", aplica una función simultáneamente contra un acumulador y cada elemento de un array (de derecha a izquierda) para reducirlo a un único valor.
 
 
     
 
-    _de ésta menera, el método "reduce()", recibe como parámetros
+    _de ésta menera, el método "reduceRight()", recibe como parámetros
 
-        _el método "reduce()", recibe como parámetro una función que puede ser anónima ó declarada la cuál, a su vez, recibirá como mínimo dos parámetros y un máximo de hasta cuatro parámetros
+        _el método "reduceRight()", recibe como parámetro una función que puede ser anónima ó declarada la cuál, a su vez, recibirá como mínimo dos parámetros y un máximo de hasta cuatro parámetros
 
             _de ésta manera, el primer parámetro ej, "v_ant", corresponderá al (valor anterior retornado), ó punto inicial del test
 
@@ -66,7 +66,7 @@
     Workflow:
     _________
 
-        _de ésta manera, lo que hace el método reduce(), es iterar sobre cada uno de los elementos contenidos en el array
+        _de ésta manera, lo que hace el método reduceRight(), es iterar sobre cada uno de los elementos contenidos en el array
 
         _de ésta manera, el primer valor del parámetro "v_ant", ó (valor anterior retornado), en éste caso será de "nunguno"
 
@@ -94,7 +94,7 @@
         
 
 
-    _de ésta manera, podremos utilizar el método reduce(), para modificar un array, pudiendo así, aumentar la cantidad de elementos dentro de un array través, del tiempo según lógica y requerimientos de nuestra aplicación ó sistema
+    _de ésta manera, podremos utilizar el método reduceRight(), para modificar un array, pudiendo así, aumentar la cantidad de elementos dentro de un array través, del tiempo según lógica y requerimientos de nuestra aplicación ó sistema
 
  
 
@@ -105,40 +105,15 @@
     var myArr = [1, 5, 10, 15];
 
 
-    //nueva variable "result", con el array "myArr", y a su vez con el método "reduce()", el cuál, a su vez en éste caso, recibe una función anónima con los dos parámetros mínimos, en éste caso (v_ant, v_act)
-    var result = myArr.reduce(function(v_ant, v_act){
+    //nueva variable "result", con el array "myArr", y a su vez con el método "reduceRight()", el cuál, a su vez en éste caso, recibe una función anónima con los dos parámetros mínimos, en éste caso (v_ant, v_act)
+    var result = myArr.reduceRight(function(v_ant, v_act){
         return v_ant + v_act;        
     },5);
 
-    //llamando al método "reduce()"
+    //llamando al método "reduceRight()"
     console.log(result);
         //de ésta manera, obtendremos por consola: 31
 
-
-    var result2 = myArr.reduceRight(function(v_ant, v_act){
-        return v_ant * v_act;        
-    },5);
-
-    console.log(result2);
-
-
-
-
-    ////////////////////////////////////////////////////////////////////////////////
-    //podremos lograr algo similar utilizando un ciclo for, y una variable, ej;
-
-
-    //nueva variable "sum", la cuál,  obtendrá el registro a través, del tiempo de la intervención del array "myArr"
-    var sum = 0;
-
-    //ciclo for, a través, del cuál, también, podremos recorrer el array, y a través, de la variable suma poremos también, dejar un registro del proceso a través, del tiempo
-    for(var i = 0; i < myArr.length; i++){
-        sum = sum + myArr[i];
-    }
-
-    //llamado por consola al la variable sum, con el valor acumulado del ciclo for
-    console.log(sum);
-        //de ésta manera, obtendremos por consola: 31
 
 
 

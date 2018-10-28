@@ -64,6 +64,14 @@
     _de ésta manera, el método copyWithin() transfiere una copia  plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve
 
 
+    sort(): (desplazamiento)
+    _______
+
+    _el método "sort()", ordena los elementos de un array localmente y devuelve el array
+   
+    _la ordenación no es necesariamente estable. El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor Unicode
+
+
     entries(): (index + elemento)
     __________
 
@@ -108,6 +116,12 @@
     ______
 
     _el método "map()", crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos
+
+
+    some(): (function)
+    _______
+
+    _el método "some()", retorna un valor booleano, true si algún elemento del array cumple con la condición implementada por la función brindada, y false en caso de que ningún elemento cumpla con dicha condición
 
 
     fill(): (sustituir)
@@ -158,6 +172,12 @@
     _más el método "isArray()", debe de utilizarse en conjunto con el objeto "Array", directamente, ya que el método isArray(), será el que reciba el array ha analizar
 
 
+    slice(): (obtener, extraer)
+    ________
+
+    _el método "slice()", devuelve una copia de una parte ó estracto de una array dentro de un nuevo array, empezando por inicio hasta fin (fin no incluido). El array original no se modificará
+
+
     includes(): (obtener)
     ___________
 
@@ -170,7 +190,13 @@
     _el método "join()", une todos los elementos de un array (o un objeto similar a una array), en una cadena y devuelve esta cadena de texto
 
 
-    pop(): (eliminar)
+    shift(): (eliminar primer elemento)
+    ________
+
+    _el método "shift()", elimina el primer elemento del array y devuelve dicho elemento, este método modifica la longitud del array
+
+
+    pop(): (eliminar último elemento)
     ______
 
     _el método "pop()", elimina el último elemento de un array y lo devuelve 
@@ -178,6 +204,12 @@
     _este método cambia la longitud del array, simplificando el array respectivo
 
     
+    reduce() | redudeRight(): (sintetizar ó sumar elementos)
+    _________________________
+
+    _el método "reduce()", nos permitirá sintetizar los elementos contenidos en un array 
+    
+    _de ésta manera, si los elementos contenidos dentro de un array, son de tipo "string", entonces el interprete de javascript, unificará los elementos contenidos en el array, en un sólo ó valores ó elemento resultante ó realizará la operación indicada para los strins, respectivos
 
 
 

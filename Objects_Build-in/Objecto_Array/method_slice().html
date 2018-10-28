@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    slice():
+    ________
+
+    _el método "slice()", devuelve una copia de una parte ó estracto de una array dentro de un nuevo array, empezando por inicio hasta fin (fin no incluido). El array original no se modificará
+
+    _de ésta manera, el método "slice()", recibe los siguientes parámetros;
+
+        _como primer parámetro debemos indicarle a través, de un número el inicio del rango a partir del cuál, se comenzarán ha seleccionar parte de los elementos del array
+    
+        _como segundo parámetro debemos indicarle a través, de un número el final del rango a partir del cuál, se comenzarán ha seleccionar parte de los elementos del array
+
+    */
+
+
+    //almacenaje del nuevo array en la variable "myArr"
+    var myArr = [1, 5, 10, 15];
+
+    
+    //llamando al método "slice()"
+    console.log(myArr.slice(1,3));
+        //de ésta manera, obtendremos por consola: [5, 10]
+
+    //llamando nuevamente al método "slice()"
+    console.log(myArr);
+        //de ésta manera, obtendremos por consola: [1, 5, 10, 15]
+        //de ésta manera, podremos ver que el array, original no ha sido modificado
+
+
+
+
+</script>
+
+</body>
+</html>
+

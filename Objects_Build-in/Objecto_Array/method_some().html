@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    some():
+    _______
+
+    _el método "some()", retorna un valor booleano, true si algún elemento del array cumple con la condición implementada por la función brindada, y false en caso de que ningún elemento cumpla con dicha condición
+
+    _de ésta manera, el método "some()", recibe los siguientes parámetros;
+
+        _como primer parámetro debemos indicarle a través, de un número el inicio del rango a partir del cuál, se comenzarán ha seleccionar parte de los elementos del array
+    
+        _como segundo parámetro debemos indicarle a través, de un número el final del rango a partir del cuál, se comenzarán ha seleccionar parte de los elementos del array
+
+    */
+
+
+    //almacenaje del nuevo array en la variable "myArr"
+    var myArr = [1, 5, 10, 15];
+
+    
+    //llamando al método "some()"
+    console.log(myArr.some(function(e){
+        return e <= 0;
+    }));
+        //de ésta manera, obtendremos por consola: false
+
+
+
+
+</script>
+
+</body>
+</html>
+
