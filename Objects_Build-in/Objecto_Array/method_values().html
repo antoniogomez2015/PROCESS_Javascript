@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    values():
+    _________
+
+    _el método "values()", devuelve un nuevo objeto Array Iterator que contiene los valores para cada índice del array
+
+    _de ésta manera, podremos obtener el objeto array, para hacer iteraciones para obtener los elementos de array, ó realizar diferentes operaciones
+
+    _de ésta manera, podremos por ejemplo, a través, del método "next()", y de la propiedad "value", para que así, en cada llamada del objeto array, podremos obtener cada elemento del array
+
+
+    _de ésta manera, el método "values()", no recibirá parámetros
+
+
+    _de ésta manera, tendremos la posibilidad en algunas opciones en las que tendremos que diferenciar entre un array y el objeto que es un array, para ciertas operaciones de comparación y lógica, otros
+    
+
+    */
+
+
+    //almacenaje del nuevo array en la variable "myArr"
+    var myArr = ['w', 'y', 'k', 'o', 'p'];
+
+    //
+    var iterator = myArr.values();
+    
+    //llamando al método "values()"
+    console.log(iterator.next().value); // w 
+    console.log(iterator.next().value); // y 
+    console.log(iterator.next().value); // k 
+    console.log(iterator.next().value); // o 
+    console.log(iterator.next().value); // p
+
+
+    //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Generador/next
+
+
+
+
+</script>
+
+</body>
+</html>
+

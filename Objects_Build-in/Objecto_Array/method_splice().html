@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    splice():
+    _________
+
+    _el método "splice()", cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos, devolviendo un nuevo array, con sólo los "elementos eliminados"
+   
+
+    _de ésta manera, el método "splice()", recibe los siguientes parámetros
+
+        _el primer parámetro corresponderá al índice ha apuntar a partir del cuál, modificaremos el array, el cuál, deberá ser expresado a través, de un número
+
+        _el segundo parámetro corresponderá a la cantidad de posiciones ó elementos ha eliminar del array, de ésta manera, podremos a través, de un número indicar la cantidad de elementos ha eliminar del respectivo array
+
+            _NOTA: más no necesariamente debemos de quitar ó eliminar elementos del array respectivo, de ésta manera, si agregamos éste parámetro con un valor de (0), ningún elemento será eliminado
+
+            _en éste caso, al agregar éste parámetro con un valor de (0), los valores ó elementos agregados posteriormente serán agregados "antes", del índice indicado en el parámetro anterior
+
+        _el tercer parámetro (opcional), corresponderá al elemento ha agregar en la posición que en el parámetro anterior hemos eliminado, lo cuál, sería una forma de sustitución
+
+            _NOTA: en éste punto no sólo podremos introducir un sólo parámetro si no que también, podremos intorducir más de un parámetro a la vez, ej:, para agregar los elementos de "Juán","Pedro","Marcos"
+
+                _myArr.splice(1,2,"Juán","Pedro","Marcos");
+
+
+    _de ésta manera, podremos estructurar un array a través, de estructuras de control y lógica en relación al programa ó sistema que estemos llevando a cabo
+
+    */
+
+
+    //almacenaje del nuevo array en la variable "myArr"
+    var myArr = ["Angel","Alberto","Xavier","Carlos"];
+
+    
+    //llamando al método "splice()"
+    console.log(myArr.splice(1,1,"Pedro","Tony"));
+        //de ésta manera, obtendremos por consola: 
+        //["Alberto"]
+
+    //llamando nuevamente el método "splice()"
+    console.log(myArr);
+        //de ésta manera, obtendremos por consola: 
+        //["Angel", "Pedro", "Tony", "Xavier", "Carlos"]
+
+
+
+
+</script>
+
+</body>
+</html>
+

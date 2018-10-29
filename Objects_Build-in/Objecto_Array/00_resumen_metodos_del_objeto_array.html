@@ -123,19 +123,7 @@
 
     _el método "some()", retorna un valor booleano, true si algún elemento del array cumple con la condición implementada por la función brindada, y false en caso de que ningún elemento cumpla con dicha condición
 
-
-    fill(): (sustituir)
-    _______
-
-    _el método "fill()", nos permitirá sustituir ó reemplazar uno ó más valores ó elementos de un array por una valor estático
-
-
-    push(): (agregar)
-    _______
-
-    _el método "push()", agrega uno o más elementos al final de un array y devuelve la nueva longitud del array
-
-
+   
     filter(): (test)
     _________
 
@@ -172,6 +160,13 @@
     _más el método "isArray()", debe de utilizarse en conjunto con el objeto "Array", directamente, ya que el método isArray(), será el que reciba el array ha analizar
 
 
+    valueOf(): (identificar un array)
+    __________
+
+    _el método "valueOf()", éste es el método default, de un array, lo cuál, devuelve los elementos contenidos de un array  
+
+
+
     slice(): (obtener, extraer)
     ________
 
@@ -190,6 +185,32 @@
     _el método "join()", une todos los elementos de un array (o un objeto similar a una array), en una cadena y devuelve esta cadena de texto
 
 
+    fill(): (sustituir)
+    _______
+
+    _el método "fill()", nos permitirá sustituir ó reemplazar uno ó más valores ó elementos de un array por una valor estático
+
+
+    splice(): (agregar | eliminar)
+    _________
+
+    _el método "splice()", cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos, devolviendo un nuevo array, con sólo los "elementos eliminados"
+
+
+    push(): (agregar)
+    _______
+
+    _el método "push()", agrega uno o más elementos al final de un array y devuelve la nueva longitud del array
+
+
+    unshift(): (agregar al inicio)
+    __________
+
+    _el método "unshift()", nos permitirá agregar nuevos elementos al inicio de un array
+
+    _de ésta manea, el método "unshift()", el devolverá el nuevo array modificado
+
+
     shift(): (eliminar primer elemento)
     ________
 
@@ -203,6 +224,7 @@
     
     _este método cambia la longitud del array, simplificando el array respectivo
 
+
     
     reduce() | redudeRight(): (sintetizar ó sumar elementos)
     _________________________
@@ -210,6 +232,20 @@
     _el método "reduce()", nos permitirá sintetizar los elementos contenidos en un array 
     
     _de ésta manera, si los elementos contenidos dentro de un array, son de tipo "string", entonces el interprete de javascript, unificará los elementos contenidos en el array, en un sólo ó valores ó elemento resultante ó realizará la operación indicada para los strins, respectivos
+
+
+    toString():
+    ___________
+
+    _el método "toString()", devuelve una cadena de caracteres representando el array especificado y sus elementos
+
+
+    toLocaleString():
+    _________________
+
+    _el método "toLocaleString()", devuelve una cadena de texto representando los elementos del array 
+    
+    _los elementos son convertidos a texto usando su método toLocaleString,  y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales “,”)
 
 
 
