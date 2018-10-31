@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    flat():
+    _______
+
+    _el método "flat()", crea una nueva matriz con todos los elementos de tipo "Number", de sub-array concatenados recursivamente hasta la profundidad especificada
+
+    NOTA: los números como elementos dentro de arrays anidados deberán ser de un sólo dígito
+
+    _de ésta manera, podremos acceders a los sub arrays anidados ó contenidos dentro de otro array, para que así, podamos acceder a todos los elementos de forma conjunta, tanto los elementos del array principal como los elementos  del array anidado en diferentes niveles
+
+    _el método "flat()", recibe los siguientes parámetros:
+
+        _por defecto el método "flat()", recibe como parámetro "1", que equivale ha acceder ha un nivel de aindamiento de un array dentro de otro
+
+        _más también, podremos acceder ha más de un nivel de arrays anidados, de ésta manera, por ejemplo; podremos indicar un nivel de "2", ó más en relación al nivel de anidamiento al cuál, desiemos acceder en relación al array principal
+
+
+
+    _de ésta manera, tendremos la posibilidad en algunas opciones en las que tendremos que diferenciar entre un array y el objeto que es un array, para ciertas operaciones de comparación y lógica, otros
+    
+
+    */
+
+    //creación y arrays animatos con elementos numéricos
+    var arr1 = [1, 2, 5, [8, 7]];
+    
+    //llamando por consola al método "flat()"
+    console.log(arr1.flat());
+        //de ésta manera, obtendremos por consola: [1, 2, 5, 8, 7]
+
+
+
+    
+    //creación y arrays animatos con elementos numéricos
+    var depth = [9,5,7,8,[4,[5,[2,0,1],9],8,4]]
+
+    //llamando por consola al método "flat()"
+    console.log(depth.flat(3));
+        //de ésta manera, obtendremos por consola: 
+        //[9, 5, 7, 8, 4, 5, 2, 0, 1, 9, 8, 4]
+
+</script>
+
+</body>
+</html>
+

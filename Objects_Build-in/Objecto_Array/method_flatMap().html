@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+    
+<script>
+
+    /*
+    
+    Métodos y Propiedades del Objeto Global:
+    ________________________________________
+
+        Reference:
+
+            https://www.w3schools.com/jsref/jsref_obj_array.asp   
+
+            
+    ////////////////////////////////////////////////////////////////////////////////
+    //methods:
+
+
+
+    flatMap():
+    __________
+
+    _el método "flatMap()", primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un map seguido de un flatten de profundidad 1, pero flatMap es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
+
+    NOTA: los números como elementos dentro de arrays anidados deberán ser de un sólo dígito
+
+    _de ésta manera, podremos hacer operaciones por cada array anidado contiguo entre otras posibilidades
+
+    
+
+    _el método "flatMap()", recibe los siguientes parámetros:
+
+        _recibe un función la cuál, puede ser anónima ó declarada, la cuál, a su vez, recibe dos parámetros por lo general
+
+            _donde el primer parámetro que recibe la función anónima es la referencia del array principal
+
+            _y como segundo parámetro opcional hará referencia a el índice de los elementos del array principal
+
+
+
+    _de ésta manera, tendremos la posibilidad de realizar operaciones de arrays anidados y contiguos dentro de un array principal a través, de diferentes operaciones dentro de estructuras de control y lógica
+    
+
+    */
+    
+    //creación y arrays animatos con elementos numéricos
+    var depth = [[9,5],[5,5],[8,5],[8,4],[4,5],[7,4],[8,1]];
+
+    //función "ref()", complementaria en la cuál, se sumarán los elementos dentro de cada array anidado y contiguo dentro del array principal
+    function ref(depth, index){
+        return [depth[0] + depth[1] + index];
+    }
+
+    //llamando por consola al método "flatMap()"
+    console.log(depth.flatMap(ref));
+        //de ésta manera, obtendremos por consola: 
+        //[14, 11, 15, 15, 13, 16, 15]
+
+</script>
+
+</body>
+</html>
+
