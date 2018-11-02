@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+/*
+    
+Documentation:
+______________
+
+	https://www.w3schools.com/jsref/jsref_obj_date.asp
+
+	https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+Object Window.Date:
+___________________
+
+
+	_el el objeto Date, nos permitirá manipular la fecha y la hora ante el usuario y en aplicaciones
+
+	_el objeto date, no forma parte del DOM, por lo que tendremos que instanciar al objetos date, a la hora de utilizarlo
+
+	_y cada uno de los objetos que creemos pueden representar una fecha y hora determinada diferente
+
+
+	Crear un Objeto Date:
+	_____________________
+
+	_para lo cuál, debemos hacer uso de la palabra clave "New", la cuál, nos permitirá instanciar un objeto ya existentes
+
+    _de ésta manera, tendremos tres configuraciones diferentes de crear una instancia del objeto date()
+
+        _en la primera opción, no pasaremos parámetros en el método "date()", del objeto date, en éste caso obtenedremos la fecha completa del objeto date, según la configuración regional por defecto del navegador actual
+
+        _en ésta segunda opción, si pasaremos parámetros en la cuál, será un parámetro numérico que es la representación numérica de una fecha en milisegundos
+
+        _en ésta tercera opción, podremos pasar de forma específica siete argumentos ó parámetros lo cuál, nos permitirá definir y personalizar la fecha y hora, los cuáles son;
+
+            _(año,mes,día,hora,minuto,segundo,milisegundos)
+
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////
+//primer método:
+
+        //instanciando al objeto date sin parámetros
+        var miFecha = new Date();
+
+        //llamando al objeto date
+        console.log(miFecha);
+
+            //de ésta manera, obtendremos por consola: 
+            //Thu Nov 01 2018 18:19:44 GMT-0400 (hora de Venezuela)
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+//segundo método:
+
+    //instanciando al objeto date con parámetro en milisegundos
+    var miFecha2 = new Date(1);
+
+    //llamando al objeto date
+    console.log(miFecha2);
+
+        //de ésta manera, obtendremos por consola: 
+        //Wed Dec 31 1969 20:00:00 GMT-0400 (hora de Venezuela)
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+//segundo método:
+
+    //instanciando al objeto date con parámetros personalizados
+    var miFecha3 = new Date(2018,10,1,18,04,05,1);
+
+    //llamando al objeto date
+    console.log(miFecha3);
+
+        //de ésta manera, obtendremos por consola: 
+        //Thu Nov 01 2018 18:04:05 GMT-0400 (hora de Venezuela)
+
+
+
+
+
+
+
+
+    //_para luego, hacer de los diferentes métodos podremos condigurar y representar la fecha y la hora de diferentes maneras y a través, de diferentes criterios, ej:
+
+
+
+    /*
+*/
+
+
+        //toDateString(), toLocaleString(), toLocaleTimeString(), toTimeString()
+
+
+/*
+
+    Configurar Hora Específica:
+    ___________________________
+
+    _si lo deseamos es crear un objeto date, con una fecha y hora concreta; podemos hacerlo pasando argumentos cuando incluimos la declaración Date()
+
+    _ésto lo hace con los parámetros alglosajones
+
+    _javascript, cuenta hasta con cuatro modos de hacer
+
+    */
+
+
+        new Date();
+
+            //_éste modo es sin argumentos y el por defecto
+
+        new Date(milliseconds);
+
+            //_éste modo es pasándole milisegundos
+
+        var d = new Date(86400000);
+
+        new Date(dateString);
+
+            //_éste modo es pasándole una cadena de datos
+
+        var d = new Date('October 13, 2017 11:13:00');
+
+        new Date(Year, month, day, hours, minutes, seconds, miliseconds);
+
+            //éste pasándole un grupo de parámetros concretos
+
+        var d = new Date(2017,01,31,16,30,00,00);	
+
+            //podríamos por ejemplo sólo calocar año, mes y hora "2017,01,31"
+
+
+
+        function tiempo(){
+
+            var miFecha = new Date(2017,01,31,16,30,00,00);         
+
+        }
+
+
+</script>
+
+
+    
+</body>
+</html>

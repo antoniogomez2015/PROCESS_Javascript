@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>	
+</head>
+<body>
+
+
+
+<!--
+
+	Metodo getDate():
+	_________________
+
+	_el método getDate(), devuelve el día del mes actual
+
+
+
+-->
+
+
+<button onclick="myFunction()">Ver Fecha y Hora</button>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	
+		function myFunction() {
+
+		    var d = new Date();
+		    var n = d.getDate();
+		    document.getElementById("demo").innerHTML = "Día del mes: " + n;
+
+		}
+
+
+</script>
+
+
+
+
+	
+
+
+
+</body>
+
+</html>
+
+
