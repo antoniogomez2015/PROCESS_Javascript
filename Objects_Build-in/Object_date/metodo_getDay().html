@@ -10,35 +10,37 @@
 	
 <script type="text/javascript">
 	
-/*
+	/*
 
 	Metodo getDay():
-	_________________
-	
-	_el método getDay(), devuelve el día la semana actual
-	
-	_más los días los representa ha modo de vector ó array numérico, de ésta manera, el lunes es representado por "1", martes "2", y as´´í, suscesivamente
+	________________
+		
+		_el método getDay(), devuelve el día del mes para la fecha especificada de acuerdo con la hora local
 
-*/
-	
-	
-	
-	function myFunction() {
+		_el método "getDay()", tieme la misma función u operación que el método "getDate()"
 
-		var d = new Date();
-		var n = d.getDay();
+	*/
 
-		document.getElementById("demo").innerHTML = "Día de la semana: " + n;
 
-	}
+
+		//instanciando al objeto date en la variable "fecha"
+		var fecha = new Date();
+
+		//aplicando el método "getDay()", en la variable "time"
+		var time = fecha.getDay();
+
+		//llamando al método "getDay()"
+		console.log(time);
+			//de ésta manera, obtendremos por consola: 2
+		
+		
+
+		
+		
 
 
 </script>
 
-
-	<button onclick="myFunction()">Ver Fecha y Hora</button>
-
-	<p id="demo"></p>
 
 
 

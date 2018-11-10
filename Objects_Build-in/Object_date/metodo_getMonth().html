@@ -6,206 +6,41 @@
 </head>
 <body>
 
-
-<!--
-
-
-Curso de JavaScript para principiantes (48 videos)
-
-	https://www.youtube.com/playlist?list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx
-
-
-canales de interes de desarrollo javascript
-
-
-
-Jesús Conde
-https://www.youtube.com/channel/UCbr0g_ADLsdzhcoAFUZkuug
-
-	28.- XHTML. Curso de JavaScript. Introducción (28-49), https://www.youtube.com/watch?v=E5b1wXqpzlQ&index=28&list=PLB275F6F2EBC6BA66
-
-
-
-
-FirefoxOS HTML5
-https://www.youtube.com/channel/UCi0iZJ2QSU4koTMJ5WeUaVA
-
-
-CasaMadrugada
-https://www.youtube.com/user/CasaMadrugada
-	tutorial básico de javascript (42 videos) https://www.youtube.com/playlist?list=PLBF55EAEDAA5938AA
-
-
-LaZonaInformatica
-https://www.youtube.com/user/LaZonaInformatica
-	Tutoriales de Javascript en Español (48 videos) https://www.youtube.com/playlist?list=PLNWyzHT7WnGOdkfbaW1LdJL6vgEOKSWOa
-
-
-
-Curso de JavaScript Completo (Universidade XTI) (46 videos en portugues) https://www.youtube.com/playlist?list=PLcHPNq67CaVlq6_hp77DXwS9xQgZeaKf-
-
-
-
-thenewboston
-	Java (Intermediate) Tutorials (59 videos) (ingles) https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
-
-
-
-xymind
-https://www.youtube.com/user/xymind/playlists
-	Tutoriales Javascript para principiantes (14 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VneZvNqxTuWd3xQxtzUkS7L
-
-	Tutoriales Javascript intermedio/avanzado (11 videos) https://www.youtube.com/playlist?list=PLAAhC8kCE0VlfmKREk2JJ-hFRPpTl3Daq
-
-
-
-Manuel J. Dávila
-https://www.youtube.com/user/manudg1000
-
-	Tutorial Javascript en Español (32 videos),  https://www.youtube.com/playlist?list=PLjARR1053fYms_VU3QDN99bE8DueY7M1I
-
-
-
-libro de javascript
-	Introducción a JavaScript: http://librosweb.es/javascript/
-
-
-
-
-http://www.w3schools.com/js/default.asp
-
-
-http://www.w3schools.com/js/
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
--->
-
-
-<!--
-
-	Object Window.Date:
-	___________________
-
-
-	_el el objeto Date, nos permitirá manipular la fecha y la hora ante el usuario y en aplicaciones
-
-	_el objeto date, no forma parte del DOM, por lo que tendremos que crear nuestros propios objetos date, a la hora de utilizarlos
-
-	_y cada uno de los objetos que creemos pueden representar una fecha y hora determinada diferente
-
-
-	Crear un Objeto Date:
-	_____________________
-
-	_para lo cuál, debemos hacer uso de la palabra clave "New", la cuál, nos permitirá instanciar un objeto ya existentes
-
-	_así, como también, es recomendable almacenar una objeto Date, instancia en una variable para que así, podamos hacer un uso más fácil de éste, ej:
-
-		
-		var miFecha = new Date();
-
-	_para luego, hacer de los diferentes métodos podremos condigurar y representar la fecha y la hora de diferentes maneras y a través, de diferentes criterios, ej:
-
-		document.getElementById('demo').innerHTML = miFecha.getDate();
-
-	_de ésta manera, podremos ver que estamos en éste caso inyectando sobre un elemento html, tanto la variable "miFecha", que contiene al objeto Date(), instanciado así, como también, hemos concatenado ".", uno de los métodos posibles que permite el objeto Date, en éste caso utilizamos el método "getDate()"
-
-	_de ésta manera, podremos determinar el flujo de trabajo con el método Date, de la siguiente manera, primero debemos expresar éste por lo general guardado en una variable y posteriormente contenarle el método ha utilizar para configurar la hora
-
-
-	Referencia del objeto Date:
-
-		http://www.w3schools.com/jsref/jsref_obj_date.asp
-
-
-
-	Metodo getMonth():
-	____________________
-
-	_el método getMonth(), devuelve los meses de "0-11", a través, de un array
-
-	_algunos métodos requerirán hacer algunos cambios ó apaños para representar correctamente la hora, especialmente los que parte a partir de un array
-
-
-	_a continuación mostraremos un ejemplo de como soluciones el inconveniente de los métodos que devuelven un valor de tipo array, en éste caso para los meses:
-
-
-
 	
--->
-
-
-
+	
 <script type="text/javascript">
 	
-	var fechaNow = new Date();
+	/*
 
-		var mes = new Array();
+	Metodo getMonth():
+	__________________
+		
+		_el método getMonth(), devuelve el mes del objeto Date, según la hora local, donde el número cero indica el primer mes del año
 
-			mes[0] = 'Enero';
-			mes[1] = 'Febrero';
-			mes[2] = 'Marzo';
-			mes[3] = 'Abril';
-			mes[4] = 'Mayo';
-			mes[5] = 'Junio';
-			mes[6] = 'Julio';
-			mes[7] = 'Agosto';
-			mes[8] = 'Septiembre';
-			mes[9] = 'Octubre';
-			mes[10] = 'Noviembre';
-			mes[11] = 'Diciembre';
+	*/
 
 
-	function myFunction() {
 
-	    var nuevaFecha = mes[fechaNow.getMonth()]
-		   
-	    document.getElementById("demo").innerHTML = "La hora actual es: " + nuevaFecha;
+		//instanciando al objeto date en la variable "fecha"
+		var fecha = new Date();
 
-	}
+		//aplicando el método "getMonth()", en la variable "time"
+		var time = fecha.getMonth();
+
+		//llamando al método "getMonth()"
+		console.log(time);
+			//de ésta manera, obtendremos por consola: 10
+		
+		
+
+		
+		
 
 
 </script>
 
 
 
-<button onclick="myFunction()">Ver Fecha y Hora</button>
-
-<p id="demo"></p>
-
-
-<!--
-
-	Explicación:
-	____________
-
-	_primero procedemos ha instanciar "new", el objeto Date(), en una variable llamada en éste caso "fechaNow"
-
-	_para luego instanciar "new", el objeto Array(), en una variale llamada en éste caso "mes"
-
-	_de ésta manera, como el objecto array instanciado sólo existe a través, de la variable llamada "mes", entonces todos los elementos relacionados con la variable "mes", serán los que ésta tomará encuenta así, el array en éste caso, a diferencia del modo convencional de crear un array 
-
-		var miArray = ['name1';...]
-
-	_funcioná correctamente y sin equivocaciones ó ambiguedad alguna
-
-	_de ésta manera, posteriormente a través, de la variable llamada "nuevaFecha", podremos llamar al array, a través, del nomber de la variable ó del nombre de sus elementos internos que es el mismos, en éste caso "mes", ej: mes[]
-
-	_para que así, en la llamada del array, podamos incluir tanto la variable que contiene el objeto Date(), instanciado
-
-	_y así, como también, concatenaremos al método del objeto Date(), ha utilizar en éste caso es el método "getHours()"
-
-	_de ésta manera, el ejecutarse la función "myFunction", el método "getHours()", indicará el més a través, de su array, interno en éste caso es el mes "enero", por ende "0"
-
-	_el cuál, se lo pasará al objeto Date(), contenido en la variable "fechaNow"
-
-	_y a su vez, se lo pasará al Array(), instanciado en la variable "mes", para que así, éste devuelva su respectivo valor al valor "0", en éste caso devuelve "enero"
-
-
--->
 
 	
 

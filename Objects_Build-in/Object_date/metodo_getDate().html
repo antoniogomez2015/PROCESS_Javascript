@@ -6,33 +6,35 @@
 </head>
 <body>
 
-
-
-<!--
+	
+	
+<script type="text/javascript">
+	
+	/*
 
 	Metodo getDate():
 	_________________
+		
+		_el método getDate(), devuelve el día del mes para la fecha especificada de acuerdo con la hora local
 
-	_el método getDate(), devuelve el día del mes actual
-
-
-
--->
+	*/
 
 
-<button onclick="myFunction()">Ver Fecha y Hora</button>
 
-<p id="demo"></p>
+		//instanciando al objeto date en la variable "fecha"
+		var fecha = new Date();
 
-<script type="text/javascript">
-	
-		function myFunction() {
+		//aplicando el método "getDate()", en la variable "time"
+		var time = fecha.getDate();
 
-		    var d = new Date();
-		    var n = d.getDate();
-		    document.getElementById("demo").innerHTML = "Día del mes: " + n;
+		//llamando al método "getDate()"
+		console.log(time);
+			//de ésta manera, obtendremos por consola: 2
+		
+		
 
-		}
+		
+		
 
 
 </script>
