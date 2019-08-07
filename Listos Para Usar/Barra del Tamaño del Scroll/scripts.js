@@ -42,22 +42,31 @@
 */
 
     /*tomamos la altura del navegador*/
-    const h1 = console.log(document.documentElement.scrollHeight);
+    const h1 = document.documentElement.scrollHeight;
 
     /*tomamos la diferencia de la altura del navegador*/
-    const h2 = console.log(document.documentElement.clientHeight);
+    const h2 = document.documentElement.clientHeight;
 
+    
     /*calculamos la diferencia entre ambos valores*/
     const scrollUnit = (h1 - h2) / 100;
 
     /*ahora vamos ha acceder a todos los estilos css, que están en el :root html*/
     const rootStyle = document.documentElement.style;
 
-    /*
+    
+    /*ahora comprobaremos si los números coninciden*/
+    addEventListener('scroll', () => {
+        /*
         _ahora tenemos que saber que cada vez que hacemos scroll, detectar cuantas unidades "scrollUnit", hemos avanzado
 
         _para lo cuál, debemos devidir el scroll detectado entre la diferencia de la altura del navegador que ya hemos calculado previamente
-    */
-    addEventListener('scroll', () =>{
-        rootStyle.setProperty('--width', Math.round(scrollY / scrollUnit))        
-    });
+
+        */
+        rootStyle.setProperty('--width', Math.round(scrollY / scrollUnit));
+    })
+
+    
+
+    
+    
