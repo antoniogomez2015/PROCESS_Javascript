@@ -1,0 +1,43 @@
+
+/*estilos css*/
+*, *:before, *::after{
+    box-sizing:  border-box;
+}
+
+:root{
+    /*para el color de la barra*/
+    --barColor: red;
+    /*para el ancho de la barra*/
+
+    /*
+        NOTA: en éste cas la barra sólo tendrá un ancho ó longitud de "15px", de ésta manera, todo el cálculo en éste ejemplo se realizará todo dividido entre 15, en vez de un 100%
+
+        _de ésta manera, controlaremos ésta variable con javascript, posteriormente
+    
+    */
+    --width: 0;
+}
+
+    body{
+        width: 15vw;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+
+    /*construcción de la barra*/
+    body::before{
+        content: "";
+        display:block;
+        height: 5px;
+        width: calc(var(--width) * 1vw);
+        position: fixed;
+        top: 0;
+        left: 42%;
+        background: var(--barColor);        
+        margin: auto;
+    }
+
+    /*
+        _de ésta manera, a través, de la propiedad "width", estamos haciendo que la variable "--width", que inicialmente tiene un valor de "0", sea multiplicada por el valor del alto del viewport, "1vw"
+    */
