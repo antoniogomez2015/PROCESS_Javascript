@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Infinity:
+    _________
+
+        Estas propiedades globales devuelven un valor simple; ellos no tienen propiedades o métodos
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/NaN
+
+
+
+    Definición:
+    ___________
+
+        NaN es una propiedad del global object (objeto global), por ejemplo, es una variable de alcance global.
+
+        El valor inicial de NaN es Not-A-Number (No es Un Número) - lo mismo que el valor de Number.NaN.
+
+        NaN nunca es equivalente con cualquier otro número, incluido el mismo NaN; no puedes chequear el valor de un not-a-number comparándolo con Number.NaN. Usar la función isNaN() para aquello.
+
+        Muchos métodos de JavaScript (como son el Number constructor, parseFloat y parseInt) retornan NaN si el valor especificado en el parámetro no puede ser parseado como un número.
+
+        Puedes utilizar la propiedad NaN para indicar una condición de error para tu función que devuelva un número en caso de éxito.
+
+        JavaScript imprime el valor Number.NaN como NaN.
+
+
+
+    Aplicación:
+    ___________
+
+        _la propiedad ó valor "NaN", nos permitirá indicarle a javascript, que analize si un determinado valor es de tipo numético ó no, ej:
+
+
+            var a = "5";
+            var b = 6;
+
+            console.log(a + b);
+
+        _ésto regularmente dará como resultado:
+
+            11
+
+        _más ahora podremos indicarle al javascript, que previamente analize el tipo de dato para que así, pueda confirmar que todos los valores son de tipo numéricos
+
+        _simplemente por defecto javascript, devolverá como resultado de retorno "NaN", al tratar de realizar una operación matemática entre dos elementos si alguno de ellos no es de tipo numérico, ej:
+
+
+            var a = "tony";
+            var b = 6;
+
+            console.log(a + b);
+
+
+        _ésto regularmente dará como resultado:
+
+            NaN
+
+
+        _más también tenremos la posibilidad de realizar un comprobación específica de un valor determinado a través, del método "IsNaN()", ej:
+
+        
+            if(IsNaN(a)){
+
+                console.log("es valor es numérico");
+
+            }else{
+                console.log(a + b);
+            }
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
