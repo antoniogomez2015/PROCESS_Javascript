@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    parseFloat():
+    _____________
+
+        Convierte (parsea) un argumento de tipo cadena y devuelve un número de punto flotante.
+
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/parseFloat
+
+
+
+    Definición:
+    ___________
+
+        parseFloat es una función de alto nivel y no está asociada a ningún objeto.
+
+        parseFloat convierte su argumento, una cadena, y devuelve un número de punto flotante. 
+        
+        Si encuentra un carácter diferente al signo (+ o -), numerales (0-9), un punto decimal o un exponente, devuelve el valor hasta ese punto e ignora ese carácter y todos los correctos siguientes. 
+        
+        Se permiten espacios anteriores y posteriores.
+
+        Si el primer carácter no se puede convertir a número, parseFloat devuelve NaN.
+
+        Para fines aritméticos, el valor NaN no es un número para ninguna base. 
+        
+        Puede llamar a la función isNaN para determinar si el resultado de parseFloat es NaN. Si se pasa NaN en operaciones aritméticas, la operación resultante también será NaN.
+
+
+
+    Aplicación:
+    ___________
+
+        Ejemplo: parseFloat devolviendo un número
+
+            Todos los siguientes ejemplos devuelven 3.14.
+
+
+                parseFloat("3.14"); 
+                parseFloat("314e-2"); 
+                parseFloat("0.0314E+2"); v
+                var cadena = "3.14"; parseFloat(cadena);
+                parseFloat("3.14más caracteres no dígitos");
+
+
+
+        Example: parseFloat returning NaN
+
+            El siguiente ejemplo devuelve NaN:
+
+                parseFloat("FF2");
+
+
+        es decir, que el método parseFloat(), espera un string, que equivalga algún nmúmero y fracción, ej; "5.2", para que así, la función pueda convertir el string, "5.2", del ejemplo en un valor numérico, en éste caso (5)
+
+        de lo contrario, es decir, el indicar como parámetro un string, diferente al equivalente a un número, el método arrojrá como resultado "NaN"
+
+
+
+
+
+
+
+-->
+</body>
+</html>

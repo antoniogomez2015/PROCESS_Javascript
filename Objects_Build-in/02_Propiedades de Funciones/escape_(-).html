@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Escape():
+    _________
+
+        La función obsoleta escape() crea una nueva cadena de caracteres en los que ciertos caracteres han sido sustituidos por una secuencia hexadecimal de escape
+
+        NOTA: éste es un método desestimado en las nuevas versiones de javascript
+
+        ésta es un opción de codificación similar a las opciones de "encodeURI -encodeURIComponent"
+
+        con la diferencia que la codificación se realiza en valores exadecimales
+
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/escape
+
+
+    Parámetros:
+    ___________
+
+        Parámetros
+
+            URI
+
+                Un Identificador de Recurso Uniforme codificado.
+
+
+
+    Definición:
+    ___________
+
+        La función escape es una propiedad del objeto global. SLos caracteres especiales son codificados a excepción de: @*_+-./
+
+        La forma hexadecimal de los caracteres cuyo valor es 0xFF o menor, es una secuencia de escape de dos digitos: %xx. 
+        
+        Para caracteres un valor superior, se usa el fomato de cuatro digitos: %uxxxx.
+
+
+
+    Aplicación:
+    ___________
+
+        Ejemplos
+
+            escape('abc123');     // "abc123"
+
+            escape('äöü');        // "%E4%F6%FC"
+
+            escape('ć');          // "%u0107"
+
+
+            // caracteres especiales
+
+            escape('@*_+-./');    // "@*_+-./"
+
+
+
+    
+
+
+
+
+
+
+
+-->
+</body>
+</html>

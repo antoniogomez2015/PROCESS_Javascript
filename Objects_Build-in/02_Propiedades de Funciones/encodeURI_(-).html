@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    encodeURI():
+    ___________
+
+        Codifica un Identificador de Recurso Uniforme (Uniform Resource Identifier, URI) reemplazando cada instancia de ciertos carácteres por uno, dos o tres secuencias de escape representando el carácter codificado en UTF-8
+
+        ésta es la opción más recomendada para la codificación Base-64 data A-z a-z 0-9 +/
+
+        de esta manera el método "encodeURI()", codifica los siguientes carácteres especiales:
+
+            A-Z a-z 0-9 -_.!*`() ;,/?:@&=+$#
+
+        lo cuál, quiere decir que ahora podremos incorporar por ejemplo enlaces y rutas complejas las cuáles contengan carácteres especial
+
+        ya que ahora javascript, a partir de éte punto codificará los carácteres especiales en carácteres reconocibles dentro de javascript
+
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI
+
+                What is the Difference between encodeURI and encodeURIComponent
+                    https://www.youtube.com/watch?v=tmgMWWNRTp0
+
+
+
+    Parámetros:
+    ___________
+
+        Parámetros
+
+            URI
+
+                Un Identificador de Recurso Uniforme codificado.
+
+
+
+    Definición:
+    ___________
+
+        Se asume que el URI es un URI completo, a fin de no codificar caracteres reservados que tienen un significado especial en la URI.
+
+        encodeURI reemplaza todos los caracteres excepto los siguientes con las secuencias de escape UTF-8:
+
+        Tipo	                    Incluye
+
+        Caracteres reservados	    ; , / ? : @ & = + $
+
+        Caracteres No escape	    Alfabéticos, dígitos decimales, - _ . ! ~ * ' ( )
+
+        Almohadilla	                #
+
+
+        Tenga en cuenta que encodeURI por sí sola no puede formar solicitudes correctas HTTP GET y POST, como por XMLHTTPRequests, porque "&", "+", y "=" no están codificados, los cuales son tratados como caracteres especiales en las solicitudes GET y POST. 
+        
+        encodeURIComponent, sin embargo, codifica estos caracteres. Lo más probable es que estos comportamientos no sean compatibles en los navegadores Web.
+
+
+
+    
+
+
+
+
+
+
+
+-->
+</body>
+</html>

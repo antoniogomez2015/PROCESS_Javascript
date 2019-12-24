@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Eval():
+    _______
+
+        La función eval() evalúa un código JavaScript representado como una cadena de caracteres (string), sin referenciar a un objeto en particular.
+
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/eval
+
+
+
+    Definición:
+    ___________
+
+        eval() es una propiedad de la función del objeto global.
+
+        El argumento de la función eval es una cadena de caracteres. Si la cadena de caracteres representa una expresión, eval() evalúa la expresión. Si el argumento representa una o más sentencias JavaScript, eval() evalúa las sentencias. No se debe llamar a eval() para evaluar una expresión aritmética; ya que JavaScript evalúa las expresiones aritméticas automáticamente.
+
+        Si construye una expresión aritmética como una cadena de caracteres, puede usar eval() para evaluarla más tarde. Por ejemplo, suponga que tiene la variable x. Puede posponer la evaluación de una expresión que involucre a x mediante la asignación del valor de la cadena de caracteres de la expresión, asignando "3 * x + 2" a la variable, y entonces llamar a eval() posteriormente en el script.
+
+        Si el argumento de eval() no es una cadena de caracteres, eval() devuelve el argumento sin cambio. En el siguiente ejemplo, el constructor String es especificado, y eval() devuelve un objeto String en lugar de evaluar la cadena de caracteres.
+
+
+
+    Aplicación:
+    ___________
+
+        la función ó método "eval()", es devuelto como un valor de retorno
+        
+            eval(cadena de caracteres o string) 
+
+
+            var edge = 39;
+            var asign = 5;
+
+            var result = edge + asign;
+
+            var proof = eval(result);
+
+            document.write(proof);
+
+        ésto dará como resultado "44", es decir, que el método "eval()", evaluará y analizará la operación ha realizar en relación al tipo de elementos respectivos
+
+
+        Parámetros:
+        ___________
+
+            cadena de caracteres (string)
+
+            Una cadena de caracteres (string) que representa una expresión, sentencia o secuencia de sentencias en JavaScript. 
+            
+            La expresión puede incluir variables y propiedades de objetos existentes.
+
+
+            Valores retornados o devueltos:            
+            ________________________________
+
+                El valor que resulta de la evaluación del código proporcionado. Si este valor está vacío. undefined (artículo en inglés) es devuelto.
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
