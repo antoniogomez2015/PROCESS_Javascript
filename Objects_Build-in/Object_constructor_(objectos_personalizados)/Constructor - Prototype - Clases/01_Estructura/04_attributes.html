@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Estructura:
+		___________
+
+
+			Attributes:			
+			___________
+
+			de ésta manera, podremos agregar variables como propiedades anidadas ó concatenadas al objeto que hemos creado, en éste caso "obj"
+
+			las cuáles, a su vez, recibirán los parámetros respectivos recibidos por el método de la función cuando ésta sea llamada posteriormente
+
+				
+                
+				function perro(){
+
+					var obj = this;
+
+					obj.nombre = n;
+					obj.rasa = r;
+					obj.edad = e;
+					obj.sexo = s;
+					obj.adiestrado = a;
+					obj.foto = f;
+
+				}
+
+
+
+
+
+			NOTA: otra forma de definir los atributos es dentro de los métodos generados para que así, los valores de los métodos no sean creados en el momento de instanciar el respecto ojeto sino, en el momento de llamar a los métodos respectivos
+
+			de ésta manera, haremos más flexible y útil los objetos creados los cuáles, ahora podrán ser dinámicos, ej:
+
+
+					obj.comer = function(c){
+
+						obj.comida = c;
+
+						alert(obj.comida);
+						
+					};
+
+
+			de ésta manera, como podremos ver, la propiedad en éste caso "comida" 
+			
+			se está creando dentro del método "comer()", y a su vez, se está definiendo su valor al momento de llamar al método 
+			
+			y pasándole a su vez como parámetro de éste el valor que tomará el atributo "comida", en éste caso, ej:
+
+
+		*/
+
+
+				document.write(comer.comida(pollo))
+
+
+
+
+
+        
+
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+
+	/*para éste nuevo método de configurar un objeto debemos de saber que para crear un función anónima, ésta debe de expresarse directamente sin nombre, así, comparando entre un función normal y una anónima podremos ver que la función anónima no lleva el nombre que define ha ésta:
+
+		function miFuncion(){}
+
+		function(){}
+
+	*/
+
+	var miNuevoObjeto2 = new Object();
+
+	//agregando una propiedad al objeto creado
+	miNuevoObjeto2.info = "Soy un nuevo objeto básico2"
+
+	//agregando nuevo método personalizado
+	miNuevoObjeto2.nuevoMetodo = function(){
+
+		confirm(this.info);
+	};
+
+</script>
+
+	<!--así, siguiendo con el botón del ejemplo anterior podremos ver que funciona de igual manera-->
+	<input type="button" value="NewObject1" onclick="miNuevoObjeto2.nuevoMetodo()">
+
+
+<script type="text/javascript">
+
+	//funciones constructor del objeto:
+
+	/*
+	ésto es hacer una especie de plantilla en la cuál, podremos luego instanciar los objetos
+
+	el proceso dista bastante del proceso que llevamos hasta ahora
+	*/
+
+	//lo primero será la declaración dicha función constructor
+	function fConstructor(){
+
+		this.info = "Soy un objeto de tipo constructor";
+		this.mostrarInfo = function(){
+
+			alert(this.info);
+		}
+
+		this.configurarInfo = function (nuevaInfo) {
+
+			this.info = nuevaInfo
+		}
+		
+
+	}
+
+
+	//ahora vamos ha instancia el objeto constructor que creamos:
+	/*para ésto creamos una variable y en ésta guardamos la instancia del objeto que estamos creando
+
+	y a través, de la palabra reservada "new", podremos hacer una llamada al objeto creado constructor para hacer así, una instancia de ésta plantilla reutilizable
+
+	así, cuando llamemos las propiedades y métodos del objeto constructuor éstas se almacenarán en éste caso en la variables que lo contendrá "miobjetoConstructor1"
+
+	así, podremos la cantidad de instancias del elemento constructor que necesitemos
+
+	*/
+
+	var miobjetoConstructor1 = new fConstructor();
+	var miobjetoConstructor2 = new fConstructor();
+	var miobjetoConstructor3 = new fConstructor();
+
+
+
+
+
+</script>
+
+<!--así, tendremos que llamar ha un objeto dentro del otro objecto-->
+<input type="button" value="ver función" onclick="miNuevoObjeto.miMetodo();">
+
+<!--así, tendremos que llamar ha un objeto dentro del otro objecto-->
+<input type="button" value="ver función2" onclick="miNuevoObjeto2.nuevoMetodo();">
+
+
+
+<!--botones para los objetos constructor-->
+
+<!--llamada el objeto constructor "miobjetoConstructor1"-->
+<input type="button" value="Objeto Constructor1" onclick="miobjetoConstructor1.mostrarInfo();">
+
+<!--llamada el objeto constructor "miobjetoConstructor1"-->
+<input type="button" value="Objeto Constructor2" onclick="miobjetoConstructor2.mostrarInfo('información alternativa');">
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+

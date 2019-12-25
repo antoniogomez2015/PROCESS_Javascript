@@ -8,62 +8,106 @@
 
 		/*
 
-		//////////////////////////////////////////////////////////////////////////////////////
-
-		Tutorial directo:
-
-			Curso de Diseño y Programación Web: 13.JavaScript: Objetos, métodos, atributos, funciones, variables | https://www.youtube.com/watch?v=hTdJdhlmQgg
-
-		Tutorial: Curso Básico de Javascript desde 0 (27 videos) | https://www.youtube.com/playlist?list=PLhSj3UTs2_yVC0iaCGf16glrrfXuiSd0G
-
-		Tutorial: Aprende JavaScript esencial en español (31 videos) | https://www.youtube.com/playlist?list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv
-
-
-		Tutorial específico: Aprende JavaScript esencial #21 - Recorrer matrices | https://www.youtube.com/watch?v=cf0VLQRPCZ0&list=PLM-Y_YQmMEqAedHjvY3_v7EfGfFCHXYHv&index=21&t=2s
-
-
-
-
-		//////////////////////////////////////////////////////////////////////////////////////
-		
+				
 		Clases:
 		_______
 
-		_a través, de las funciones de javascript, podremos crear clases que definan objetos, métodos y atributos para que así, podamos crear estructuras de memoria más completas, complejas y a la medida en relación a nuestras necesidades, ej:
+		a través, de las funciones de javascript, podremos crear clases que definan objetos, métodos y atributos 
+		
+		para que así, podamos crear estructuras de memoria más completas, complejas y a la medida en relación a nuestras necesidades
+
+		de ésta manera, comenzaremos ha estudiar la estructura para la creación de objetos prototipos ó clases en javascript
 
 
 
 		Estructura:
 		___________
 
+
 			Función:
 			________
 
 			_para definir una clase en javascript, haremos uso de una función convencional en javascript, la cuál, podremos renombrar con cualquier nombre
 
+				
+				function perro(){
+
+					}
+
+
 
 			Object:
 			_______
 
-			_y a su vez, dentro de la cuál, haremos uso de la palabra reservada "this", para referirnos al entorno de la misma función y poder crear un objeto en relación ha ésta función, almacenando éste dentro de una variable en éste caso "obj"
+			_y a su vez, dentro de la cuál, haremos uso de la palabra reservada "this", para referirnos al entorno de la misma función y poder crear un objeto vacío en relación ha ésta función
+			
+			almacenando éste dentro de una variable en éste caso "obj"
+
+				
+				function perro(){
+
+					var obj = this;
+
+					}	
 
 
-			Attributes:
+
+			Attributes:			
 			___________
 
-			_de ésta manera, podremos agregarle variables como propiedades anidadas ó concatenadas al objeto que hemos creado "obj"
+			_de ésta manera, podremos agregar variables como propiedades anidadas ó concatenadas al objeto que hemos creado, en éste caso "obj"
 
 			_las cuáles, a su vez, recibirán los parámetros respectivos recibidos por el método de la función cuando ésta sea llamada posteriormente
+
+				
+				function perro(){
+
+					var obj = this;
+
+					obj.nombre = n;
+					obj.rasa = r;
+					obj.edad = e;
+					obj.sexo = s;
+					obj.adiestrado = a;
+					obj.foto = f;
+
+				}
+
 
 
 			Methods:
 			________
 
-			_de igualmanera, para crear métodos dentro del objeto en éste caso "obj", debemos concatenarle variables con un nombre respectivo a las cuáles, les asignaremos una nueva función 
+			_de igualmanera, para crear métodos dentro del objeto en éste caso "obj", debemos concatenarle variables con un nombre respectivo a las cuáles, les asignaremos una nueva función, ej: "aparecer"
 
 			_la cuál, a su vez, contendrá sus propias instrucciones y algoritmos ha llevar ha cabo
 
 			_de ésta manera, podremos crear nuestros propios métodos los cuáles responderán a las necesidades establecidas por el objeto respectivo
+
+
+				function perro(n,r,e,s,a,f){
+
+					var obj = this;
+
+					obj.nombre = n;
+					obj.rasa = r;
+					obj.edad = e;
+					obj.sexo = s;
+					obj.adiestrado = a;
+					obj.foto = f;			
+
+
+					obj.aparecer = function(){
+
+						var imagen = document.createElement('img');
+						imagen.src = obj.foto;
+						imagen.alt = obj.nombre;
+						imagen.tittle = 'prueba de ejemplo';
+
+						document.body.appendChild(imagen);
+
+					};
+				}
 
 
 

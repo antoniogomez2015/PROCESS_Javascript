@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+
+	//funciones constructor del objeto personalizado:
+
+	/*
+	ésto es hacer una especie de plantilla en la cuál, podremos luego instanciar los objetos
+
+	el proceso dista bastante del proceso que llevamos hasta ahora
+	*/
+
+	//lo primero será la declaración dicha función constructor
+	function fConstructor(){
+
+		//nuevo atributo del nuevo objeto
+		/*aquí el "this", hará de elemento padre al elemento que llame al objeto, ya que ésto es una plantilla*/
+		this.info = "Soy un objeto de tipo constructor";
+
+		/*y aquí "this", suplantará ha el objeto que creabamos y hará que el elemento que llame al método haga de del objeto padre de la función*/
+		this.mostrarInfo = function(){
+
+			alert(this.info);
+		}
+
+		/*en éste caso es similar al anterior más a la función le hemos agregado un parámetro el cuál un string*/
+		this.configurarInfo = function (nuevaInfo) {
+
+			/*de ésta manera, lo que pasemos como valor de info, sustituirá el valor existente del valor del atributo principal de info*/
+			this.info = nuevaInfo
+		}		
+
+	}
+
+
+	//ahora vamos ha instancia el objeto constructor que creamos:
+	/*para ésto creamos una variable y en ésta guardamos la instancia del objeto que estamos creando
+
+	y a través, de la palabra reservada "new", podremos hacer una llamada al objeto creado constructor para hacer así, una instancia de ésta plantilla reutilizable
+
+	así, cuando llamemos las propiedades y métodos del objeto constructuor éstas se almacenarán en éste caso en la variables que lo contendrá "miobjetoConstructor1"
+
+	así, podremos crear la cantidad de instancias del elemento constructor que necesitemos
+
+	*/
+
+	var miobjetoConstructor1 = new fConstructor();
+	var miobjetoConstructor2 = new fConstructor();
+	var miobjetoConstructor3 = new fConstructor();
+
+
+
+
+
+</script>
+
+<!--así, tendremos que llamar ha un objeto dentro del otro objecto
+para ésto, debemos de colocar el nombre de variable que contiene al objeto instanciado, en éste caso a la variable "miobjetoConstructor1"
+
+para luego colocar de forma concatenada ".", el nombre del método que ahora hace de padre de la función, en éste caso el método "mostrarInfo", más éste debe ser expresado con "()", paréntesis quedando de la siguiente manera: 
+"miobjetoConstructor1.mostrarInfo()"
+-->
+<input type="button" value="ver función" onclick="miobjetoConstructor1.mostrarInfo();">
+
+<!--ésta llamada al objeto instanciada es idéntica a la anterior más en éste caso le estamos pasando argumentos dentro del método "configurarInfo()"-->
+<input type="button" value="ver función2" onclick="miobjetoConstructor2.configurarInfo('nuevo contenido para la propiedad INFO');">
+
+
+</body>
+
+</html>
+
+
