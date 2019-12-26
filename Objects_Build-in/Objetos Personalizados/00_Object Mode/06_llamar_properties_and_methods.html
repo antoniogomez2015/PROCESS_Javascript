@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Llamar Properties and Methods:
+        ______________________________
+
+
+            Properties:
+            ___________
+
+            para llamar properties, debemos de primeramente hacer referencia al nuevo objeto que hemos creado, en éste caso el objeto "miNuevoObjeto"
+
+            para a continuación acceder al objeto respectivo hasta la propiedad deseada del mismo a través, de la notación de punto ".", ej:
+
+        */
+
+
+            var miNuevoObjeto = new Object();
+
+            miNuevoObjeto.info = 'tony';
+
+                function miFunc(){
+                    alert(this.info);
+                }
+
+                miNuevoObjeto.mostrarInfo = miFunc;
+
+                //accediendo a la propiedad del objeto renderizandolo en el navegador
+                document.write(miNuevoObjeto.info);
+
+
+
+        /*
+
+            Methods:
+            ________
+
+            para llamar methods, debemos de primeramente hacer referencia al nuevo objeto que hemos creado, en éste caso el objeto "miNuevoObjeto"
+
+            para a continuación acceder al objeto respectivo hasta el método deseado del mismo a través, de la notación de punto ".", ej:
+
+        */
+
+
+            var miNuevoObjeto = new Object();
+
+            miNuevoObjeto.info = 'tony';
+
+                function miFunc(){
+                    alert(this.info);
+                }
+
+                miNuevoObjeto.mostrarInfo = miFunc;
+
+                //accediendo al método del objeto renderizandolo en el navegador
+                document.write(miNuevoObjeto.mostrarInfo());
+
+
+        /*
+
+                nótece que para llamar al método del objeto respectivo debemos de llamar al método respectivo a través, del uso de sus paréntesis "()"
+        
+        
+        */
+  
+
+    </script>
+    
+
+
+</head>
+
+<body>
+
+    <!--accediendo al método el objeto desde un botón-->
+    <input type="button" value="boton" onclick="miNuevoObjeto.mostrarInfo()">
+    
+    
+
+
+</body>
+</html>

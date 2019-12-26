@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Add Methods:
+        ____________
+
+
+            Function:
+            _________
+
+            primeramente tendremos que crear una función con el proceso ha realizar, en éste caso la función: 
+            
+                _"miFunc()"
+
+
+            Name:
+            _____
+        
+            para posteriormente en una nueva sentencia hacer referencia al nombre del objecto, en éste caso:
+
+                _"miNuevoObjeto"
+
+
+            Concatenación:
+            ______________
+
+            para posteriormente proceder a concatenar ".", con la notación de punto           
+
+
+            Method:
+            _______
+
+            para a continuación indicar el nombre del método ha agregar dentro del objeto perdonalizado, en éste caso el método: 
+            
+                _"mostrarInfo"
+
+
+            para seguidamente proceder ha asignar "=", el tipo de valor y su descripción respectivamente            
+            
+            y finalmente debemos hacer referencia al nombre de la función que hemos creado previamente, en éste caso a la función:
+            
+                _"miFunc"
+
+            
+
+        */
+
+
+            var miNuevoObjeto = new Object();
+
+            miNuevoObjeto.info = 'tony';
+
+                function miFunc(){
+                    alert(this.info);
+                }
+
+                miNuevoObjeto.mostrarInfo = miFunc;
+  
+
+        /*
+
+            Funciones Anónimas:
+            ___________________
+
+            tendremos la posbilidad de crear funciones anónimas para no tener así, que crear una función a parte
+
+            si no que en vez de eso, podremos declarar la función en el mismo punto en el que declaremos el nuevo método a crear dentro del objeto 
+            
+            lo cuál, es más práctico y elegante, ej:
+        
+        
+        */
+
+            miNuevoObjeto.mostrarInfo2 = function (){
+                    alert(this.info);
+                }
+
+        /*
+            de ésta manera, como podremos ver colocamos la función directamente como valor del método
+
+            con la única diferencia que a la función lo le asignamos nombre lo cuál, la hace anónima
+        */
+
+
+
+    </script>
+    
+
+
+</head>
+
+<body>
+
+    <!--llamando al método a través de un botón-->
+	<input type="button" value="boton" onclick="miNuevoObjeto.mostrarInfo()">
+	
+</body>
+</html>
