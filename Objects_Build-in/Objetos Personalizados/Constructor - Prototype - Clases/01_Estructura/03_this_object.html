@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Estructura:
+		___________
+
+			tenemos dos posibilidades para poder acceder y hacer referencia a las propiedades y métodos que creemos dentro de la función constructor
+
+			la cuál, siempre será haciendo uso de la palabra reservada "this", para referirnos al entorno de la misma función 
+
+
+			Opcion 1 :
+			__________
+
+			tendremos la posibilidad de crear una variable en éste caso:
+			
+				_"obj"
+				
+			
+			a la cuál, le asignaremos como valor la palabra reserda
+
+				_"this"
+
+
+			y poder así, crear un objeto vacío en relación ha ésta función
+			
+			almacenando éste dentro de una variable que hemos creado, en éste caso la variable "obj"
+
+		*/
+
+
+				
+				function perro(){
+
+					var obj = this;
+
+					obj.name = value;
+
+
+				}	
+
+
+		/*
+
+			Opcion 2:
+			_________
+
+			más también, tendremos la opción de hacer referencia de forma directa para cada elemento dentro del constructor a su elemento padre
+
+			a través, de la palabra reservada
+
+				_"this"
+
+
+			la cuál, precederá a cada propiedad y método
+		
+		
+		
+		*/
+
+				function perro(){
+
+					this.name = value;
+
+					this.name = function(){
+						sentences;
+					}
+
+				}	
+
+
+
+
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+	
+	
+</body>
+</html>

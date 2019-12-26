@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Extender:
+		_________
+
+        tenemos la posibilidad de agregar nuevas propiedades y métodos a un prototipo ó modelo de objeto
+
+        de ésta manera, extenderemos las posibilidades de los objetos personalidos
+
+        para lo cuál, dispondremos de la palabra reservada:
+
+            _"prototype"
+
+
+        de ésta manera, tendremos que concatener ".", posteriormente de la palabra reservada "prototype"
+
+        el nombre de la propiedad ó método ha agregar a la instancia del objeto respectivo
+
+        para posteriormente asignar "=", el valor de dicha propiedad ó método  
+
+
+
+        NOTA: las propiedades y métodos agregados por medio de "prototype" 
+        
+        a los modelos de objetos se reflejarán en todas las instancias creadas de los mismos  
+
+
+        */
+
+
+            //definición del constructor modelo del objeto
+            function dog(n,r,e,s,a,f){
+
+                var obj = this;
+
+                obj.nombre = n;
+                obj.rasa = r;
+                obj.edad = e;
+                obj.sexo = s;
+                obj.adiestrado = a;
+                obj.foto = f;
+
+            }
+
+
+            //instanciando al objeto del modelo
+            var mascota = new dog();
+
+            var mascota_2 = new dog();
+
+
+            //agregando una propiedad al objeto ya creado
+            dog.prototype.amo = "tony";
+
+
+            //accediendo a la propiedad agregada
+            document.write(mascota.amo);           
+
+            document.write(mascota_2.amo);
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+	
+	
+</body>
+</html>

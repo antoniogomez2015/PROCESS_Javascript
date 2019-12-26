@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Estructura:
+		___________
+
+
+			Características:
+			________________
+
+			más también, tendremos la posibilidad de crear un constructor el cuál, requiera parámetros a la hora de instanciar el objeto personalizado 
+            
+            para que así, se pasen datos dinámicamente a la hora de invocar a cada instancia del objeto de la clase ó modelo del mismo
+
+
+            Parámetros:
+            ___________
+
+            de ésta manera, los valores que indiquemos como parámetros de la función en el constructor
+
+            deben coincidir con los valores asignados en las propiedades y métodos del constructor para que así haya correspondencia y retorno de valores
+
+		*/
+
+
+
+				function perro(n,r,e,s,a,f){
+
+					var obj = this;
+
+					obj.nombre = n;
+					obj.rasa = r;
+					obj.edad = e;
+					obj.sexo = s;
+					obj.adiestrado = a;
+					obj.foto = f;			
+
+
+					obj.aparecer = function(){
+
+						var imagen = document.createElement('img');
+						imagen.src = obj.foto;
+						imagen.alt = obj.nombre;
+						imagen.tittle = 'prueba de ejemplo';
+
+						document.body.appendChild(imagen);
+
+					};
+				}
+
+        /*
+        
+            ahora podremos instanciar el objeto de la clase ó constructor 
+            
+            con los parámetros requeridos por el constructor, clase ó modelo, ej:          
+
+        */
+
+                var obj_1 = new perro("Cherry", "Terry", 3, "Macho", false, false);
+
+
+        /*
+        
+            de ésta manera, una vez configurado la nueva instancia del modelo u objeto
+
+            con los valores de sus propiedades y métodos pasados como parámetros
+
+            podremos ahora si, acceder ha esas propiedades y métodos, ej:
+        
+        */
+                document.write(obj_1.nombre); //Cherry
+
+
+
+
+
+
+            
+
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+	
+	
+</body>
+</html>
