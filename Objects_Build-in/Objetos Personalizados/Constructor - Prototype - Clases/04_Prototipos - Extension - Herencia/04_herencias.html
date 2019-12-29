@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+				
+		Herencias:
+		__________
+
+        herencia es la posibilidad de poder crear un objeto a partir de otro objeto ya existente
+
+        para lo cuál, haremos uso de la palabra reservada:
+
+            _"prototype"
+
+
+        de ésta manera, el nuevo objeto heredará las propiedades y métodos del objeto viejo
+
+        más también, al nuevo objeto compuesto le podremos agregar nuevas propiedades y métodos adicionales personalizadas
+
+        de ésta manera, podremos crear clases genéricas y luego ir refinándolas en clases más específicas por medio de las herencias
+
+        
+
+        */
+
+        /*
+
+            Modelos Prototipo Genérico:
+            ___________________________
+
+            primero procederemos ha crear una clase constructor genérica ó base
+
+            a partir de la cuál, crearemos las propiedades y métodos comúnes
+
+            para posteriormente especificar en nuevos objetos los datos específicos para cada usuario
+
+        */
+
+
+            //definición del constructor modelo del objeto genérico
+            function Domestico(){
+
+                var obj = this;
+
+                obj.animal = "";
+                obj.nombre = "";                
+
+                obj.confAnimal = function(nAnimal){
+                    obj.animal = nAnimal;
+                }
+
+                obj.confNombre =function(nNombre){
+                    obj.nombre = nNombre;
+                }
+
+            }
+
+
+            //instanciando al objeto del modelo
+            var miGato = new Domestico();
+
+                //configurar color del método a través, de su parámetro
+                miGato.confAnimal = "Gato";
+                miGato.confNombre = "tomy";
+
+                    document.write(miGato.confNombre);
+           
+
+            /*
+            
+            Objeto Específico:
+            __________________
+
+            de ésta manera, a partir del modelo genérico podremos comenzar un objeto nuevo posteriormente 
+            
+            de ésta manera, podremos luego complementar un objeto específico
+
+            sin la necesidad de tener que realizar todo el proceso de nuevo
+
+            */
+
+
+            //ahora la nueva función constructor "Perro", podrá tomar propiedades del prototipo Domestico()
+            Perro.prototype = new Domestico();
+
+                function Perro(){
+
+                    var obj = this;
+
+                    obj.padre = "";
+
+                    obj.dir = "";
+
+                    obj.confPadre = function(padre){
+                        obj.padre = padre;
+                    }
+
+                    obj.direccion = function(dir){
+                        obj.dir = dir;
+                    }
+
+                    obj.family = function(){
+                        obj.nombre + " " + "Amo: " + obj.padre;
+                    } 
+                }
+
+                Perro.confPadre = "Juán";
+                Perro.direccion = "Barquisimeto";
+
+                
+
+            //instanciado al objeto proof del constructor "Perro", que a su vez, éste toma elementos del constructor "Domestico"
+            var Proof = new Perro();
+
+                Proof.confPadre = "Juan";
+                Proof.direccion = "Cabudare";
+
+                    document.write(Proof.direccion());
+
+              
+
+                        
+
+
+                //aquí quedamos:   https://www.youtube.com/watch?v=uKz30sRuKS4&list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx&index=29
+
+
+
+                //Pan dulce Kugelhopf:  https://www.youtube.com/watch?v=XJmDoFqStto
+
+                //pan salado: https://www.youtube.com/watch?v=9LmpM6nwSws
+
+                //catalinas: https://www.youtube.com/watch?v=hFe51Ih1GjY
+
+                //Pan Dulce Andino: https://www.youtube.com/watch?v=v_tn_qGXDNA
+
+                //suspiros: https://www.youtube.com/watch?v=uv-87ipNL7U
+
+                //quesadillas andinas: https://www.youtube.com/watch?v=flh7D97bsik
+
+                //masa de pasteles andinos: https://www.youtube.com/watch?v=fqQdkJjDJVM
+
+                //Como hacer pastelitos para vender: https://www.youtube.com/watch?v=NyM2KG5NCCU
+
+                //pastelitos andinos y rellenos de carne y arroz: https://www.youtube.com/watch?v=K0exMlKXJSU
+
+                //pastelitos de pizza: https://www.youtube.com/watch?v=S89J8fxJTek
+
+
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+	
+	
+</body>
+</html>

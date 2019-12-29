@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+        Referencia:
+        ___________
+
+            29.- Curso de JavaScrit para principiantes. Encapsulación en JavaScript.
+                https://www.youtube.com/watch?v=sRqEkdDqPF8&list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx&index=30
+
+                
+
+				
+		Encapsulamiento:
+		________________
+
+
+            Características:
+            ________________
+
+            tenemos la posibilidad de encapsular ó de hacer privado parte del código dentro de una función constructor
+
+            así, la característica de encapsulamiento nos permitirán ocultar datos e instrucciones dentro de una clase, modelo ó constructor
+
+            de ésta manera, el contenido encapsulado sólo podrá ser accedido desde dentro de la misma función constructor
+
+
+            Lógica:
+            _______
+
+            entendiéndose así, que dichos elementos ocultos no podrán ser accesibles ni siquiera desde objetos instanciados a partir de la misma claso que contiene los elementos ocultos
+
+
+            Accesibilidad:
+            ______________
+
+            todas las propiedades y métodos dentro de una función vaya ha ser ésta constructor ó no
+
+            sólo serán accesibles dentro del mismo ámbito ó scope de la propia función donde fueron creados
+
+            más existe la posibilidad de una excepción para las funciones que fungirán ó harán de modelo constructor
+
+            a través, de la palabra reserva 
+
+                _"this"
+
+
+            precediendo a una propiedad ó método de forma concatenada ".", como sentencias dentro de una función
+
+            dichas propiedades y métodos en éste caso, si serán accesibles desde objetos instanciados a partir de dicha función que fungirá ó hará de constructor ó modelo base
+
+            de ésta manera, las variables se convierten en propiedades
+
+            y las funciones se convierten en métodos y a partir de éste punto si serán accesibles de las instancias objetos que creemos
+
+
+        */
+
+
+
+
+
+            //de ésta manera, ahora la función "voltear", ahora podrá acceder a todos los métodos y propiedades del objeto pre construido "String"
+
+            function Caja(ancho, largo, alto){
+
+                function volumen(a,b,c){
+
+                    return a*b*c;
+                }
+
+                this.volumenCaja = volumen(ancho, largo, alto);
+
+            }
+            
+
+            Contenedor = new Caja(5,4,3);
+
+            document.write(Contenedor.volumenCaja);
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>
