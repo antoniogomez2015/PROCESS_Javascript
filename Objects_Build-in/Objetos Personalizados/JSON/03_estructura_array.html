@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+		Estructura Array:
+		_________________
+
+		más también, dispondremos de la estructura "array", para la estructuración de datos dentro de json
+
+        de ésta manera, podremos crear colecciones de datos ordenados por tipos para luego acceder ha éstos
+
+        y con diferentes tipos de elementos como valor, como por ejemplo;
+        
+        los diferentes tipos de elementos existentes en javascript, como string, otros arrays, objetos, objetos vacíos, otros
+
+        NOTA: más nos podremos colocar todos los tipos de valores juntos como claves dentro de un mismo array jason
+
+        si no que en vez de eso, tendremos de colocar sólo un tipo de valor por cada array, ej: sólo; objetos, strings,..
+
+
+        Accesibilidad:
+        ______________
+
+		así, sólo tendremos que hacer referencia a la variable que contiene la notación json
+
+		para posteriormente concatenarle ".", con la notación de punto el nombre de clave ha octener y su posición dentro del array
+
+		para que así, obtengamos el valor de dicha propiedad, ej
+		
+		*/
+
+					
+
+			var usuario = [
+                
+				{
+                    "referencia": 545,
+                    "sistema": "estandar"
+                },
+
+                {
+                    "jornada": "enero",
+                    "trimestre": "primero"
+                }
+			]
+
+			document.write(usuario[1].jornada);
+
+        
+            
+           
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+		Estructura de Objetos Json:
+		___________________________
+
+		la estructura objeto, consta de valores que hacen de clave 
+		
+		las cuáles siempre estarán encerrados entre comillas dobles
+
+		y estarán separadas por el caracter de dos puntos ":"
+
+		para segundamente proceder ha indicar el valor de dicha clave
+
+		más el valor asignable podrá ser cualquier valor válido dentro de javascript
+
+		como string, números, objetos vacíos, arrays, objetos, otros
+
+
+		Diferencias:
+		____________
+
+		de ésta manera, podremos ver que se trata de un objeto convencional en javascript
+
+		más con la única diferencia de que cada cada clave siempre tendrá que estar encerrada dentro de comillas dobles
+
+		y que el signo de asignación en éste caso será el caracter de dos puntos ":", y no el caracter de igualdad "="
+		
+
+
+		Accesibilidad:
+        ______________
+
+		de ésta manera, podremos acceder a las propiedades y valores de una notación json, como cualquier objeto nativo de javascript, de forma regular
+
+		así, sólo tendremos que hacer referencia a la variable que contiene la notación json
+
+		para posteriormente concatenarle ".", con la notación de punto el nombre de clave ha octener y su posición dentro del array
+
+		para que así, obtengamos el valor de dicha propiedad, ej
+		
+		*/
+
+					
+
+			var usuario = {
+
+				"nombre" : "tony",
+				"apellido" : "gomez",
+				"cargo" : "diseñador",
+				"edad" : 39,
+				"cursado": [1,2,3],
+				"idividual": true,
+				"exonerado":null,
+				"asignacion": {
+					"recursos": "online",
+					"ref": [45,78, "Albert"],
+					"tutor": {
+						"nombre": "Jose David",
+						"apellidos": "Vargas Lozada"
+					}
+				}
+			}
+
+			document.write(usuario.asignacion.recursos);
+
+        
+            
+           
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>
