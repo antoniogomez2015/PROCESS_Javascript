@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+
+    <h1>DOM</h1>
+
+
+    <!--
+
+        Accesos de Interés:
+        ___________________
+
+
+        charset:
+        ________
+
+        podremos acceder ha elementos como el conjunto de caracteres del idioma, por ejemplo para saber si el documento está en UTF-8, ej:
+
+    -->
+
+        <script>
+
+            console.log(document.charset);
+
+        </script>
+
+    <!--
+
+        scripts:
+        ________
+
+        también, podremos acceder a los script, para saber así, que documentos están relacionados con el documento
+        
+        el llamar directamente he "document.script". nos devolverá un colección html ha modo de array, con todos los scripts
+
+        más si deseamos acceder ha uno específicamente, podremos indicar su ubicación dentro de la colección
+
+        para lo cuál, haremos uso de los corchetes como si fuese un array
+
+
+    -->
+
+        <script>
+
+            //script generales
+            console.log(document.scripts);
+
+            //script específicos
+            console.log(document.scripts[0]);
+
+        </script>
+
+
+    <!--
+
+        styles:
+        _______
+
+        también, podremos acceder a los etilos css, relacionados con el documento html
+
+        de ésta manera, podremos hacer modificaciones dinamicamene de las hojas estilos relacionadas con el documento html
+
+
+    -->
+
+        <script>
+
+            //referencia ha estilos en general
+            console.log(document.styleSheets);
+
+            //referencia ha estilos en específico
+            console.log(document.styleSheets[0]);
+
+        </script>
+
+
+    <!--
+
+        Links:
+        ______
+
+        también, tendremos la posibilidades de acceder a los enlaces de un documento para diferentes procesos dinámicos
+
+        de ésta manera, los enlaces existentes serán listados y ordenados según su características
+
+        así, podremos ver los enlaces a compañados de sus clases y atributos
+
+        de ésta manera, a través, de sus clases podremos acceder ha éstos más rápidamente
+
+    -->
+
+        <script>
+
+            //enlaces generales ó globales
+            console.log(document.links);
+
+            //enlaces específicos
+            console.log(document.links[45]);
+
+        </script>
+
+
+    <!--
+
+        Selecciones del Usuario:
+        ________________________
+
+        también, tendremos la posiblidad de acceder ha una sección de texto u otros elementos que haya hecho el usuario en el documento html, según la lógica y modelo de negocios de nuestra aplicación
+
+        para que así, según la selección que haya hecho el usuario podamos reaccionar si la selección es correcta
+
+    -->
+
+        <script>
+
+            //capturar selección del usuario
+            console.log(document.getSelection().anchorNode.data);
+
+            //más también, podríamos de forma directa convertir ha texto
+            console.log(document.getSelection().toString());
+
+            
+        </script>
+
+
+    <!--
+
+        MIX:
+        ____
+
+        de igualmente podremos acceder ha elementos como: 
+        
+            _imágenes 
+            
+            _formularios 
+            
+        
+        entre otros elementos importantes que podremos acceder y modificar según el modelo de negocios de nuestra aplicación
+
+
+
+
+    -->
+
+
+
+   
+
+
+</body>
+</html>
