@@ -17,50 +17,30 @@
 
                 https://www.youtube.com/watch?v=8hIr3Kl-g7k&list=PLEtcGQaT56cij4cilDUzKYcu6-wW44kTx&index=32
 
-
-		JSON Ofitial Site:
-		__________________
-
-			https://www.json.org/json-en.html
-
-                
+            
 
 
+		Serialización Json Object:
+        __________________________
 
-				
-		JSON:
-		_____
+        de ésta manera, los navegadores modernos convierten los valores de notación json 
+        
+        en un objeto llamado "json", el cuál, ya es un objeto propio de javascript 
+        
+        con sus propiedades y métodos específicas
 
-
-			Serialización Json Object:
-            __________________________
-
-            de ésta manera, los navegadores modernos convierten los valores de notación json, en un objeto llamado "json", el cuál, ya es un objeto propio de javascript, con sus propiedades y métodos específicas
-
-            para manejar el proceso de codificación y decodificación ó serialización y deserialización
+        para manejar el proceso de codificación y decodificación ó serialización y deserialización
 
 
+        Objeto Json:
+        ____________
 
-            Métodos:
-            ________
-                
-
-                    parse();
-
-
-
-
+        de ésta manera, un objeto ó notación json, la podremos convertir a un objeto javascript, ej:
 
         */
 
-
-			var usuario = {
-
-				"nombre" : "tony",
-                "apellido" : "gomez",
-                "cargo" : "diseñador",
-                "edad" : 39
-			}
+            //objeto json
+			var cadena = '{"nombre":"Juan","edad":32,"pais":"Perú"}';
 
         /*
             de ésta manera, a través, de la función parse(), del objeto JSON, podremos convertir el la notación json, en éste caso "usuario"
@@ -72,10 +52,10 @@
             
             
            
-            //no funciona!!!
-            var miNuevoObjetoJS = JSON.parse(usuario);
+            //convertirnos la notación json, ha un objeto javascript, a través, del método parse()
+            var miNuevoObjetoJS = JSON.parse(cadena);
 
-            document.write(miNuevoObjetoJS.edad);
+            console.log(miNuevoObjetoJS);
 
 
         /*
