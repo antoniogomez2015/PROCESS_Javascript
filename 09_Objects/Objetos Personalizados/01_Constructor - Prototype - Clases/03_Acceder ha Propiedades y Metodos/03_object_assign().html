@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Ejemplo</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+        
+        
+    //////////////////////////////////////////////////////////////////////////////////
+
+    /*
+
+    Tutorial:
+    _________
+
+        Object.assign() Method : Object Oriented Programming in JavaScript Series - Part 7
+
+            https://www.youtube.com/watch?v=9Ky4X6inpi4
+
+
+
+
+    Object.assign():
+    ________________
+
+    _el método "assign()", nos permitirá poder agregar un objeto dentro de otro 
+
+    es decir, que podremos sumar las propiedades y métodos de un objeto, con las propiedades y métodos de otro objeto
+    
+    de ésta manera, podremos acceder a las propiedades de un objeto desde de otro objeto
+
+    _el método "assign()", recibe dos parámetros, los cuáles son:
+
+        _el primer parámetro corresponde al objeto principal que contendrá dentro de si al otro objeto
+
+        _y el segundo parámetro corresponde al otro objeto que será incorporado dentro del objeto principal
+
+    */
+
+
+    //objeto principal
+    var obj1 = {
+        name: "tony",
+        lastName: "Gomez"
+    }
+
+    //objeto complementario
+    var user = {
+        id: function(){
+            //objeto user, que hace uso de propiedades del objeto principal obj1  
+            document.write("El usuario es: " + this.name + " " + this.lastName);
+        }
+    }
+
+    //a través, del objeto "Object", podremos utilizar el método "assign()", a través, del cuál, podremos mezclar ó vincular ambos objetos, tanto el objto user, como el objeto obj1, en éste caso
+    Object.assign(obj1, user);
+
+
+    //llamando al objeto en éste caso obj1, y a través, del cuál, podremos acceder a la propiedad "id", del objeto complementario "user"
+    obj1.id();
+
+
+    //de ésta manera, obtendremos renderizado en el navegador: 
+    
+        //El usuario es: tony Gomez
+            
+        
+
+    //////////////////////////////////////////////////////////////////////////////////
+        
+    //también, tendremos la posibilidad de copiar las propiedades de un objeto dentro de un objeto vació, ej;
+
+    //objeto complementario
+    var nick = {
+        nick: "massive",
+        date: [17,12,1980],
+        stages: 8,
+        lives: 2,
+        power: 65
+    }
+
+
+    //objeto principal a través, de un objeto vació el cuál, es almacenado en una variable "proUser", en éste caso
+    var proUser = Object.assign({}, nick);
+
+    //llamando y accediendo a las propiedades del objeto complementario "nick", a través, del objeto principal, en éste caso por referencia es "proUser"
+    console.log("Usuario: " + proUser.nick + " " + "Referencia: " + proUser.date[2]);
+
+</script>
+    
+    
+</body>
+
+</html>
+
+
