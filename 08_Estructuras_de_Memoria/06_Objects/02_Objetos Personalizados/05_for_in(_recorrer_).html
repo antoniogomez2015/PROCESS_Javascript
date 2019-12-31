@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<!--
+
+
+
+	Ciclo For In:
+	_____________
+
+	también, disponemos del ciclo especial "for (in){}", el cuál, es una variante del ciclo for 
+	
+	de ésta manera, podremos utilizar el ciclo "for in", para recorrer las propiedades de un objeto
+
+	_para lo cuál, debemos de hacer uso de la siguiente estructura ej:
+
+	-->
+
+
+	<script>
+
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+
+		//ejemplo para obtener todos los valores recorridos del objeto
+		for (var propiedad in libro){
+			
+			document.write(propiedad);
+		}		
+
+
+		//ejemplo para obtener tanto la "clave", como el "valor", de forma ordenada y lógica del objeto recorrido
+		for (var propiedad in libro){
+			
+			document.write(propiedad + ' : ' + libro[propiedad]);
+		}
+
+
+
+	</script>
+
+
+	<!--
+
+	_de ésta manera, javascript, nos arrojará todas las propiedades con sus respectivos valores de forma contigua gracias al ciclo for, en éste variante para recorrer objetos
+
+	-->
+
+
+
+
+	
+	
+</body>
+</html>

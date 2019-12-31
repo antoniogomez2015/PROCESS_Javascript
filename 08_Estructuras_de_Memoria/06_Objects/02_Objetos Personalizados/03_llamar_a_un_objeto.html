@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>		
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+
+	llamar a un Objeto:
+	___________________
+
+    _llmar ha un objeto en javascript, y acceder a sus propiedades 
+    
+    para lo cuál, dispondremos de dos opciones
+    
+
+
+    Doc Operator:
+    _____________
+
+    en la primera opción, debemos de haer uso del "dot operator" 
+    
+    lo cuál, no es más que el uso de la notación de punto ".", 
+    
+    como elemento concatenador en el respectivo objeto con una respectiva propiedad del mismos
+
+
+
+    Brackers Notation:
+    __________________
+
+    así, como también, tendremos la posibilidad de llamar un objeto a través, de la notación "Brackers Notation" 
+    
+    ó "corchetes", y la diferencia principal con la notación "Doc Operator" 
+    
+    es que la opción "Brackers Notation", nos permitirá acceder a propiedades con más de una palabra en su definición dentro de un objeto
+
+    como podemos ver la última propiedad llamada "critica general", del objeto "libro", en éste caso del ejemplo  tiene más de una palabra en su conformación
+
+    lo cuál, no está a corde con las normas de nombres de estructuras de memoria como variables constantes, otros
+
+    donde las definiciones de elementos en javascript, no podrán contener espacios, carácteres especiales, númenos en su inicio, otros
+
+	de ésta manera, a través, de la brackers notation, procederíamos ha llamar ha ese tipo de propiedades de un objeto de la siguiente manera:
+
+    -->
+
+
+    <script>
+
+        //definición de objeto javascript
+        var libro = {
+
+            libro: "IP",
+            autor: "Stephen King",
+            genero: "terror",
+            valoracion: 9,
+            tags: ["Pennywise", "floating", "Payaso", "Derry"],
+            "critica general": "favorable"
+        }
+
+
+        //accediendo a propiedades del objeto a través, de la notación de punto
+		document.write(libro.autor);
+
+        //accediendo a propiedades del objeto a través, de la notación de punto
+		document.write(libro.tags[3]);
+
+
+
+        //accediendo a propiedades del objeto a través, de la notación de brackers notation
+        document.write(libro["critica general"]);
+
+
+
+    </script>
+
+    <!--
+
+
+
+    
+
+	
+</body>
+</html>

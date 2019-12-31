@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>		
+	</script>
+
+</head>
+<body>
+
+	<!--
+
+
+
+	Borrar Propiedades de un Objeto:
+	________________________________
+
+    _también, tenemos la posibilidad de borrar propiedades existentes en un objeto 
+    
+	para lo cuál, haremos uso de la función pre costruida 
+	
+	
+		_"delete()"
+
+
+    _a través, de la cuál, nos referiremos al objeto respectivo 
+    
+    y al atributo ha eliminar pasándolos como parámetros de ésta función "delete()", ej:
+    
+    -->
+
+
+    <script>
+
+
+		var libro = {
+
+			titulo: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"]	
+		}
+
+        //eliminando propiedad "genero"
+		delete(libro.genero);
+
+
+        //ahora optendremos el objeto sin la propiedad "genero", en éste caso
+        console.log(libro);
+
+
+
+
+
+
+
+    </script>
+	
+
+
+
+
+
+	
+	
+</body>
+</html>
