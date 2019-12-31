@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+		Numbers Nulls Booleans Estructura:
+		__________________________________
+
+		la notación json, también permite la incorporación valores del tipo numéricos, nulos y buleanos 
+		
+		dentro de las estructuras de los objetos de tipo json
+
+        así, todos éstos tipos valores podrán ser incorporados dentro de objetos json, de tipo string, objetos, arrays, otros
+
+
+        Definición:
+        ___________
+
+        de ésta manera, éstos tipos de valores se expresarán dentro de las sentencias 
+        
+        siempre como un valor de la expresión ó sentencia
+        
+        de ésta manera, los valores expresados no estarán encerrados entre comillas
+
+        para luego, dentro de las comillas agregar las llaves que enmarcarán a todas las sentencias clave valor, ej:
+
+
+            "{'clave':18}"
+
+        
+		
+		*/
+
+					
+			//declaración de un objeto json
+			var alumno = '{"alumno":"Tony","apellido":"Gomez Otalora","promedio":null,"activo":true}'
+
+
+				//convirtiendo el objeto json, en un objeto javascript, para poder acceder ha éste
+				var nObject = JSON.parse(alumno);
+
+
+					//accediendo a propiedad del nuevo objeto javascript
+					document.write(nObject.alumno);
+
+        
+            
+           
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>

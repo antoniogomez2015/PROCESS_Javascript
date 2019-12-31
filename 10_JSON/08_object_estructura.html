@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+		Objet Estructura:
+		_________________
+
+		también tendremos la posibildad de crear notación json, bajo la estructura convencional de objetos en javascript
+
+		de ésta manera, podremos acceder directamente al objeto, sin la necesidad de algún parseador ó conversor de objetos
+
+		más la ventaja de poder agregar sub objetos, arrays, otros
+
+
+		NOTA: la notación de el objeto json, puede parsearse a una cadena json, a través, del método "parse()", para su posterior intercambio
+
+
+
+		Definición:
+		___________
+
+        de ésta manera, el bloque de sentencias del objeto estará siempre expresado de forma simple
+		
+		es decir, sin la necesidad de utilizar comillas, sean éstas comillas simples ó dobles
+
+        de ésta manera, agregamos directamente las llaves que enmarcarán a todas las sentencias clave valor, ej:
+
+
+            {'clave':"valor"}
+
+        
+		
+		*/
+
+					
+			//definición de un objeto json javascript
+			var usuario = {
+
+                "escuela": "Diseño Gráfico",
+                "año": 2000,
+                "promedio": 15,
+                "activo": true				
+            }
+
+
+				//accediendo directamente a una propiedad valor de un objeto json, como un objeto javascript, convencional, sin parseador
+				document.write(usuario.escuela);
+
+        
+            
+           
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>

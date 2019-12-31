@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+		Array Estructura:
+		_________________
+
+		también tendremos la posibildad de crear notación json, bajo la estructura convencional de un array en javascript
+
+		de ésta manera, podremos acceder directamente al array sin la necesidad de algún parseador ó conversor de objetos
+
+		más la ventaja de poder agregar sub objetos, arrays, otros
+
+        NOTA: no existe diferencia en éste caso, entre un array javascript, y un array json
+
+        NOTA: más no podremos colocar todos los tipos de valores juntos como claves dentro de un mismo array jason
+
+        NOTA: la notación de el array json, puede parsearse a una cadena json, a través, del método "parse()", para su posterior intercambio
+
+
+
+		Definición:
+		___________
+
+        de ésta manera, el bloque de sentencias del objeto estará siempre expresado de forma simple
+		
+		es decir, sin la necesidad de utilizar comillas, sean éstas comillas simples ó dobles
+
+        de ésta manera, agregamos directamente las llaves que enmarcarán a todas las sentencias clave valor, ej:
+
+
+            ['valor/indice',"valor/indice"]
+
+
+
+        Accesibilidad:
+        ______________
+
+		así, sólo tendremos que hacer referencia a la variable que contiene la notación json
+
+		para posteriormente concatenarle ".", con la notación de punto el nombre de clave ha octener y su posición dentro del array
+
+		para que así, obtengamos el valor de dicha propiedad
+
+        
+		
+		*/
+
+        //Ejemplo 1:        
+
+					
+			//definición de un array json javascript, con valores tipo cadena
+			var usuario = [
+
+                "Proceso", "Diseño Gráfico",
+                "Referencia", "Estatus",
+                "promedio", "Avanzado",
+                12, true				
+            ]
+
+
+			//accediendo directamente a una propiedad valor de un arrray json, como un objeto javascript, convencional, sin parseador
+			document.write(usuario[5]);
+
+
+
+
+
+        //Ejemplo 2:
+
+            //definición de un array json javascript, con valores tipo objetos
+            var participante = [
+                
+			    {
+                    "referencia": 545,
+                    "sistema": "estandar"
+                },
+
+                {
+                    "jornada": "enero",
+                    "trimestre": "primero"
+                }
+			]
+
+			document.write(participante[1].jornada);
+            
+           
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>

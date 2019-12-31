@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+
+		/*
+
+		String Estructura:
+		__________________
+
+		el principal tipo de notación json, es la de tipo string
+
+        la cuál, es la común para el intercambio de datos entre diferentes lenguajes y aplicaciones y sistema
+
+
+		Definición:
+		___________
+
+        de ésta manera, el bloque de la cadena de sentencias estará principalmente encerrada entre comillas, sean éstas comillas simples ó dobles
+
+        para luego, dentro de las comillas agregar las llaves que enmarcarán a todas las sentencias clave valor, ej:
+
+
+            "{'clave':"valor"}"
+
+        
+		
+		*/
+
+					
+			//declaración de un objeto json
+			var alumno = '{"alumno":"Tony","apellido":"Gomez Otalora","promedio":15,"activo":true}'
+
+
+				//convirtiendo el objeto json, en un objeto javascript, para poder acceder ha éste
+				var nObject = JSON.parse(alumno);
+
+
+					//accediendo a propiedad del nuevo objeto javascript
+					document.write(nObject.alumno);
+
+        
+            
+           
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+	
+	
+</body>
+</html>
