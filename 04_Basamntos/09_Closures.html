@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <title>javascrip</title>
 </head>
-
+<body>
 
 <!--
 
@@ -26,23 +26,97 @@
             Aprende JavaScript esencial #24 - Closures
                 https://www.youtube.com/watch?v=dJ3Onk2WRLs
 
+    
+    Definición:
+    ___________
+
+    los closures son funciones que manejan variables independientes 
+
+    en otras palabras las función definida en el closure "recuerda", el entorno en que se ha creado
 
 
 
+    Execution Stack:
+    ________________
+
+    "Execution Stack", es un modo de apilador de funciones
+
+    de ésta manera, cada vez que se ejecuta una función, se crea una nueva ejecución de contexto
+
+    de ésta manera, se irán apilando una ejecución sobre otra de abajo hacia arriba
+
+
+-->
+			
+
+    <script>
 
 
 
-                
+        function inicia(){
+
+            var nombre = "Mozilla";
+
+            function muestraNombre(){
+                alert(nombre);
+            }
+            muestraNombre();
+        }
+
+        document.write(muestraNombre());
+
+
+
+    </script>
+
+<!--
+
+    Primer Contexto de Ejecución:
+    _____________________________
+
+    de ésta manera, la función "inicia()", crea una nueva ejecución de contexto
+
+    y ésta nueva ejecución de contexto, se coloca sobre la "ejecución de contexto global", de "Windows Object"
+
+
+    Segundo Contexto de Ejecución:
+    ______________________________
+
+    y dentro de la función "inicia()", hemos creado e invocado la función "muestraNombre()"
+
+    la cuál, también, creará un nuevo contexto el cuál, se colocará sobre sobre la ejecución de contexto "inicia()"
+
+
+    Eliminación de un Contexto de Ejecución:
+    ________________________________________
+
+    de ésta manera, cuando la función "muestraNombre()", en éste caso, se ha ejecutado y ha complido su propósito correctamente
+
+    en ese momento el contexto de ejecución de la función "muestraNombre()", se eliminará de la pila ó bloque de ejecución "execution stacks"
+
+    para que así, el motor de javascript, a partir de éste punto vuelva al punto de ejecución de contecto nuevamente de la función "inicia()"
+
+    más el contexto de ejecución de la función "inicia()", aún permanece intacto por que está en un nivel de la pila de ejecución inferior
+
+    entendiendo así, que la función "inicia()", mantendrá en memoria todos los elementos como variables y funciones, objetos, otros
+
+    incluyendo la variable "nombre", y la función "montrarNombre()"
+
+    ésto es así, por que la función inicia(), siempre existirá en memoria mientras hayan funciones que requieran el contexto de ejecución en el cuál, fueron invocadas 
+    
+    es decir, dentro de la función inicia(), en éste caso
+
+    para por último, al haber finalizado de ejecutar todas las sentencias e instrucciones de la función inicia()
+
+    el contexto de ejecución de la función inicio(), también, será eliminado del excecution stack
+
+    
+
+
 
 
 
 -->
-
-	
-
-			
-
-<body>
 
 
 			

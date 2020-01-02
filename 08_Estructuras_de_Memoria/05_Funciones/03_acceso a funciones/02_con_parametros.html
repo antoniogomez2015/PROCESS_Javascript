@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Ejemplo</title>
+</head>
+
+<body>
+    
+    <script type="text/javascript">  
+
+
+        /*
+
+
+
+        Funciones con Parámetros:
+        _________________________
+
+        para acceder a las sentencias de una función, debemos de asignar un parámetro en la declaración de la función respectiva, ej: 
+        
+
+            _function proof(e){}
+            
+
+        más la convención más recomendada es "_evt"
+
+        de ésta manera, si agregamos una variable "name", en éste caso en la cuál, almacenaremos el valor del parámetro "_evt", que se pase al momento de invocar la función
+
+
+            function proof(_evt){
+
+                var name = _evt;
+            }
+
+
+        para que así, hagamos que la función "proof", en éste caso devuelta "return", ese mismo valor al momento de ser ejecutada
+        
+
+            function proof(_evt){
+
+                var name = _evt;
+
+                return name;
+            }            
+
+      
+        
+        para que así, cuando llamemos ó ejecutemos la función proof, y le pasemos un parámetro a través, de cualquier procedimiento, en éste caso a través, del método "prompt()"
+
+        la función "proof", en éste caso nos devuelva el mismo valor que le hemos enviado como parámetro
+
+        para que así, podamos procesar e interpretar ese valor según la lógica de nuestra aplicación
+
+        */
+                
+        
+
+            function proof(_evt){ 
+
+                var name = _evt;
+
+                return name;
+            
+            } 
+
+            var pregunta = prompt("Indique su Nombre: ")
+
+            console.log('Su nombre es: ' + proof(pregunta));
+
+
+
+
+        /*
+
+        Parámetros Anidados:
+        ____________________
+
+        más también, tendremos la posibildiad de acceder ha parámetro anidados
+
+        es decir, aceder ha parámetros de una función, que se encuentra dentro de otra función
+            
+        */ 
+
+
+            function nombre(primerNombre){
+
+                var saludo = "¿Cómo estás?";
+
+                return function(apellido){
+                    console.log("Hola " + primerNombre + " " + apellido + " " + saludo);
+                }
+            }
+
+            console.log(nombre("Tony")("Gomez")); 
+
+
+        /*
+        
+        de ésta manera, a la hora de invocar a la función en éste caso "nombre", debemos de hacer uso de paréntesis consecutivos 
+        
+        es decir, debemos de indicar en el primer paréntesis el parámetro requerido por la función principal, ej:
+
+
+            _nombre("Tony")
+
+
+        para seguidamente, en un paréntesis siguiente indicar el parámetro requerido por la función anidada, ej:
+
+
+            _nombre("Tony")("Gomez")
+
+
+
+
+        ////////////////////////////////////////////////////////////////////////
+
+
+        Valores por Referencia:
+        _______________________
+
+        otra manera de acceder ha a funciones anidadas a sus parámetros, es a través, de valores por referencia de variables
+
+        así, podremos crear una variable a la cuál, la podremos inicializar con un valor el cuál, será la función "nombre('Luis')", con parámetro el string, "Luis"
+
+        y a su vez, llamamos a la función "apellido('Salamanca')", a la cuál, le pasamos como parámetro en éste caso, el string, "salamanca"
+
+        */
+
+
+            var apellido = nombre('Luis');
+
+            apellido('Salamanca');
+
+
+        /*
+        
+        de ésta manera, primeramente hacemos referencia de forma convencional a la función "nombre()", y le pasamos el parámetro requerido 
+
+
+            var apellido = nombre('Luis');
+
+
+        más para acceder al parámetro de una función anónima anidada, en éste caso debemos referenciar a la expresión ó nombre exacto del parámetro reqeurido 
+        
+        al cuál, debemos de llamar como un método e indicarle el valor que deseamos parale como parámetro, ej:
+
+
+            apellido('Salamanca');
+        
+
+
+        */
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
