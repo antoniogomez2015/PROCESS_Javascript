@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+
+<!--
+
+
+	Template Settings:
+	__________________
+
+    
+        Referencia:
+        ___________
+
+            3. Curso de javascript: Novedades de Ecmascript 6(ES6) - Interpolación(Plantillas de Cadena)
+
+                https://www.youtube.com/watch?v=HLjhD0Beyw0
+
+
+
+            JavaScript Getters and Setters | Mosh
+
+                https://www.youtube.com/watch?v=bl98dm7vJt0
+
+
+
+            Template Strings en ES6: estudiando las nuevas Plantillas de Cadena en Javascript
+            
+                http://www.etnassoft.com/2016/10/05/template-strings-en-es6-estudiando-las-nuevas-plantillas-de-cadena-en-javascript/
+
+
+            Plantillas de cadena de texto
+
+                https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
+
+
+
+
+
+    Características:
+    ________________
+
+    tendremos la posiblidad de acceder ha propiedades de un objeto a través, de las interpolaciones
+
+    de ésta manera, podremos hacer referencia y acceder ha propiedades específicas
+
+
+
+    Comparativa:
+    ____________
+
+    a diferencia de forma anterior de acceder ha elementos múltiplemente, ej:
+
+
+        cons person = {
+            firstName: "Mosh",
+            lastName: "Hamedani"
+        };
+
+        console.log(person.firstName + " " + ..);
+    
+
+    en la cuál, hacemos uso del símbolo "+", para relacionar diferentes propiedades en una misma expresión
+
+    más ahora en la modalidad de interpolación cadenas 
+    
+    podremos hacer referencias a diferentes propiedades dentro de una misma cadena 
+
+    
+
+    Interpolación:
+    ______________
+
+
+        Comillas Invertidas:
+        ____________________
+
+        primeramente debemos de anmarca una expresión ó cadena de texto ó string
+
+        dentro de comillas invertidas 
+        
+            _``
+
+
+        Símbolo Dolar:
+        ______________
+
+        de ésta manera, una vez hemos enmarcardo toda la expresión dentro de comillas invertidas
+
+        debemos de ir agregando las interlaciones para lo cuál, debemos hacer uso del símbolo dolar, ej:
+
+            _`$`
+
+        
+        Llaves:
+        _______
+
+        para a continuación agregar llaves {}, dentro de las cuáles debemos de indicar la propiedad del objeto ha interpolar, ej:
+
+            _`${nombre}`
+
+
+-->
+
+    <script>
+
+        //definición de un objeto
+        var miObject = {
+
+            nombre: "tony",
+            apellidos: "gomez",
+            edad: 39,
+            profesion: function(){
+                var profesion = "diseñador";
+                var aplicacion = "digital";
+                var perfil = profesion + ": " + aplicacion;
+
+                return perfil
+            }
+        }        
+
+
+        //accediendo a las propiedades ó claves del objeto
+        document.write(`${miObject.nombre} ${miObject.profesion()}`);
+        
+
+    </script>
+
+    
+
+
+
+			
+
+<body>
+	
+</body>
+
+</html>

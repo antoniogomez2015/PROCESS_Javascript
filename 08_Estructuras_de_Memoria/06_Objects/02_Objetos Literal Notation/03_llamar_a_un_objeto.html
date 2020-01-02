@@ -46,7 +46,20 @@
 
     donde las definiciones de elementos en javascript, no podrán contener espacios, carácteres especiales, númenos en su inicio, otros
 
-	de ésta manera, a través, de la brackers notation, procederíamos ha llamar ha ese tipo de propiedades de un objeto de la siguiente manera:
+    de ésta manera, a través, de la brackers notation, procederíamos ha llamar ha ese tipo de propiedades de un objeto 
+    
+
+    Functions:
+    __________
+
+    más las propiedades ó claves de un objeto que tengan como valor una función anónima como valor
+
+    debemos de llamar a las propiedades respectivas como su fuesen métodos de forma nativa
+
+    es decir, debemos referir al nombre de la propiedad y agregarle paréntesis "()", al final, ej:
+
+
+        .clave()
 
     -->
 
@@ -61,7 +74,14 @@
             genero: "terror",
             valoracion: 9,
             tags: ["Pennywise", "floating", "Payaso", "Derry"],
-            "critica general": "favorable"
+            "critica general": "favorable",
+            seccion: function(){
+                var categoria = "Ciencia Ficción";
+                var contenido = 30;
+                var descripcion = "Categoría: " + categoria + " Contenido: " + contenido + " Unidades";
+
+                return descripcion;
+            }
         }
 
 
@@ -71,10 +91,14 @@
         //accediendo a propiedades del objeto a través, de la notación de punto
 		document.write(libro.tags[3]);
 
+        //accediendo a la función "seccion", anidada dentro del objeto, llamando a la propiedad como un método, ej: "seccion()"
+        document.write(libro.seccion())
 
 
         //accediendo a propiedades del objeto a través, de la notación de brackers notation
         document.write(libro["critica general"]);
+
+        ;
 
 
 

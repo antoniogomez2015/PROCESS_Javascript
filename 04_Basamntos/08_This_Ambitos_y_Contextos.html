@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+
+<!--
+
+
+	Ámbitos y Contextos con This:
+	_____________________________
+
+
+	Windows Object:
+	_______________
+
+	cada vez que se crea un contexto de javascript, en el navegador a través, de los tags, <script></script>
+
+	en ese punto se creará el objeto "window", el cuál, contempla todos los sub objetos, métodos, propiedades y demás elementos partes del lenguaje javascript
+
+
+	This Object:
+	____________
+
+	más también, en ese mismo momento se crea el objeto "this", el cuál, será un reflejo del objeto "window"
+
+	de ésta manera, el objeto "this", lo que nos permitirá crear son ámbitos personalizados a parte del ámbito global del objeto window
+
+	de ésta manera, podremos hacer referencias por ejemplo a un ámbito inmediatamente superior dentro de un objeto 
+	
+	que a su vez, está contenido dentro de una función, otros
+
+
+	Workflow:
+	_________
+
+	lo que quiere decir, que si por ejemplo, una función de nombre "imprimir", en éste ejemplo; 
+	
+	con un bloque de código "console.log()", dentro de un objeto "persona" 
+
+	el cuál, a su vez hace referencia a una variable que se encuentra en el objeto "persona"
+	
+	dará como resultado al llamar a la función "imprimir()" 
+	
+	las mismas propiedades del objeto "persona", excentuando la función "imprimir", que contiene el "this", ej;
+
+
+
+		//definición de un objeto
+		var persona = {
+			nombre: "Maria",
+			apellido: "Durán",
+			imprimir: function(){
+				console.log(this.nombre);
+			}
+		}
+
+		//accediendo al método "imprimir"
+		console.log(persona.imprimir());
+
+
+		
+	como podremos ver en el ejemplo de arriba, javascript no tendrá que buscar hasta ámbito global del objeto window 
+	
+	de ésta manera, tendremos un control total del alcance y comportamiento del ámbito de los elementos en relación a nuestras necesidades
+
+
+
+	Ámbito Extendido:
+	_________________
+	
+	incluso tendremos la posibilidad de crear contextos más ámplios, en ámbitos superiores inmediatos 
+	
+	lo que quiere decir, que podremos almacenar contextos superiores y hacer referencia ha éstos en contextos ó ámbitos inferiores 
+	
+	"var self = this;", lo que aumentará aún más las posibilidades y alcances de los elementos en javascript, ej;
+
+
+
+-->
+	
+	<script type="text/javascript">
+
+		///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+		//ejemplo de ámbito global Sin "this"
+		var nombre = "perezAlberto";
+
+		var loc ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103,
+				titular: function(){
+					console.log("El nombre es: " + nombre);
+				}
+			}
+		}
+
+
+		/*
+
+		Lógica:
+		_______
+		
+		_de ésta manera, al llamar a la clave "titular", dentro del objeto en éste caso "loc" 
+
+		la cuál, tiene como valor una función anónima la cuál, tiene como sentencia a un console.log()
+
+		en la cuál, a su vez hace referencia ha una variable de nombre "nombre"
+		
+		de ésta manera, javascript, buscará la variable "nombre" directamente en el ámbito global, obviando las propiedades del objeto "loc", que tiene disponibles inmediatamente
+
+		lo que quiere decir, en éste caso, es que javascript, obviará la clave "nombre", con un valor de "tony", dentro del objeto "loc"
+
+		y en vez de eso, javascirpt, accederá a la variable del mismo nombre "name", en el ámbito global fuera del objeto
+
+		de ésta manera, javascript, encontrará la variable con el nombre de "nombre", y con un valor de "perezAlberto"
+
+		lo cuál, no dará error en éste caso, pero no obedece a la lógica del objeto que hemos programado
+
+		*/
+
+
+		console.log(loc.direccion.titular());
+
+
+		///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+		//ejemplo de ámbito local con "this"
+		var nombre2 = "tonyGomez";
+
+		var loc2 ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103,
+				titular: function(){
+					console.log("Tu pais es: " + this.pais);
+				}
+			}
+		}
+
+
+		/*
+		de ésta manera, al llamar a la función anónima anidada "titular", dentro del objeto en éste caso "loc2/direccion" 
+		
+		de ésta manera, javascript, buscará la clave ó propiedad con el nombre "pais", directamente en el ámbito del objeto superior, en éste caso, el objeto "dirección"
+		
+		obviando las propiedades que estén fuera del objeto en un ámbito superior ó global
+
+		gracias a la instrucción "this", que precederá a la clave respectiva
+		*/
+
+
+		console.log(loc2.direccion.titular());
+
+
+
+		///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+		//ejemplo de ámbito local con "this", en un segundo nivel
+		var nombre3 = "tonyGomez";
+
+		var loc3 ={
+			nombre: "tony",
+			apellido: "gomez",
+			edad: 35,
+			sexo: "masculino",
+			ref: function(){
+				var self = this;
+			},
+			direccion:{
+				pais: "venezuela",
+				estado: "lara",
+				ciudad: "barquisimeto",
+				codigoPostal: 3001,
+				casa: 103,				
+				titular: function(){
+					console.log("Tu nombre es: " + self.nombre);
+				}
+			}
+		}
+
+
+		/*
+
+		de ésta manera, al llamar a la función anidada "titular", dentro del objeto en éste caso "loc3" 
+		
+		javascript, buscará la variable nombre3, pero en un ámbito superior al del objeto anidado "direccion"
+		
+		ya que a través, de la propiedad "ref", que tiene como valor una función anónima 
+		
+		la cuál, tiene una variable llamada por convención "self", la cuál, a su vez tiene el valor de "this" 
+		
+		de ésta manera, éste nuevo this, almacenado en la variable self 
+		
+		hará referencia a ese contexto ó ámbito superior lo cuál, permitirá tener acceso en éste caso a la propiedad "nombre3",
+		
+		NOTA: en éste caso no funciona por ahora
+		*/
+
+
+		console.log(loc3.direccion.titular());
+		
+
+
+	</script>
+
+			
+
+<body>
+
+	
+</body>
+
+</html>

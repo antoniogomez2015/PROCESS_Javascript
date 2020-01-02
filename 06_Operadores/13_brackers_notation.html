@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>javascrip</title>
+</head>
+
+
+<!--
+	Bracker Notation:
+	_________________
+
+
+		Definición:
+		___________
+
+		la notación de corchete ó "brackers notation", nos permintirá obtener las propiedades de un objeto
+
+		de ésta manera, al nombre de un objeto debemos de agregar corchetes, ej:
+		
+
+			name[]
+	
+
+		para a continuación agregar el nombre del elemento ha obtener dentro del corchete entre comillas, en una operación determinada, ej:
+
+
+			name["nombre"]
+
+
+		NOTA: el método bracker notation, es más recomendado para trabajo con objetos/propiedades, más no para funciones, otros
+
+
+
+		Claves Estandars:
+		_________________
+
+		de ésta manera, primeramente a través, de la brackers notation, podremos obtener propiedades estandar 
+		
+		es decir, propiedades que estén expresadas sin espacio, números en su inicio y sin carácteres especiales, en su definición
+
+		NOTA: ya que si intentamos acceder ha propiedades de un objeto que estén conformadas por más de una palabra a través, de la notación de punto, ésto nos dará un error
+
+-->
+
+
+			<!--ejemplo para acceder a las propiedades de un objeto-->
+			<script type="text/javascript">
+
+				var persona = {
+					nombre: "tony",
+					apellido: "gomez",
+					pais: "venezuela",
+					edad: 38,
+					sexo: "macho",
+					historial:{
+						referencia: "disponible",
+						caloficacion: "promedio"
+					}
+				}
+
+
+
+				//acceder a una clave directa de un objeto:
+				console.log(persona["nombre"]);
+
+
+				//acceder ha clave anidadad del objeto
+				console.log(persona["historial"]["referencia"]);
+
+
+			</script>
+
+
+
+<!--
+
+
+		Claves Especiales:
+		__________________
+
+		la diferencia principal con la notación "Doc Operator" 
+    
+    	es que la opción "brackers notation", nos permitirá acceder a propiedades con más de una palabra en su definición dentro de un objeto
+
+    	como podemos ver la última propiedad llamada "critica general", del objeto "libro", en éste caso del ejemplo, tiene más de una palabra en su conformación
+
+    	lo cuál, no está a corde con las normas de nombres de estructuras de memoria como variables constantes, otros
+
+    	donde las definiciones de elementos en javascript, no podrán contener espacios, carácteres especiales, númenos en su inicio, otros
+
+		de ésta manera, a través, de la brackers notation, procederíamos ha llamar ha ese tipo de propiedades de un objeto de la siguiente manera:
+
+
+-->
+
+		<script>
+
+			//definición de objeto javascript
+			var libro = {
+
+			libro: "IP",
+			autor: "Stephen King",
+			genero: "terror",
+			valoracion: 9,
+			tags: ["Pennywise", "floating", "Payaso", "Derry"],
+			"critica general": "favorable"
+			}
+
+
+			//accediendo a propiedades del objeto a través, de la notación de punto
+			document.write(libro.autor);
+
+			//accediendo a propiedades del objeto a través, de la notación de punto
+			document.write(libro.tags[3]);
+
+
+
+			//accediendo a propiedades del objeto a través, de la notación de brackers notation
+			document.write(libro["critica general"]);
+
+
+
+		</script>
+
+	
+		
+
+
+	
+
+			
+
+<body>
+	
+</body>
+
+</html>
