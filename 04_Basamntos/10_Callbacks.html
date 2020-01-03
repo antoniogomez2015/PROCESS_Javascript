@@ -8,8 +8,6 @@
 
 <!--
 
-
-
 	Callbacks:
 	__________
 
@@ -38,17 +36,84 @@
 
 
 
-
-
-
-
-
-
-                
-
-
-
 -->
+
+
+<script>
+
+    /*
+    
+    Síntesis:
+    _________
+
+    las funciones callback, ó función de orden superior 
+    
+    en javascript, se derivan de una paradigma de programación el cuál, es la:
+    
+
+        _"programación funcional"
+
+
+    la programación funcional en niveles fundamentales, especifica el uso de funciones como argumeto de otra función
+    
+    
+    */
+
+
+
+        //programación funcional
+        function saludar(callback){
+
+            //callback
+            callback()
+
+        }
+
+    /*
+
+    Funcionalismo:
+    ______________
+    
+        de ésta manera, como podremos ver estamos llamando una función "callback()", la cuál, se ejecutará dentro de una función, en éste caso, la función saludar
+    
+        más la función "callback()", aún no existe por no la hemos declarado ni inicializado previamente
+
+        ya que la función "callback()", la crearemos en el mismo momento al llamar ó acceder a la función saludar
+
+        y la cuál, será enviada como argumentos de la función saludar, ej:
+    
+    */
+
+        //se envía una función anónima como argumento de la función saludar
+        saludar(function(){
+            console.log("Programación Funcional");
+        });
+
+
+    /*
+    
+    Parámetros Anidados:
+    ____________________
+
+    también, tenemos la posiblidad de indicar parámetros anidados para así, aumentemos la funcionalidad de los callbacks, ej:
+    
+    */
+
+
+        //programación funcional
+        function usuario(user, callback){
+
+            //callback
+            callback(user)
+
+        }
+
+        usuario("Juán", function(user){
+            console.log("Sr. ", name);
+        });
+
+
+</script>
 
 	
 
