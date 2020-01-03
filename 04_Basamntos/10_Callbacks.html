@@ -91,6 +91,9 @@
 
 
     /*
+
+
+
     
     Parámetros Anidados:
     ____________________
@@ -103,14 +106,72 @@
         //programación funcional
         function usuario(user, callback){
 
-            //callback
+            //callback con parámetro
             callback(user)
 
         }
 
+        //se envía una función anónima como argumentos de la función saludar
         usuario("Juán", function(user){
-            console.log("Sr. ", name);
+            console.log("Sr. ", user);
         });
+
+    /*
+    
+        de ésta manera, podremos ver que parte de los argumentos que podemos pasar a la hora de llamar a la función, en éste caso de la función usuario
+
+        los podremos usar como argumentos y datos de las funciones callbacks
+
+        de ésta manera, podremos aumentar la complejidad y funcionalismo y optimización a través, de la programación funcional
+
+        también, podríamos optimizar el código de la siguiente manera para hacerlo más regible y administrable:
+
+
+            var alumno = function(user){
+                console.log("Sr. ", user);
+            }
+
+            usuario("Juan", alumno);
+
+    */
+
+    /*
+    
+    Funcionalismo:
+    ______________
+
+    cuando ó cuál, es el momento ideal para utilizar ó implementar un callback
+
+     generalmente los callbacks, se utilizan cuando tenemos un proceso 
+     
+     el cuál, va ha depender del resultado de otro proceso
+
+
+        ejemplo:
+        ________
+
+        imaginemos que tenemos un proceso "A", el cuál arroja un resultado
+
+        y dicho resultado es enviado al proceso "B"
+
+        de ésta manera, obtendremos una anidación de procesos
+
+        donde el proceso "B", depende y está super ditado por el proceso "A"
+
+
+
+
+
+    
+    */
+
+
+
+
+
+
+
+
 
 
 </script>
