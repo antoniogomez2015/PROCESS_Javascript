@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Comodín de Sustitución:
+        _______________________
+
+        el comodín de sustitución se define a través, de un punto "."
+
+        el cuál, define un comodín dentro del patrón 
+        
+        es decir, cualquier carácter dentro del patrón que se encuentre dentro de las coincidencias indicadas
+
+        en relación a cuantos puntos se han indicados, ej:
+
+
+            "/i..um"
+
+
+        de ésta manera, estamos indicando en el patrón de búsqueta
+
+        que se busque coincidencas de palabras que comiencen por "i", y que terminen en "un"
+
+        sin importar que carácteres hayan en el medio en relación a la cantidad de puntos indicados en el patrón
+
+        en éste caso, se han indicado dos "..", puntos 
+        
+        es decir, que el patrón buscará las coincidencias indicadas sin importar si hay dos carácteres intermedios 
+
+        sean cuales sean éstos carácters encontrados de forma intermedia entre los carácteres indicados como coincidencia
+        
+        incluyendo también, los espacios vacíos los cuales serán contemplados como carácteres igualmente
+        
+            
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+
+        var regExp = new RegExp('/I..um/gi');
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+
+</body>
+</html>

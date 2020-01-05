@@ -16,7 +16,13 @@
 
         de ésta manera, para implementar las expresiones regulares primeramente debemos de crear y seleccionar un string, con javascript
 
+        para a continuación almacenar la expresión regular ó patrón de búsqueda y sus flags, en una variable ó constante
+
+        para luego hacer uso del método "test()", del objeo RegEx, el cuál, nos arrojará verdadeo ó falso en relación a la consulta realizada
+
     -->
+
+
 
     <p id="text">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -27,18 +33,32 @@
 
     <script>
 
+        //optenemos el string, de un tag, html
         const text = document.getElementById('text').textContent; 
 
-        const regEx = /lorem/gi;
+        //creamos y almacenamos la expresión regular ó patrón de búsqueda y sus flags
 
-            console.log(regEx.test(text));
+            //ésta es la forma vanilla para hacer uso de las expresiones regulares
+            const regEx = /lorem/gi;
 
+            //instanciando del objeto RegExp a través del método constructor "RegExp()""
+            const regEx2 = new RegExp('/loren/gi')
 
-
-
+                //hacemos la comprobación de la búsqueda
+                console.log(regEx2.test(text));
 
     
     </script>
+
+    
+
+    <!--
+
+        ambas formas de utilizar ó implementar las expresiones regulares son permitidas
+
+        tanto la forma vanila como instanciar el objeto RegExp
+
+    -->
 
 
 
