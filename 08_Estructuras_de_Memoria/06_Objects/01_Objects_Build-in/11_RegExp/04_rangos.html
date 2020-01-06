@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Rangos:
+        _______
+
+        los rangos son partes de los carácteres válidos y se definen igualmente a través, de corchetes "[]"
+
+        el cuál, define un comodín dentro del patrón 
+        
+        es decir, ésta opción nos permitirá indicar una colección de elementos ha incluir en la búsqueda
+        
+        con la diferencia de que ahora podremos agregar rangos de búsqueda, por medio del uso de guines para indicar rangos, ej:
+
+
+            "[a-l]"
+
+
+        NOTA: los rangos no se realizan a través del orden alfabético del abecedario, si no que en vez de eso, se hace uso de las tablas ASCII
+
+            https://elcodigoascii.com.ar/
+
+
+        de ésta manera, estamos indicando en el patrón de búsqueda
+
+        que éste busque coincidencias en éste caso, de palabras que contengan secuencia entre la A y la L"[a-l]"
+
+        más también, podremos mezclar búsquedar entre rangos y carácteres válidos, ej:
+
+
+            "[0-5ou]"
+
+
+        de ésta manera, se realizará la búsqueda de coinciencias de entre los números cero y el cinco y a demás, los carácteres o y u respectivamente
+
+
+        también, puede llevar a confunsión los casos entre rangos y carácteres válidos, ej:
+
+
+            "[a-cou]"
+
+
+        en éste caso, es fácilmente confundible e interpretar mal
+
+        ya primeramente se realizará la búsqueda del rango "a-c", y luego, las bocales "o", y "u", respectivamente
+        
+            
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /[a-cou]/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+
+</body>
+</html>

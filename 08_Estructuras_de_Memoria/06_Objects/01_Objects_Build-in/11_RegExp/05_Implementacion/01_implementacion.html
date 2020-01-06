@@ -20,6 +20,50 @@
 
         para luego hacer uso del método "test()", del objeo RegEx, el cuál, nos arrojará verdadeo ó falso en relación a la consulta realizada
 
+
+
+        Modalidad Vanila:
+        _________________
+
+        podemos hacer referencia al objeto RegExp, directamente llamando ha una expresión regular la cuál, podremos almacenar en una variable ó constante directamente, ej:
+
+
+            const regEx = /lorem/gi;
+
+
+        Modalidad de Instanciación:
+        ___________________________
+
+        otra opción es instanciar al objeto RegExp, por medio a través, de la palabra reservada 
+        
+
+            _new
+
+
+        para luego hacer referencia al objeto a través, del método constructor 
+        
+        el método se llama igualmente, ej:
+
+
+            _RegExp()
+
+
+            const regEx2 = new RegExp('/loren/gi')
+
+
+        la única diferencia con la modalidad vanila
+        
+        es que el patrón ó expresión regular se expresa como un primer argumento del método RegExp(), y entre comillas ej:
+
+
+            RegExp(patterns)
+
+
+        y los flags, ó banderas se indican como un segundo argumento, separados por una coma ",", ej:
+
+
+            RegExp('patterns', 'flags')
+
     -->
 
 
@@ -42,7 +86,7 @@
             const regEx = /lorem/gi;
 
             //instanciando del objeto RegExp a través del método constructor "RegExp()""
-            const regEx2 = new RegExp('/loren/gi')
+            const regEx2 = new RegExp('/loren/', 'gi');
 
                 //hacemos la comprobación de la búsqueda
                 console.log(regEx2.test(text));

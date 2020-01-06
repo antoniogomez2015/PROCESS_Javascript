@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Cadenas Completas:
+        __________________
+
+        los cadenas completas nos permitirá indicar palabras y series de elementos más completos y complejos como números y demás combinaciones
+
+        el cuál, define un comodín dentro del patrón 
+        
+        es decir, ésta opción nos permitirá indicar una colección de elementos complejos ha incluir en la búsqueda
+        
+        las cadenas se expresarán a través, de los paréntesis, ej:
+
+
+            "(Lorem)"
+
+
+        más si deseamos indicar más de una cadena, podremos hacer uso del caracter especial pipe "|"
+
+        para separar las cadenas, teniendo en cuenta que el patrón contemplará los espacios vacíos como carácteres válidos, ej:
+
+
+            "(Lorem|dolor)"
+        
+            
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /(Lorem|dolor)/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+
+</body>
+</html>

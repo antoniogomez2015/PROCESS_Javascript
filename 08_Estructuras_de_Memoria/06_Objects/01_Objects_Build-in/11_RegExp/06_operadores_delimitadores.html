@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Operadores Delimitadores:
+        _________________________
+
+        los operadores delimitadores nos permitirán indicar que antes ó despues de cada operador no puede haber nada respectivamente, ej
+
+
+            ^: antes de éste operador no puede haber nada
+
+
+            $: después de éste operador no puede haber nada
+
+
+        primeramente tendremos el carácter especial acendo circundrejo "^", el cuál, se colocaría en el inicio de la búsqueda ej
+
+
+            "/^Lorem/"
+
+
+        y el carácter espeial de dolar "$", el cuál, se colocaría al final de la búsqueda
+
+
+            "^Lorem$"
+        
+
+        existen más operadores delimitadores pero éstos son los más comúnes y utilizados
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /^is$/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+
+</body>
+</html>

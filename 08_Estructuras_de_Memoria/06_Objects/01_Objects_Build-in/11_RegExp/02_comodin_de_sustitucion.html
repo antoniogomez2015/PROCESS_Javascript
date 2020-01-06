@@ -26,9 +26,9 @@
             "/i..um"
 
 
-        de ésta manera, estamos indicando en el patrón de búsqueta
+        de ésta manera, estamos indicando en el patrón de búsqueda
 
-        que se busque coincidencas de palabras que comiencen por "i", y que terminen en "un"
+        que se busque coincidencias de palabras que comiencen por "i", y que terminen en "un"
 
         sin importar que carácteres hayan en el medio en relación a la cantidad de puntos indicados en el patrón
 
@@ -39,6 +39,25 @@
         sean cuales sean éstos carácters encontrados de forma intermedia entre los carácteres indicados como coincidencia
         
         incluyendo también, los espacios vacíos los cuales serán contemplados como carácteres igualmente
+
+
+        NOTA: hay casos en los que necesitaremos escapar un caracter, para que así, éste caracter sea interpretado como el character que representa en pantalla y no sea interpretado por javascript
+
+        como en el caso por ejemplo, de
+
+
+            foto001.jpg
+
+        en éste caso, si creamos el patrón de búsqueda
+
+            "/foto...\.jpg"
+
+
+        de ésta manera, el punto de asignación del tipo de extensión del archivos de imágen, no será contemplado en la búsqueda de la expresión regular
+
+        si no que en vez de eso, sólo se buscaran coincidencias de "foto", y "jpg"
+
+        y los carácteres intermedios excepto el ".", final de la extensión del archivo
         
             
 
@@ -55,7 +74,10 @@
     
         var inf = document.getElementById('inf').textContent;
 
-        var regExp = new RegExp('/I..um/gi');
+        //la modalidad de instancia del objeto RegExp(), nos da "false", y no se por que
+        //var regExp = new RegExp('/i..um/', 'gi');
+
+        var regExp = /i..um/gi;
 
         var consult = regExp.test(inf);
 
