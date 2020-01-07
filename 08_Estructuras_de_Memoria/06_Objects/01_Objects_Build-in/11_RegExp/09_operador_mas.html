@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Operadores +:
+        _____________
+
+        el operador + nos permitirá indicar que lo que se encuentre antes de +, tiene que estar una vez como mínimo, ej:
+
+
+            /A-[0-9]+/
+
+
+        de ésta manera, ésto debe interpretarse como una búsqueda donde se busquen coincidencias de la letra "A", más un guión "-"
+
+        más al menos un número dentro de los indicados dentro del modo de búsqueda de lista [0-9]
+
+
+        Diferencias:
+
+            de ésta manera, la diferencia con el operador de asterisco, es que el operador + 
+            
+            si requiere que al menos haya una coincidencia, mientras que el operador de asterisco la coincidencia puede existir ó no
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum 10 458 1132800
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /(Lorem)+/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+    
+
+
+
+
+
+</body>
+</html>

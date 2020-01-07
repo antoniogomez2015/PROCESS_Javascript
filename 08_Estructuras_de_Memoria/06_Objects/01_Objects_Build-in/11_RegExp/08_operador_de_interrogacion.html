@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Operadores de ?:
+        ________________
+
+        el operador de interrogación ?, nos permitirá indicar que lo que se encuentre antes de la interrogación puede no estar
+
+        pero si está sólo puede aparecer una vez, ej:
+
+
+            /^[ae]?$/
+
+
+        de ésta manera, ésto debe interpretarse como una búsqueda donde se busquen coincidencias de las letras "a", y "e", indistintamente
+
+        y si se encuentran coincidencias de alguna de éstas letras ó de ambas letras
+
+        sólo podrán haber una sóla repetición de las coincidencia por letra respectivamente
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum 10 458 1132800
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /(since)?/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+    
+
+
+
+
+
+</body>
+</html>

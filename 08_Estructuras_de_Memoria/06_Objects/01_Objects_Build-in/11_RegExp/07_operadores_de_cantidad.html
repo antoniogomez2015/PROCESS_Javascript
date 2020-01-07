@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Operadores de Cantidad:
+        _______________________
+
+        los operadores de cantidad nos permitirán indicar las veces que se debe producir una coincidencia
+
+        los operadores de cantidad se expresan a través, de llaves, ej:
+
+
+            {}
+
+
+        de ésta manera, tendremos 3 combinaciones posibles
+
+
+            primer caso:
+
+                en la cuál, sólo indicamos un parámetro
+            
+                de ésta manera, una coincidencia se tiene que repetir "{n}", cantidad de veces
+
+
+            segundo caso:
+
+                en el cuál, indicamos dos parámetros, ej:
+
+                    _"{n,m}"
+                
+
+                de ésta manera, las coincidencias de ambos parámetros indicados tienen que repetirse "n", cantidad de veces
+
+
+            tercer caso:
+
+                en el cuál, indicamos un parámetro y una coma al final, ej: 
+                
+                    _{n,}
+
+                
+                de ésta manera, que las coincidencias deben repetirse como mínimo y sin fin
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum 10 458 1132800
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /^[a-zA-Z]{1-3} {1}$/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+    <!--
+
+        ejemplo:
+        ________
+
+
+            /^[a-zA-Z]{1-3}@{1}$/gi
+
+
+        en éste ejemplo, la búsqueda tendrá que encontrar coincidencias que vayan desde la "a", a la "z", tanto minúasculas como mayúsculas
+
+        y que a su vez, éstas coincidencias existan como mínimo una vez y como máximo tres veces
+
+
+        Interpretación:
+        _______________
+
+        de ésta manera, la expresión regular del ejemplo anterior se debe leer de la siguiente manera;
+
+        primero se buscarán coincidencias de las letras de entre la "a", a la "z", tanto en maýusculas como en minúsculas 
+        
+        sean éstas coincidencias consecutivas ó no por el tipo de listado de caracteres [], que no obliga ha que haya consecución
+
+        y que a su vez, éstas coincidencias ocurran con un mínimo de repeticiones de "1", y una máximo de "3", veces
+
+        pero que a su vez, ha éstas le seceda el caracter especial "@" 
+        
+        el cuál, a su vez, sólo se podrá repetir una vez
+
+        y así, sólo entonces la búsqueda se dará por encontrada y nos arrojará "true"
+
+
+
+
+
+    -->
+
+
+</body>
+</html>

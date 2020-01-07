@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+
+        Operadores de Asterisco:
+        ________________________
+
+        el operador de asterisco nos permitirá indicar que lo que se entre antes del asterisco puede estar ó puede no estar y a su vez, se puede repetir
+
+        de ésta manera, el operador de asterisco se expresa de la siguiente manera:
+
+
+            /.*/
+
+
+        de ésta manara, podremos configurar patrones más flexibles, ej:
+
+
+            /.*dummy.*/
+
+
+        de ésta manera, el contenido antes y depués de la palabra "dummy", puede existir ó no, éste contenido se puede repetir ó no
+
+
+        NOTA: el asterisco también, aplicación sobre diferentes estructuras de búsqueda, ej:
+
+
+            /A-[0-9]*/
+
+
+        de ésta manera, ésto se entiende como la búsqueda del caracter "A", más un guión "-", más la condición [0-9], de números en éste caso, puede estar ó no estar, ó incluso puede repetirse o no
+
+
+
+    -->
+
+    <p id="inf">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum 10 458 1132800
+    </p>
+
+
+
+    <script>
+    
+        var inf = document.getElementById('inf').textContent;
+        
+
+        var regExp = /.*dummy.*/gi;
+
+        var consult = regExp.test(inf);
+
+        console.log(consult);
+    
+    </script>
+
+   
+
+
+
+
+</body>
+</html>
