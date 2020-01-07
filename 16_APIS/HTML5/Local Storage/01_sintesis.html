@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Sintesis:
+        _________
+
+            localStorage y sessionStorage son una muy buena forma de guardar datos sin tener que utilizar cookies. 
+            
+            
+            Incluso IE8 soporta a ambas así que es poco probable que necesites un polyfill.
+            
+            
+            Si lo necesitas, el de: 
+            
+            
+                _Remy Sharp 
+
+                    https://gist.github.com/remy/350433
+                
+                
+                
+            es muy bueno y fácil de implementar
+
+
+            En localStorage, los datos que se guardan son de tipo/valor (key/value), 
+            
+            
+            así que si se desea guardar datos más complejos, podemos hacerlo guardando JSON en forma de string (JSON.stringify(obj)) 
+            
+            
+            que luego parsearemos con JSON.parse(str), luego de obtener el registro guardado. 
+            
+            
+            Tampoco hay forma de saber (en los distintos navegadores) si se ha excedido la capacidad, así que conviene envolver nuestro código entre try/catch. 
+            
+            
+            Es seguro usar hasta 2.5 MB.
+                                    
+                                        
+            
+
+            Referencia: 
+            
+                https://www.htmlcinco.com/15-apis-de-html5/
+
+
+
+
+                
+
+    -->
+</body>
+</html>

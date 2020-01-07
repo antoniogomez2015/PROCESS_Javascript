@@ -3,9 +3,17 @@
 
         GitHub
 
-        
-            https://github.com/DorianDesings/js2018/commit/fba4cf00c47d23af0c9b62fcebf46fd7a41040e6
 
+            #48 - Librería de validaciones - Curso básico de JavaScript 2019
+
+                https://www.youtube.com/watch?v=OR_-N4o97bE&list=PLROIqh_5RZeBAnmi0rqLkyZIAVmT5lZxG&index=49
+
+
+        
+                    https://github.com/DorianDesings/js2018/commit/fba4cf00c47d23af0c9b62fcebf46fd7a41040e6
+
+
+                    
     */
 
    
