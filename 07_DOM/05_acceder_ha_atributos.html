@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Acceder ha Atributos Html:
+        __________________________
+
+        tenemos la posibilidad de acceder ha valores de atributos html desde javascript
+
+
+            javascript:
+
+
+        seguida del evento ha ejecutar, ej:
+
+        https://www.youtube.com/watch?v=0-njErr83ds&list=PLYHc9BY38qm_HQp05ceaE4Ucthl5rg8XH
+
+    -->
+
+    <a href="javascript:accion(evt)">Da Click Aquí</a>
+
+
+    <div id="caja_1" onclick="accion(this)"></div>
+    <div id="caja_2" onclick="accion(this)"></div>
+    <div id="caja_3" onclick="accion(this)"></div>
+    <div id="caja_4" onclick="accion(this)"></div>
+
+    <script>
+    
+        function accion(){
+
+            alert("La caja es: " + caja.id);
+        }
+    
+    </script>
+
+    
+</body>
+</html>
