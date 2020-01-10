@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        
+        body{
+            background-color: grey;
+        }
+
+        div{
+            display: inline-block;
+            width: 300px;
+            min-height: 300px;
+            background-color: orange;
+            margin-top: 100px;
+        }
+
+    </style>
+
 </head>
+
 <body>
     <!--
 
         Acceder ha Atributos Html:
         __________________________
 
-        tenemos la posibilidad de acceder ha valores de atributos html desde javascript
+        tenemos la posibilidad de acceder ha valores de atributos html a través, de javascript
 
 
             javascript:
@@ -20,26 +38,68 @@
 
         seguida del evento ha ejecutar, ej:
 
-        https://www.youtube.com/watch?v=0-njErr83ds&list=PLYHc9BY38qm_HQp05ceaE4Ucthl5rg8XH
 
+            <a href="javascript:accion(box)">Da Click Aquí</a>
+
+
+
+        a través de la instrucción 
+        
+            
+            this
+
+
+
+        la cúal, podremos pasar como argumento del método pasado como parámetro del evento html, el cuál, se ejecutará a la hora del desencadenamiento del evento respectivo, ej:
+
+
+            onclick="accion(this)
+
+
+
+        de ésta manera, a través, de la instrucción this, al pasarla como argumento podremos acceder al elemento html en el cuál, se ha agregado la instrucción this, y a sus atributos, y elementos
+
+
+        de ésta manera, podremos acceder a la información obtenida, en éste caso a a través, del parámetro "box"
+        
+        por medio del cuál, podremos concatenar ".", un elemento ó propriedad ha optener ó referenciar, ej:
+
+
+            box.id
+
+
+        de ésta manera, en éste caso estaremos accediendo al atributo id="", del elemento html, sobre el cuál, se ha agergado el atributo tipo evento onlick=""" html
+
+
+
+
+
+        Tutorial:
+
+            https://www.youtube.com/watch?v=0-njErr83ds&list=PLYHc9BY38qm_HQp05ceaE4Ucthl5rg8XH
+
+
+            
     -->
-
-    <a href="javascript:accion(evt)">Da Click Aquí</a>
-
-
-    <div id="caja_1" onclick="accion(this)"></div>
-    <div id="caja_2" onclick="accion(this)"></div>
-    <div id="caja_3" onclick="accion(this)"></div>
-    <div id="caja_4" onclick="accion(this)"></div>
 
     <script>
     
-        function accion(){
+        function accion(box){
 
-            alert("La caja es: " + caja.id);
+            alert("La caja es: " + box.id);
         }
     
     </script>
+
+    <a href="javascript:accion(box)">Da Click Aquí</a>
+
+
+    <div id="caja_1" onclick="accion(this)">Caja 1</div>
+    <div id="caja_2" onclick="accion(this)">Caja 2</div>
+    <div id="caja_3" onclick="accion(this)">Caja 3</div>
+    <div id="caja_4" onclick="accion(this)">Caja 4</div>
+
+    
 
     
 </body>
