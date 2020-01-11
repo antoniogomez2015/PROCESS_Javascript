@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        getSelection():
+        _______________
+
+        tenemos la posibilidad de acceder a un texto seleccionado por el usuario para diferentes aplicaciones en relación a la lógica y modelo de negocios de la aplicación
+
+        para lo cuál, dispondremos de los siguientes métodos y propiedades, ej
+
+    -->
+
+    <script>
+    
+        var inf = document.getSelection().anchorNode.data;
+
+        console.log(inf);
+
+    </script>
+
+    <!--
+
+        de ésta manera, podremos captura la selección de tipo texto que ha realizado el usuario sobre el navegador
+
+    -->
+
+    <!--
+
+        más también, dispondremos de otro método "toString()", a través, del cuál, de manera directa podremos acceder a la selección del usuario, ej:
+
+    -->
+
+    <script>
+    
+        var inf = document.getSelection().toString();
+
+        console.log(inf);
+
+    </script>
+
+    <p>hola mundo</p>
+
+
+
+</body>
+</html>
