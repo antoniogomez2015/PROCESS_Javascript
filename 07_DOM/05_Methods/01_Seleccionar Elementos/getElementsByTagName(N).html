@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        geElementsByTagName():
+        ______________________
+
+        éste método nos permitirá seleccionar ó capturar todos los elementos html a la vez existentes en la página web
+
+        de ésta manera, el método geElementsByTagName(), nos devolverá un array de elementos con los tags, encontrados conicidentemente 
+
+        para su utilización en diferentes procesos y funciones    -->
+
+        
+
+    <ul class="topics">
+
+        <li>info 1</li>
+        <li>info 2</li>
+        <li>info 3</li>
+        <li>info 4</li>
+        <li>info 5</li>
+
+    </ul>
+
+    <ul class="ref">
+
+        <li>accion 1</li>
+        <li>accion 2</li>
+        <li>accion 3</li>
+        <li>accion 4</li>
+        <li>accion 5</li>
+
+    </ul>
+
+
+
+    <script>
+    
+        //podremos optener todas las tags conincidentes por tipos
+        var cap = document.getElementsByTagName('li');
+
+
+        //obtener una tag específica de las coincidentes
+        var cap2 = document.getElementsByTagName('li')[3];
+
+        
+
+        console.log(cap);
+
+        console.log(cap2);
+
+    </script>
+
+
+
+</body>
+</html>

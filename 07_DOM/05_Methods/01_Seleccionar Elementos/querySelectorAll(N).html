@@ -12,27 +12,90 @@
         QuerySelectorAll():
         ___________________
 
-        éste método nos permitirá seleccionar ó capturar elementos html
+        éste método nos permitirá seleccionar ó capturar varios elementos html a la vez
+
+        a través, de coincidencias tanto por:
+
+            _tag
+            _attribute
+            _class
+            _Id
 
         para su utilización en diferentes procesos y funciones
 
-        para lo cuál, debemos de haber asignado una clase 
 
-        al elemento respectivo ha seleccionar para que así, podamos hacer referencia al valor de éste
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Document/querySelectorAll
+
+
 
     -->
 
+        
+
+    <ul class="topics" value="text">
+
+        <li>info 1</li>
+        <li>info 2</li>
+        <li>info 3</li>
+        <li>info 4</li>
+        <li>info 5</li>
+
+    </ul>
+
+
+
+    <div class="co">
+
+        <ul class="ref">
+
+            <li id="s1">accion 1</li>
+            <li>accion 2</li>
+            <li>accion 3</li>
+            <li>accion 4</li>
+            <li>accion 5</li>
+
+        </ul>
+
+    </div>
+
+
     <script>
     
-        var cap = document.querySelector('tag');
+        //búsqueda por tags
+        var cap = document.querySelectorAll('ul li');
+
+
+        //búsquedas por clases
+        var cap2 = document.querySelectorAll('ul.ref, ul.topics');
+
+
+        //búsquedas por tags, que son hijas de otros elementos
+        var cap3 = document.querySelectorAll('div.co > ul li');
+
+
+        //búsquedas por tags, que a su vez, contengan un atributo específico coincienten, en éste caso el atributo value=""
+        var cap4 = document.querySelectorAll('ul[value]');
+
+
+        //búsquedas por id=""
+        var cap5 = document.querySelectorAll('#s1')[0];
+
+
 
         console.log(cap);
 
+        console.log(cap2);
+
+        console.log(cap3);
+
+        console.log(cap4);
+
+        console.log(cap5);
+
     </script>
-
-    
-
-    <h1 class="tag">hola mundo</h1>
 
 
 

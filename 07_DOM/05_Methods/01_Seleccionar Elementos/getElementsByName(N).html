@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        geElementsByName():
+        ___________________
+
+        éste método nos permitirá seleccionar ó capturar todos los elementos html a la vez existentes en la página web
+
+        de ésta manera, el método geElementsByTagName(), nos devolverá un array de elementos con los tags, encontrados conicidentemente que tengan el atributo name=""
+
+        para su utilización en diferentes procesos y funciones    
+    
+    
+        
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Document/getElementsByName
+
+
+    -->
+
+        
+
+    <form action="" name="myForm">
+
+        <input type="text" value="nick" name="info">
+
+        <input type="passwork" value="contraseña" name="pass">
+
+    </form>
+
+
+
+    <script>
+    
+        //podremos optener todas las tags conincidentes con un atributo name
+        var cap = document.getElementsByName('myForm');
+
+
+        //podremos optener una referencia específica dentro del array con el atributo name
+        var cap = document.getElementsByName('myForm')[0];
+
+
+        
+
+        console.log(cap);
+
+
+    </script>
+
+
+
+</body>
+</html>
