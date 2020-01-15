@@ -14,11 +14,31 @@
 
         éste método nos permitirá seleccionar ó capturar elementos html
 
+        de ésta manera, el intérprete de javascript, nos devolverá el primer elemento coincidente que encuentre
+
+        como tags, atributos, clases e identificadores, ej:
+
+
+            _tags
+
+            _attributes
+
+            _.class
+
+            _#id
+
+
         para su utilización en diferentes procesos y funciones
 
         para lo cuál, debemos de haber asignado una clase 
 
         al elemento respectivo ha seleccionar para que así, podamos hacer referencia al valor de éste
+
+
+        de ésta manera, el método querySelector(), nos permitirá implementar cualquier conjugación css, para especificar elementos como por ejemplo; pseudo clases, operadores globales, otros, ej:
+
+            _li:nth-last-child(1)
+
 
 
 
@@ -30,15 +50,33 @@
     -->
 
     
-    <h1 id="tag">hola mundo</h1>
+    <h1 id="tag" class="ttl" name="hi">hola mundo</h1>
+
+
+    <div id="campo">
+
+        <input type="text" value="Nick" name="user">
+
+    </div>
 
 
 
     <script>
     
-        var cap = document.querySelector('#tag');
+        //accediento a través, de un "id", identificador
+        var cap1 = document.querySelector('#tag');
 
-        console.log(cap);
+        //accediento a través, de una clase
+        var cap2 = document.querySelector('.ttl');
+
+        //accediento a través, de un atributo que está dentro de otro elemento padre
+        var cap3 = document.querySelector('div#campo input[name=user]');
+
+
+
+        console.log(cap1);
+        console.log(cap2);
+        console.log(cap3);
 
     </script>
 

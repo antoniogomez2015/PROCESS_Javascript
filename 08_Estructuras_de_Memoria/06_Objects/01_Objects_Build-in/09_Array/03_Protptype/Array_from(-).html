@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Array From():
+        _____________
+
+        tenemos la posibilidad de convertir un elemento en un array
+
+        para que así, podamos aplicar propiedades y métodos del objeto array
+
+        de ésta manera, por ejemplo; podremos convertir un NodeList, ó HTMLCollection, u otros en un array
+
+        para lo cuál, debemos primeramente de hacer uso del constructor: 
+        
+        
+            Array
+
+
+        seguido del método: 
+        
+        
+            Array.from()
+
+
+        al cuál, debemos de pasarle como parámetro el elemento ha convertir, ej:
+
+
+
+    -->
+
+    <div id="cont">
+
+        <h2 class="intro1">Bienvenidos</h2>
+
+        <h3 class="intro2">asignación</h3>
+
+    </div>
+
+
+    <script>
+    
+        var cap = document.querySelectorAll('#cont .intro1, .intro2');
+
+        var conv = Array.from(cap);
+
+        conv.map(function(el =>){
+            if(el.textContent.trim().toUppercase() === 'OBJECT'){
+                el.remove()
+            }
+        })
+    
+    </script>
+
+</body>
+</html>
