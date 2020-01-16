@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        innerHTML:
+        __________
+
+        éste atributo nos permitirá tanto acceder como insertar contenido html, dentro de otro elemento html
+
+        de ésta manera, podremos tanto agregar nuevo contenido html dentro de otro elemento html
+
+        como también, podremos acceder ha contenido html, existente dentro de otro elemento html
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML
+
+
+
+
+    -->
+
+    
+    <h1>hola mundo bienvenidos ha <strong>Javascript</strong></h1>
+
+
+
+    <script>
+    
+        //capturamos al elemento html        
+        var inf = document.querySelector('h1');
+
+
+        //obtención del contenido tipo texto del elemento html
+        var cadena1 = inf.innerHTML
+
+
+        //insertar contenido html
+        var cadena2 = inf.innerHTML = `ya es parte de los usuarios de <em>Javascript</em>`;
+
+
+        //comprobación de la inserción de html anidado
+        var proof = inf.outerHTML;
+
+
+        //llamada por consola
+        console.log(cadena1);
+        console.log(cadena2);
+        console.log(proof);
+
+
+
+
+    </script>
+
+
+    <!--
+
+        de ésta manera, podremos obtener todo el contenido html, existente en éste caso dentro del tag "h1"
+
+        incluyendo contenido como texto, como otras tags, html y sus atributos anidados
+
+    -->
+
+    
+
+
+
+</body>
+</html>

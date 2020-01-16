@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        classList:
+        __________
+
+        La propiedad classList, es de sólo lectura 
+        
+        
+        Element.classList, devuelve una colección activa de:
+        
+        
+            _DOMTokenList 
+            
+            
+        de los atributos de clase de un elemento
+
+
+        usar classList, es una forma práctica de acceder a la lista de clases de un elemento 
+        
+                        
+        como una cadena de texto delimitada por espacios a través de: 
+        
+
+            _element.className. 
+        
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/classList
+
+
+
+
+    -->
+
+    
+    <h1 id="tag" class="ttl, lot" >hola mundo</h1>
+
+
+
+    <script>
+    
+        //capturamos al elemento html
+        var clase = document.getElementById('tag');
+
+
+        //opteniendo el valor de los atributos de tipo class="" de un elemento html
+        var cls = clase.classList;
+
+
+        console.log(cls)
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

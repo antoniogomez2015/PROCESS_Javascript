@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        setAttribute():
+        _______________
+
+        éste método nos permitirá asignar atributos a elementos html
+
+        de ésta manera, podremos acceder ha elementos específicos html
+
+        y agregarles nuevos atributos con sus valores respectivos
+
+        para su utilización en diferentes procesos y funciones  
+        
+        
+        Alternativo:
+        ____________
+
+        también, podremos conseguir el mismo resultado a través, de la notación de punto "."
+
+        acciendo al objeto genérico objeto, ej
+
+
+            _elementoSeleccionado.Nuevapropiedad = valorHaAgregar
+
+            _elmento.id = 'cont'
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Document/querySelector
+
+
+    -->
+
+    
+    <h1 id="tag" class="ttl" >hola mundo</h1>
+
+
+    <div id="campo">
+
+        <input type="text" value="Nick" name="user">
+
+    </div>
+
+
+
+    <script>
+    
+        //capturamos al elemento html
+        var attb = document.getElementById('tag');
+
+
+        //agregamos el atribut "name", con un valor de "Hi"
+        attb.setAttribute('name', 'Hi');
+
+        //luego pedimos ese atributo para conformalo "name"
+        var opt = attb.getAttribute('name');
+
+
+        //optención de un atributo por consola
+        console.log(opt);
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

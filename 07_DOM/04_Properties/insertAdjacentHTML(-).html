@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        insertAdjacentHTML():
+        _____________________
+
+        el método insertAdjacentHTML(), inserta contenido de tipo html dentro de una etiqueta html 
+        
+        
+        en una posición específica dentro de la estructura de la expresión html
+
+
+        lo cuál, quiere decir que podremos crear un tipo de elemeto html, ó tag, vacía la cuál, podremos rellenar con contenido posteriormente 
+        
+        
+        de ésta manera, podremos re crear el dom, modificando la estructura de tags, según la lógica y modelo de negocios de nuestra aplicación
+
+
+
+
+            EL método insertAdjacentHTML(), de la interfaz Element analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada 
+            
+            
+            Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento 
+            
+            
+            Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con innerHTML.
+
+
+        
+
+
+
+        Parameters:
+        ___________
+
+        éste método recibe dos parámetros:
+
+        
+            primer parámetro: 
+            
+                éste define la posición dentro de la expresión html del tag, respectivo 
+                
+                a partir de la cuál, se hará la intersión de contenido de tipo texto
+
+
+            segundo parámetro:
+
+                éste define al valor, cadena ó contenido de tipo texto ha agregar 
+
+
+
+
+
+        Positions Values:
+        _________________
+
+
+            _beforebegin
+
+                _insertará el elemento de tipo texto antes del elemento referido
+
+
+            _afterbegin
+
+                _insertará el elemento de tipo texto dentro del elemento referido como primer elemento hijo
+
+
+            _beforeend
+
+                _insertará el elemento de tipo texto dentro del elemento referido como último elemento hijo
+
+
+            _afterend
+
+                _insertará el elemento de tipo texto después del elemento referido
+
+
+
+            NOTA: los valores de posición "beforebegin", "afterend", sólo funcionan cuando el elemento referido tiene un elemento padre
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML
+
+
+
+
+    -->
+
+    
+    <h1 id="cap"></h1>
+
+   
+
+
+    <script>
+
+        //primeramente seleccionamos el elemento html respectivo
+        var el = document.getElementById('cap');
+           
+
+        //luego, agregamos el atributo href="", y agregamos su valor http://..
+        el.insertAdjacentHTML('afterbegin', '<a href="http://www.google.com">Google</a>');
+
+
+
+        var proof = el.outerHTML;
+
+      
+
+
+        //optención de un atributo por consola
+        console.log(el);
+
+        console.log(proof);
+
+       
+      
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

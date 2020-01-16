@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        getAttribute():
+        _______________
+
+        éste método nos permitirá seleccionar ó capturar atributos de elementos html
+
+        de ésta manera, podremos acceder ha atributos específicos de elementos html
+
+        para su utilización en diferentes procesos y funciones    
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/getAttribute
+
+
+    -->
+
+    
+    <h1 id="tag" class="ttl" name="hi">hola mundo</h1>
+
+
+    <div id="campo">
+
+        <input type="text" value="Nick" name="user">
+
+    </div>
+
+
+
+    <script>
+    
+        var attb = document.getElementById('tag');
+
+
+        //optención de un atributo, en éste caso id=""
+        console.log(attb.getAttribute('id'));
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

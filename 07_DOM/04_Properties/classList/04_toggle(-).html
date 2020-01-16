@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        toggle():
+        _________
+
+        Cuando sólo hay un argumento presente: 
+        
+            Alterna el valor de la clase 
+            
+        
+        ej., si la clase existe la elimina y devuelve 
+        
+
+            _false 
+            
+            
+        si no, la añade y devuelve: 
+        
+        
+            _true
+
+
+        Cuando el segundo argumento está presente: 
+        
+            Si el segundo argumento se evalúa como true 
+        
+        
+        se añade la clase indicada, y si se evalúa como false, la elimina.
+        
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/classList
+
+
+
+
+    -->
+
+    
+    <div id="ttl" class="cap, campo">
+
+        <input type="text" value="Nick" name="user">
+
+    </div>
+
+
+
+    <script>
+    
+        //capturamos al elemento html        
+        var del = document.getElementById('ttl');
+
+
+        //elimina ó agrega un atributo de tipo class="" con un valor de "tempo", al elemento html
+        var cls = del.classList.toggle('tempo');
+
+
+        //luego, pedimos ese tipo de atributo para comprobar que éste existe
+        var get = del.getAttribute('class')
+
+
+        //luego lo llamamos por consola
+        console.log(get)
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

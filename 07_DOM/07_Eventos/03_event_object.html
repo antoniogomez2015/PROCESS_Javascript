@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Event Object:
+        _____________
+
+        Los gestores de eventos pueden estar atados a varios elementos en el DOM
+        
+        
+        Cuando un evento ocurre, un objeto de evento es dinámicamente creado y pasado secuencialmente a las "escuchas" (listeners) autorizadas para la gestión del evento 
+        
+        
+        La interfaz Event del DOM, es entonces accesible por la función de manejo, vía el objeto de evento puesto como el primer (y único) argumento
+
+        
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/API/Event
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+    
+        //capturamos el elemento html
+        var el = document.querySelector('button');
+
+
+        //función a ejecutar tras la ejecución del evento
+        function intro(){
+
+            alert('Bienvenido');
+        }
+
+        //evento "click", a través, del gestor de eventos "addEventListener()", y "referencia", ha la función "intro", ha ejecutar
+        el.addEventListener('click', intro);
+    
+
+
+
+    </script>
+
+</body>
+</html>

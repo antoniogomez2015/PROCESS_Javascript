@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        AddEventListener():
+        ___________________
+
+        AddEventListener(), es un método del objeto global el cuál, es un gestor de eventos
+        
+
+        addEventListener(), Registra un evento a un objeto en específico 
+        
+        
+        El ObJeto especifico puede ser un simple elemento en un archivo, el mismo  documento, una ventana o un  XMLHttpRequest
+
+        Para registrar más de un eventListener, puedes llamar addEventListener() para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura
+
+
+
+
+        Sintaxis:
+        _________
+
+
+        definición:
+
+
+            _target.addEventListener('eventName', 'evenHandler');
+
+
+            _target.addEventListener(tipo, listener[, useCapture]);
+
+
+        el método addEventListener(), requiere tres parámetros los cuales son:
+
+
+            tipo:
+            _____
+
+                Una cadena representando el  tipo de evento a escuchar
+
+
+            Listener:
+            _________
+
+                El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre
+                
+                Debe ser un objeto implementando la "interfaz EventListener" o solo una function en JavaScript
+
+
+            useCapture: (opcional)
+            ___________
+
+                Si es true, useCapture indica que el usuario desea iniciar la captura 
+                
+                Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al listener registrado antes de comenzar a ser controlados por algún EventTarget que esté por debajo en el arbol DOM del documento
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+    
+        //capturamos el elemento html
+        var el = document.querySelector('button');
+
+
+        //función a ejecutar tras la ejecución del evento
+        function intro(){
+
+            alert('Bienvenido');
+        }
+
+        //evento "click", a través, del gestor de eventos "addEventListener()", y "referencia", ha la función "intro", ha ejecutar
+        el.addEventListener('click', intro);
+    
+
+
+
+    </script>
+
+</body>
+</html>

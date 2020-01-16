@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        textContent:
+        ____________
+
+        éste atributo nos permitirá tanto obtener el contenido de tipo texto de una etiqueta html ó nodo
+        
+        como también, nos permitirá agregar contenido de tipo texto ha una etiqueta html
+
+        para su uso posterior en diferentes procesos, otros
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Node/textContent
+
+
+
+
+    -->
+
+    
+    <h1>hola mundo <em>Javascript</em></h1>
+
+    <h2>Nuevo Curso de <em>Javascript</em></h2>
+
+
+
+    <script>
+    
+        //capturamos los elementos html        
+        var inf = document.querySelector('h1');
+        var inf2 = document.querySelector('h2');
+
+
+        //agrgar nuevo contenido de tipo texto, sustituyendo al texto anterior
+        var newInf = inf2.textContent = 'Ya eres parte del curso de Javascript';
+
+
+        //obtención del contenido tipo texto existente del elemento html
+        var cadena = inf.textContent;        
+
+
+        //llamada por consola
+        console.log(cadena);
+
+        console.log(newInf);
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

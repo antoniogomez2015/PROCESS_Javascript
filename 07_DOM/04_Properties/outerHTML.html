@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        outerHTML:
+        __________
+
+        éste atributo nos permitirá obtener un elemento html con todos sus atributos y características como un string
+
+        de ésta manera, podremos saber la composición de una sentencia que conforma un elemento html        
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/outerHTML
+
+
+
+
+    -->
+
+    
+    <div id="ttl" class="cap, campo">
+
+        <input type="text" value="Nick" name="user">
+
+    </div>
+
+
+
+    <script>
+    
+        //capturamos al elemento html        
+        var del = document.getElementById('ttl');
+
+
+        //comprobación de toda la sentencia html
+        var cadena = del.outerHTML;
+
+
+        //llamada por consola
+        console.log(cadena);
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

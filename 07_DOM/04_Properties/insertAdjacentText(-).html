@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        insertAdjacentText():
+        _____________________
+
+        el método insertAdjacentText(), inserta contenido de tipo texto dentro de una etiqueta html 
+        
+        
+        en una posición específica dentro de la estructura de la expresión html
+
+
+        lo cuál, quiere decir que podremos crear un tipo de elemeto html, ó tag, vacía la cuál, podremos rellenar con contenido posteriormente 
+        
+        
+        de ésta manera, podremos re crear el dom, modificando la estructura de tags, según la lógica y modelo de negocios de nuestra aplicación
+
+
+
+        Parameters:
+        ___________
+
+        éste método recibe dos parámetros:
+
+        
+            primer parámetro: 
+            
+                éste define la posición dentro de la expresión html del tag, respectivo 
+                
+                a partir de la cuál, se hará la intersión de contenido de tipo texto
+
+
+            segundo parámetro:
+
+                éste define al valor, cadena ó contenido de tipo texto ha agregar 
+
+
+
+
+
+        Positions Values:
+        _________________
+
+
+            _beforebegin
+
+                _insertará el elemento de tipo texto antes del elemento referido
+
+
+            _afterbegin
+
+                _insertará el elemento de tipo texto dentro del elemento referido como primer elemento hijo
+
+
+            _beforeend
+
+                _insertará el elemento de tipo texto dentro del elemento referido como último elemento hijo
+
+
+            _afterend
+
+                _insertará el elemento de tipo texto después del elemento referido
+
+
+
+            NOTA: los valores de posición "beforebegin", "afterend", sólo funcionan cuando el elemento referido tiene un elemento padre
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText
+
+
+
+
+    -->
+
+    
+    <h1 id="tag" class="ttl" >hola mundo</h1>
+
+
+
+
+
+    <script>
+    
+        //creamos un nuevo elemento html de tipo enlace <a>
+        var el = document.createElement('a');
+       
+
+        //luego, agregamos el atributo href="", y agregamos su valor http://..
+        el.setAttribute('href', 'href="http://www.google.com'); 
+
+
+
+        //luego, agregamos el tengo referencial del enlace creado
+        el.insertAdjacentText('beforeend', 'Google');
+
+
+
+
+
+        //optención de un atributo por consola
+        console.log(el);
+
+
+        //luego, insertamos el nuevo elementos que hemos creado dentro del arbol del dom
+        document.body.appendChild(el);
+
+      
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

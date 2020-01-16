@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        add():
+        ______
+
+        el método add(), es un método directo de la propiedad classList
+        
+        el cuál, nos permitirá agregar una clase a un elemento html
+        
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/classList
+
+
+
+
+    -->
+
+    
+    <div id="campo">
+
+        <input type="text" value="Nick" name="user">
+
+    </div>
+
+
+
+    <script>
+    
+        //capturamos al elemento html
+        var clase = document.getElementById('campo');
+
+
+        //agregamos un atributo de tipo class="" con un valor de "section", al elemento html
+        var cls = clase.classList.add('section');
+
+
+        //luego, pedimos ese atributo para comprobar que éste existe
+        var get = clase.getAttribute('class')
+
+
+        //luego lo llamamos por consola
+        console.log(get)
+
+
+
+
+    </script>
+
+    
+
+
+
+</body>
+</html>
