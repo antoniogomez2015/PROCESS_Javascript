@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Type:
+        _____
+
+        La propiedad "type", es de solo lectura de tipo de la interfaz de evento 
+        
+        
+        la cuál, devuelve una cadena que contiene el tipo de evento 
+
+        de ésta manera, podremos obtener el tipo de evento por su nombre específico, ej:
+
+
+            _evento tipo: "click, mouseover,.., otros"
+        
+
+        
+        ésta se establece cuando se construye el evento y es el nombre comúnmente utilizado para referirse al evento específico, como clic, carga o error
+
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/en-US/docs/Web/API/Event/type
+
+
+
+
+            
+    -->
+
+    <button>soy un botón</button>
+
+    <script>
+    
+        var el = document.querySelector('button');
+
+        el.addEventListener('click', action);
+
+        function action(ev){
+            console.log(ev.type, ev.target);
+        }
+    
+    </script>
+
+</body>
+</html>
