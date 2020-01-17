@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Custom Events:
+        ______________
+        
+
+
+    -->
+
+    <h1 class="cont">0</h1>
+
+
+    <script>
+
+        const headerTag = document.querySelector('.cont');
+
+        headerTag.addEventListener('numberChanged', function(e){
+            headerTag.textContent = e.detail.number;
+            headerTag.style.color = e.detail.textColor;
+        });
+
+        function changeNumber(n, c){
+            const event = new CustomEvent('numberChanged', {
+                detail: {
+                    number: n,
+                    textColor: c
+                }
+            });
+
+            headerTag.dispatchEvent(event);
+        }
+
+
+
+
+
+    
+    /*
+        var el = document.querySelector('.cont');
+
+        el.addEventListener('color', change);
+
+        function change(ev){
+            var number = ev.target.createElement(p);
+            number.textContent = sec;
+        }
+
+        function sec(){
+            var value = prompt('Indique un número: ');
+            return value;
+        }
+
+
+
+        var color = new CustomEvent('click', {
+            intervalo = 1,
+            color = ''
+        });
+    */
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Custom Events:
+        ______________
+
+        Lanza un evento en el sistema de eventos 
+        
+        
+        El evento está sujeto al mismo comportamiento y capacidades que si fuera un evento de lanzamiento directo
+        
+        
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/EventTarget/dispatchEvent
+
+
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+    
+            
+        // add an appropriate event listener
+        obj.addEventListener("cat", function(e) { process(e.detail) });
+
+        // create and dispatch the event
+        var event = new CustomEvent("cat", {
+        detail: {
+            hazcheeseburger: true
+        }
+        });
+        
+        obj.dispatchEvent(event);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Custom Events:
+        ______________
+        
+
+
+    -->
+
+    <h1>Creating Events</h1>
+
+    <main>
+        <!--add stuff here-->
+    </main>
+
+
+    <script>
+    
+            
+        //1 let evt = new Event('explode');
+        //2 let evt = new CustomEvent('explode', {detail:{speed:29, volume:40}});
+
+        let born = new Event('born');
+        let died = new CustomEvent('died', {detail: {time: Date.now()}});
+
+
+        document.addEventListener('DOMContentLoaded', function(){
+            let m = document.querySelector('main');
+            addParagraph(m, 'This is un paragrapth');
+            addParagraph(m, 'A new Star Wars movie is coming soon');
+
+            m.addEventListener('click', function(ev){
+                removeParagrapth(m, m.firstElementChild);
+            });
+            
+        });
+
+        function addParagraph(parent, text){
+            let p = document.createElement('p');
+            p.textContent = text;
+
+            //set up and dispatch events
+            p.addEventListener('born', wasBorn);
+            p.addEventListener('died', hasDied);
+            p.dispatchEvent(born);
+
+            //add to screen
+            parent.appendChild(p);
+        }
+        
+
+        function removeParagrapth(parent, p){
+
+            //dispatch event
+            p.dispatchEvent(died);
+
+            //remove elemento from scree
+            parent.removeChild(p);
+        }
+
+        function wasBorn(ev){
+            console.log(ev.type, ev.target);
+        }
+
+        function hasDied(ev){
+            console.log(ev.type, ev.target, ev.detail.time);
+
+            //remove the listeners
+            ev.target.removeEventListener('born', wasBorn);
+            ev.target.removeEventListener('died', hasDied);
+        }
+
+
+    </script>
+
+    <!--
+
+        Interpretación:
+        _______________
+
+
+            eventos personalizados:
+            _______________________
+
+                primer evento:
+
+                    donde el primer objeto que creamos es 'born', a través, del constructor Event(), para crear una instancia objeto event 
+                        
+                    sin características definidas, es decir, que no le hemos indicado un comportamiento diferente al comportamiento por defecto
+
+
+                segundo evento:
+
+                    luego, creamos el seungo evento a través, del constructor CustomEvent(), en el cuál, hemos configurado como segundo parámetro el objeto Date(), y hora actual
+
+
+
+            evento auto ejecutable:
+            _______________________
+
+            luego, creamos un evento DOMContentLoaded, auto ejecutable el cuál, se ejecutará al momento de cargarse la página sin importar hojas de estilo y demás elementos relacionados
+
+
+                captura html:
+                _____________
+
+                luego, dentro del contexto del evento DOMContentLoaded, procedermos ha capturar al elemento ó tag, html <main>, sobre el cuál, volcaremos los datos dinámicamente posteriormente
+
+
+                llamado de funciones:
+                _____________________
+
+                luego, en el mismo contexto del evento DOMContentLoaded, también, creamos dos llamadas de la función addParagraph(), la cuál, aún no existe
+
+                y a las cuales les pasaremos como parámetros los siguientes elementos:
+
+                    primer parámetro
+
+                        consta de la variable que contiene al elemento <main>, html que hemos capturado previamente
+
+                    segundo parámetro
+
+                            el cuál, consta de un string, el cuál, será el texto que será agregado el contenedor dinámicamente posteriormente
+
+
+
+                evento anidado:
+                _______________
+
+                luego, en el mismo contexto del evento DOMContentLoaded, hemos creado otro evento anidado dentro del
+
+                en el cuál, se llama a una función removeParagraph(), a la cuál, se pasa como parámetros el elemento html que hemos capturado
+
+                y el elemento que hemos capturado más la referencia al primer elemento dentro de éste "firstElementChild"
+
+
+
+            funciones addParagrapth:
+            ________________________
+
+            luego, desarrollamos las funciones addParagrapth, a la cuál, le pasamos dos parámetros 
+
+            dichos parámetros corresponderán en cantidad con los parámetros que hemos indicado cuando llamamos ha la función anteriormente
+
+                nuevo elemento:
+                _______________
+
+                luego, dentro de la función creamos un nuevo elemento "createElement()", de tipo <p>
+
+                al cuál, le asignamos como valor con "textContent", éste valor será el que hemos indicado como segundo parámetro al momento de llamar a la función anteriormente, el cuál, es un texto ó string
+
+
+                eventos anidados relacionados:
+                ______________________________
+
+                luego, al elemento que hemos creado "<p>", le asignamos dos eventos con "addEventListener()"
+
+                los cuales son los eventos personalizados que hemos creado inicialmente
+
+                de ésta manera, agregamos los eventos "born", con la funcióon referida "wasBorn"
+                
+                y el evento "died", con la función referida "hasDie"
+
+
+                lanzamiento del evneto born:
+                ____________________________
+
+                luego, al elemento que hemos creado "<p>", le asignamos y lanzamos el evento "born", a través, de "dispatchEvent('born')", para que así, el evento born, se cargado en el sistema de eventos general
+
+                
+                insersión html:
+                _______________
+
+                luego, también, relacionamos que el primer parámetro que indicamos a la hora de llamar a la función 
+                
+                el cuál, ahora se le incorporará el elemento html que hemos creado <p>, a través, de parent.appendChild(p), para que aaprezcan en pantalla
+
+
+
+            función removeParagraph:
+            ________________________
+
+            
+
+
+
+
+
+    -->
+
+</body>
+</html>
