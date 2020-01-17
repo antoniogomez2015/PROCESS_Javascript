@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Event Protype:
+        ______________
+
+        El constructor Event() crea un nuevo Event
+
+
+        de ésta manera, podremos adicionalmente configurar el comportamiento del eventos a través, de su prototipo
+
+
+
+        Sintaxis:
+        _________
+
+
+            _event = new Event(typeArg, eventInit);
+
+
+
+        Valores:
+        ________
+
+
+            typeArg:
+            
+                Es un DOMString que representa el nombre del evento.
+
+
+
+            eventInit: Optional              
+
+                "bubbles": (Opcional) 
+                
+                    Boolean indica si el evento se propaga. Por defecto es false
+
+
+                "cancelable": (Opcional) 
+                
+                    A Boolean indica si el evento puede ser cancelado. Por defecto es false
+
+
+                "scoped": (Opcional) 
+                
+                    Boolean indica el ámbito de propagación. Si el valor es true, deepPath contendrá el nodo de destino
+
+
+                "composed": (Opcional) 
+                
+                    Boolean que indica si el evento disparará listeners fuera de un shadow root. Por defecto es false
+        
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/es/docs/Web/API/Event/Event
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+
+            //capturando el elemento html
+            var el = document.querySelector('button');
+    
+
+
+            // crea un evento look que se propaga y no puede cancelarse
+            var ev = new Event("look", {"bubbles":true, "cancelable":false});
+
+            document.dispatchEvent(ev);
+
+            document.createEvent()
+
+
+
+    </script>
+
+</body>
+</html>

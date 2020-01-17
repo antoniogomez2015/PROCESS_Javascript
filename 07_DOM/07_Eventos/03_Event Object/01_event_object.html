@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Event Object:
+        _____________
+
+        el event object, es un objeto que ya biene pre construido dentro de cada evento dentro de javascript
+
+        de ésta manera, podremos obtener información y aceder a las características tanto internas como relacionales de los eventos en todas sus direcciones
+
+        es decir, que podremos obtener información tanto del propio evento como de donde proviene el evento y relacionamiento colateral
+
+        lo cuál, es especialmente útil para la creación de contenido dinámico, otros
+
+
+        
+
+        Otra Fefinición:
+
+            Los gestores de eventos pueden estar atados a varios elementos en el DOM
+            
+            
+            Cuando un evento ocurre, un objeto de evento es dinámicamente creado y pasado secuencialmente a las "escuchas" (listeners) autorizadas para la gestión del evento 
+            
+            
+            La interfaz Event del DOM, es entonces accesible por la función de manejo, vía el objeto de evento puesto como el primer (y único) argumento
+
+        
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/API/Event
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+    
+        //capturamos el elemento html
+        var el = document.querySelector('button');
+
+
+        
+        function intro(){
+
+            //accediendo al objeto event, para obtener información del evento ejecutado, en éste caso vía consola
+            console.log(event);
+        }
+
+        
+        //gestor de eventos y acciones
+        el.addEventListener('click', intro);
+    
+
+
+
+    </script>
+
+</body>
+</html>

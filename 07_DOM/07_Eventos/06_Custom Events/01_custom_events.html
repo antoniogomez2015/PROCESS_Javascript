@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Custom Events:
+        ______________
+
+        el constructor "CustomEvent()", nos permitirá crear un nuevo "CustomEvent", ó evento personalizado
+        
+        
+
+        Sintaxis:
+        _________
+
+            _event = new CustomEvent(typeArg, customEventInit);
+
+           
+
+
+        Parámetros:
+        ___________
+
+            typeArg:
+
+                un DOMString, representa al nombre del evento ha crear
+    
+    
+
+            customEventInit (Optional):
+           
+                "detail" opcional y predeterminado a nulo, de tipo cualquiera, que es un valor dependiente de evento asociado con el evento
+
+
+
+
+        Ejemplo:
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+    
+            
+        // add an appropriate event listener
+        obj.addEventListener("cat", function(e) { process(e.detail) });
+
+        // create and dispatch the event
+        var event = new CustomEvent("cat", {
+        detail: {
+            hazcheeseburger: true
+        }
+        });
+        obj.dispatchEvent(event);
+
+
+    </script>
+
+</body>
+</html>

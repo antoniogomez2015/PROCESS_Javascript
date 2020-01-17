@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Target:
+        _______
+
+        tenemos la posibilidad de acceder a los elementos html, sobre los cuáles hemos creado un evento
+
+
+        Una referencia a un objeto que lanzo el evento 
+        
+        
+        IEs diferente de "event.currentTarget", donde el evento es llamado durante la fase de  bubbling or capturing
+
+
+        de ésta manera, a través, de atributos anidados podremos acceder a los elementos html, que han desencadenado un evento, ej:
+
+
+            _e.target
+
+
+        así como también, incluso podremos hacer transversing, en el DOM, al poder acceder a su vez, a partes del elemento html, seleccionado por target sobre el cuál, se ha desencadenado el evento, ej:
+
+
+            _.target.textContent
+
+  
+        
+        La propiedad event.target  puede ser usada para implementar una delegación del evento
+
+
+
+
+        Referencia:
+        ___________
+
+            https://developer.mozilla.org/es/docs/Web/API/Event/target
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+    
+        //capturamos el elemento html
+        var el = document.querySelector('button');
+
+
+        
+        function intro(e){
+
+            //accediendo al objeto event, para obtener información del evento ejecutado, en éste caso vía consola
+
+            //optener el elemento html sobre el cuál, se ha hecho click
+            console.log(e.target);
+
+            //optener el texto dentro del elemento html optenido donde se ha hecho click
+            console.log(e.target.textContent);
+        }
+
+        
+        //gestor de eventos y acciones
+        el.addEventListener('click', intro);
+    
+
+
+
+    </script>
+
+</body>
+</html>
