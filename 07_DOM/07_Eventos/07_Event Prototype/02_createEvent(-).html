@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Create Event:
+        _____________
+
+        Crea un event del tipo especificado en la creación del evento personalizado
+        
+        
+        El objeto devuelto debe antes ser inicializado 
+        
+        
+        y puede, posteriormente ser pasado a element.dispatchEvent
+
+
+
+        Sintaxis:
+        _________
+
+
+            _event =document.createEvent(type)
+
+
+        _event, es el objeto Event creado
+
+
+        _type, es una cadena que representa el tipo de evento que se creará 
+        
+        
+        Los tipos de evento posibles incluyen: 
+            
+            _"UIEvents" 
+            _"MouseEvents"
+            _"MutationEvents"
+            _"HTMLEvents" 
+            
+            
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/es/docs/Web/API/Document/createEvent
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+
+    <script>
+
+            
+            var el = document.querySelector('button');
+
+            var nombre = "",
+                edad = 0;
+
+             
+
+            el.addEventListener('look', gen());
+
+
+            
+            var ev = new Event("look", {
+                thisnombre : this.nombre = prompt('Indique su Nombre!'), 
+                edad : edad = this.prompt('Indique su Edad!')                  
+            });
+                
+           
+            
+
+            function gen(){
+
+                ev.dispatchEvent(ev)
+                
+                console.log(nombre + " " + edad);  
+                            
+            };
+
+            
+
+           
+            
+
+
+            
+
+            //el.createEvent();
+            
+
+           
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -38,7 +38,9 @@
 
 
 
-            eventInit: Optional              
+            eventInit: Optional 
+            
+                éstas opciones nos permitirán indicar el comportamiento del evento
 
                 "bubbles": (Opcional) 
                 
@@ -85,12 +87,21 @@
     
 
 
-            // crea un evento look que se propaga y no puede cancelarse
-            var ev = new Event("look", {"bubbles":true, "cancelable":false});
+            //creación de un evento "look", personalizado que se propaga y no puede cancelarse
+            var ev = new Event("look",
 
+                {
+                    "bubbles":true, 
+                    "cancelable":false
+                });
+
+            //despliegue del evento a la lista de eventos general de javascript
             document.dispatchEvent(ev);
 
-            document.createEvent()
+
+            //crea el evento especificado
+            //document.createEvent();
+
 
 
 

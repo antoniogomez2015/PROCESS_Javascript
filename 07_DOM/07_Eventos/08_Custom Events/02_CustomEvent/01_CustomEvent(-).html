@@ -14,8 +14,12 @@
         ______________
 
         el constructor "CustomEvent()", nos permitirá crear un nuevo "CustomEvent", ó evento personalizado
+
+        dentro del cuál, podremos expresar la lógica ha implementar a través, de objeto javascript, convencional
         
         
+
+
 
         Sintaxis:
         _________
@@ -38,7 +42,7 @@
            
                 "detail" (opcional) 
                 
-                    predeterminado a "null", de tipo cualquiera, que es un valor dependiente de evento asociado con el evento
+                    representa a la lógica ha ejecutar a través, de un objeto en javascript, y otros elementos
 
 
 
@@ -62,18 +66,24 @@
 
 
     <script>
+
+        var obj = document.querySelector('button');
     
             
-        // add an appropriate event listener
-        obj.addEventListener("cat", function(e) { process(e.detail) });
+        //agregado del evento al elemento html
+        obj.addEventListener("nameEvent", function(e) { process(e.detail) });
 
-        // create and dispatch the event
-        var event = new CustomEvent("cat", {
-        detail: {
-            hazcheeseburger: true
-        }
+        //creación del evento personalizado "nameEvent"
+        var ev = new CustomEvent("nameEvent", {
+
+            //lógica ha ejecutar en objeto javascript
+            detail: {
+                hazcheeseburger: true
+            }
         });
-        obj.dispatchEvent(event);
+
+        //despliegue del evento dentro de la lista de eventos en javascript
+        obj.dispatchEvent(ev);
 
 
     </script>

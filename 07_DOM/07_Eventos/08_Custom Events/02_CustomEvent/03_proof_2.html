@@ -22,14 +22,21 @@
 
     <script>
 
+        //captura del elemento html
         const headerTag = document.querySelector('.cont');
 
+        //asignación del evento personalizado 'numberChanged', al elemento html
         headerTag.addEventListener('numberChanged', function(e){
+            //asignación de los parámetros configurados en el evento personalizado como partes del contenido del elemento html seleccionado, tanto el elemento número como color
             headerTag.textContent = e.detail.number;
             headerTag.style.color = e.detail.textColor;
         });
 
+
+
+        //desarrollo de la funcíón que contendrá al evento personalizado y sus características
         function changeNumber(n, c){
+            //se pasan como parámetros "n, c", dos elementos que equivaldrán a los elementos dentro del evento personalizados "number y textColor"
             const event = new CustomEvent('numberChanged', {
                 detail: {
                     number: n,
@@ -37,6 +44,7 @@
                 }
             });
 
+            //luego se despliega el evento dentro de la gerarquía de eventos generales de javascript
             headerTag.dispatchEvent(event);
         }
 
