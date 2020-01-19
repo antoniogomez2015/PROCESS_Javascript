@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Click:
+        ______
+
+        el evento click, nos permitirá capturar la acción de click, del usuario sobre un elemento html
+
+
+        sea sobre un elemento de tipo button, ó botón ó sobre cualquier elemento html
+
+
+        de ésta manera, a través, del evento click, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
+        
+        
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+    <h1></h1>
+
+
+    <script>
+
+        //document.body.onload = addElement;
+
+        
+
+        var el = document.querySelector('button');
+    
+        el.addEventListener('click', function(){
+
+            var p = document.createElement('p');
+
+            var cont = document.createTextNode('Bienvenidos!'); 
+
+            p.appendChild(cont);
+
+            p.style.color = 'orange';            
+
+            document.body.insertBefore(p, el);
+            
+        });
+        
+       
+
+
+
+    </script>
+
+</body>
+</html>

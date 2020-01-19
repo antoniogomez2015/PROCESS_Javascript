@@ -13,6 +13,8 @@
         _______
 
         detail es una propiedad de solo lectura de la interfaz CustomEvent 
+
+        lo que quiere decir de ésta propiedad sólo trabaja con eventos personalizados
         
         
         la cuál devuelve todos los datos pasados al inicializar el evento
@@ -36,11 +38,20 @@
     
         var el = document.querySelector('button');
 
-        el.addEventListener('click', action);
+        var act = function(e){
 
-        function action(){
-            console.log();
+            var ev = new CustomEvent('custom', {
+                
+                info: e.detail
+            });
+            //console.log(el.insertAdjacentText('beforeend', ' Ya está hecho!'));        
+            ev.dispatchEvent(ev)
         }
+
+        el.addEventListener('cutom', function(e){
+            act(e)
+        });
+
 
 
     
