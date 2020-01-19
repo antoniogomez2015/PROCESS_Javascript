@@ -10,16 +10,16 @@
     <!--
 
 
-        Click:
-        ______
+        Doble Click:
+        ____________
 
-        el evento click, nos permitirá capturar la acción de click, del usuario sobre un elemento html
+        el evento dblclick, nos permitirá capturar la acción del doble click, del usuario sobre un elemento html
 
 
         sea sobre un elemento de tipo button, ó botón ó sobre cualquier elemento html
 
 
-        de ésta manera, a través, del evento click, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
+        de ésta manera, a través, del evento dblclick, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
         
         
 
@@ -29,7 +29,7 @@
         ___________
 
         
-            https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
 
 
 
@@ -48,12 +48,11 @@
         //document.body.onload = addElement;
 
         
-        //capturando al elemento html
+        //captura del elemento html
         var el = document.querySelector('button');
     
-    
-        //agregado del evento tipo click
-        el.addEventListener('click', function(){
+        //agregado del evento doble click
+        el.addEventListener('dblclick', function(){
 
             var p = document.createElement('p');
 
@@ -61,7 +60,15 @@
 
             p.appendChild(cont);
 
-            p.style.color = 'orange';            
+            if(!p.style.backgroundColor){
+                p.style.backgroundColor = 'black';
+                p.style.color = 'white';
+
+            }else{
+                p.style.backgroundColor = 'orange';
+            }
+
+                        
 
             document.body.insertBefore(p, el);
             

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Mouseleave:
+        ___________
+
+        el evento mouseleave, nos permitirá capturar la acción del mouse, del usuario al salir de área del elemento html
+
+
+        sea sobre un elemento de tipo button, ó botón ó sobre cualquier elemento html
+        
+
+        de ésta manera, a través, del evento mouseleave, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
+        
+        
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+    <h1></h1>
+
+
+    <script>
+
+        //document.body.onload = addElement;
+
+        
+        //captura del elemento html
+        var el = document.querySelector('button'),
+            cont = document.querySelector('h1');
+
+    
+        //agregado del evento doble click
+        el.addEventListener('mouseleave', function(){
+            cont.innerText = 'Bienvenidos!'
+            cont.style['background-color'] = 'orange'; cont.style['color'] = 'white'; cont.style['margin-top'] = '100px'          
+        });
+        
+       
+        
+
+
+
+    </script>
+
+</body>
+</html>

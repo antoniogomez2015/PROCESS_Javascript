@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Mouseenter:
+        ___________
+
+        el evento mouseenter, nos permitirá capturar la acción del mouse, del usuario sobre el área del elemento html
+
+        sea sobre un elemento de tipo button, ó botón ó sobre cualquier elemento html
+
+
+        aunque es similar al mouseover, mouseenter difiere en que no salta y no se envía a ningún descendiente 
+        
+        
+        cuando el puntero se mueve desde el espacio físico de uno de sus descendientes a su propio espacio físico
+
+
+        de ésta manera, a través, del evento mouseenter, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
+        
+        
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+    <h1></h1>
+
+
+    <script>
+
+        //document.body.onload = addElement;
+
+        
+        //captura del elemento html
+        var el = document.querySelector('button'),
+            cont = document.querySelector('h1');
+
+    
+        //agregado del evento doble click
+        el.addEventListener('mouseenter', function(e){
+
+            console.log(e.target);
+            
+            
+        });
+        
+       
+        /*
+        
+        MediaQueryList
+            https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
+
+        MediaQueryList.media
+            https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/media
+
+        Clipboard.readText()
+            https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText
+
+
+        HTML DOM Style Object
+            https://www.w3schools.com/jsref/dom_obj_style.asp
+
+
+        style
+            https://stackoverflow.com/questions/3968593/how-can-i-set-multiple-css-styles-in-javascript
+
+            https://www.geeksforgeeks.org/how-to-change-style-attribute-of-an-element-dynamically-using-javascript/
+
+
+        
+        
+        */
+
+
+
+    </script>
+
+</body>
+</html>
