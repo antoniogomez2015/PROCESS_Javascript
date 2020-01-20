@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Mousedown:
+        __________
+
+        el evento mousedown, nos permitirá capturar la acción del click, sostenido del usuario sobre un elemento html
+
+
+        y tiene como acción por defecto las siguientes caracteríticas: 
+        
+            _el comenzar una acción de arrastrar y soltar         
+        
+            _comenzar la selección de un texto 
+            
+            _comenzar una interacción de desplazamiento (en combinación con el botón medio del mouse, si es soportado)
+
+
+        sea sobre un elemento de tipo button, ó botón ó sobre cualquier elemento html
+
+
+        el evento mousedown se activa cuando el botón de un dispositivo apuntador (usualmente el botón de un ratón) es presionado en un elemento
+
+
+        de ésta manera, a través, del evento mousedown, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
+        
+        
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/es/docs/Web/API/Element/mousedown_event
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+    <nav>
+        <h2></h2>
+    </nav>
+
+
+    <script>
+        
+        //captura del elemento html
+        var el = document.querySelector('button');           
+
+    
+        //agregado del evento mousedown y usando el objeto event "e"
+        el.addEventListener('mousedown', function(e){
+
+            //seleccionando el elemento de destino y agregándole atributos
+            var el2 = document.body.querySelector('nav h2');
+            el2.setAttribute('class', 'copy');
+
+            //insertando dentro del elemento de destino la información del usuario dinámicamente
+            el2.innerHTML = inf();            
+
+            //envando la información html, del elemento de destino a la consola
+            console.log(el2);
+           
+            
+        });
+
+        //función que capturará y devolverá dinámicamente la información del usuario
+        function inf(e){
+            return prompt('info aquí!');
+        }
+        
+       
+
+
+
+    </script>
+
+</body>
+</html>

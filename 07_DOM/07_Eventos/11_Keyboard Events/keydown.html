@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Keydown:
+        ________
+
+        El evento keydown es lanzado cuando una tecla es presionada (hacia abajo)
+        
+        
+        A diferencia del evento keypress, el evento keydown es lanzado para las teclas que producen un carácter y también para las que no lo producen
+
+
+        de ésta manera, podremos crear shortcuts, para diferentes operaciones de nuestra aplicación según la lógica y modelos de negocios, otros
+
+
+        así, como también, podremos crear juegos controlados totalmente por el teclado del usuario
+
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Document/keydown_event
+
+
+            ANIA KINSKI
+            CANDY ALEXA
+        
+    -->
+
+
+    <div>Mueva Aquí!</div>
+
+    <script>
+
+    //ejemplo de mover elemento en la pantalla
+    
+        //selección general de un elemento html
+        let el = document.body.querySelector('div');
+
+        //comprobación de un elemento coincidente específico
+        //al cuál, se le han agregado atributos y estilos
+        if(el.textContent == 'Mueva Aquí!'){
+            el.setAttribute('class', 'cont');
+
+            el.style['font-size'] = '2em';
+            el.style.color = 'red';
+            el.style['margin-top'] = '50px';
+            el.style['margin-left'] = '50px';
+            el.style.cursor = 'pointer';
+
+            console.log(el.outerHTML);
+        }
+
+        //const motive = document.querySelector('.cont');        
+
+        addEventListener('keyup', function(e){
+
+            switch (e.key){
+
+                case 'ArrowUp':
+
+                    up();
+
+                break;
+
+                case 'ArrowDown':
+
+                    down();
+
+                break;
+
+                case 'ArrowLeft':
+
+                    left();
+
+                break;
+
+                case 'ArrowRight':
+
+                    right();
+
+                break;
+
+            }
+
+            console.log(e.key);
+
+        });
+
+        function up(){
+            alert(e.key);
+        }
+
+        function down(){
+            alert(e.key);
+        }
+
+        function left(){
+            alert(e.key);
+        }
+
+        function right(){
+            alert(e.key);
+        }
+
+
+
+
+
+
+    //ejemplo de un shortcut: Control + A  
+
+        //se ha agregado un evento apuntando directamente a todo el DOM
+        addEventListener('keydown', function(e){
+            
+            //se identifica si el usuario ha hecho una combinación de teclas
+            if(e.key == 'a' && e.ctrlKey == true){
+                const rs = document.createElement('h2');                
+                rs.setAttribute('class', 'dest');                
+                rs.textContent = `El Shortcut es: ${mix()} ${din2()}`;
+                                
+                document.body.appendChild(rs);
+
+                function mix(){
+                    if(e.ctrlKey == true){
+                        control = 'Control + '; 
+                        return control;
+                    }else{
+                        return e.ctrlKey;
+                    }
+                      
+                } 
+
+                function din2(){
+                    if(e.key == 'a'){
+                        key = e.key.toUpperCase();
+                        return key;
+                    }else{
+                        return e.key;
+                    }
+                }              
+
+                e.preventDefault();
+
+                console.log(rs.outerHTML);
+                console.log(e);
+            }  
+            
+        });
+
+    //ejemplo
+        
+    
+    </script>
+
+
+</body>
+</html>

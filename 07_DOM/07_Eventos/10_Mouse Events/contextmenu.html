@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+
+        Contectmenu:
+        ____________
+
+        el evento contectmenu, nos permitirá capturar la acción del botón secundario del mouse, del usuario sobre un elemento html
+
+
+        el atributo global  contextmenu es el  id de un  <menu> para nosotros como el menu contextual para este elemento
+
+
+        un menu contextual  es un menu que aparece sobre la interacción del usuario como por ejemplo un click derecho 
+        
+        
+        HTML5 ahora permite modificar menus incluyendo menús anidados
+
+
+        sea sobre un elemento de tipo button, ó botón ó sobre cualquier elemento html
+        
+
+        de ésta manera, a través, del evento contectmenu, podremos desencadenar una serie de acciones según la lógica y modelos de negocios del sitio web
+        
+        
+
+
+
+        Referencia:
+        ___________
+
+        
+            https://developer.mozilla.org/es/docs/Web/HTML/Atributos_Globales/contextmenu
+
+
+
+
+
+
+    -->
+
+    <button>Acceder Aquí</button>
+
+    <h1></h1>
+
+
+    <script>
+
+        
+        //menú a través, del Objecto Evento
+        function createMenu(e){
+            //creando el menú con su contenido
+            const menu = document.createElement('div');
+            menu.textContent = 'Soy un Menú Contextual';
+            menu.id = 'Cmenu';                      
+
+            //estilos del menú
+            menu.style.background = "grey";
+            menu.style.padding = '1em';
+            menu.style.color = 'white';
+            menu.style['border-radius'] = '10px';
+            menu.style.position = 'fixed';
+            menu.style.top = `${e.pageY}px`;
+            menu.style.left = `${e.pageX}px`;
+
+            //comprobación y eliminación de menús previos
+            const el = document.getElementById('Cmenu');
+
+            if(el){
+                document.body.removeChild(el)
+            }  
+
+            //inserción del menú en el DOM
+            document.body.appendChild(menu);
+        }
+
+             
+              
+        //creación del evento menú "contextmenu"
+        document.addEventListener('contextmenu', function(e){
+            createMenu(e)
+            e.preventDefault();         
+        });
+        
+       
+        
+
+
+
+    </script>
+
+</body>
+</html>
