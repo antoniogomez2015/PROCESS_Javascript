@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Submit:
+        _______
+
+        el evento submit, se ejecuta cuando un formulario es enviado
+
+
+        el evento de envío se activa cuando se envía un <from>
+
+
+        tenga en cuenta que el evento "submit" se activa en el elemento <form> en sí, y no en ningún <button> o <input type = "submit"> dentro de él 
+            
+            (Se envían formularios, no botones).
+
+
+        el evento de envío solo se activa cuando el usuario hace clic en un botón de envío (<botón> o <input type = "submit">) en un formulario 
+        
+        
+        El evento no se genera cuando se llama directamente al método form.submit ().
+
+
+        de ésta manera podremos comprobar por ejemplo, si todos los campos del formulario han sido llenados, otros
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+
+
+          
+
+
+    -->
+
+    <form action="#" id="cont">
+
+        <input type="text" value="Info aquí!">
+        <input type="passwork" value="Contraseña">
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script>
+    
+        //
+        let get = document.querySelector('#cont');
+        
+                
+        get.addEventListener('submit', function(e){
+                                
+            let imp1 = document.querySelector('form input[type=text]').value;
+                    
+            if(imp1 === 'Info aquí!'){                
+                
+                alert('hola');
+                console.log(imp1)
+            }else{
+                console.log(imp1)
+            }
+                       
+        });
+    
+    </script>
+
+</body>
+</html>

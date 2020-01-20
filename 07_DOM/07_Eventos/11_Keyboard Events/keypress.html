@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Keypress:
+        _________
+
+        El evento de "keypress", ó de pulsación de tecla, se activa cuando se presiona una tecla que produce un valor de carácter 
+        
+        
+        Ejemplos de teclas que producen un valor de caracteres son las teclas: 
+        
+
+            _alfabéticas 
+            _numéricas 
+            _y de puntuación 
+        
+
+        Ejemplos de teclas que no proceden de un valor caracter:
+
+
+            _alt
+            _shift
+            _control
+            _meta
+
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/API/Element/keypress_event
+
+
+
+    -->
+
+    <script>
+
+    //ejemplo de capturar datos del usuario y renderizarlos en pantalla en tiempo real al estilo Vuejs
+    
+        //primero, creamos un elemento html, de tipo input para capturar la información del usuario
+        //y le agregamos atributos y estilos
+        const camp = document.createElement('input');
+        camp.setAttribute('class', 'inf');
+        camp.setAttribute('value', 'Pulse un tecla aquí!');
+        camp.style.margin = '50px';
+
+        //luego insertamos el elemento en el dom, de elementos html
+        document.body.appendChild(camp);
+
+        //luego, creamos otros elemento html el cuál, será destino de los datos dinámicamente
+        //al cuál, le agregaremos atributos y estilos
+        const area = document.createElement('p');
+        area.setAttribute('class', 'area');        
+        area.style.margin = '50px';
+
+        //luego insertamos el elemento en el dom, de elementos html
+        document.body.appendChild(area);
+
+        //luego, agregaremos el evento keypress al elemento html, de destino
+        camp.addEventListener('keypress', function(e){
+            //accedemos al objeto evento y a la propiedad tecla discada
+            let vl = e.key;
+
+            //luego, insertamos esa información de forma contigua una de otra para que permacezca, sobre el elemento html, de destino
+            area.insertAdjacentText('beforeend', vl);
+
+            //confirmación de captura del evento por consola
+            console.log(vl);
+        });
+    
+    
+    </script>
+
+</body>
+</html>

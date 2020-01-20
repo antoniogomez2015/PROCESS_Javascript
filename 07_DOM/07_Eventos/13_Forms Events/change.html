@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Change:
+        _______
+
+        el evento de "change", se activa para los elementos de tipo: 
+        
+            _<input> 
+
+            _<select>
+
+            _<textarea> 
+            
+            
+        cuando el usuario confirma una alteración del valor de uno de éstos elemento
+
+
+
+        
+        a diferencia del evento de input, el evento de change, no se activa necesariamente para cada alteración del valor de un elemento
+
+
+        dependiendo del tipo de elemento que se cambia y la forma en que el usuario interactúa con el elemento, el evento de change se dispara en un momento diferente:
+
+
+            cuando el elemento está: marcado (haciendo clic o usando el teclado) para <input type = "radio"> y <input type = "checkbox">;
+
+
+            cuando el usuario confirma el change, explícitamente (por ejemplo, seleccionando un valor del menú desplegable de <select> con un clic del mouse 
+                
+                
+            seleccionando una fecha de un selector de fecha para <input type = "date">, seleccionando un archivo en el selector de archivos para <input type = "file">, etc.)
+
+
+            cuando el elemento pierde el focus, después de cambiar su valor, pero no se compromete 
+            
+                (por ejemplo, después de editar el valor de <textarea> o <input type = "text">)
+
+
+            la especificación HTML, enumera los tipos <input> que deberían activar el evento de cambio
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+
+
+          
+
+
+    -->
+
+    <form action="#" id="cont">
+
+        <input type="text" value="Info aquí!">
+        <input type="passwork" value="Contraseña">
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script>
+    
+        //
+        let camp = document.querySelector('form input[type=text]').value;
+                  
+        camp.addEventListener('change', function(e){
+                               
+            
+            let nl = document.createElement('h1');      
+            nl.textContent = camp;
+
+            document.body.appendChild(nl);
+            
+                       
+        });
+    
+    </script>
+
+</body>
+</html>
