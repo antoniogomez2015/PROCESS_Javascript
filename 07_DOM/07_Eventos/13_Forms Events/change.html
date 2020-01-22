@@ -65,28 +65,64 @@
     <form action="#" id="cont">
 
         <input type="text" value="Info aquí!">
-        <input type="passwork" value="Contraseña">
+        <input type="text" value="Contraseña">
         <input type="submit" value="Enviar">
 
     </form>
 
     <script>
     
-        //
-        let camp = document.querySelector('form input[type=text]').value;
-                  
-        camp.addEventListener('change', function(e){
-                               
-            
-            let nl = document.createElement('h1');      
-            nl.textContent = camp;
+        //primero, seleccionamos al elemento html, input de tipo text
+        let camp = document.querySelector('form input[type=text]');        
 
-            document.body.appendChild(nl);
+        console.log(camp.outerHTML);
+        
+        camp.addEventListener('change', function(){ 
+
+                               
+            let sc = document.querySelector('form input + input'); 
+             
+            sc.textContent = camp;
             
                        
         });
+
+
+        /*//primero, seleccionamos al elemento html, input de tipo text
+        let camp = document.querySelector('form input[type=text]');        
+
+        console.log(camp.outerHTML);
+        //luego, al elemento html, seleccionado le agregamos el evento "change"
+        camp.addEventListener('change', function(){ 
+
+            //luego, cuando el contenido del input, sea cambiado por el usuario
+            //crearemos un nuevo elemento                            
+            let nl = document.createElement('h1'); 
+
+            //y ha dicho elemento, le agregaremos como contenido el string, insertado por el usuario "value"     
+            nl.textContent = camp.value;
+
+            //para por último insertar el elemento que hemos creado dentro de la estructura del dom
+            document.body.appendChild(nl);
+            
+                       
+        });*/
     
     </script>
 
 </body>
 </html>
+<!--
+
+
+https://videosection.com/video/115697559
+
+https://www.porn.biz/top-deep%20throat/page-1.php
+
+https://www.freeomovie.com/francesca-le-is-the-ultimate-whore/
+
+https://www.freeomovie.com/brutal-invasion-11/
+
+https://jizzbunker.com/es/
+
+-->

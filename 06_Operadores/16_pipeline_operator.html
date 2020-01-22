@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Pipeline Operator:
+        __________________
+
+        el operador experimental pipeline |> (actualmente en su fase1) 
+        
+        
+        conduce el valor de una expresión dentro de una función 
+        
+        
+        esto permite la creación de llamadas de función en cadena de un modo más legible 
+        
+        
+        el resultado es una simplificación sintáctica en la cual la llamada a una función con un único parámetro puede ser escrita del siguiente modo:
+
+    -->
+
+    <script>
+
+
+            let url = "%21" |> decodeURI;
+
+
+    </script>
+
+    <!--
+
+        La llamada equivalente en sintaxis tradicional tiene este aspecto:
+
+    -->
+
+    <script>
+
+
+            let url = decodeURI("%21");
+
+
+    </script>
+
+    <!--
+
+
+        Sintaxis:
+        _________
+
+
+        expression |> function
+
+
+        El valor especificado en la expression se pasa dentro de la  function como su único parámetro.
+
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Pipeline_operator
+
+
+
+
+
+
+
+
+    -->
+
+
+
+</body>
+</html>

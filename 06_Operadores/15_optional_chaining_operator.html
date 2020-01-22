@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Optional Chaining Operator:
+        ___________________________
+
+        el optional chaining "?", nos permite leer el valor de una propiedad ubicada en lo profundo de una cadena de objetos conectados 
+        
+        
+        sin tener que validar expresamente que cada referencia en la cadena sea válida 
+        
+        
+        el operador funciona de manera similar a el operador de encadenamiento ".", excepto que en lugar de causar un "error", si una referencia es nula (nula o indefinida) 
+        
+        
+        la expresión cortocircuita con un valor de retorno de indefinido 
+        
+        
+        cuando se usa con llamadas a funciones, devuelve indefinido si la función dada no existe.
+
+
+        esto da como resultado expresiones más cortas y simples cuando se accede a propiedades encadenadas cuando existe la posibilidad de que falte una referencia 
+        
+        
+        también puede ser útil al explorar el contenido de un objeto cuando no hay una garantía conocida de qué propiedades se requieren
+
+
+
+        Sintaxis:
+        _________
+
+
+        de ésta manera, cuando necesitemos acceder ha un elemento que no sabemos si existe ó está disponible, en éste caso debemos de hacer uso de optional chaining:
+
+
+            _?
+
+
+        determinando así, que si el elemento que indiquemos seguidamente exita
+
+
+        entonces que continúe llevándose a cabo la operación
+
+
+        más si lo que sigue no existe, entonces devuelves "indefined"
+
+
+        de ésta manera el intérprete de javascript, nunca romperá la ejecución del código, ej:
+
+
+            _element?elments..
+
+
+
+
+        Tutorial:
+
+            Aprende a usar los nuevos Optional Chaining y Nullish Operator
+
+                https://www.youtube.com/watch?v=BWnpbBvebk8
+
+
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+
+
+
+    -->
+
+<script>
+
+    const user = {
+        /*mail: 'monoproduccion@gmail.com',
+        id: {
+            number: 123,
+            address: {
+                street: 'Merlo Park',
+                number: 21
+            }
+        }*/
+    }
+
+    //al tratar de acceder a una pripiedad que no esta disponible
+    //el programa no se rompe, si no que en vez de eso, da "undefined", i sigue con la ejecución
+    console.log(user.id?.address?.street);
+
+
+</script>
+
+</body>
+</html>
