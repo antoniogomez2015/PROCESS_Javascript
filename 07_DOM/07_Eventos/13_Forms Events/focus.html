@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        Focus:
+        ______
+
+        el evento de "focus", se activa cuando hacemos click, sobre un elemento por ejemplo; tipo input de tipo texto, otros
+
+
+        de ésta manera, en éste punto el elemento se activará y podremos escribir sobre éste
+
+
+        y en éste punto se disparará el evento de tipo focus
+
+
+        éste evento es especialmente útil para realización de búsquedas dinámicas en campos de texto
+
+
+        como también, para la creación de auto completados y textos sugeridos
+        
+            
+        
+
+
+
+        Referencia:
+
+            https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
+
+
+            https://developer.mozilla.org/es/docs/Web/API/HTMLElement/focus
+
+
+          
+    -->
+
+    <form action="#" id="cont">
+
+        <input type="text" value="">       
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script>
+    
+        //primero, seleccionamos al elemento html, al cuál, le agregaremos el evneto
+        let sug = document.querySelector('form [type="text"]');        
+
+        //al elemento seleccionado le agregamos el evento "focus"
+        sug.addEventListener('focus', function(){
+
+            //volvemos ha seleccionar el evento html, para actualizar su atributo "value", dentro del evento
+            act = document.querySelector('form [type="text"]');
+
+            //luego, le cambiamos el valor al atributo "value"
+            act.value = 'Nombre Completo';             
+
+            //comprobación del evento por consola
+            console.log(sug.outerHTML);
+
+        });
+        
+    
+    </script>
+
+</body>
+</html>
+<!--
+
+
+https://videosection.com/video/115697559
+
+https://www.porn.biz/top-deep%20throat/page-1.php
+
+https://www.freeomovie.com/francesca-le-is-the-ultimate-whore/
+
+https://www.freeomovie.com/brutal-invasion-11/
+
+https://jizzbunker.com/es/
+
+-->

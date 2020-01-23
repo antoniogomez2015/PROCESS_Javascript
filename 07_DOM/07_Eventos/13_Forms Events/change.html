@@ -22,9 +22,7 @@
             
             
         cuando el usuario confirma una alteración del valor de uno de éstos elemento
-
-
-
+        
         
         a diferencia del evento de input, el evento de change, no se activa necesariamente para cada alteración del valor de un elemento
 
@@ -65,6 +63,7 @@
     <form action="#" id="cont">
 
         <input type="text" value="Info aquí!">
+        <input type="text" value="">
         <input type="text" value="Contraseña">
         <input type="submit" value="Enviar">
 
@@ -72,41 +71,28 @@
 
     <script>
     
-        //primero, seleccionamos al elemento html, input de tipo text
+        //primero, seleccionamos al elemento html, input de tipo text donde el usuario indicará la información
         let camp = document.querySelector('form input[type=text]');        
-
-        console.log(camp.outerHTML);
         
+
+        //luego, agregamos el evento "change", al elemento que hemos seleccionado  
         camp.addEventListener('change', function(){ 
 
-                               
-            let sc = document.querySelector('form input + input'); 
+            //luego, seleccionamos al elemento de destino sobre el cuál, se volcará la información dinámica        
+            let sc = document.querySelector('form [value=""]'); 
+
+            //luego, al elemento de destino le cambiamos el valor del atributo value, por el valor del value, del elemento inicial donde el usuario indicará la informaicón
+            let re = camp.value;
              
-            sc.textContent = camp;
+            //para que así, el primer elemento recoja la información y se la pase al segundo elemento
+            sc.value = re;
             
                        
         });
 
-
-        /*//primero, seleccionamos al elemento html, input de tipo text
-        let camp = document.querySelector('form input[type=text]');        
-
-        console.log(camp.outerHTML);
-        //luego, al elemento html, seleccionado le agregamos el evento "change"
-        camp.addEventListener('change', function(){ 
-
-            //luego, cuando el contenido del input, sea cambiado por el usuario
-            //crearemos un nuevo elemento                            
-            let nl = document.createElement('h1'); 
-
-            //y ha dicho elemento, le agregaremos como contenido el string, insertado por el usuario "value"     
-            nl.textContent = camp.value;
-
-            //para por último insertar el elemento que hemos creado dentro de la estructura del dom
-            document.body.appendChild(nl);
-            
+       
                        
-        });*/
+        
     
     </script>
 
