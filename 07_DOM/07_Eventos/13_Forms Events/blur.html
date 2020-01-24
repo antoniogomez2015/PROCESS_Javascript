@@ -40,9 +40,9 @@
 
     -->
 
-    <form action="#" id="cont">
+    <form action="#">
 
-        <input type="text" value="Name">        
+        <input type="text" value="First Name">        
         <input type="text" value="LastName">
         <input type="text" value="Contraseña">
         <input type="submit" value="Enviar">
@@ -51,20 +51,37 @@
 
     <script>
 
-        let el = document.querySelector('form [value="Name"]');
-            
-        el = document.addEventListener('focus', function(){
+        //primeramente, seleccionamos el elemento input, tipo text
+        let el = document.querySelector('form [value="First Name"]');
 
-            ch = document.querySelector('form [value="Name"]');
+        //luego, le agregamos el evento "focus"
+        el.addEventListener('focus', function(e){          
 
-            // el.value.replace('')
-            ch.value.innerHTML('');
+            //luego, volvemos ha seleccionar el elemento dentro del evento para poder cambiarle así, el valor de su atributo "value", ha vacío
+            vl = document.querySelector('form [value="First Name"]');
 
-            console.log(ch.outerHTML);
+            vl.value = '';
 
-            alert(ch.outerHTML);
-
+            //y su color de fondo
+            e.target.style.background = '#F0F0F0';
+                
         });
+
+            
+        //luego, ha éste mismo elemento html, le agregamos el evento "blue"
+        el.addEventListener('blur', function(e){
+
+            //luego, volvemos ha seleccionar el elemento dentro del evento para poder cambiarle así, el valor de su atributo "value", ha su valor original
+            ch = document.querySelector('form [value="First Name"]');
+            
+            ch.value = 'First Name';
+
+            //y restablecemos el color de fondo original
+            e.target.style.background = 'white';
+                       
+        });
+
+        
     
     </script>
 
@@ -73,7 +90,6 @@
 <!--
 
 
-https://videosection.com/video/115697559
 
 https://www.porn.biz/top-deep%20throat/page-1.php
 
